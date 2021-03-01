@@ -1,16 +1,15 @@
+const { Schema } = require("mongoose");
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
+const userSchema = new Schema({
     firstName: {
         type: String,
         required: true,
-        unique: false,
         minlength: 1
     },
     lastName: {
         type: String,
         required: true,
-        unique: false,
         minlength: 1
     },
     email: {
@@ -21,8 +20,7 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
-        unique: false
+        required: true
     },
     paidAccess: {
         type: Boolean,
@@ -30,11 +28,10 @@ const userSchema = mongoose.Schema({
     },
     modulesCompleted: {
         type: String,
-        required: false,
-        unique: false
+        required: false
     },
     dob: {
-        type: Date,
+        type: String,
         required: true,
         unique: false
     },

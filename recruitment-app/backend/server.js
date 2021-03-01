@@ -39,14 +39,14 @@ app.get('/user', (req, res) => {
 /* 
 *   => username / String
 *   <= New user created / JSON [200]
-*   <X Returns the erro / JSON [400]
+*   <X Returns the error / JSON [400]
 */
-app.post('/user', (req, res) => {
-    const firstname = req.body.firstname;
-    const lastname = req.body.lastname;
-    const email = req.body.email;
-    const password = passwordHash.generate(req.body.password);
-    const dob = req.body.dob;
+app.post('/user/register', (req, res) => {
+    const firstname = req.body.FirstName;
+    const lastname = req.body.LastName;
+    const email = req.body.Email;
+    const password = passwordHash.generate(req.body.Password);
+    const dob = req.body.DateOfBirth;
 
     /*
     *   Returns 400 status along with an error message 
@@ -54,11 +54,16 @@ app.post('/user', (req, res) => {
     */
     if ((firstname || lastname || email || password || dob) == (undefined || null)) {
         res.status(400).json('Error: Required Data Missing')
+        console.log("Required Data Missing")
     }
-    const newUser = new User({ firstname }, { lastname }, { email }, { password }, false, "{}", { dob });
+    console.table([firstname, lastname, email, password, dob]);
+    const newUser = new User({ firstName: firstname, lastName: lastname, email: email, password: password, paidAccess: false, modulesCompleted: "{}", dob: dob });
     newUser.save()
         .then(() => res.json('User Added'))
-        .catch(err => res.status(400).json('Error: ' + err));
+        .catch(err => {
+            res.status(400).json('Error: ' + err)
+            console.log('Error: ' + err);
+        });
 });
 
 app.listen(port, () => {
