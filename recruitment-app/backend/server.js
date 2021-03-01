@@ -24,12 +24,35 @@ app.get('/', (req, res) => {
     res.status(200).send("Hello, World!")
 });
 
-app.get('/user', (req,res) => {
-
+/* 
+* => N/A
+* <= Array of all users / JSON [200]
+* <X Returns the error / JSON [400]
+*/
+app.get('/user', (req, res) => {
+    User.find()
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err));
 });
 
-app.get('/user/add/<name>', (req,res) => {
-
+/* 
+* => username / String
+* <= New user created / JSON [200]
+* <X Returns the erro / JSON [400]
+*/
+app.post('/user', (req, res) => {
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email;
+    const password = req.body.password;
+    const dob = req.body.dob;
+    if((firstname || lastname || email || password || dob) == (undefined || null)) {
+        res.status(400).json('Error: Required Data Missing')
+    }
+    const newUser = new User({ firstname },{ lastname },{ email },{ password }, false,"{}",{ dob });
+    newUser.save()
+        .then(() => res.json('User Added'))
+        .catch(err => res.status(400).json('Error: ' + err));
 });
 
 app.listen(port, () => {
