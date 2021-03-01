@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const passwordHash = require('password-hash');
 
 let User = require('./schemas/userSchema');
 
@@ -25,9 +26,9 @@ app.get('/', (req, res) => {
 });
 
 /* 
-* => N/A
-* <= Array of all users / JSON [200]
-* <X Returns the error / JSON [400]
+*   => N/A
+*   <= Array of all users / JSON [200]
+*   <X Returns the error / JSON [400]
 */
 app.get('/user', (req, res) => {
     User.find()
@@ -36,20 +37,25 @@ app.get('/user', (req, res) => {
 });
 
 /* 
-* => username / String
-* <= New user created / JSON [200]
-* <X Returns the erro / JSON [400]
+*   => username / String
+*   <= New user created / JSON [200]
+*   <X Returns the erro / JSON [400]
 */
 app.post('/user', (req, res) => {
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
     const email = req.body.email;
-    const password = req.body.password;
+    const password = passwordHash.generate(req.body.password);
     const dob = req.body.dob;
-    if((firstname || lastname || email || password || dob) == (undefined || null)) {
+
+    /*
+    *   Returns 400 status along with an error message 
+    *   if any of the required data is not present 
+    */
+    if ((firstname || lastname || email || password || dob) == (undefined || null)) {
         res.status(400).json('Error: Required Data Missing')
     }
-    const newUser = new User({ firstname },{ lastname },{ email },{ password }, false,"{}",{ dob });
+    const newUser = new User({ firstname }, { lastname }, { email }, { password }, false, "{}", { dob });
     newUser.save()
         .then(() => res.json('User Added'))
         .catch(err => res.status(400).json('Error: ' + err));
@@ -57,4 +63,11 @@ app.post('/user', (req, res) => {
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
+});
+
+
+app.use('/login', (req, res) => {
+    res.send({
+        token: 'test123'
+    });
 });
