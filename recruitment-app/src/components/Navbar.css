@@ -1,0 +1,17 @@
+/* Navbar styling */
+
+/* Logo width and height */
+.logo{
+    height: 5rem;
+    width: 5rem;
+}
+
+/* Nav text color */
+.navbar-light .navbar-nav .nav-link{
+    color: #000!important;
+}
+
+/* Nav text on hover */
+.navbar-light .navbar-nav .nav-link:hover{
+    color: red!important;
+}
