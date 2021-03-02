@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const passwordHash = require('password-hash');
 
 let User = require('./schemas/userSchema');
 
@@ -24,12 +25,81 @@ app.get('/', (req, res) => {
     res.status(200).send("Hello, World!")
 });
 
-app.get('/user', (req,res) => {
-
+/* 
+*   => N/A
+*   <= Array of all users / JSON [200]
+*   <X Returns the error / JSON [400]
+*/
+app.get('/user', (req, res) => {
+    User.find()
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err));
 });
 
-app.get('/user/add/<name>', (req,res) => {
+/* 
+*   => username / String
+*   <= New user created / JSON [200]
+*   <X Returns the error / JSON [400]
+*/
+app.post('/user/register', (req, res) => {
+    const firstname = req.body.FirstName;
+    const lastname = req.body.LastName;
+    const email = req.body.Email;
+    const password = passwordHash.generate(req.body.Password);
+    const dob = req.body.DateOfBirth;
 
+    /*
+    *   Returns 400 status along with an error message 
+    *   if any of the required data is not present 
+    */
+    if ((firstname || lastname || email || password || dob) == (undefined || null)) {
+        res.status(400).json('Error: Required Data Missing')
+        console.log("Required Data Missing")
+    }
+    console.table([firstname, lastname, email, password, dob]);
+    const newUser = new User({ firstName: firstname, lastName: lastname, email: email, password: password, paidAccess: false, modulesCompleted: "{}", dob: dob });
+    newUser.save()
+        .then(() => res.json('User Added'))
+        .catch(err => {
+            res.status(400).json('Error: ' + err)
+            console.log('Error: ' + err);
+        });
+});
+
+app.post('/user/login', (req, res) => {
+    const email = req.body.Email;
+    const password = req.body.Password;
+
+    /*
+    *   Returns 400 status along with an error message 
+    *   if any of the required data is not present 
+    */
+    if ((email || password) == (undefined || null)) {
+        res.status(400).json('Error: Required Data Missing')
+        console.log("Required Data Missing")
+    }
+    User.findOne({ email: email }, function (err, data) {
+        if (err) {
+            res.send(err);
+        } else {
+            if (passwordHash.verify(password, data.password)) {
+                res.send(data);
+            } else {
+                res.json("Error: Incorrect Password");
+            }
+        }
+    });
+});
+
+app.post('/user/check', (req, res) => {
+    console.log("[Server] Checking Email: " + req.body.Email);
+    User.exists({ email: req.body.Email }, (err, data) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
 });
 
 app.listen(port, () => {
