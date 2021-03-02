@@ -66,13 +66,42 @@ app.post('/user/register', (req, res) => {
         });
 });
 
-app.listen(port, () => {
-    console.log(`App listening on port ${port}!`);
+app.post('/user/login', (req, res) => {
+    const email = req.body.Email;
+    const password = req.body.Password;
+
+    /*
+    *   Returns 400 status along with an error message 
+    *   if any of the required data is not present 
+    */
+    if ((email || password) == (undefined || null)) {
+        res.status(400).json('Error: Required Data Missing')
+        console.log("Required Data Missing")
+    }
+    User.findOne({ email: email }, function (err, data) {
+        if (err) {
+            res.send(err);
+        } else {
+            if (passwordHash.verify(password, data.password)) {
+                res.send(data);
+            } else {
+                res.json("Error: Incorrect Password");
+            }
+        }
+    });
 });
 
-
-app.use('/login', (req, res) => {
-    res.send({
-        token: 'test123'
+app.post('/user/check', (req, res) => {
+    console.log("[Server] Checking Email: " + req.body.Email);
+    User.exists({ email: req.body.Email }, (err, data) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
     });
+});
+
+app.listen(port, () => {
+    console.log(`App listening on port ${port}!`);
 });

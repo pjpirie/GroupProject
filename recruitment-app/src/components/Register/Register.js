@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // import './Login.css';
 
 async function RegisterUser(credentials) {
-    return fetch('https://localhost:8080/register', {
+    return fetch('http://localhost:5000/user/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -21,22 +21,21 @@ export default function Register() {
     const [LastName, setLastName] = useState();
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
-    const [ConfirmPassword, setConfirmPassword] = useState();
     const [DateOfBirth, setDateOfBirth] = useState();
 
     const handleSubmit = async e => {
+        checkMatch(document.getElementById("confirmPass").value);
         e.preventDefault();
         try {
             if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
             console.log("Submitted");
-            // const token = await RegisterUser({
-            //     FirstName,
-            //     LastName,
-            //     Email,
-            //     Password,
-            //     DateOfBirth
-            // });
-            // setToken(token);
+            const token = await RegisterUser({
+                FirstName,
+                LastName,
+                Email,
+                Password,
+                DateOfBirth
+            });
         } catch (e) {
             console.error(e);
         }
@@ -65,11 +64,11 @@ export default function Register() {
                 </label>
                 <label>
                     <p>Password</p>
-                    <input type="password" onChange={e => setPassword(e.target.value)} />
+                    <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <label>
                     <p>Confirm Password</p>
-                    <input type="password" onChange={e => checkMatch(e.target.value)} />
+                    <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
                 </label>
                 <label>
                     <p>Date of Birth</p>
