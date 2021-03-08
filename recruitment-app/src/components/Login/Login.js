@@ -11,7 +11,8 @@ async function LoginUser(credentials) {
         },
         body: JSON.stringify(credentials)
     })
-        .then(data => data.json());
+        .then(data => data.json())
+        .then(data => document.cookie = "Authorisation=" + JSON.stringify(data) + "; SameSite=None; Secure");
 }
 
 async function accountExists(email) {

@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const passwordHash = require('password-hash');
+const jwt = require('jsonwebtoken');
 
 let User = require('./schemas/userSchema');
 
@@ -10,6 +11,7 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+const jwtSecret = process.env.JWT_SECRET;
 
 app.use(cors());
 app.use(express.json());
@@ -83,7 +85,10 @@ app.post('/user/login', (req, res) => {
             res.send(err);
         } else {
             if (passwordHash.verify(password, data.password)) {
-                res.send(data);
+                // console.log(jwtSecret);
+                const token = jwt.sign(JSON.stringify(data._id), jwtSecret);
+                // const token = "Placeholder";
+                res.send({ data: data, token: token });
             } else {
                 res.json("Error: Incorrect Password");
             }
