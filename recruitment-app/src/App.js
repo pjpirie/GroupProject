@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
-import Navbar from './components/Navbar.js';
-import Footer from './components/Footer.js';
+import Navbar from './components/Header/Navbar.js';
+import Footer from './components/Footer/Footer.js';
 import Landing from './pages/landing';
 import Contact from './pages/contact';
 
