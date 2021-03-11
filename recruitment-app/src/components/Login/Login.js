@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
-// import './Login.css';
+import './Login.css';
 
 async function LoginUser(credentials) {
     return fetch('http://localhost:5000/user/login', {
@@ -28,7 +28,7 @@ async function accountExists(email) {
         .then(data => data.json());
 }
 
-export default function Login() {
+export default function Login(props) {
 
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
@@ -52,10 +52,12 @@ export default function Login() {
         }
     }
 
+
+
     return (
-        <div className="login-wrapper">
-            <h1>Please Login</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="loginWrapper">
+            <h1 class="sans-heading">LOGIN</h1>
+            <form onSubmit={handleSubmit} className="loginForm">
                 <label>
                     <p>Email</p>
                     <input type="text" onChange={e => setEmail(e.target.value)} />
@@ -65,7 +67,11 @@ export default function Login() {
                     <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <div>
-                    <button type="submit">Submit</button>
+                    <p>Need an account?
+                    <button
+                            onClick={() => props.openRegister(true)}
+                        >Sign up here</button></p>
+                    <button class="login-btn" type="submit">Login</button>
                 </div>
             </form>
         </div>
