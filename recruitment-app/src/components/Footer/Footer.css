@@ -1,0 +1,38 @@
+.footer-main{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    /* min-height:10em; */
+    background: #213142;
+    color: #fff!important;
+    text-align: center;
+}
+
+.container{
+    margin: 2rem auto;
+    width: 70vw!important;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    height: 5rem;
+    width: 5rem;
+}
+
+.footerBtn{
+    background: #71A068!important;
+}
+
+.link-col{
+    text-align: left!important;
+}
+
+.link-col li::before{
+    content: "> ";
+}

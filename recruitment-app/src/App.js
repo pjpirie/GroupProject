@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import './App.css';
-import Navbar from './components/Navbar.js';
-import Footer from './components/Footer.js';
+import Navbar from './components/Header/Navbar.js';
+import Footer from './components/Footer/Footer.js';
 
 
 function App() {
