@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
 import './Navbar.css';
-import logo from '../logo.svg';
-import { Navbar, Nav } from 'react-bootstrap';
+import logo from './logo.svg';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+import Login from './Login/Login';
+import loginBG from '../assets/login_bg.png';
+import Register from './Register/Register';
+
+Modal.setAppElement('#root');
 
 function Header() {
+
+  const navStyle = {
+    color: 'black',
+    textDecoration: 'none'
+  };
+
+  const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
+  const [registermodalIsOpen, registersetModalIsOpen] = useState(false);
+
   return (
     <Fragment>
       <Navbar collapseOnSelect expand="lg" variant="light" className="navbar">
@@ -97,6 +113,11 @@ function Header() {
         <Register />
       </Modal>
     </Fragment>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bothdev
   )
 }
 
