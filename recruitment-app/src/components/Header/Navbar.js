@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
-import logo from './logo.svg';
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import logo from '../logo.svg';
+import {Navbar, Nav} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
