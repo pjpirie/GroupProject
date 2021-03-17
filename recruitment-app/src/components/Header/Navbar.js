@@ -15,8 +15,11 @@ Modal.setAppElement('#root');
 function Header() {
 
   const navStyle = {
-    color: 'black',
-    textDecoration: 'none'
+    color: '#fff',
+    textDecoration: 'none',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   };
 
   const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
@@ -25,10 +28,11 @@ function Header() {
   return (
     <Fragment>
       <Navbar collapseOnSelect expand="lg" variant="light" className="navbar">
-        <Navbar.Brand href="#home"><img src={logo} className="d-inline-block align-top logo" alt="Website Logo" /></Navbar.Brand>
+        {/* <Navbar.Brand href="#home"><img src={logo} className="d-inline-block align-top logo" alt="Website Logo" /></Navbar.Brand> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
+          {/* <Nav className="mr-auto"> */}
+          <Nav>
             <Link style={navStyle} to="/">
               <li className="nav-link">Home</li>
             </Link>

@@ -1,8 +1,7 @@
 .Landing {}
 
 .hero__section {
-    height: 60vh;
-    width: 100vw;
+    height: 50vh;
     background: url('../../assets/hero_img.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,14 +14,21 @@
 .hero__text {
     font-size: 3rem;
     font-weight: 700;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about__section {
-    margin: -10rem 7rem 0;
+    margin-top: -10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
 }
 
 .about__section div {
@@ -42,14 +48,94 @@
     color: #fff;
     font-size: 1.3rem;
     font-weight: 700;
+    border: none;
+    outline: none;
 }
 
-.module__section {}
+.module__section {
+    background: #213142;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem 4rem 1rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    margin-top: 2rem;
+}
 
-.module__grid {}
+.module__section__content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.module__grid__item {}
+.module__section h2 {
+    text-align: center;
+    margin: 1rem auto 2rem;
+    font-weight: 700;
+}
 
-.howto__section {}
+.module__grid {
+    height: 35vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.howto__text {}
+.module__grid__item {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    width: 40%;
+    height: auto;
+}
+
+.module__grid__item img {
+    flex: 1;
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.module__grid__item .module__grid__item__text {
+    flex: 2;
+    margin: 0 1rem;
+}
+
+.howto__section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+.howto__text {
+    align-self: flex-end;
+    flex: 3;
+    width: auto;
+}
+
+.howto__text h2 {
+    color: #0E1B31;
+    font-size: 2.5rem;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.howto__section .computerImage {
+    flex: 1;
+    padding: 0 5vw;
+    max-width: 40vw;
+}
+
+.bgimg {
+    position: absolute;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 30vw;
+    height: 30vw;
+}

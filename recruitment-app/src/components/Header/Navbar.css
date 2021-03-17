@@ -1,26 +1,32 @@
 /* Navbar styling */
 
 /* Logo width and height */
-.logo{
+.logo {
     height: 5rem;
     width: 5rem;
 }
 
 /* Nav text color */
-.navbar-light .navbar-nav .nav-link{
-    color: #000!important;
+.navbar-light .navbar-nav .nav-link {
+    /* color: #fff !important; */
 }
 
 /* Nav text on hover */
-.navbar-light .navbar-nav .nav-link:hover{
-    color: red!important;
+.navbar-light .navbar-nav .nav-link:hover {
+    color: red !important;
 }
 
-.nav-link{
+.nav-link {
     margin: 0 1.5rem 0 1.5rem;
+    color: #fff !important;
+    font-weight: 700;
 }
 
-.navbar{
-    width:50%;
-    margin-left: 35%;
+.navbar {
+    width: 50%;
+    right: 0;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.0);
+    position: absolute !important;
+    color: #fff !important;
 }
