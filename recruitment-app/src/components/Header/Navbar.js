@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import './Navbar.css';
-import logo from '../logo.svg';
+import logo from '../../assets/logo.svg';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -36,7 +36,7 @@ function Header() {
             <Link style={navStyle} to="/">
               <li className="nav-link">Home</li>
             </Link>
-            <Link style={navStyle} to="/about">
+            <Link style={navStyle} to="/company">
               <li className="nav-link">Our Company</li>
             </Link>
             <Link style={navStyle} to="/modules">

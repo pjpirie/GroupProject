@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../logo.svg';
+import logo from '../../assets/logo.svg';
 import { Button } from '@material-ui/core';
 
 function Footer() {

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {Button} from '@material-ui/core';
-import logo from '../components/logo.svg';
+import logo from '../../assets/logo.svg';
 import CheckBoard from '@material-ui/icons/AssignmentTurnedIn';
 import Account from '@material-ui/icons/AccountCircle';
 import Check from '@material-ui/icons/CheckCircleOutlineRounded';
