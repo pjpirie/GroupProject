@@ -1,14 +1,14 @@
 import React, { useState, Fragment } from 'react';
 import './Navbar.css';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Login from './Login/Login';
-import loginBG from '../assets/login_bg.png';
-import Register from './Register/Register';
+import Login from '../Login/Login';
+import loginBG from '../../assets/login_bg.png';
+import Register from '../Register/Register';
 
 Modal.setAppElement('#root');
 
@@ -113,11 +113,6 @@ function Header() {
         <Register />
       </Modal>
     </Fragment>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> bothdev
   )
 }
 

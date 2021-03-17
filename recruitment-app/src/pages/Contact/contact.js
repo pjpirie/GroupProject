@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Navbar from '../components/Navbar.js';
-import Footer from '../components/Footer.js';
+
 
 
 function Contact() {

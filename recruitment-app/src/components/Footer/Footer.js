@@ -30,7 +30,7 @@ function Footer() {
         </div>
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p className="text-xs-center">
+          <p className="text-xs-center margin-bottom-reset">
             &copy;{new Date().getFullYear} Recruitment App
           </p>
         </div>
