@@ -1,7 +1,10 @@
 .footer-main{
-    position:absolute;
-    bottom:0;
     width:100%;
+    position: relative;
+    height: 20vh;
+    margin-top: -20vh;
+    clear: both;
+
     /* min-height:10em; */
     background: #213142;
     color: #fff!important;

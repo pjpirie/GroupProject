@@ -23,4 +23,6 @@
 .navbar{
     width:50%;
     margin-left: 35%;
+    min-height: 10vh!important;
+    /* background: #000; */
 }
