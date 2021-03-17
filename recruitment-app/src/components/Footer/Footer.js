@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import logo from '../../assets/logo.svg';
 import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -21,10 +22,18 @@ function Footer() {
           <div className="col-md-3 col-sm-6">
             <ul className="list-unstyled link-col">
               <h3>Quick Links</h3>
-              <li>Home</li>
-              <li>Course Info</li>
-              <li>Contact</li>
-              <li>Privacy Policy</li>
+              <Link to="/" className="footer-nav">
+                <li>Home</li>
+              </Link>
+              <Link to="/modules" className="footer-nav">
+                <li>Course Information</li>
+              </Link>
+              <Link to="/contact" className="footer-nav">
+                <li>Contact</li>
+              </Link >
+              <Link to="/" className="footer-nav">           
+                <li>Privacy Policy</li>
+              </Link>
             </ul>
           </div>
         </div>

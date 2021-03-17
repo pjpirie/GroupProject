@@ -1,8 +1,8 @@
 .footer-main {
     width: 100%;
     position: relative;
-    height: 20vh;
-    margin-top: -20vh;
+    height: 25vh;
+    margin-top: -25vh;
     clear: both;
     /* min-height:10em; */
     background: #213142;
@@ -42,4 +42,8 @@
 
 .margin-bottom-reset {
     margin-bottom: 0 !important;
+}
+
+.footer-nav, .footer-nav:hover{
+    color: #fff;
 }
