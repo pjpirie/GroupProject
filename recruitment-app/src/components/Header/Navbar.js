@@ -15,15 +15,23 @@ Modal.setAppElement('#root');
 function Header() {
 
   const navStyle = {
-    color: '#fff',
+    color: 'rgba(0,0,0,1)',
     textDecoration: 'none',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
   };
+  const getLinkStyle = (theme) => {
+    if(theme == true){
+      return {color: 'rgba(255,255,255,1)'}
+    }else{
+      return {color: 'rgba(0,0,0,1)'}
+    }  
+  }
 
   const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
   const [registermodalIsOpen, registersetModalIsOpen] = useState(false);
+  const [lightStyle, setLightStyle] = useState(false);
 
   return (
     <Fragment>
@@ -33,20 +41,20 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           {/* <Nav className="mr-auto"> */}
           <Nav>
-            <Link style={navStyle} to="/">
-              <li className="nav-link">Home</li>
+            <Link onClick={() => setLightStyle(true)} style={navStyle} to="/">
+              <li style={getLinkStyle(lightStyle)} className="nav-link">Home</li>
             </Link>
-            <Link style={navStyle} to="/company">
-              <li className="nav-link">Our Company</li>
+            <Link onClick={() => setLightStyle(false)} style={navStyle} to="/company">
+              <li style={getLinkStyle(lightStyle)} className="nav-link">Our Company</li>
             </Link>
-            <Link style={navStyle} to="/modules">
-              <li className="nav-link">Modules</li>
+            <Link onClick={() => setLightStyle(false)} style={navStyle} to="/modules">
+              <li style={getLinkStyle(lightStyle)} className="nav-link">Modules</li>
             </Link>
-            <Link style={navStyle} to="/contact">
-              <li className="nav-link">Contact</li>
+            <Link onClick={() => setLightStyle(false)} style={navStyle} to="/contact">
+              <li style={getLinkStyle(lightStyle)} className="nav-link">Contact</li>
             </Link>
-            <Link style={navStyle} to="/account">
-              <li onClick={() => loginsetModalIsOpen(true)}><AccountCircleIcon /></li>
+            <Link onClick={() => setLightStyle(false)} style={navStyle} to="/account">
+              <li style={getLinkStyle(lightStyle)} onClick={() => loginsetModalIsOpen(true)}><AccountCircleIcon /></li>
             </Link>
           </Nav>
         </Navbar.Collapse>
