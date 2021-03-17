@@ -18,7 +18,7 @@
 
 .nav-link {
     margin: 0 1.5rem 0 1.5rem;
-    color: #fff !important;
+    /* color: #000 !important; */
     font-weight: 700;
 }
 
@@ -28,5 +28,5 @@
     margin: 1rem;
     background-color: rgba(255, 255, 255, 0.0);
     position: absolute !important;
-    color: #fff !important;
+    /* color: #000 !important; */
 }
