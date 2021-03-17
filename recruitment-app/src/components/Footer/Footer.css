@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 .footer-main {
     position: relative;
     width: 100%;
+=======
+.footer-main{
+    width:100%;
+    position: relative;
+    height: 20vh;
+    margin-top: -20vh;
+    clear: both;
+
+>>>>>>> origin/ChrisDev
     /* min-height:10em; */
     background: #213142;
     color: #fff !important;
