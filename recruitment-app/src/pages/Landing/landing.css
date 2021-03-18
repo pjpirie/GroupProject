@@ -76,7 +76,7 @@
 }
 
 .module__grid {
-    height: 35vh;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -91,13 +91,11 @@
 }
 
 .module__grid__item img {
-    flex: 1;
     height: 100px !important;
     width: 100px !important;
 }
 
 .module__grid__item .module__grid__item__text {
-    flex: 2;
     margin: 0 1rem;
 }
 
@@ -138,4 +136,17 @@
     z-index: -1;
     width: 30vw;
     height: 30vw;
+}
+
+.footer__divider {
+    max-width: 50px;
+    max-height: 50px;
+    display: inline-block;
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    background: #fff;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 1;
 }

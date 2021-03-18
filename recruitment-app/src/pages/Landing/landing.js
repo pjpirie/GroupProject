@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import VideoImage from '../../assets/Icon material-slow-motion-video.png';
 import DownloadImage from '../../assets/Icon awesome-download.png';
@@ -6,12 +7,18 @@ import InfoImage from '../../assets/Group 59.png';
 import ComputerImage from '../../assets/computer.png';
 import GirlWithComputerImage from '../../assets/Group 41.png';
 import './landing.css';
+import './landing.responsive.css';
 import ModuleStartCard from '../../components/ModuleStartCard/ModuleStartCard';
 import BGImage1 from '../../assets/Group 58.png';
 
 
 
 function Landing() {
+
+    const [moduleState, setModuleState] = useState(1);
+    useEffect(() => {
+        setModuleState(1);
+    },[]);
     return (
         <div className="Landing">
             <div className="hero__section">
@@ -73,7 +80,8 @@ function Landing() {
                 </div>
                     <img className="computerImage" src={ComputerImage} alt="Imagery of a computer with the first module on the screen"></img>
             </div>
-            <ModuleStartCard />
+            <ModuleStartCard state={moduleState} setState={setModuleState}/>
+            <span className="footer__divider"></span>
         </div>
 
 
