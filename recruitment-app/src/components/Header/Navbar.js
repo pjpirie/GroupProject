@@ -31,8 +31,7 @@ function Header(props) {
   
   // const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
   // const [registermodalIsOpen, registersetModalIsOpen] = useState(false);
-  const [lightStyle, setLightStyle] = useState(false);
-  const [authStatus, setAuthStatus] = useState(false);
+  const [lightStyle, setLightStyle] = useState(true);
 
   useEffect(() => {
     props.checkAuth();
@@ -56,11 +55,7 @@ function Header(props) {
             <Link onClick={() => setLightStyle(false)} style={navStyle} to="/contact">
               <li style={getLinkStyle(lightStyle)} className="nav-link">Contact</li>
             </Link>
-            {/* <Link onClick={() => setLightStyle(false)} style={navStyle} to="/account">
-              <li style={getLinkStyle(lightStyle)} onClick={() => loginsetModalIsOpen(true)}><AccountCircleIcon /></li>
-            </Link> */}
             <AccountSection getLinkStyle={getLinkStyle} setLightStyle={setLightStyle} navStyle={navStyle} lightStyle={lightStyle}/>
-            {/* <button onClick={props.auth}>Check Auth{props.auth ? "True" : "False"}</button> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

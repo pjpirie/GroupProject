@@ -72,25 +72,28 @@ export default function Login(props) {
     console.log(cookie); 
 
     return (
-        <div className="loginWrapper">
-            <h1 class="sans-heading">LOGIN</h1>
-            <form onSubmit={handleSubmit} className="loginForm">
-                <label>
-                    <p>Email</p>
-                    <input type="text" onChange={e => setEmail(e.target.value)} />
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
-                </label>
-                <div>
-                    <p>Need an account?
-                    <button
-                            onClick={() => {return <Redirect to='/register'/>}}
-                        >Sign up here</button></p>
-                    <button class="login-btn" type="submit">Login</button>
-                </div>
-            </form>
+        <div className="loginPage__Wrapper">
+            <div className="loginWrapper">
+                <h1 class="sans-heading">LOGIN</h1>
+                <form onSubmit={handleSubmit} className="loginForm">
+                    <label>
+                        <p>Email</p>
+                        <input type="text" onChange={e => setEmail(e.target.value)} />
+                    </label>
+                    <label>
+                        <p>Password</p>
+                        <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                    </label>
+                    <div>
+                        <p>Need an account?
+                        <button 
+                        class="btn-clearing register-btn" 
+                        onClick={() => {return <Redirect to='/register'/>}}
+                                >Sign up here</button></p>
+                        <button class=" btn-clearing login-btn" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
