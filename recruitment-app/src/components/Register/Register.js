@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router';
 
-// import './Login.css';
+import './Register.css';
 
 
 
@@ -55,37 +55,47 @@ export default function Register() {
     }
 
     return (
-        <div className="register-wrapper">
-            <h1>Please Register</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <p>First Name</p>
-                    <input type="text" onChange={e => setFirstName(e.target.value)} />
-                </label>
-                <label>
-                    <p>Last Name</p>
-                    <input type="text" onChange={e => setLastName(e.target.value)} />
-                </label>
-                <label>
-                    <p>Email</p>
-                    <input type="text" onChange={e => setEmail(e.target.value)} />
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
-                </label>
-                <label>
-                    <p>Confirm Password</p>
-                    <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
-                </label>
-                <label>
-                    <p>Date of Birth</p>
-                    <input type="date" onChange={e => setDateOfBirth(e.target.value)} />
-                </label>
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
+        
+        <div className="registerPage__Wrapper">
+            <div className="registerWrapper">
+                <h1>Please Register</h1>
+                <form onSubmit={handleSubmit} className="registerForm">
+                    <div className="names">
+                        <label>
+                            <p>First Name</p>
+                            <input type="text" onChange={e => setFirstName(e.target.value)} />
+                        </label>
+                        <label>
+                            <p>Last Name</p>
+                            <input type="text" onChange={e => setLastName(e.target.value)} />
+                        </label>
+                    </div>
+                    <label>
+                        <p>Email</p>
+                        <input type="text" onChange={e => setEmail(e.target.value)} />
+                    </label>
+                    <label>
+                        <p>Password</p>
+                        <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                    </label>
+                    <label>
+                        <p>Confirm Password</p>
+                        <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
+                    </label>
+                    <label>
+                        <p>Date of Birth</p>
+                        <input type="date" onChange={e => setDateOfBirth(e.target.value)} />
+                    </label>
+                    <div>
+                        <p>Got an account?
+                        <button 
+                        class="btn-clearing alt-btn" 
+                        onClick={() => {return <Redirect to='/login'/>}}
+                                >Log in here</button></p>
+                        <button class=" btn-clearing main-btn" type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }

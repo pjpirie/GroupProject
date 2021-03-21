@@ -87,10 +87,10 @@ export default function Login(props) {
                     <div>
                         <p>Need an account?
                         <button 
-                        class="btn-clearing register-btn" 
+                        class="btn-clearing alt-btn" 
                         onClick={() => {return <Redirect to='/register'/>}}
                                 >Sign up here</button></p>
-                        <button class=" btn-clearing login-btn" type="submit">Login</button>
+                        <button class=" btn-clearing main-btn" type="submit">Login</button>
                     </div>
                 </form>
             </div>
