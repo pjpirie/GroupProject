@@ -86,7 +86,7 @@ export default function Login(props) {
                 <div>
                     <p>Need an account?
                     <button
-                            onClick={() => props.openRegister(true)}
+                            onClick={() => {return <Redirect to='/register'/>}}
                         >Sign up here</button></p>
                     <button class="login-btn" type="submit">Login</button>
                 </div>
