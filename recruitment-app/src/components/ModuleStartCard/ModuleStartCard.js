@@ -4,7 +4,7 @@ import './ModuleStartCard.css';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 function ModuleStartCard(props) {
-    if(props.state == 1){
+    if(props.state === 1){
         return (
             <Fragment>
             <span className="tab1" style={{ backgroundColor: '#565788'}}></span>
@@ -20,7 +20,7 @@ function ModuleStartCard(props) {
             </span>
             </Fragment>
         );
-    }else if(props.state == 2){
+    }else if(props.state === 2){
         return (
             <Fragment>
             <span className="tab1" style={{ backgroundColor: '#BCBDC7'}}></span>
@@ -36,7 +36,7 @@ function ModuleStartCard(props) {
             </span>
             </Fragment>
         );
-    }else if(props.state == 3){
+    }else if(props.state === 3){
         return (
             <Fragment>
             <span className="tab1" style={{ backgroundColor: '#8588A1'}}></span>

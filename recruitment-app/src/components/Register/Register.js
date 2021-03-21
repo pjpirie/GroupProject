@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router';
 
 // import './Login.css';
 
-async function RegisterUser(credentials) {
-    return fetch('http://localhost:5000/user/register', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-    })
-        .then(data => data.json());
-}
+
 
 export default function Register() {
 
@@ -22,6 +14,19 @@ export default function Register() {
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
     const [DateOfBirth, setDateOfBirth] = useState();
+    const [redirect, setRedirect] = useState(false);
+
+    async function RegisterUser(credentials) {
+        return fetch('http://localhost:5000/user/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        })
+            .then(data => data.json())
+            .then(() => setRedirect(true));
+    }
 
     const handleSubmit = async e => {
         checkMatch(document.getElementById("confirmPass").value);
@@ -44,6 +49,9 @@ export default function Register() {
     const checkMatch = p => {
         p === Password ? PasswordsMatch = true : PasswordsMatch = false;
         console.table([p, Password, PasswordsMatch]);
+    }
+    if(redirect){
+        return <Redirect to='/login'/>
     }
 
     return (

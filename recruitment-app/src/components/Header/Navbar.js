@@ -1,45 +1,48 @@
-import React, { useState, Fragment } from 'react';
-import './Navbar.css';
-import logo from '../../assets/logo.svg';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import React, { useState, Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Navbar.css';
+import { Navbar, Nav } from 'react-bootstrap';
 import Modal from 'react-modal';
-import Login from '../Login/Login';
-import loginBG from '../../assets/login_bg.png';
-import Register from '../Register/Register';
+import AccountSection from '../AccountSection/AccountSection'
 
 Modal.setAppElement('#root');
 
-function Header() {
+const navStyle = {
+  color: 'rgba(0,0,0,1)',
+  textDecoration: 'none',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+};
+const getLinkStyle = (theme) => {
+  if(theme === true){
+    return {color: 'rgba(255,255,255,1)'}
+  }else{
+    return {color: 'rgba(0,0,0,1)'}
+  }  
+}
 
-  const navStyle = {
-    color: 'rgba(0,0,0,1)',
-    textDecoration: 'none',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
-  const getLinkStyle = (theme) => {
-    if(theme == true){
-      return {color: 'rgba(255,255,255,1)'}
-    }else{
-      return {color: 'rgba(0,0,0,1)'}
-    }  
-  }
 
-  const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
-  const [registermodalIsOpen, registersetModalIsOpen] = useState(false);
+
+
+
+function Header(props) {
+  
+  // const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
+  // const [registermodalIsOpen, registersetModalIsOpen] = useState(false);
   const [lightStyle, setLightStyle] = useState(false);
+  const [authStatus, setAuthStatus] = useState(false);
+
+  useEffect(() => {
+    props.checkAuth();
+  },[]);
 
   return (
     <Fragment>
-      <Navbar collapseOnSelect expand="lg" variant="light" className="navbar">
-        {/* <Navbar.Brand href="#home"><img src={logo} className="d-inline-block align-top logo" alt="Website Logo" /></Navbar.Brand> */}
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar collapseOnSelect expand="lg" variant="light" className="navbar">        
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* <Nav className="mr-auto"> */}
           <Nav>
             <Link onClick={() => setLightStyle(true)} style={navStyle} to="/">
               <li style={getLinkStyle(lightStyle)} className="nav-link">Home</li>
@@ -53,13 +56,19 @@ function Header() {
             <Link onClick={() => setLightStyle(false)} style={navStyle} to="/contact">
               <li style={getLinkStyle(lightStyle)} className="nav-link">Contact</li>
             </Link>
-            <Link onClick={() => setLightStyle(false)} style={navStyle} to="/account">
+            {/* <Link onClick={() => setLightStyle(false)} style={navStyle} to="/account">
               <li style={getLinkStyle(lightStyle)} onClick={() => loginsetModalIsOpen(true)}><AccountCircleIcon /></li>
-            </Link>
+            </Link> */}
+            <AccountSection getLinkStyle={getLinkStyle} setLightStyle={setLightStyle} navStyle={navStyle} lightStyle={lightStyle}/>
+            {/* <button onClick={props.auth}>Check Auth{props.auth ? "True" : "False"}</button> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Modal
+
+
+
+
+      {/* <Modal
         isOpen={loginmodalIsOpen}
         onRequestClose={() => loginsetModalIsOpen(false)}
         style={{
@@ -123,7 +132,7 @@ function Header() {
         }}
       >
         <Register />
-      </Modal>
+      </Modal> */}
     </Fragment>
   )
 }

@@ -1,4 +1,3 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {Button} from '@material-ui/core';
 import logo from '../../assets/logo.svg';
 import CheckBoard from '@material-ui/icons/AssignmentTurnedIn';
@@ -29,7 +28,7 @@ function Company() {
                     <p>
                         In qui irure laborum duis mollit incididunt proident laboris minim excepteur voluptate velit reprehenderit ea. Deserunt ullamco quis do sint dolor sunt anim nostrud ex enim incididunt do. Nostrud pariatur ex tempor irure proident labore ea incididunt do sint occaecat non. Et nostrud reprehenderit id dolor ea veniam ullamco. Ut Lorem eiusmod minim quis labore non nostrud. Ad anim enim in consectetur officia occaecat mollit fugiat. Veniam culpa exercitation officia sunt eiusmod eiusmod quis officia ex qui esse anim velit. Commodo nisi cupidatat pariatur velit deserunt. Commodo est irure nostrud laborum esse anim mollit. Et magna ex cillum veniam veniam esse anim. Est reprehenderit deserunt est pariatur et. Cillum do fugiat proident reprehenderit.
                     </p>
-                    <img src={logo} alt="Image" width="100" />
+                    <img src={logo} alt="" width="100" />
                 </div>
                 <div className="card-2">
                     <CheckBoard />
@@ -37,7 +36,7 @@ function Company() {
                     <p>
                         In qui irure laborum duis mollit incididunt proident laboris minim excepteur voluptate velit reprehenderit ea. Deserunt ullamco quis do sint dolor sunt anim nostrud ex enim incididunt do. Nostrud pariatur ex tempor irure proident labore ea incididunt do sint occaecat non. Et nostrud reprehenderit id dolor ea veniam ullamco. Ut Lorem eiusmod minim quis labore non nostrud. Ad anim enim in consectetur officia occaecat mollit fugiat. Veniam culpa exercitation officia sunt eiusmod eiusmod quis officia ex qui esse anim velit. Commodo nisi cupidatat pariatur velit deserunt. Commodo est irure nostrud laborum esse anim mollit. Et magna ex cillum veniam veniam esse anim. Est reprehenderit deserunt est pariatur et. Cillum do fugiat proident reprehenderit.
                     </p>
-                    <img src={logo} alt="Image" width="100" />
+                    <img src={logo} alt="" width="100" />
                 </div>
                 <div className="card-1">
                     <CheckBoard />
@@ -45,7 +44,7 @@ function Company() {
                     <p>
                         In qui irure laborum duis mollit incididunt proident laboris minim excepteur voluptate velit reprehenderit ea. Deserunt ullamco quis do sint dolor sunt anim nostrud ex enim incididunt do. Nostrud pariatur ex tempor irure proident labore ea incididunt do sint occaecat non. Et nostrud reprehenderit id dolor ea veniam ullamco. Ut Lorem eiusmod minim quis labore non nostrud. Ad anim enim in consectetur officia occaecat mollit fugiat. Veniam culpa exercitation officia sunt eiusmod eiusmod quis officia ex qui esse anim velit. Commodo nisi cupidatat pariatur velit deserunt. Commodo est irure nostrud laborum esse anim mollit. Et magna ex cillum veniam veniam esse anim. Est reprehenderit deserunt est pariatur et. Cillum do fugiat proident reprehenderit.
                     </p>
-                    <img src={logo} alt="Image" width="100" />
+                    <img src={logo} alt="" width="100" />
                 </div>
                 <div className="card-2">
                     <CheckBoard />
@@ -53,7 +52,7 @@ function Company() {
                     <p>
                         In qui irure laborum duis mollit incididunt proident laboris minim excepteur voluptate velit reprehenderit ea. Deserunt ullamco quis do sint dolor sunt anim nostrud ex enim incididunt do. Nostrud pariatur ex tempor irure proident labore ea incididunt do sint occaecat non. Et nostrud reprehenderit id dolor ea veniam ullamco. Ut Lorem eiusmod minim quis labore non nostrud. Ad anim enim in consectetur officia occaecat mollit fugiat. Veniam culpa exercitation officia sunt eiusmod eiusmod quis officia ex qui esse anim velit. Commodo nisi cupidatat pariatur velit deserunt. Commodo est irure nostrud laborum esse anim mollit. Et magna ex cillum veniam veniam esse anim. Est reprehenderit deserunt est pariatur et. Cillum do fugiat proident reprehenderit.
                     </p>
-                    <img src={logo} alt="Image" width="100" />
+                    <img src={logo} alt="" width="100" />
                 </div>
                 <div className="card-1">
                     <CheckBoard />
@@ -61,7 +60,7 @@ function Company() {
                     <p>
                         In qui irure laborum duis mollit incididunt proident laboris minim excepteur voluptate velit reprehenderit ea. Deserunt ullamco quis do sint dolor sunt anim nostrud ex enim incididunt do. Nostrud pariatur ex tempor irure proident labore ea incididunt do sint occaecat non. Et nostrud reprehenderit id dolor ea veniam ullamco. Ut Lorem eiusmod minim quis labore non nostrud. Ad anim enim in consectetur officia occaecat mollit fugiat. Veniam culpa exercitation officia sunt eiusmod eiusmod quis officia ex qui esse anim velit. Commodo nisi cupidatat pariatur velit deserunt. Commodo est irure nostrud laborum esse anim mollit. Et magna ex cillum veniam veniam esse anim. Est reprehenderit deserunt est pariatur et. Cillum do fugiat proident reprehenderit.
                     </p>
-                    <img src={logo} alt="Image" width="100" />
+                    <img src={logo} alt="" width="100" />
                 </div>
                 <div className="card-2">
                     <CheckBoard />
@@ -69,7 +68,7 @@ function Company() {
                     <p>
                         In qui irure laborum duis mollit incididunt proident laboris minim excepteur voluptate velit reprehenderit ea. Deserunt ullamco quis do sint dolor sunt anim nostrud ex enim incididunt do. Nostrud pariatur ex tempor irure proident labore ea incididunt do sint occaecat non. Et nostrud reprehenderit id dolor ea veniam ullamco. Ut Lorem eiusmod minim quis labore non nostrud. Ad anim enim in consectetur officia occaecat mollit fugiat. Veniam culpa exercitation officia sunt eiusmod eiusmod quis officia ex qui esse anim velit. Commodo nisi cupidatat pariatur velit deserunt. Commodo est irure nostrud laborum esse anim mollit. Et magna ex cillum veniam veniam esse anim. Est reprehenderit deserunt est pariatur et. Cillum do fugiat proident reprehenderit.
                     </p>
-                    <img src={logo} alt="Image" width="100" />
+                    <img src={logo} alt="" width="100" />
                 </div>
             </div>
             <div className="Divider-top">
@@ -83,7 +82,7 @@ function Company() {
                     Id dolor eiusmod ad mollit laboris commodo officia consequat aliqua reprehenderit qui dolore ea ipsum. Anim ex elit eu consequat. Occaecat duis nulla consectetur velit laboris commodo. Lorem proident non eiusmod pariatur aute elit minim quis. Aliquip magna eiusmod incididunt incididunt commodo.
                     Minim pariatur proident veniam sint cillum incididunt sunt dolore eiusmod quis sunt et duis ut. Magna anim qui reprehenderit reprehenderit cupidatat nulla pariatur. Duis sit cillum mollit duis ullamco deserunt. Cillum sit est adipisicing ut enim elit. Sunt in amet dolor cupidatat deserunt qui ipsum sunt irure velit adipisicing culpa laboris qui. Officia aliquip elit magna anim. Fugiat qui sunt aliqua ex anim irure enim veniam in dolore consequat.
                 </p>
-                <img src={logo} alt="Image" width="300" />
+                <img src={logo} alt="" width="300" />
             </div>
             <div className="Divider-bottom">
                 <h1>" This programme is designed to priovide a template for you to access skills and techiques and target these on achieving your goal of successding in recruitment situations "</h1>

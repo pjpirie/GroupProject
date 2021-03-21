@@ -3,6 +3,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const passwordHash = require('password-hash');
 const jwt = require('jsonwebtoken');
+const ejwt = require('express-jwt');
+const cookieParser = require('cookie-parser');
 
 let User = require('./schemas/userSchema');
 
@@ -15,6 +17,7 @@ const jwtSecret = process.env.JWT_SECRET;
 
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser(jwtSecret));
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
@@ -88,7 +91,9 @@ app.post('/user/login', (req, res) => {
                 // console.log(jwtSecret);
                 const token = jwt.sign(JSON.stringify(data._id), jwtSecret);
                 // const token = "Placeholder";
-                res.send({ data: data, token: token });
+                res.cookie('token', token, { httpOnly: true });
+                res.cookie('logged_in', true, { httpOnly: true });
+                res.json({ token })
             } else {
                 res.json("Error: Incorrect Password");
             }
@@ -106,6 +111,37 @@ app.post('/user/check', (req, res) => {
         }
     });
 });
+
+app.post('/user/auth', (req, res) => {
+    console.log("[Server] Checking Token");
+    console.log(req.headers.cookie);
+    if(req.headers.cookie == undefined){
+        console.log("Cookie Undefined");
+        res.json({tokenValid: false});
+    }else{
+        let UserHeaders = req.headers.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+        if(UserHeaders.token != (null || undefined)){
+            if(jwt.verify(UserHeaders.token, jwtSecret)){
+                console.log("Token Valid");
+                res.json({tokenValid: true});
+            }else{
+                console.log("Token Invalid");
+                res.json({tokenValid: false});
+            }
+        }else{
+            console.log("Token Undefined");
+            res.json({tokenValid: false});
+        }
+    }   
+});
+
+app.post('/user/logout', (req, res) => {
+    console.log("[Server] Logging out: ");
+    res.clearCookie('token', { httpOnly: true });
+    res.status(200).send("Cleared token");
+});
+
+
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);

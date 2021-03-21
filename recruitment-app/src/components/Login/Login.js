@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useSelector,useDispatch } from 'react-redux';
+import {setLogged} from '../../actions';
+import { Redirect } from 'react-router';
+
 import './Login.css';
 
 async function LoginUser(credentials) {
-    return fetch('http://localhost:5000/user/login', {
+    return fetch('/user/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(credentials)
     })
-        .then(data => data.json())
-        .then(data => document.cookie = "Authorisation=" + JSON.stringify(data) + "; SameSite=None; Secure");
+        .then(data => data.json());
+        // .then(data => document.cookie = "Authorisation=" + JSON.stringify(data) + "; SameSite=None; Secure");
 }
 
 async function accountExists(email) {
     const emailJSONObject = { Email: email };
     // console.log("Email: " + email);
-    return fetch('http://localhost:5000/user/check', {
+    return fetch('/user/check', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -28,10 +30,18 @@ async function accountExists(email) {
         .then(data => data.json());
 }
 
+let cookie = document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+
 export default function Login(props) {
 
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
+    const dispatch = useDispatch();
+    const isLogged = useSelector(state => state.isLogged);
+
+    if(isLogged){
+        return <Redirect to='/' />
+    }
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -43,16 +53,23 @@ export default function Login(props) {
             //     Email,
             //     Password
             // });
-            console.log(await LoginUser({
+            let logged_in = await LoginUser({
                 Email,
                 Password
-            }));
+            });
+
+            console.log(logged_in);
+            console.log(logged_in.token);
+            if(logged_in.token != undefined){
+                dispatch(setLogged());
+                return <Redirect to='/' />
+            }
         } catch (e) {
             console.error(e);
         }
     }
 
-
+    console.log(cookie); 
 
     return (
         <div className="loginWrapper">
