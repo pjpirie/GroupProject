@@ -53,6 +53,7 @@ function App() {
             <Route path="/modules" component={Modules} />
             <Route path="/account" component={Account} />
           </Switch>
+            <span className="footer__divider"></span>
           <Footer />
         </div>
       </div>

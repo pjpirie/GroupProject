@@ -110,7 +110,6 @@ Everyone will access Module 1, Preparation, as this is relevant irrespective of 
                     <h5>Sign up using your email address and start your personalised learning journey.</h5>
             </div>
 
-            <span className="footer__divider"></span>
         </div>
 
 

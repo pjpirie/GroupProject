@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import {setLightNav} from '../../actions';
 
 import './Register.css';
+import './Register.responsive.css';
 
 
 

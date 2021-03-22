@@ -142,18 +142,7 @@
     height: 30vw;
 }
 
-.footer__divider {
-    max-width: 50px;
-    max-height: 50px;
-    display: inline-block;
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    background: #fff;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    z-index: 1;
-}
+
 
 .info__section {
     padding: 2rem 2rem;
