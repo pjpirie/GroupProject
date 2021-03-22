@@ -1,9 +1,11 @@
 import {useEffect, useState} from 'react';
-import VideoImage from '../../assets/Icon material-slow-motion-video.png';
-import DownloadImage from '../../assets/Icon awesome-download.png';
-import AudioImage from '../../assets/Icon metro-multitrack-audio.png';
-import InfoImage from '../../assets/Group 59.png';
-import ComputerImage from '../../assets/computer.png';
+import ClipboardImage from '../../assets/clipboard.png';
+import MessageImage from '../../assets/msg.png';
+import LaptopImage from '../../assets/laptop.png';
+import PeopleImage from '../../assets/people.png';
+import FacesImage from '../../assets/faces.png';
+import PencilImage from '../../assets/pencil.png';
+import ComputerImage from '../../assets/laptopandsmartphone.png';
 import GirlWithComputerImage from '../../assets/Group 41.png';
 import './landing.css';
 import './landing.responsive.css';
@@ -32,14 +34,20 @@ function Landing() {
 
                     Our Recruitment Skills Development Programme is designed to provide a straightforward means to enhance your chances of success by applying relevant learning in a structure focused on your specific needs.  
                     </p>
-                    <button>Learn More</button>
+                    {/* <button>Learn More</button> */}
                 </div>
             </div>
             <div className="howto__section">
                 <div className="howto__text">
                     <h2>How to use this <br />Programme</h2>
                     <p>
-                        Everyone will access Module 1, Preparation, as this is relevant irrespective of the structure of the recruitment event in which you will be participating. From there you will utilise other modules depending on the nature of the process in which you will be participating.
+                    The programme is divided into six modules covering skills and techniques to enable you to showcase your personality and key attributes in the main activities utilised in modern recruitment situations. You can apply your learning by inputting “Action Items” specific to you. These can be stored and printed to provide your Personal Action Plan. <br /><br />
+
+Everyone will access Module 1, Preparation, as this is relevant irrespective of the structure of the recruitment event in which you will be participating. From there you will utilise other modules depending on the nature of the process in which you will be participating.
+
+
+
+
                 </p>
                 </div>
             </div>
@@ -48,18 +56,24 @@ function Landing() {
                     <h2>Key Module Elements</h2>
                     <div className="module__grid">
                         <div className="module__grid__item">
-                            <img src={VideoImage} alt="representing a video"></img>
+                            <img src={ClipboardImage} alt="representing the preparation module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={InfoImage} alt="representing information"></img>
+                            <img src={MessageImage} alt="representing the face to face interview module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={AudioImage} alt="representing a audio"></img>
+                            <img src={LaptopImage} alt="representing the virtual/remote interview module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={DownloadImage} alt="representing a downloading"></img>
+                            <img src={PeopleImage} alt="representing the group exercises module"></img>
                         </div>
-                    </div>
+                        <div className="module__grid__item">
+                            <img src={FacesImage} alt="representing the role play module"></img>
+                        </div>
+                        <div className="module__grid__item">
+                            <img src={PencilImage} alt="representing the written exercise module"></img>
+                        </div>
+                    </div> 
                 </div>
             </div>
             <img className="bgimg" src={BGImage1} alt="Background"></img>
@@ -68,21 +82,21 @@ function Landing() {
                     <div className="info__section__points__container">
                         <h2>Within each module</h2>
                         <div className="info__section__point">
-                            <AddIcon style={{color: '#60ff70'}} />
+                            <AddIcon style={{color: '#71A068'}} />
                             <p>
                                 Short video with audio commentary<br />
                                 (Relevant recruitment scenarios)
                             </p>
                         </div>
                         <div className="info__section__point">
-                            <AddIcon style={{color: '#60ff70'}} />
+                            <AddIcon style={{color: '#71A068'}} />
                             <p>
                                 Key Learning Points<br />
                                 (Detailed content)
                             </p>
                         </div>
                         <div className="info__section__point">
-                            <AddIcon style={{color: '#60ff70'}} />
+                            <AddIcon style={{color: '#71A068'}} />
                             <p>
                                 Action Items<br />
                                 (Personal Action Plan – Download, Save, Print)

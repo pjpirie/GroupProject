@@ -17,6 +17,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    color: #fff;
 }
 
 .about__section {
@@ -178,6 +179,7 @@
 
 .info__section__point {
     display: flex;
+    margin: 1rem 0;
 }
 
 .computerImage {
