@@ -1,8 +1,7 @@
 .footer-main {
     width: 100%;
     position: relative;
-    height: 25vh;
-    margin-top: -25vh;
+    height: auto;
     clear: both;
     /* min-height:10em; */
     background: #213142;
@@ -11,9 +10,11 @@
     padding: 1.2rem;
 }
 
-.container {
+.footer__container {
     margin: 2rem auto 0 auto;
-    width: 70vw !important;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
 }
 
 .row {
@@ -44,6 +45,7 @@
     margin-bottom: 0 !important;
 }
 
-.footer-nav, .footer-nav:hover{
+.footer-nav,
+.footer-nav:hover {
     color: #fff;
 }

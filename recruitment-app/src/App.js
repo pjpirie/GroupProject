@@ -53,9 +53,9 @@ function App() {
             <Route path="/modules" component={Modules} />
             <Route path="/account" component={Account} />
           </Switch>
+          <Footer />
         </div>
       </div>
-      <Footer />
     </Router>
   );
 }

@@ -1,0 +1,13 @@
+@media (max-width:500px) {
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer__container .col {
+        margin: 1rem auto;
+    }
+
+    .col3 {
+        width: auto;
+    }
+}
