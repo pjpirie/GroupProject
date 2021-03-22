@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background: url('../../assets/login_bg.png'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .loginWrapper {
@@ -17,7 +21,8 @@
     align-items: center;
     background: #ffffff;
     padding: 4rem 2rem 2rem 2rem;
-    border-radius: 15px
+    border-radius: 15px;
+    box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .loginForm {
@@ -82,4 +87,5 @@
     padding: 0px 10px;
     font-weight: 500;
     color: #213142;
+    background: #fff;
 }

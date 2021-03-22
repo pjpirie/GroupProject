@@ -4,9 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import Modal from 'react-modal';
-import AccountSection from '../AccountSection/AccountSection'
+import AccountSection from '../AccountSection/AccountSection';
+import { useSelector,useDispatch } from 'react-redux';
+import {setLightNav} from '../../actions';
 
 Modal.setAppElement('#root');
+
 
 const navStyle = {
   color: 'rgba(0,0,0,1)',
@@ -29,9 +32,15 @@ const getLinkStyle = (theme) => {
 
 function Header(props) {
   
+
+  
+const dispatch = useDispatch();
+let isNavLight = useSelector(state => state.isLightNav);
   // const [loginmodalIsOpen, loginsetModalIsOpen] = useState(false);
   // const [registermodalIsOpen, registersetModalIsOpen] = useState(false);
-  const [lightStyle, setLightStyle] = useState(true);
+  const setLightStyle = (data) => {
+    dispatch(setLightNav(data))
+  }
 
   useEffect(() => {
     props.checkAuth();
@@ -44,18 +53,18 @@ function Header(props) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Link onClick={() => setLightStyle(true)} style={navStyle} to="/">
-              <li style={getLinkStyle(lightStyle)} className="nav-link">Home</li>
+              <li style={getLinkStyle(isNavLight)} className="nav-link">Home</li>
             </Link>
             <Link onClick={() => setLightStyle(false)} style={navStyle} to="/company">
-              <li style={getLinkStyle(lightStyle)} className="nav-link">Our Company</li>
+              <li style={getLinkStyle(isNavLight)} className="nav-link">Our Company</li>
             </Link>
             <Link onClick={() => setLightStyle(false)} style={navStyle} to="/modules">
-              <li style={getLinkStyle(lightStyle)} className="nav-link">Modules</li>
+              <li style={getLinkStyle(isNavLight)} className="nav-link">Modules</li>
             </Link>
             <Link onClick={() => setLightStyle(false)} style={navStyle} to="/contact">
-              <li style={getLinkStyle(lightStyle)} className="nav-link">Contact</li>
+              <li style={getLinkStyle(isNavLight)} className="nav-link">Contact</li>
             </Link>
-            <AccountSection getLinkStyle={getLinkStyle} setLightStyle={setLightStyle} navStyle={navStyle} lightStyle={lightStyle}/>
+            <AccountSection getLinkStyle={getLinkStyle} setLightStyle={setLightStyle} navStyle={navStyle} lightStyle={isNavLight}/>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

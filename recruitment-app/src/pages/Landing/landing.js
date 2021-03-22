@@ -12,14 +12,16 @@ import './landing.responsive.css';
 import ModuleStartCard from '../../components/ModuleStartCard/ModuleStartCard';
 import BGImage1 from '../../assets/Group 58.png';
 import AddIcon from '@material-ui/icons/Add';
+import {setLightNav} from '../../actions';
+import {useDispatch} from 'react-redux';
 
 
 
 function Landing() {
+    const dispatch = useDispatch();
 
-    const [moduleState, setModuleState] = useState(1);
     useEffect(() => {
-        setModuleState(1);
+        dispatch(setLightNav(true));
     },[]);
     return (
         <div className="Landing">

@@ -14,3 +14,21 @@ export const isLogged = () => {
         type: 'CHECK'
     }
 }
+
+export const setLightNav = (data) => {
+    if(data){
+        return {
+            type: 'LIGHT'
+        }
+    }else{
+        return {
+            type: 'DARK'
+        }
+    }
+}
+
+export const isLightNav = () => {
+    return {
+        type: 'CHECK'
+    }
+}
