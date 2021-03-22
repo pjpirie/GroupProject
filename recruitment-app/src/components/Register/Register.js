@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router';
+import { useDispatch } from 'react-redux';
+import {setLightNav} from '../../actions';
 
 import './Register.css';
 
 
 
 export default function Register() {
+    const dispatch = useDispatch();
+    
+    useEffect(() =>{
+        dispatch(setLightNav(true));
+    }, []);
 
     let PasswordsMatch = false;
     const [FirstName, setFirstName] = useState();

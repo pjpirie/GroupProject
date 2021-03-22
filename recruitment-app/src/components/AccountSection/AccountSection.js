@@ -11,9 +11,7 @@ function AccountSection(props) {
     const { setLightStyle, navStyle, getLinkStyle, lightStyle} = props;
     const dispatch = useDispatch();
 
-    // useEffect(() =>{
-    //     checkAuth()
-    // }, []);
+
 
     async function logout() {
         return await fetch('/user/logout', {
@@ -46,10 +44,10 @@ function AccountSection(props) {
     }else{
         return (
             <Fragment>
-                <Link onClick={() => setLightStyle(false)} style={navStyle} to="/login">
+                <Link onClick={() => setLightStyle(true)} style={navStyle} to="/login">
                     <li style={getLinkStyle(lightStyle)} className="nav-link">Login</li>
                 </Link>
-                <Link onClick={() => setLightStyle(false)} style={navStyle} to="/register">
+                <Link onClick={() => setLightStyle(true)} style={navStyle} to="/register">
                     <li style={getLinkStyle(lightStyle)} className="nav-link">Register</li>
                 </Link>
             </Fragment>

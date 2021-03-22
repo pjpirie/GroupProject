@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
-import {setLogged} from '../../actions';
+import {setLogged, setLightNav} from '../../actions';
 import { Redirect } from 'react-router';
 
 import './Login.css';
+import './Login.responsive.css';
 
 async function LoginUser(credentials) {
     return fetch('/user/login', {
@@ -34,10 +35,15 @@ let cookie = document.cookie.split(';').map(cookie => cookie.split('=')).reduce(
 
 export default function Login(props) {
 
+    
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
-    const dispatch = useDispatch();
     const isLogged = useSelector(state => state.isLogged);
+    const dispatch = useDispatch();
+    
+    useEffect(() =>{
+        dispatch(setLightNav(true));
+    }, []);
 
     if(isLogged){
         return <Redirect to='/' />

@@ -1,0 +1,25 @@
+@media (max-width:1050px) {}
+
+@media (max-width:500px) {
+    .loginWrapper {
+        width: 90%;
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .loginForm div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .loginForm div p {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .loginForm label {
+        padding: 0 5px;
+        margin: 10px 0 5px;
+    }
+
+}
+
