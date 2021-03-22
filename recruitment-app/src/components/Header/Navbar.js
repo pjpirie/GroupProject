@@ -42,7 +42,7 @@ function Header(props) {
       <Navbar collapseOnSelect expand="lg" variant="light" className="navbar">        
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav>
+          <Nav className="mr-auto">
             <Link onClick={() => setLightStyle(true)} style={navStyle} to="/">
               <li style={getLinkStyle(lightStyle)} className="nav-link">Home</li>
             </Link>

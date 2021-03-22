@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
@@ -10,7 +10,7 @@ import Contact from './pages/Contact/contact';
 import Company from './pages/Company/Company';
 import Modules from './pages/Modules/Modules';
 import Account from './pages/Account/Account';
-import { useSelector,useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {setLogged} from './actions';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
