@@ -64,8 +64,4 @@
     .progress__bar {
         width: 80vw !important;
     }
-
-    .info__section__container {
-        flex-direction: column;
-    }
 }

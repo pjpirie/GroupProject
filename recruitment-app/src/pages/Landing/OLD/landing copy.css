@@ -58,12 +58,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 4rem 1rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
     margin-top: 2rem;
 }
 
 .module__section__content {
-    width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -76,11 +76,10 @@
 }
 
 .module__grid {
-    width: 100%;
-    max-width: 1200px;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .module__grid__item {
@@ -89,8 +88,6 @@
     margin: 2rem;
     width: 40%;
     height: auto;
-    justify-content: center;
-    align-items: center;
 }
 
 .module__grid__item img {
@@ -106,7 +103,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin: 4rem 2rem;
+    margin: 2rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -152,36 +149,4 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: 1;
-}
-
-.info__section {
-    padding: 2rem;
-}
-
-.info__section h5 {
-    text-align: center;
-    margin: 2rem 0 5rem 0;
-    font-weight: 700;
-}
-
-.info__section__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info__section__points__container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.info__section__point {
-    display: flex;
-}
-
-.computerImage {
-    max-width: 500px;
-    width: 100%;
-    margin: 2rem;
 }

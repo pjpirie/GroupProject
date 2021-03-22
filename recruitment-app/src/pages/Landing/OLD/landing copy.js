@@ -9,7 +9,6 @@ import './landing.css';
 import './landing.responsive.css';
 import ModuleStartCard from '../../components/ModuleStartCard/ModuleStartCard';
 import BGImage1 from '../../assets/Group 58.png';
-import AddIcon from '@material-ui/icons/Add';
 
 
 
@@ -35,6 +34,42 @@ function Landing() {
                     <button>Learn More</button>
                 </div>
             </div>
+            <div className="module__section">
+                <div className="module__section__content">    
+                    <h2>Key Module Elements</h2>
+                    <div className="module__grid">
+                        <div className="module__grid__item">
+                            <img src={VideoImage} alt="representing a video"></img>
+                            <div className="module__grid__item__text">
+                            <h3>Video</h3>
+                            <p>Illustrations of recruitment situations</p>
+                            </div>
+                        </div>
+                        <div className="module__grid__item">
+                            <img src={InfoImage} alt="representing information"></img>
+                            <div className="module__grid__item__text">
+                            <h3>Learning Points</h3>
+                            <p>Detailed key learning points for each module</p>
+                            </div>
+                        </div>
+                        <div className="module__grid__item">
+                            <img src={AudioImage} alt="representing a audio"></img>
+                            <div className="module__grid__item__text">
+                            <h3>Audio</h3>
+                            <p>Commentary of information relevant to each module</p>
+                            </div>
+                        </div>
+                        <div className="module__grid__item">
+                            <img src={DownloadImage} alt="representing a downloading"></img>
+                            <div className="module__grid__item__text">
+                            <h3>Activities</h3>
+                            <p>Downloadable personal recruitment project plan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <img className="bgimg" src={BGImage1} alt="Background"></img>
             <div className="howto__section">
                 <div className="howto__text">
                     <h2>How to use this <br />Programme</h2>
@@ -42,58 +77,9 @@ function Landing() {
                         Everyone will access Module 1, Preparation, as this is relevant irrespective of the structure of the recruitment event in which you will be participating. From there you will utilise other modules depending on the nature of the process in which you will be participating.
                 </p>
                 </div>
-            </div>
-            <div className="module__section">
-                <div className="module__section__content">    
-                    <h2>Key Module Elements</h2>
-                    <div className="module__grid">
-                        <div className="module__grid__item">
-                            <img src={VideoImage} alt="representing a video"></img>
-                        </div>
-                        <div className="module__grid__item">
-                            <img src={InfoImage} alt="representing information"></img>
-                        </div>
-                        <div className="module__grid__item">
-                            <img src={AudioImage} alt="representing a audio"></img>
-                        </div>
-                        <div className="module__grid__item">
-                            <img src={DownloadImage} alt="representing a downloading"></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img className="bgimg" src={BGImage1} alt="Background"></img>
-            <div className="info__section">
-                <div className="info__section__container">
-                    <div className="info__section__points__container">
-                        <h2>Within each module</h2>
-                        <div className="info__section__point">
-                            <AddIcon style={{color: '#60ff70'}} />
-                            <p>
-                                Short video with audio commentary<br />
-                                (Relevant recruitment scenarios)
-                            </p>
-                        </div>
-                        <div className="info__section__point">
-                            <AddIcon style={{color: '#60ff70'}} />
-                            <p>
-                                Key Learning Points<br />
-                                (Detailed content)
-                            </p>
-                        </div>
-                        <div className="info__section__point">
-                            <AddIcon style={{color: '#60ff70'}} />
-                            <p>
-                                Action Items<br />
-                                (Personal Action Plan – Download, Save, Print)
-                            </p>
-                        </div>
-                    </div>
                     <img className="computerImage" src={ComputerImage} alt="of a computer with the first module on the screen"></img>
-                </div>
-                    <h5>Sign up using your email address and start your personalised learning journey.</h5>
             </div>
-
+            <ModuleStartCard state={moduleState} setState={setModuleState}/>
             <span className="footer__divider"></span>
         </div>
 
