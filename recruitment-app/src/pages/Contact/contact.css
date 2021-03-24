@@ -1,11 +1,11 @@
 .contact-page {
 	width: 100vw;
-	height: 80vh;
+	/* min-height: 80vh; */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 
-	margin-top: 3rem;
+	padding-top: 3rem;
 }
 
 .contact {
@@ -16,13 +16,16 @@
 	margin-top: 3rem;
 
 	width: 100%;
-	height: 100%;
+	/* min-height: 100%; */
 	max-width: 800px;
-	max-height: 600px;
 }
 
 .contact-header {
 	margin-left: 35rem;
+}
+
+.contact-form {
+	height: auto;
 }
 
 .input {
@@ -55,3 +58,28 @@ option {
 	margin-top: 1rem !important;
 	margin-left: 25rem !important;
 }
+
+@media (max-width: 870px) {
+	.contact-header {
+		text-align: center;
+		margin-left: 0;
+	}
+
+	.contact-form {
+		flex-direction: column;
+		margin-bottom: 3rem;
+	}
+
+	.textarea {
+		width: 80%;
+	}
+
+	.submitBtn {
+		margin-top: 0 !important;
+		margin-left: 0 !important;
+	}
+}
+
+/* .link {
+	border: 1px solid green !important;
+} */

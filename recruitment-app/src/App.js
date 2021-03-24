@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
@@ -7,7 +7,6 @@ import Navbar from './components/Header/Navbar';
 import Footer from './components/Footer/Footer';
 import Landing from './pages/Landing/landing';
 import Contact from './pages/Contact/contact';
-import Company from './pages/Company/Company';
 import Modules from './pages/Modules/Modules';
 import Account from './pages/Account/Account';
 import { useDispatch } from 'react-redux';
@@ -49,9 +48,9 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/contact" component={Contact} />
-            <Route path="/company" component={Company} />
             <Route path="/modules" component={Modules} />
             <Route path="/account" component={Account} />
+            <Redirect to="/" />
           </Switch>
             <span className="footer__divider"></span>
           <Footer />

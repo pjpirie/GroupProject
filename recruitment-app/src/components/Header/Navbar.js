@@ -55,9 +55,6 @@ let isNavLight = useSelector(state => state.isLightNav);
             <Link onClick={() => setLightStyle(true)} style={navStyle} to="/">
               <li style={getLinkStyle(isNavLight)} className="nav-link">Home</li>
             </Link>
-            <Link onClick={() => setLightStyle(false)} style={navStyle} to="/company">
-              <li style={getLinkStyle(isNavLight)} className="nav-link">Our Company</li>
-            </Link>
             <Link onClick={() => setLightStyle(false)} style={navStyle} to="/modules">
               <li style={getLinkStyle(isNavLight)} className="nav-link">Modules</li>
             </Link>
