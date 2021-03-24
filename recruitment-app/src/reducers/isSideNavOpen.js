@@ -1,14 +1,14 @@
-const isLogged = (state = false, action) => {
+const isSideNavOpen = (state = true, action) => {
     switch(action.type){
-        case "SIGN_IN":
+        case "OPEN":
             return true;
-        case "SIGN_OUT":
+        case "CLOSED":
             return false;
-        case "CHECK_LOGGED":
+        case "CHECK":
             return state;
         default:
             return state;
     }
 }
 
-export default isLogged;
+export default isSideNavOpen;

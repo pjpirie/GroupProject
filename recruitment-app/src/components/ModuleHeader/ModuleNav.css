@@ -1,0 +1,72 @@
+.ModuleNav {
+    max-width: 250px;
+    width: 20vw;
+    background: #213142;
+    min-height: 100vh;
+    display: inline-block;
+    transition: all 600ms ease-in-out;
+}
+
+.ModuleNav.hidden {
+    margin-left: -19vw;
+}
+
+.ModuleNav__user {
+    color: #fff;
+    text-align: center;
+}
+
+.ModuleNav__link {
+    color: #fff;
+    grid-template-columns: 50% 50%;
+    max-width: 60%;
+    margin: 1rem auto 0;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ModuleNav__link:hover {
+    color: #71A068;
+    text-decoration: none;
+}
+
+a.ModuleNav__link {
+    background: none !important;
+}
+
+.ModuleNav__link span {
+    margin-left: 1rem;
+}
+
+.ModuleNav__close {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ModuleNav__close svg {
+    margin: 1rem;
+}
+
+.ModuleNav__btn {
+    margin: 2rem 0 0 0;
+    padding: 5px 20px;
+    background: #71A068;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    display: flex;
+}
+
+.link_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

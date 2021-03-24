@@ -36,3 +36,19 @@ body {
 	transform: translate(-50%, -50%) rotate(45deg);
 	z-index: 1;
 }
+
+.LoggedIn__Module__Container {
+	display: flex;
+}
+
+.App__MenuOpen__button {
+	margin: 1rem;
+	transition: opacity 400ms ease-in-out, transform 800ms ease-in-out, margin 800ms ease-in-out;
+}
+
+.App__MenuOpen__button.hidden {
+	opacity: 0;
+	transform: scaleX(0);
+	margin-left: 0px;
+	margin-right: 0px;
+}

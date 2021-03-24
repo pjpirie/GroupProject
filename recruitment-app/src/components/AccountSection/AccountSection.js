@@ -36,7 +36,7 @@ function AccountSection(props) {
                     <Link onClick={() => setLightStyle(true)} style={navStyle} to="/">
                         <li onClick={() => {
                             logout();
-                            dispatch(setLogged());
+                            dispatch(setLogged(false));
                         }} style={getLinkStyle(lightStyle)} className="nav-link">Logout</li>
                     </Link>
                 </Fragment>

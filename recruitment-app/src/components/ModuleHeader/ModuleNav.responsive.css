@@ -1,0 +1,26 @@
+@media (max-width:1000px) {
+    .ModuleNav {
+        width: 250px;
+    }
+
+    .ModuleNav.hidden {
+        margin-left: -250px;
+    }
+}
+
+@media (max-width:500px) {
+    .ModuleNav {
+        width: 100vw;
+        position: absolute;
+    }
+}
+
+@media (max-width:250px) {
+    .ModuleNav {
+        width: 100vw;
+    }
+
+    .ModuleNav.hidden {
+        margin-left: -100vw;
+    }
+}

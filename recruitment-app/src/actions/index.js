@@ -32,3 +32,40 @@ export const isLightNav = () => {
         type: 'CHECK'
     }
 }
+
+
+
+export const setMainNav = (data) => {
+    if(data){
+        return {
+            type: 'MAIN'
+        }
+    }else{
+        return {
+            type: 'ALT'
+        }
+    }
+}
+
+export const isMainNav = () => {
+    return {
+        type: 'CHECK'
+    }
+}
+
+export const setSideNavOpen = (data) => {
+    if(data){
+        return {
+            type: 'OPEN'
+        }
+    }else{
+        return {
+            type: 'CLOSED'
+        }
+    }
+}
+export const isSideNavOpen = () => {
+    return {
+        type: 'CHECK'
+    }
+}
