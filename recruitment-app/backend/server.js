@@ -7,6 +7,7 @@ const ejwt = require('express-jwt');
 const cookieParser = require('cookie-parser');
 
 let User = require('./schemas/userSchema');
+let Module = require('./schemas/moduleSchema');
 
 
 require('dotenv').config();
@@ -141,6 +142,37 @@ app.post('/user/logout', (req, res) => {
     res.status(200).send("Cleared token");
 });
 
+app.get('/module', (req, res) => {
+    Module.find()
+        .then(modules => res.json(modules))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+app.get('/module/:moduleNumber', (req, res) => {
+    console.log("[Server] Getting Module #" + req.params.moduleNumber);
+    Module.findOne({ number: req.params.moduleNumber }, (err, data) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
+});
+
+app.post('/module/add', (req, res) => {
+    console.log("[Server] Adding Module ");
+    const newModule = new Module({ 
+        title: req.body.moduleTitle, 
+        number: req.body.number, 
+        description: req.body.moduleDescription, 
+        learningPoints: req.body.learningPoints});
+        newModule.save()
+        .then(() => res.json('Module Added'))
+        .catch(err => {
+            res.status(400).json('Error: ' + err)
+            console.log('Error: ' + err);
+        });
+});
 
 
 app.listen(port, () => {

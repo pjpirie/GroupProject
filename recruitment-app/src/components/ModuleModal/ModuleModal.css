@@ -1,0 +1,125 @@
+.ModuleTree__Modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 650px;
+    max-height: 350px;
+    border-radius: 10px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ModuleTree__Modal--Mod1 {
+    top: 25%;
+}
+
+.ModuleTree__Modal--Mod2 {
+    top: 30%;
+}
+
+.ModuleTree__Modal--Mod3 {
+    top: 35%;
+}
+
+.ModuleTree__Modal--Mod4 {
+    top: 40%;
+}
+
+.ModuleTree__Modal--Mod5 {
+    top: 45%;
+}
+
+.ModuleTree__Modal--Mod6 {
+    top: 50%;
+}
+
+.ModuleTree__Modal--Mod7 {
+    top: 55%;
+}
+
+.ModuleTree__Modal__Header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.ModuleTree__Modal__Header img {
+    max-width: 20vw;
+    width: 100%;
+    margin-right: 2rem;
+    border-radius: 5px;
+}
+
+.ModuleTree__Modal__Header__Text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ModuleTree__Modal__Header__Text__Main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ModuleTree__Modal__LearningPoints {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ModuleTree__Modal__Point {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ModuleTree__Modal__Point p {
+    margin-bottom: 0;
+}
+
+.ModuleTree__Modal__Point h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #565788;
+    border-radius: 50px;
+    /* height: 30px;
+    width: 30px; */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 7px;
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+
+.ModuleTree__Modal__ButtonContainer {
+    width: 100%;
+}
+
+.ModuleModal__btn {
+    width: 100px;
+    height: 40px;
+    margin: 1rem 0 0 auto;
+    padding: 5px 20px;
+    background: #71A068;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MouleModal__Close__btn {
+    margin-left: 1rem;
+}

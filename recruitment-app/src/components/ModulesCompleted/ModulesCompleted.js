@@ -4,10 +4,10 @@ import './ModulesCompleted.css'
 
 function ModulesCompleted(props) {
     const getStyle = (theme) => {
-        return theme == "dark" ? {color: 'rgba(0,0,0,1)'} : {color: 'rgba(255,255,255,1)'};
+        return theme === "dark" ? {color: 'rgba(0,0,0,1)'} : {color: 'rgba(255,255,255,1)'};
     }
 
-    if(props.form == "bar"){
+    if(props.form === "bar"){
         return (
             <div className="ModulesCompleted">
                 <div className="ModulesCompleted__container">
@@ -18,7 +18,7 @@ function ModulesCompleted(props) {
                 </div>
             </div>
         );
-    }else if(props.form == "pie"){
+    }else if(props.form === "pie"){
         return (
             <div className="ModulesCompleted">
                 <div className="ModulesCompleted__container">

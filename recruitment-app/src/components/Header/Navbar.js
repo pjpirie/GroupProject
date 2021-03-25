@@ -43,7 +43,7 @@ let isNavLight = useSelector(state => state.isLightNav);
   }
 
   useEffect(() => {
-    props.checkAuth();
+    // props.checkAuth();
   },[]);
 
   return (

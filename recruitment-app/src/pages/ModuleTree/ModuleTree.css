@@ -27,6 +27,7 @@
     flex-direction: column;
     max-width: 700px;
     width: 100%;
+    position: relative;
 }
 
 .ModuleTree__Tree__row {
@@ -46,7 +47,42 @@
     max-height: 10vh;
 }
 
-.Mod1 img {
-    background: #fff;
-    border: 100px;
+.Mod1 img {}
+
+.ModuleTree__Line {
+    width: 100px;
+    height: 20px;
+    background: #ccc ;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(90deg) translateX(50%);
 }
+
+.M45 {
+    width: 180px;
+    transform: translate(100px, 35px) rotate(-45deg);
+}
+
+.P45 {
+    width: 180px;
+    transform: translate(-100px, 35px) rotate(45deg);
+}
+
+.TopLineM45 {
+    width: 180px;
+    transform: translate(100px, -35px) rotate(45deg);
+}
+
+.TopLineP45 {
+    width: 180px;
+    transform: translate(-100px, -35px) rotate(-45deg);
+}
+
+/* .modal__container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+} */

@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import {setLogged} from '../../actions';
