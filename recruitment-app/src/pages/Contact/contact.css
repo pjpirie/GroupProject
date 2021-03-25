@@ -16,7 +16,6 @@
 	margin-top: 3rem;
 
 	width: 100%;
-	/* min-height: 100%; */
 	max-width: 800px;
 }
 
@@ -26,6 +25,7 @@
 
 .contact-form {
 	height: auto;
+	flex-direction: column;
 }
 
 .input {

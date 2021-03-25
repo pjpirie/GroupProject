@@ -11,11 +11,9 @@
 }
 
 .wheel {
-	top: 0;
-	left: 0;
-	width: 50rem;
-	margin-top: -300px;
-	margin-left: -220px;
+	max-width: 50rem;
+	margin-top: -20rem;
+	margin-left: -15rem;
 }
 
 .ModuleBtn {
@@ -54,7 +52,7 @@
 
 .right,
 .left {
-	width: 50%;
+	min-width: 50%;
 }
 
 .cards img {
@@ -93,7 +91,7 @@
 }
 
 .infoImg {
-	height: 604px;
+	height: 100%;
 }
 
 .divider {
@@ -169,4 +167,37 @@
 
 .coreIcons > svg:nth-child(2) {
 	color: #71a068;
+}
+
+@media (max-width: 870px) {
+	.card-1,
+	.card-2,
+	.info,
+	.divider {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.divLeft,
+	.divRight {
+		width: 100%;
+	}
+
+	.divLeft > h1 {
+		padding-left: 0;
+	}
+
+	.right,
+	.left {
+		margin: 0;
+	}
+
+	.ModuleHeader > .left {
+		display: none;
+	}
+
+	.Modules {
+		text-align: center;
+	}
 }
