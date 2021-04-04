@@ -45,6 +45,7 @@
 
 .ModuleTree__Tree_item img {
     max-height: 10vh;
+    cursor: pointer;
 }
 
 .Mod1 img {}
@@ -52,7 +53,7 @@
 .ModuleTree__Line {
     width: 100px;
     height: 20px;
-    background: #ccc ;
+    background: #ccc;
     z-index: -1;
     position: absolute;
     transform: rotate(90deg) translateX(50%);

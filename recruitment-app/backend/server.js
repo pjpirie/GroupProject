@@ -94,7 +94,16 @@ app.post('/user/login', (req, res) => {
                 // const token = "Placeholder";
                 res.cookie('token', token, { httpOnly: true });
                 res.cookie('logged_in', true, { httpOnly: true });
-                res.json({ token })
+                res.cookie('User_Id', data._id, { httpOnly: true });
+                let user = {
+                    firstName: data.firstName,
+                    lastName: data.lastName,
+                    email: data.email,
+                    paidAccess: data.paidAccess,
+                    modulesCompleted: data.modulesCompleted,
+                    dob: data.dob
+                }
+                res.json({ token: token, user: user})
             } else {
                 res.json("Error: Incorrect Password");
             }
@@ -123,7 +132,26 @@ app.post('/user/auth', (req, res) => {
         let UserHeaders = req.headers.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
         if(UserHeaders.token != (null || undefined)){
             if(jwt.verify(UserHeaders.token, jwtSecret)){
-                console.log("Token Valid");
+                console.log(`Token Valid ${UserHeaders.User_Id}`);
+                User.findById(UserHeaders.UserId, function (err, data){
+                    console.table({error: err, data: data});
+                });
+                // User.findById(UserHeaders.UserId, function (err, data) {
+                //     if (err) {
+                //         res.send(err);
+                //     } else {
+                //         let user = {
+                //             firstName: data.firstName,
+                //             lastName: data.lastName,
+                //             email: data.email,
+                //             paidAccess: data.paidAccess,
+                //             modulesCompleted: data.modulesCompleted,
+                //             dob: data.dob
+                //         }
+                //         res.json({tokenValid: true, user: user});
+                        
+                //     }
+                // });
                 res.json({tokenValid: true});
             }else{
                 console.log("Token Invalid");

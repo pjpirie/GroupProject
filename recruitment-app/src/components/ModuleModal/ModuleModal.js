@@ -4,11 +4,14 @@ import { Redirect } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
 import CourseGuideImage from '../../assets/CourseGuideImage.png';
-
+import { useSelector,useDispatch } from 'react-redux';
+import {setRedirect} from '../../actions';
 
 
 
 function ModuleModal(props) {
+    
+const dispatch = useDispatch();
 const [ModuleInfo, setModuleInfo] = useState({
     title: 'Loading...',
     number: props.number,
@@ -17,9 +20,6 @@ const [ModuleInfo, setModuleInfo] = useState({
 });
 
     const getModuleInfo = async (number) => {
-        if(number !== 1 && number !== 2){
-            number = 1;
-        } 
         return await fetch(`/module/${number}`, {
             method: 'GET',
             headers: {
@@ -64,7 +64,7 @@ const [ModuleInfo, setModuleInfo] = useState({
                 </div>
             </div>
                 <div className="ModuleTree__Modal__ButtonContainer">
-                    <button className="ModuleModal__btn" onClick={() => {<Redirect to={`/module/${props.number}`} />}}>Start</button>
+                    <button className="ModuleModal__btn" onClick={() => { dispatch(setRedirect(true, `/module/${props.number}`))} }>Start</button>
                 </div>
             </div>
         </div>

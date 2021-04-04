@@ -63,13 +63,13 @@ function ModuleTree() {
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod6">
-                                <img onClick={() => {setMod6Open(!isMod6Open)}} src={WrittenIcon} alt="Written Exercises"/>
+                                <img onClick={() => {setMod6Open(!isMod6Open)}} src={RolePlayIcon} alt="Written Exercises"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod7">
-                                <img onClick={() => {setMod7Open(!isMod7Open)}} src={RolePlayIcon} alt="Role Play Exercises"/>
+                                <img onClick={() => {setMod7Open(!isMod7Open)}} src={WrittenIcon} alt="Role Play Exercises"/>
                             </div>
                         </div>
                         {isMod1Open ? <ModuleModal number={1} modalOpen={setMod1Open}/> : ''}

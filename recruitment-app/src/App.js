@@ -1,5 +1,5 @@
 import { useEffect, Fragment, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import './App.css';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
@@ -9,11 +9,11 @@ import Footer from './components/Footer/Footer';
 import Landing from './pages/Landing/landing';
 import Contact from './pages/Contact/contact';
 import Company from './pages/Company/Company';
-import Modules from './pages/Modules/Modules';
+import Modules from './pages/Modules/1/Module';
 import Account from './pages/Account/Account';
 import Help from './pages/Help/Help'
 import { useDispatch, useSelector } from 'react-redux';
-import {setLogged, setSideNavOpen} from './actions';
+import {setLogged, setSideNavOpen, setRedirect} from './actions';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import MenuIcon from '@material-ui/icons/Menu';
 import ModuleTree from './pages/ModuleTree/ModuleTree';
@@ -24,11 +24,13 @@ import HashLoader from 'react-spinners/HashLoader';
 function App() {
 
   const [loading, setLoading] = useState(true);
+  const [hasRedirected, setRedirected] = useState(false);
   
   const dispatch = useDispatch();
   
   const isLogged = useSelector(state => state.isLogged);
   const isSideNavOpen = useSelector(state => state.isSideNavOpen);
+  const isRedirect = useSelector(state => state.toRedirect)
   
   const checkAuth = async (msg = "App") => {
     console.log("Checking Auth from " + msg)
@@ -60,7 +62,14 @@ function App() {
   }else{
     return (
       <Router>
-        <ScrollToTop checkAuth={checkAuth} />
+        {console.log(isRedirect)}
+        { isRedirect.redirect ? (
+          <Redirect to={isRedirect.location}/>
+        ) : (
+          console.log("No Redirect")) 
+        }
+        {hasRedirected ? dispatch(setRedirect(false)) : ""}
+        <ScrollToTop checkAuth={checkAuth} loading={setLoading}/>
         <div className="App">
           <div className="main">
             {!isLogged ?  (

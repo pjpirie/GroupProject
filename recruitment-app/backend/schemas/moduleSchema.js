@@ -15,7 +15,6 @@ const moduleSchema = new Schema({
     description: {
         type: String,
         required: true,
-        unique: true,
         minlength: 5
     },
     learningPoints: {

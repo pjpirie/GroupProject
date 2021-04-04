@@ -27,7 +27,7 @@ const userSchema = new Schema({
         required: true
     },
     modulesCompleted: {
-        type: String,
+        type: Array,
         required: false
     },
     dob: {

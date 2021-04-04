@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
-import {setLogged, setLightNav} from '../../actions';
+import {setLogged, setLightNav, setRedirect, setAccount} from '../../actions';
 import { Redirect } from 'react-router';
 
 import './Login.css';
@@ -51,14 +51,9 @@ export default function Login(props) {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        // console.log(await accountExists(Email));
         try {
             if (await !accountExists(Email)) throw ("LoginError: No account with that email address");
             console.log("Submitted");
-            // const token = await LoginUser({
-            //     Email,
-            //     Password
-            // });
             let logged_in = await LoginUser({
                 Email,
                 Password
@@ -68,15 +63,13 @@ export default function Login(props) {
             console.log(logged_in.token);
             if(logged_in.token != undefined){
                 dispatch(setLogged());
-                return <Redirect to='/' />
+                dispatch(setAccount(true, logged_in.user));
+                dispatch(setRedirect(true, `/`))
             }
         } catch (e) {
             console.error(e);
         }
     }
-
-    console.log(cookie); 
-
     return (
         <div className="loginPage__Wrapper">
             <div className="loginWrapper">
@@ -94,7 +87,7 @@ export default function Login(props) {
                         <p>Need an account?
                         <button 
                         class="btn-clearing alt-btn" 
-                        onClick={() => {return <Redirect to='/register'/>}}
+                        onClick={() => { dispatch(setRedirect(true, `/register`))} }
                                 >Sign up here</button></p>
                         <button class=" btn-clearing main-btn" type="submit">Login</button>
                     </div>

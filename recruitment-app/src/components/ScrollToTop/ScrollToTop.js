@@ -6,6 +6,10 @@ const { pathname } = useLocation();
 
 useEffect(() => {
 window.scrollTo(0, 0);
+// props.loading(true);
+// setTimeout(() =>{
+//     props.loading(false);
+// }, 1000)
 props.checkAuth();
 }, [pathname]);
 

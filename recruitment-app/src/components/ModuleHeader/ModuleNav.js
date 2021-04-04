@@ -30,6 +30,7 @@ function ModuleNav() {
     
     const dispatch = useDispatch();
     const isSideNavOpen = useSelector(state => state.isSideNavOpen);
+    const UserData = useSelector(state => state.isSideNavOpen);
     return (
         <div className={(isSideNavOpen ? "ModuleNav" : "ModuleNav hidden")}>
             <div className="ModuleNav__container">
@@ -38,7 +39,7 @@ function ModuleNav() {
                 </div>
                 <GetUserName />
                 <ModulesCompleted form="bar" theme="light"/>
-                <Link to="/moduleTree">
+                <Link to="/">
                     <li className="ModuleNav__link"><SchoolIcon fontSize="large"/> <span>Module</span></li>
                 </Link>
                 <Link to="/edit">

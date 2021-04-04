@@ -69,3 +69,39 @@ export const isSideNavOpen = () => {
         type: 'CHECK'
     }
 }
+
+export const setRedirect = (data, location) => {
+    if(data){
+        return {
+            type: 'REDIRECT',
+            location: location
+        }
+    }else{
+        return {
+            type: 'STAY'
+        }
+    }
+}
+export const isRedirect = () => {
+    return {
+        type: 'CHECK'
+    }
+}
+
+export const setAccount = (data, user) => {
+    if(data){
+        return {
+            type: 'SET_ACCOUNT',
+            user: user
+        }
+    }else{
+        return {
+            type: 'UNSET_ACCOUNT'
+        }
+    }
+}
+export const getAccount = () => {
+    return {
+        type: 'CHECK'
+    }
+}

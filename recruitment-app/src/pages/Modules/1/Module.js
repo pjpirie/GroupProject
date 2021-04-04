@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Modules() {
+function Module() {
     return (
         <div>
-            <h1>Modules</h1>
+            <h1>Module1</h1>
         </div>
     )
 }
 
-export default Modules
+export default Module
