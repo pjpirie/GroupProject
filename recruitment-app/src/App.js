@@ -16,13 +16,14 @@ import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
 import Help from './pages/Help/Help';
 import Landing from './pages/Landing/landing';
-import { default as Module1, default as Modules } from './pages/Modules/1/Module';
+import { default as Module1 } from './pages/Modules/1/Module';
 import { default as Module2 } from './pages/Modules/2/Module';
 import { default as Module3 } from './pages/Modules/3/Module';
 import { default as Module4 } from './pages/Modules/4/Module';
 import { default as Module5 } from './pages/Modules/5/Module';
 import { default as Module6 } from './pages/Modules/6/Module';
 import { default as Module7 } from './pages/Modules/7/Module';
+import Modules from './pages/Modules/Modules';
 import ModuleTree from './pages/ModuleTree/ModuleTree';
 
 
@@ -94,6 +95,7 @@ function App() {
               <Fragment>
                 <div className="LoggedIn__Module__Container">
   
+<<<<<<< HEAD
                   <ModuleNav/>
                   <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon onClick={() => dispatch(setSideNavOpen(!isSideNavOpen))} />
@@ -119,6 +121,25 @@ function App() {
               <span className="footer__divider"></span>
             <Footer />
           </div>
+=======
+  return (
+    <Router>
+      <ScrollToTop checkAuth={checkAuth} />
+      <div className="App">
+        <div className="main">
+          <Navbar checkAuth={checkAuth}/>
+          <Switch>
+            <Route path="/" exact component={Landing} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/modules" component={Modules} />
+            <Route path="/account" component={Account} />
+            <Redirect to="/" />
+          </Switch>
+            <span className="footer__divider"></span>
+          <Footer />
+>>>>>>> origin/ChrisDev
         </div>
       </Router>
     );
