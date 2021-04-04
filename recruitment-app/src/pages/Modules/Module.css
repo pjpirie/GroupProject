@@ -26,7 +26,7 @@
 	margin-left: 10rem;
 }
 
-.right > h1 {
+.right>h1 {
 	font-size: 4rem;
 	margin-top: 1rem;
 }
@@ -75,7 +75,7 @@
 	width: 100%;
 }
 
-.banner > h2 {
+.banner>h2 {
 	display: flex;
 	font-size: 4rem;
 }
@@ -104,7 +104,7 @@
 	padding-bottom: 2rem;
 }
 
-.divLeft > h1 {
+.divLeft>h1 {
 	padding-left: 10rem;
 	margin-top: -9rem;
 }
@@ -124,7 +124,7 @@
 	text-align: center;
 }
 
-.divRight > img {
+.divRight>img {
 	width: 8rem;
 	margin-bottom: 10px;
 }
@@ -141,7 +141,7 @@
 	justify-content: space-evenly;
 }
 
-.coreContent > h1 {
+.coreContent>h1 {
 	font-size: 4rem;
 	text-align: center;
 }
@@ -151,6 +151,7 @@
 	justify-content: space-evenly;
 	width: 60vw;
 }
+
 .coreIconsText {
 	display: flex;
 	justify-content: space-evenly;
@@ -158,18 +159,19 @@
 	font-size: 2rem;
 }
 
-.coreIcons > svg {
+.coreIcons>svg {
 	width: 8rem;
 	height: 8rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
 
-.coreIcons > svg:nth-child(2) {
+.coreIcons>svg:nth-child(2) {
 	color: #71a068;
 }
 
 @media (max-width: 870px) {
+
 	.card-1,
 	.card-2,
 	.info,
@@ -184,7 +186,7 @@
 		width: 100%;
 	}
 
-	.divLeft > h1 {
+	.divLeft>h1 {
 		padding-left: 0;
 	}
 
@@ -193,7 +195,7 @@
 		margin: 0;
 	}
 
-	.ModuleHeader > .left {
+	.ModuleHeader>.left {
 		display: none;
 	}
 

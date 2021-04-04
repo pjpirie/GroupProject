@@ -3,22 +3,22 @@ import Check from '@material-ui/icons/CheckCircleOutlineRounded';
 import Bulb from '@material-ui/icons/EmojiObjects';
 import Arrow from '@material-ui/icons/OpenWithRounded';
 import Gear from '@material-ui/icons/Settings';
-import Clipboard from '../../assets/clipboard.png';
-import Faces from '../../assets/faces.png';
-import ModuleImg4 from '../../assets/Image-1.png';
-import ModuleImg3 from '../../assets/Image-2.png';
-import ModuleImg1 from '../../assets/Image-3.png';
-import ModuleImg2 from '../../assets/Image-4.png';
-import ModuleImg5 from '../../assets/Image-5.png';
-import ModuleImg6 from '../../assets/Image.png';
-import Laptop from '../../assets/laptop.png';
-import logo from '../../assets/logo.svg';
-import ModuleBottom from '../../assets/modules-bottom.png';
-import Msg from '../../assets/msg.png';
-import Pencil from '../../assets/pencil.png';
-import People from '../../assets/people.png';
-import wheel from '../../assets/wheel.png';
-import './Modules.css';
+import Clipboard from '../../../assets/clipboard.png';
+import Faces from '../../../assets/faces.png';
+import ModuleImg4 from '../../../assets/Image-1.png';
+import ModuleImg3 from '../../../assets/Image-2.png';
+import ModuleImg1 from '../../../assets/Image-3.png';
+import ModuleImg2 from '../../../assets/Image-4.png';
+import ModuleImg5 from '../../../assets/Image-5.png';
+import ModuleImg6 from '../../../assets/Image.png';
+import Laptop from '../../../assets/laptop.png';
+import logo from '../../../assets/logo.svg';
+import ModuleBottom from '../../../assets/modules-bottom.png';
+import Msg from '../../../assets/msg.png';
+import Pencil from '../../../assets/pencil.png';
+import People from '../../../assets/people.png';
+import wheel from '../../../assets/wheel.png';
+import './Module.css';
 
 
 
