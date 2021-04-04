@@ -1,5 +1,6 @@
 import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted';
 import './ModuleTree.css';
+import './ModuleTree.responsive.css';
 import GuideIcon from '../../assets/GuideIconV2.png';
 import PrepIcon from '../../assets/PrepIcon.png';
 import FaceToFaceIcon from '../../assets/FaceToFaceIcon.png';

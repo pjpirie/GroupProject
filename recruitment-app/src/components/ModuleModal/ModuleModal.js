@@ -1,4 +1,5 @@
-import './ModuleModal.css'
+import './ModuleModal.css';
+import './ModuleModal.responsive.css'
 import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
@@ -49,20 +50,20 @@ const [ModuleInfo, setModuleInfo] = useState({
                 </div>
             </div>
             <div className="ModuleTree__Modal__Body">
-                <div className="ModuleTree__Modal__LearningPoints">
-                <div className="ModuleTree__Modal__Point">
-                    <h4>01</h4>
-                    <p>{ModuleInfo.learningPoints[0] ?? "Loading..."}</p>
-                </div>
-                <div className="ModuleTree__Modal__Point">
-                    <h4>02</h4>
-                    <p>{ModuleInfo.learningPoints[1] ?? "Loading..."}</p>
-                </div>
-                <div className="ModuleTree__Modal__Point">
-                    <h4>03</h4>
-                    <p>{ModuleInfo.learningPoints[2] ?? "Loading..."}</p>
-                </div>
-            </div>
+                {/* <div className="ModuleTree__Modal__LearningPoints">
+                    <div className="ModuleTree__Modal__Point">
+                        <h4>01</h4>
+                        <p>{ModuleInfo.learningPoints[0] ?? "Loading..."}</p>
+                    </div>
+                    <div className="ModuleTree__Modal__Point">
+                        <h4>02</h4>
+                        <p>{ModuleInfo.learningPoints[1] ?? "Loading..."}</p>
+                    </div>
+                    <div className="ModuleTree__Modal__Point">
+                        <h4>03</h4>
+                        <p>{ModuleInfo.learningPoints[2] ?? "Loading..."}</p>
+                    </div>
+                </div> */}
                 <div className="ModuleTree__Modal__ButtonContainer">
                     <button className="ModuleModal__btn" onClick={() => { dispatch(setRedirect(true, `/module/${props.number}`))} }>Start</button>
                 </div>

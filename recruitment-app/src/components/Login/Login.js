@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useSelector,useDispatch } from 'react-redux';
-import {setLogged, setLightNav, setRedirect, setAccount} from '../../actions';
+import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
-
+import { setAccount, setLightNav, setLogged, setRedirect } from '../../actions';
 import './Login.css';
 import './Login.responsive.css';
+
 
 async function LoginUser(credentials) {
     return fetch('/user/login', {
@@ -48,7 +48,6 @@ export default function Login(props) {
     if(isLogged){
         return <Redirect to='/' />
     }
-
     const handleSubmit = async e => {
         e.preventDefault();
         try {

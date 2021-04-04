@@ -1,23 +1,29 @@
-import { useEffect, Fragment, useState } from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
-import './App.css';
-import Register from './components/Register/Register';
-import Login from './components/Login/Login';
-import Navbar from './components/Header/Navbar';
-import ModuleNav from './components/ModuleHeader/ModuleNav';
-import Footer from './components/Footer/Footer';
-import Landing from './pages/Landing/landing';
-import Contact from './pages/Contact/contact';
-import Company from './pages/Company/Company';
-import Modules from './pages/Modules/1/Module';
-import Account from './pages/Account/Account';
-import Help from './pages/Help/Help'
-import { useDispatch, useSelector } from 'react-redux';
-import {setLogged, setSideNavOpen, setRedirect} from './actions';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import MenuIcon from '@material-ui/icons/Menu';
-import ModuleTree from './pages/ModuleTree/ModuleTree';
+import { Fragment, useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import HashLoader from 'react-spinners/HashLoader';
+import { setLogged, setRedirect, setSideNavOpen } from './actions';
+import './App.css';
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Header/Navbar';
+import Login from './components/Login/Login';
+import ModuleNav from './components/ModuleHeader/ModuleNav';
+import Register from './components/Register/Register';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Account from './pages/Account/Account';
+import Company from './pages/Company/Company';
+import Contact from './pages/Contact/contact';
+import Help from './pages/Help/Help';
+import Landing from './pages/Landing/landing';
+import { default as Module1, default as Modules } from './pages/Modules/1/Module';
+import { default as Module2 } from './pages/Modules/2/Module';
+import { default as Module3 } from './pages/Modules/3/Module';
+import { default as Module4 } from './pages/Modules/4/Module';
+import { default as Module5 } from './pages/Modules/5/Module';
+import { default as Module6 } from './pages/Modules/6/Module';
+import { default as Module7 } from './pages/Modules/7/Module';
+import ModuleTree from './pages/ModuleTree/ModuleTree';
 
 
 
@@ -96,13 +102,13 @@ function App() {
                     <Route path="/" exact component={ModuleTree} />
                     <Route path="/account" component={Account} />
                     <Route path="/help" component={Help} />
-                    <Route path="/module/1" component={Help} />
-                    <Route path="/module/2" component={Help} />
-                    <Route path="/module/3" component={Help} />
-                    <Route path="/module/4" component={Help} />
-                    <Route path="/module/5" component={Help} />
-                    <Route path="/module/6" component={Help} />
-                    <Route path="/module/7" component={Help} />
+                    <Route path="/module/1" component={Module1} />
+                    <Route path="/module/2" component={Module2} />
+                    <Route path="/module/3" component={Module3} />
+                    <Route path="/module/4" component={Module4} />
+                    <Route path="/module/5" component={Module5} />
+                    <Route path="/module/6" component={Module6} />
+                    <Route path="/module/7" component={Module7} />
                   </Switch>
                   <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon style={{opacity: 0}} />

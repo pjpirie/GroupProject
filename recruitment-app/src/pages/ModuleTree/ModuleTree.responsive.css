@@ -1,0 +1,28 @@
+@media (max-width:1050px) {
+    .M45 {
+        width: 180px;
+        transform: translate(50px, 0px) rotate(0deg);
+        width: 22.5vw;
+    }
+
+    .P45 {
+        width: 180px;
+        transform: translate(0px, 35px) rotate(90deg);
+        /* background: pink; */
+    }
+
+    .TopLineM45 {
+        width: 180px;
+        transform: translate(0px, -35px) rotate(-90deg);
+        /* background: green; */
+    }
+
+    .TopLineP45 {
+        width: 180px;
+        transform: translate(-50px, 0px) rotate(0deg);
+        /* background: red; */
+        width: 22.5vw;
+    }
+}
+
+@media (max-width:500px) {}

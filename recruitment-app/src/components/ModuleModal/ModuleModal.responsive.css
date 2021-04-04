@@ -1,0 +1,39 @@
+@media (max-width:900px) {
+    .ModuleTree__Modal {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        max-width: 80vw;
+        max-height: 80vh;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:500px) {
+    .ModuleTree__Modal {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        max-width: 100vw;
+        max-height: 80vh;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

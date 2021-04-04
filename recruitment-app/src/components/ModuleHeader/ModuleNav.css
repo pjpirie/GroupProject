@@ -1,14 +1,16 @@
 .ModuleNav {
-    max-width: 250px;
-    width: 20vw;
+    min-width: 250px;
+    width: 250px;
     background: #213142;
     min-height: 100vh;
     display: inline-block;
+    position: fixed;
     transition: all 600ms ease-in-out;
+    z-index: 999;
 }
 
 .ModuleNav.hidden {
-    margin-left: -19vw;
+    margin-left: -250px;
 }
 
 .ModuleNav__user {

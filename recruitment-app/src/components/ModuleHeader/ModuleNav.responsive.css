@@ -1,17 +1,19 @@
 @media (max-width:1000px) {
     .ModuleNav {
         width: 250px;
+        position: fixed;
     }
 
     .ModuleNav.hidden {
         margin-left: -250px;
+        position: fixed;
     }
 }
 
 @media (max-width:500px) {
     .ModuleNav {
         width: 100vw;
-        position: absolute;
+        position: fixed;
     }
 }
 

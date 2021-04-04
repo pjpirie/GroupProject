@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     max-width: 650px;
-    max-height: 350px;
+    max-height: 300px;
     border-radius: 10px;
     top: 25%;
     left: 50%;
@@ -47,12 +47,15 @@
 .ModuleTree__Modal__Header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
 }
 
 .ModuleTree__Modal__Header img {
     max-width: 20vw;
-    width: 100%;
+    max-height: 80%;
+    height: 100%;
+    width: auto;
     margin-right: 2rem;
     border-radius: 5px;
 }
@@ -60,6 +63,7 @@
 .ModuleTree__Modal__Header__Text {
     display: flex;
     flex-direction: column;
+    min-width: 60%;
 }
 
 .ModuleTree__Modal__Header__Text__Main {
@@ -106,7 +110,7 @@
 .ModuleModal__btn {
     width: 100px;
     height: 40px;
-    margin: 1rem 0 0 auto;
+    margin: 0 0 0 auto;
     padding: 5px 20px;
     background: #71A068;
     border-radius: 20px;
