@@ -227,7 +227,7 @@ app.post('/user/moduleComplete/:moduleNumber', (req, res) => {
             }
             else
             {
-                data.modulesCompleted == data.modulesCompleted.push(req.params.moduleNumber);
+                data.modulesCompleted = data.modulesCompleted.push(req.params.moduleNumber);
                 data.save();
             }
         })
@@ -243,7 +243,7 @@ app.post('/user/moduleComplete/:moduleNumber', (req, res) => {
                 }
                 else
                 {
-                    data.paidAccess == req.body.paidAcces;
+                    data.paidAccess = req.body.paidAccess;
                     data.save();
                 }
             })

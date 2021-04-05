@@ -44,9 +44,11 @@ function CMS(props) {
                     {
                         users.map(user=>
                             <tr className="email-single-display">
-                                <td className="user-email" key={user.id}>{user.email}</td>
-                                <td className="user-email"><p name="currentAccess" value={user.paidAccess ? "true":"false"}>{user.paidAccess ? "Yes":"No"}</p></td>
-                                <td className="user-email"><form onSubmit={changeAccess(user.paidAccess)}><button type="submit" value="submit">Change Access</button></form></td>
+                                <form onSubmit={changeAccess(user.paidAccess)}>
+                                    <td className="user-email" key={user.id}><p name="userEmail">{user.email}</p></td>
+                                    <td className="user-email"><p name="currentAccess" value={user.paidAccess ? "true":"false"}>{user.paidAccess ? "Yes":"No"}</p></td>
+                                    <td className="user-email"><button type="submit" value="submit">Change Access</button></td>
+                                </form>
                             </tr>
                         )
                     }
