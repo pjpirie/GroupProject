@@ -7,31 +7,32 @@
 	background: #213142;
 	color: #fff !important;
 	text-align: center;
-	padding: 1.2rem;
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+
 }
 
 .footer__container {
-	margin: 2rem auto 0 auto;
-	width: 100%;
+	margin: 2rem auto 1rem auto;
+	/* width: 100%; */
 	max-width: 1200px;
 	display: flex;
-}
-
-.row {
-	display: flex;
 	justify-content: center;
-	margin: 0;
-	padding: 0;
+
 }
 
 .logo {
 	height: 5rem;
 	width: 5rem;
+
+
 }
 
 .footerBtn {
 	background: #71a068 !important;
 	color: #fff !important;
+
+
 }
 
 .link-col {
@@ -44,9 +45,18 @@
 
 .margin-bottom-reset {
 	margin-bottom: 0 !important;
+
 }
 
 .footer-nav,
 .footer-nav:hover {
 	color: #fff;
+
+}
+
+.col{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 25%;
+
 }

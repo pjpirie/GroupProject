@@ -46,7 +46,7 @@ function Contact() {
 
                     <label className="label">
                         <p>Category</p>
-                        <select required className="input" name="category">
+                        <select required className="input-select" name="category">
                             <option></option>
                             <option>Select 1</option>
                             <option>Select 2</option>
@@ -65,10 +65,10 @@ function Contact() {
                 }
                 {
                     display?
-                <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
-                : null
+                    <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
+                    : null
                 }
-                </div>
+            </div>
         </div>
     );
 }

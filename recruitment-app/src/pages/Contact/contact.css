@@ -17,6 +17,11 @@
 
 	width: 100%;
 	max-width: 800px;
+
+	height: 70vh;
+
+	/* outline: 1px solid red; */
+
 }
 
 .contact-header {
@@ -25,16 +30,26 @@
 
 .contact-form {
 	height: auto;
-	flex-direction: column;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 5rem;
 }
 
-.input {
-	margin: 0 auto;
-	padding: 0.5rem;
+.input, .input-select {
+	
+	margin: 0 auto !important;
+	padding: 0.5rem !important;
 	border: 1px solid #000 !important;
 	border-radius: 10px !important;
 	width: 30ch !important;
 	height: 4ch !important;
+}
+
+.input-select{
+	height: 6.7ch !important;
+	margin-top: -1px !important;
 }
 
 .label {
@@ -48,15 +63,11 @@ option {
 	border-radius: 10px !important;
 }
 
-/* .textarea{
-	width: 70ch;
-	height: 10ch;
-} */
-
 .submitBtn {
 	background: #71a068 !important;
 	margin-top: 1rem !important;
 	margin-left: 25rem !important;
+	color: #fff !important;
 }
 
 @media (max-width: 870px) {
@@ -67,7 +78,11 @@ option {
 
 	.contact-form {
 		flex-direction: column;
-		margin-bottom: 3rem;
+		margin-bottom: 5rem !important;
+	}
+
+	.contact{
+		margin-bottom: 10rem;
 	}
 
 	.textarea {
