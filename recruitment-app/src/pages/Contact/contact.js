@@ -1,8 +1,7 @@
+import { Button } from '@material-ui/core';
+import emailjs from 'emailjs-com';
 import { useState } from 'react';
-import {Button} from '@material-ui/core';
-import emailjs from 'emailjs-com'
-import './contact.css'
-
+import './contact.css';
 function Contact() {
 
     const [display, setDisplay] = useState(false)

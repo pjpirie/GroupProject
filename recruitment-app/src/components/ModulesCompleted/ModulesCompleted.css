@@ -1,3 +1,13 @@
+.ModulesCompleted {
+    position: relative;
+}
+
+.ModulesCompleted__container {
+    width: 80%;
+    position: relative;
+    margin: 1rem auto;
+}
+
 .ModulesCompleted__progress__bar {
     max-width: 156px;
     max-height: 20px;
@@ -30,4 +40,40 @@
 .ModulesCompleted__text {
     text-align: center;
     color: #fff;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.ModulesCompleted .item h2 {
+    text-align: center;
+    position: absolute;
+    line-height: 125px;
+}
+
+.ModulesCompleted .item {
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModulesCompleted svg {
+    transform: rotate(-90deg);
+}
+
+.ModulesCompleted .circle_animation {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.ModulesCompleted .html .circle_animation {
+    -webkit-animation: html 1s ease-out forwards;
+    animation: html 1s ease-out forwards;
+}
+
+@keyframes html {
+    to {
+        stroke-dashoffset: 180;
+    }
 }

@@ -94,7 +94,7 @@ app.post('/user/login', (req, res) => {
                 // const token = "Placeholder";
                 res.cookie('token', token, { httpOnly: true });
                 res.cookie('logged_in', true, { httpOnly: true });
-                res.cookie('User_Id', data._id, { httpOnly: true });
+                res.cookie('User_Id', data.email, { httpOnly: true });
                 let user = {
                     firstName: data.firstName,
                     lastName: data.lastName,
@@ -133,8 +133,23 @@ app.post('/user/auth', (req, res) => {
         if(UserHeaders.token != (null || undefined)){
             if(jwt.verify(UserHeaders.token, jwtSecret)){
                 console.log(`Token Valid ${UserHeaders.User_Id}`);
-                User.findById(UserHeaders.UserId, function (err, data){
-                    console.table({error: err, data: data});
+                let email = UserHeaders.User_Id;
+                console.log(email);
+                User.findOne({ email: email }, function (err, data){
+                    if (err) {
+                        res.send(err);
+                    } else {
+                        let user = {
+                            firstName: data.firstName,
+                            lastName: data.lastName,
+                            email: data.email,
+                            paidAccess: data.paidAccess,
+                            modulesCompleted: data.modulesCompleted,
+                            dob: data.dob
+                        }
+                        res.json({tokenValid: true, user: user});
+                        
+                    }
                 });
                 // User.findById(UserHeaders.UserId, function (err, data) {
                 //     if (err) {
@@ -143,7 +158,7 @@ app.post('/user/auth', (req, res) => {
                 //         let user = {
                 //             firstName: data.firstName,
                 //             lastName: data.lastName,
-                //             email: data.email,
+                //                email: data.email,
                 //             paidAccess: data.paidAccess,
                 //             modulesCompleted: data.modulesCompleted,
                 //             dob: data.dob
@@ -152,7 +167,7 @@ app.post('/user/auth', (req, res) => {
                         
                 //     }
                 // });
-                res.json({tokenValid: true});
+                // res.json({tokenValid: true});
             }else{
                 console.log("Token Invalid");
                 res.json({tokenValid: false});

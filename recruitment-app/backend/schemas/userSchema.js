@@ -35,6 +35,11 @@ const userSchema = new Schema({
         required: true,
         unique: false
     },
+    auth: {
+        type: Boolean,
+        required: true,
+        default: false
+    }
 });
 
 const User = mongoose.model('User', userSchema);

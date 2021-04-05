@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 // import HashLoader from 'react-spinners/HashLoader';
-import { setLogged, setRedirect, setSideNavOpen } from './actions';
+import { setAccount, setLogged, setRedirect, setSideNavOpen } from './actions';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Header/Navbar';
@@ -48,8 +48,11 @@ function App() {
       }
     })
     .then(data => data.json())
-    // .then(data => console.log(data))
-    .then(data => (data.tokenValid) === true ? dispatch(setLogged(true)) : dispatch(setLogged(false)));
+    // .then(data => console.log(data.user))
+    .then(data => {
+      (data.tokenValid) === true ? dispatch(setLogged(true)) : dispatch(setLogged(false));
+      dispatch(setAccount(true, data.user));
+    });
   }
   
   useEffect(() => {
@@ -95,7 +98,7 @@ function App() {
               <Fragment>
                 <div className="LoggedIn__Module__Container">
   
-                  <ModuleNav/>
+                  <ModuleNav checkAuth={checkAuth}/>
                   <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon onClick={() => dispatch(setSideNavOpen(!isSideNavOpen))} />
                   </div>

@@ -1,18 +1,17 @@
 
-import './ModuleNav.css';
-import './ModuleNav.responsive.css';
 import CloseIcon from '@material-ui/icons/Close';
-import { Link } from 'react-router-dom';
-import ModulesCompleted from '../ModulesCompleted/ModulesCompleted';
-import SchoolIcon from '@material-ui/icons/School';
 import CreateIcon from '@material-ui/icons/Create';
 import HelpIcon from '@material-ui/icons/Help';
-import { useSelector,useDispatch } from 'react-redux';
-import {setLogged,setSideNavOpen} from '../../actions';
+import SchoolIcon from '@material-ui/icons/School';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { setLogged, setSideNavOpen } from '../../actions';
+import ModulesCompleted from '../ModulesCompleted/ModulesCompleted';
+import './ModuleNav.css';
+import './ModuleNav.responsive.css';
 
-const GetUserName = () => {
-    return <h3 className="ModuleNav__user" >Paul Pirie</h3>
-}
+
 
 
 async function logout() {
@@ -26,11 +25,20 @@ async function logout() {
     .then(data => console.log(data));
 }
 
-function ModuleNav() {
+function ModuleNav(props) {
     
+    useEffect(() => {
+        props.checkAuth();
+    },[]);
+
     const dispatch = useDispatch();
     const isSideNavOpen = useSelector(state => state.isSideNavOpen);
-    const UserData = useSelector(state => state.isSideNavOpen);
+    const UserData = useSelector(state => state.getAccount).user;
+    console.log(UserData);
+
+    const GetUserName = () => {
+        return <h3 className="ModuleNav__user" >{UserData.firstName} {UserData.lastName}</h3>
+    }
     return (
         <div className={(isSideNavOpen ? "ModuleNav" : "ModuleNav hidden")}>
             <div className="ModuleNav__container">

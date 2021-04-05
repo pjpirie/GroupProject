@@ -27,8 +27,8 @@ import './Module.css';
 
 function Module() {
     return (
-        <div className="Modules">
-            <div className="ModuleHeader">
+        <div className="Module__Page">
+            <div className="Module__Page__Header">
                 <div className="left">
                     <img src={wheel} alt="" className="wheel" />
                 </div>

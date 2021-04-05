@@ -1,8 +1,10 @@
-import './ModulesCompleted.css'
+import './ModulesCompleted.css';
+
 
 
 
 function ModulesCompleted(props) {
+
     const getStyle = (theme) => {
         return theme === "dark" ? {color: 'rgba(0,0,0,1)'} : {color: 'rgba(255,255,255,1)'};
     }
@@ -22,7 +24,15 @@ function ModulesCompleted(props) {
         return (
             <div className="ModulesCompleted">
                 <div className="ModulesCompleted__container">
-                        <h6 className="ModulesCompleted__text" style={getStyle(props.theme)}>Pie Not Made Yet</h6>
+                    <div class="item html">
+                        <h2 style={getStyle(props.theme)}>20%</h2>
+                        <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                            <title>Layer 1</title>
+                            <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="#6fdb6f" fill="none"/>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
         );
