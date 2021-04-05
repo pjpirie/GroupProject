@@ -1,22 +1,24 @@
+import { Fragment, useState } from 'react';
+import { useSelector } from 'react-redux';
+import FaceToFaceIcon from '../../assets/FaceToFaceIcon.png';
+import GroupIcon from '../../assets/GroupIcon.png';
+import GuideIcon from '../../assets/GuideIconV2.png';
+import PrepIcon from '../../assets/PrepIcon.png';
+import RolePlayIcon from '../../assets/RolePlayIcon.png';
+import VirtualIcon from '../../assets/VirtualIcon.png';
+import WrittenIcon from '../../assets/WrittenIcon.png';
+import ModuleModal from '../../components/ModuleModal/ModuleModal';
 import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted';
 import './ModuleTree.css';
 import './ModuleTree.responsive.css';
-import GuideIcon from '../../assets/GuideIconV2.png';
-import PrepIcon from '../../assets/PrepIcon.png';
-import FaceToFaceIcon from '../../assets/FaceToFaceIcon.png';
-import VirtualIcon from '../../assets/VirtualIcon.png';
-import GroupIcon from '../../assets/GroupIcon.png';
-import WrittenIcon from '../../assets/WrittenIcon.png';
-import RolePlayIcon from '../../assets/RolePlayIcon.png';
-import { useEffect, useState } from 'react';
-import {Fragment} from 'react';
-import Modal from 'react-modal';
-import ModuleModal from '../../components/ModuleModal/ModuleModal';
+
 
 
 
 function ModuleTree() {
     
+    
+    const UserData = useSelector(state => state.getAccount).user;
     const [isMod1Open, setMod1Open] = useState(false);
     const [isMod2Open, setMod2Open] = useState(false);
     const [isMod3Open, setMod3Open] = useState(false);
@@ -24,6 +26,19 @@ function ModuleTree() {
     const [isMod5Open, setMod5Open] = useState(false);
     const [isMod6Open, setMod6Open] = useState(false);
     const [isMod7Open, setMod7Open] = useState(false);
+
+    async function completeModule(inData, moduleNumber) {
+        return await fetch(`/user/moduleComplete/${moduleNumber}`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inData), 
+            credentials: 'same-origin'
+        })
+        .then(data => console.log(data));
+    }
+
     return (
         <Fragment>
             <div className="ModuleTree">
@@ -35,7 +50,7 @@ function ModuleTree() {
                     <div className="ModuleTree__Tree">
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod1" >
-                                <img onClick={() => {setMod1Open(!isMod1Open)}} src={GuideIcon} alt="Course Guide"/>
+                                <img onClick={() => {setMod1Open(!isMod1Open); completeModule({email: UserData.email}, 1)}} src={GuideIcon} alt="Course Guide"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>

@@ -217,6 +217,37 @@ app.post('/module/add', (req, res) => {
         });
 });
 
+app.post('/user/moduleComplete/:moduleNumber', (req, res) => {
+    console.log("[Server] Completing Module #" + req.params.moduleNumber);
+        User.findOne({ email: req.body.email}, function(err, data) {
+            if (err)
+            {
+                res.status(400).json('Error: ' + err)
+                console.log('Error: ' + err);
+            }
+            else
+            {
+                data.modulesCompleted == data.modulesCompleted.push(req.params.moduleNumber);
+                data.save();
+            }
+        })
+    });
+
+    app.post('/CMS', (req, res) => {
+        console.log("[Server] Completing Module #" + req.body.user);
+            User.findOne({ email: req.body.email}, function(err, data) {
+                if (err)
+                {
+                    res.status(400).json('Error: ' + err)
+                    console.log('Error: ' + err);
+                }
+                else
+                {
+                    data.paidAccess == req.body.paidAcces;
+                    data.save();
+                }
+            })
+        });
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
