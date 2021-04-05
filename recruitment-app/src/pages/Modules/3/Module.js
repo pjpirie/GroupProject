@@ -13,7 +13,10 @@ function Module() {
     return (
         <div className="Module__Page__Wrapper">
             <div className="Module__Page__Header">
-                <h1>Course Guide</h1>
+                <div className="Module__Page__Header__Text">
+                    <h3>Module 2</h3>
+                    <h1>Interview</h1>
+                </div>
                 <Eta time={15}/>
             </div>
             <div className="Module__Page__Body">
@@ -23,7 +26,7 @@ function Module() {
                     </video>
                 </div>
                 <div className="Module__Page__Text">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+                    <p></p>
                 </div>
                 <div className="Module__Page__LearningPoints">
                     <h2>Key Learning Points</h2>

@@ -45,8 +45,9 @@
 .Module__Page__LearningPoints {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
+    margin: 0 0 2rem 2rem;
 }
 
 .Module__Page__LearningPoints>p {
@@ -89,7 +90,6 @@
 .Module__Page__Point__Body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin: 1rem 0 1rem 5rem;
 }
@@ -98,11 +98,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* margin: 0 2rem; */
 }
 
 .Module__Page__Activity__Header {
     margin: 1rem 0;
     width: 100%;
+    margin: 2rem 0 1rem 2rem;
 }
 
 .Module__Page__Activity__Body {

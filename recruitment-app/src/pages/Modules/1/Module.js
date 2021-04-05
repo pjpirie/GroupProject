@@ -13,7 +13,10 @@ function Module() {
     return (
         <div className="Module__Page__Wrapper">
             <div className="Module__Page__Header">
-                <h1>Course Guide</h1>
+                <div className="Module__Page__Header__Text">
+                    <h3>Module 0</h3>
+                    <h1>Course Guide</h1>
+                </div>
                 <Eta time={15}/>
             </div>
             <div className="Module__Page__Body">
