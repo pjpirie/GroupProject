@@ -10,6 +10,11 @@
 	display: flex;
 }
 
+.ModuleHeader > .right{
+	text-align: left !important;
+	margin-right: 10rem !important;
+}
+
 .wheel {
 	max-width: 50rem;
 	margin-top: -20rem;
@@ -21,10 +26,6 @@
 	color: #fff !important;
 }
 
-.right {
-	margin-right: 10rem;
-	margin-left: 10rem;
-}
 
 .right>h1 {
 	font-size: 4rem;
@@ -43,16 +44,25 @@
 
 .card-1 {
 	display: flex;
+
 }
 
 .card-2 {
 	display: flex;
 	flex-direction: row-reverse;
+
 }
 
 .right,
 .left {
-	min-width: 50%;
+	/* text-align: center; */
+	outline: 1px solid red;
+	justify-content: center;
+	width: 50vw;
+}
+
+.right>.ModuleImg{
+	
 }
 
 .cards img {
@@ -60,7 +70,8 @@
 }
 
 .ModuleImg {
-	width: 25rem !important;
+	width: 20vw !important;
+
 	margin: 0 2rem 0 2rem;
 }
 
@@ -88,6 +99,7 @@
 
 .infoText {
 	margin-top: 5rem;
+	margin-left: 5rem;
 }
 
 .infoImg {
@@ -166,7 +178,7 @@
 	padding-right: 1rem;
 }
 
-.coreIcons>svg:nth-child(2) {
+.coreIcons>svg:hover {
 	color: #71a068;
 }
 
@@ -192,11 +204,16 @@
 
 	.right,
 	.left {
-		margin: 0;
+		margin: 0 auto;
 	}
 
 	.ModuleHeader>.left {
 		display: none;
+	}
+
+	.ModuleHeader>.right {
+		text-align: center !important;
+		margin: 0 auto;
 	}
 
 	.Modules {
