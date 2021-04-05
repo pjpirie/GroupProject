@@ -13,7 +13,7 @@ function ModulesCompleted(props) {
 
     const getPercentage = () =>{
         if(UserData.modulesCompleted.length == 1){
-            if(UserData.modulesCompleted[0] == ""){
+            if(UserData.modulesCompleted[0] == (""|| "{}")){
                 return 0;
             }
             else{
