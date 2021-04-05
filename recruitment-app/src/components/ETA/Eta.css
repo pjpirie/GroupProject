@@ -1,0 +1,10 @@
+.ETA__Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ETA__Text {
+    margin-left: 0.5rem;
+}

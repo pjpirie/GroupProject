@@ -4,7 +4,7 @@
     background: #213142;
     min-height: 100vh;
     display: inline-block;
-    position: fixed;
+    position: relative;
     transition: all 600ms ease-in-out;
     z-index: 999;
 }
