@@ -16,6 +16,7 @@ import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
 import Help from './pages/Help/Help';
 import Landing from './pages/Landing/landing';
+import CMS from './pages/CMS/CMS';
 import { default as Module1 } from './pages/Modules/1/Module';
 import { default as Module2 } from './pages/Modules/2/Module';
 import { default as Module3 } from './pages/Modules/3/Module';
@@ -89,6 +90,7 @@ function App() {
                   <Route path="/contact" component={Contact} />
                   <Route path="/company" component={Company} />
                   <Route path="/modules" component={Modules} />
+                  {/* <Route path="/CMS" component={CMS} /> */}
                 </Switch>
               </Fragment>
             ) : (
@@ -110,6 +112,7 @@ function App() {
                     <Route path="/module/5" component={Module5} />
                     <Route path="/module/6" component={Module6} />
                     <Route path="/module/7" component={Module7} />
+                    <Route path="/CMS" component={CMS} />
                   </Switch>
                   <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon style={{opacity: 0}} />
