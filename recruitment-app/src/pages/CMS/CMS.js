@@ -1,11 +1,15 @@
+import { useSelector } from 'react-redux'
+
 import React, { useEffect, useState }  from 'react'
 import { Redirect } from 'react-router';
 import axios from 'axios'
 
 import './CMS.css'
 
-
 function CMS(props) {
+
+
+    // const users = useSelector(state=>state.getAccount).user
 
     const [users, setUsers] = useState([])
     useEffect(()=>{
@@ -17,24 +21,31 @@ function CMS(props) {
         .catch(error=>console.log(error))
     }, [])
 
+
     const changeAccess=(currentAccess)=>{
-        let newAcc;
-        if(currentAccess === true){newAcc=false}else{newAcc=true};
+        window.location.reload();
         return fetch('http://localhost:5000/CMS', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify(newAcc),
+            body: JSON.stringify(currentAccess),
         })
-            .then(data=>data.json())
+        .then(data=>data.json())
     }
+
+
+    const checker = useSelector(state => state.getAccount).user.auth
+    if(!checker){console.log(checker + "    Checker says no")}
+    if(checker){console.log(checker + "     Checker says yes")}
 
     return (
         <div className="CMS-container">
 
             <div className="acc-display">
-
+                <h1>How to use:</h1>
+                <h3>To change someones paid status, simply find the account you wish to change and click on the "Change Access" button.</h3>
+                <h3>If you change the access to the wrong account, find the account and press the button again.</h3> <br />
                 <table className="email-display">
                     <tr className="email-header">
                         <th>Email</th>
@@ -44,11 +55,9 @@ function CMS(props) {
                     {
                         users.map(user=>
                             <tr className="email-single-display">
-                                <form onSubmit={changeAccess(user.paidAccess)}>
-                                    <td className="user-email" key={user.id}><p name="userEmail">{user.email}</p></td>
-                                    <td className="user-email"><p name="currentAccess" value={user.paidAccess ? "true":"false"}>{user.paidAccess ? "Yes":"No"}</p></td>
-                                    <td className="user-email"><button type="submit" value="submit">Change Access</button></td>
-                                </form>
+                                <td className="user-email"><p name="userEmail">{user.email}</p></td>
+                                <td className="user-email"><p name="currentAccess">{user.paidAccess ? "Yes":"No"}</p></td>
+                                <td className="user-email"><button onClick={()=>{changeAccess({email: user.email, paidAccess: !user.paidAccess})}}>Change Access</button></td>
                             </tr>
                         )
                     }
@@ -59,5 +68,4 @@ function CMS(props) {
         </div>
     )  
 }
-
 export default CMS
