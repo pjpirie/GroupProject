@@ -1,34 +1,21 @@
-import React, { useEffect, useState }  from 'react'
-import { Redirect } from 'react-router';
-import axios from 'axios'
-
-import './CMS.css'
+import React from 'react';
+import './CMS.css';
 
 
 function CMS(props) {
 
-    const [users, setUsers] = useState([])
-    useEffect(()=>{
-        axios.get("http://localhost:5000/user")
-        .then(res=>{
-            console.log(res)
-            setUsers(res.data)
-        })
-        .catch(error=>console.log(error))
-    }, [])
-
-    const changeAccess=(currentAccess)=>{
-        let newAcc;
-        if(currentAccess === true){newAcc=false}else{newAcc=true};
-        return fetch('http://localhost:5000/CMS', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(newAcc),
-        })
-            .then(data=>data.json())
-    }
+    // const changeAccess=(currentAccess)=>{
+    //     let newAcc;
+    //     if(currentAccess === true){newAcc=false}else{newAcc=true};
+    //     return fetch('http://localhost:5000/CMS', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newAcc),
+    //     })
+    //         .then(data=>data.json())
+    // }
 
     return (
         <div className="CMS-container">
@@ -41,7 +28,7 @@ function CMS(props) {
                         <th>Paid</th>
                         <th>Change</th>
                     </tr>
-                    {
+                    {/* {
                         users.map(user=>
                             <tr className="email-single-display">
                                 <td className="user-email" key={user.id}>{user.email}</td>
@@ -49,7 +36,7 @@ function CMS(props) {
                                 <td className="user-email"><form onSubmit={changeAccess(user.paidAccess)}><button type="submit" value="submit">Change Access</button></form></td>
                             </tr>
                         )
-                    }
+                    } */}
                 </table>
 
             </div>

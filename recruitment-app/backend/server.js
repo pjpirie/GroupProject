@@ -101,7 +101,8 @@ app.post('/user/login', (req, res) => {
                     email: data.email,
                     paidAccess: data.paidAccess,
                     modulesCompleted: data.modulesCompleted,
-                    dob: data.dob
+                    dob: data.dob,
+                    auth: data.auth
                 }
                 res.json({ token: token, user: user})
             } else {
@@ -145,7 +146,8 @@ app.post('/user/auth', (req, res) => {
                             email: data.email,
                             paidAccess: data.paidAccess,
                             modulesCompleted: data.modulesCompleted,
-                            dob: data.dob
+                            dob: data.dob,
+                            auth: data.auth
                         }
                         res.json({tokenValid: true, user: user});
                         
