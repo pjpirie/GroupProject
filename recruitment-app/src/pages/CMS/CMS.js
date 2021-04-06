@@ -52,7 +52,7 @@ function CMS(props) {
                         <th>Paid</th>
                         <th>Change</th>
                     </tr>
-                    {
+                    {/* {
                         users.map(user=>
                             <tr className="email-single-display">
                                 <td className="user-email"><p name="userEmail">{user.email}</p></td>
@@ -60,7 +60,7 @@ function CMS(props) {
                                 <td className="user-email"><button onClick={()=>{changeAccess({email: user.email, paidAccess: !user.paidAccess})}}>Change Access</button></td>
                             </tr>
                         )
-                    }
+                    } */}
                 </table>
 
             </div>
