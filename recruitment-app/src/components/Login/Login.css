@@ -81,6 +81,7 @@
     color: white;
     font-weight: 700;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .alt-btn {
@@ -88,4 +89,6 @@
     font-weight: 500;
     color: #213142;
     background: #fff;
+    cursor: pointer;
+
 }

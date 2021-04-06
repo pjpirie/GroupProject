@@ -35,6 +35,10 @@
 
 }
 
+.list-unstyled{
+	list-style: none;
+}
+
 .link-col {
 	text-align: left !important;
 }

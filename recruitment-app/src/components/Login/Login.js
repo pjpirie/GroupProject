@@ -83,12 +83,13 @@ export default function Login(props) {
                         <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
                     </label>
                     <div>
+
+                        <button class=" btn-clearing main-btn" type="submit">Login</button>
                         <p>Need an account?
                         <button 
                         class="btn-clearing alt-btn" 
                         onClick={() => { dispatch(setRedirect(true, `/register`))} }
                                 >Sign up here</button></p>
-                        <button class=" btn-clearing main-btn" type="submit">Login</button>
                     </div>
                 </form>
             </div>
