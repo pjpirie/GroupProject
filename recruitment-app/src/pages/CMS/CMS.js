@@ -11,7 +11,7 @@ function CMS(props) {
 
     const [users, setUsers] = useState([])
     useEffect(()=>{
-        axios.get("http://localhost:5000/user")
+        axios.get("http://86.11.53.197:5000/user")
         .then(res=>{
             console.log(res)
             setUsers(res.data)
@@ -22,14 +22,14 @@ function CMS(props) {
     const changeAccess=(currentAccess)=>{
         window.location.reload();
 
-        axios.get("http://localhost:5000/user")
+        axios.get("http://86.11.53.197:5000/user")
         .then(res=>{
             console.log(res)
             setUsers(res.data)
         })
         .catch(error=>console.log(error))
 
-        return fetch('http://localhost:5000/CMS', {
+        return fetch('http://86.11.53.197:5000/CMS', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

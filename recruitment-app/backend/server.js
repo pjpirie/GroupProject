@@ -295,6 +295,36 @@ app.post('/user/moduleComplete/:moduleNumber', (req, res) => {
             })
         });
 
+    app.get('/download1', function(req, res){
+        const file = `./downloads/Module 1 Preparation Activity Sheet.pdf`;
+        res.download(file); // Set disposition and send it.
+        });
+
+    app.get('/download2', function(req, res){
+        const file = `./downloads/Module 2 Interview Activity Sheet.pdf`;
+        res.download(file); // Set disposition and send it.
+        });
+
+    app.get('/download3', function(req, res){
+        const file = `./downloads/Module_3_RemoteVirtule_Interview_Activity_Sheet.pdf`;
+        res.download(file); // Set disposition and send it.
+        });
+
+    app.get('/download4', function(req, res){
+        const file = `./downloads/Module 4 Group Exercise Activity Sheet.pdf`;
+        res.download(file); // Set disposition and send it.
+        });
+
+    app.get('/download5', function(req, res){
+        const file = `./downloads/Module 5 Role Play Activity Sheet.pdf`;
+        res.download(file); // Set disposition and send it.
+        });
+
+    app.get('/download6', function(req, res){
+        const file = `./downloads/Module 6 Written Exercise Activity Sheet.pdf`;
+        res.download(file); // Set disposition and send it.
+        });
+
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
 });
