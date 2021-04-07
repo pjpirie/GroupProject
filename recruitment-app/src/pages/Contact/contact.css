@@ -18,7 +18,7 @@
 	width: 100%;
 	max-width: 800px;
 
-	height: 70vh;
+	height: 80vh;
 
 	/* outline: 1px solid red; */
 
@@ -69,6 +69,14 @@ option {
 	color: #fff !important;
 }
 
+.contact-message{
+	padding: 2rem;
+	margin-top: 5rem;
+	border-radius: 10px;
+	box-shadow: 13px 15px 22px -10px rgba(167, 167, 167, 0.75);
+	background: #FAFAFA;
+}
+
 @media (max-width: 870px) {
 	.contact-header {
 		text-align: center;
@@ -81,7 +89,7 @@ option {
 	}
 
 	.contact{
-		margin-bottom: 10rem;
+		margin-bottom: 20rem;
 	}
 
 	.textarea {
@@ -89,8 +97,10 @@ option {
 	}
 
 	.submitBtn {
+		/* margin-right: 20px !important; */
 		margin-top: 0 !important;
 		margin-left: 0 !important;
+		/* width: 50px; */
 	}
 }
 

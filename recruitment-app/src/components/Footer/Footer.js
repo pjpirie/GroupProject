@@ -23,16 +23,16 @@ function Footer() {
             <ul className="list-unstyled link-col">
               <h3>Quick Links</h3>
               <Link to="/" className="footer-nav">
-                <li>Home</li>
+                <li className="footer-nav-links">Home</li>
               </Link>
               <Link to="/modules" className="footer-nav">
-                <li>Course Information</li>
+                <li className="footer-nav-links">Course Information</li>
               </Link>
               <Link to="/contact" className="footer-nav">
-                <li>Contact</li>
+                <li className="footer-nav-links">Contact</li>
               </Link >
-              <Link to="/" className="footer-nav">           
-                <li>Privacy Policy</li>
+              <Link to="/privacy" className="footer-nav">           
+                <li className="footer-nav-links">Privacy Policy</li>
               </Link>
             </ul>
           </div>

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import React, { useEffect, useState }  from 'react'
 import { Redirect } from 'react-router';
 import axios from 'axios'
+import { Button } from '@material-ui/core';
 
 import './CMS.css'
 
@@ -60,7 +61,7 @@ function CMS(props) {
                             <tr className="email-single-display">
                                 <td className="user-email"><p name="userEmail">{user.email}</p></td>
                                 <td className="user-email"><p name="currentAccess">{user.paidAccess ? "Yes":"No"}</p></td>
-                                <td className="user-email"><button onClick={()=>{changeAccess({email: user.email, paidAccess: !user.paidAccess})}}>Change Access</button></td>
+                                <td className="user-email"><Button className="button-style" onClick={()=>{changeAccess({email: user.email, paidAccess: !user.paidAccess})}}>Change Access</Button></td>
                             </tr>
                         )})
                     }

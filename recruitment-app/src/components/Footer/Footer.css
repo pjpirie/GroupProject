@@ -31,12 +31,15 @@
 .footerBtn {
 	background: #71a068 !important;
 	color: #fff !important;
-
-
+	margin-top: 1rem !important;
 }
 
 .list-unstyled{
 	list-style: none;
+}
+
+.footer-nav-links{
+	margin-top: 5px;
 }
 
 .link-col {

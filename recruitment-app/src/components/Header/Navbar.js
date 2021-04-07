@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightNav } from '../../actions';
 import AccountSection from '../AccountSection/AccountSection';
+import logo from '../../assets/logo.svg'
 import './Navbar.css';
 
 
@@ -38,10 +39,13 @@ let isNavLight = useSelector(state => state.isLightNav);
     },[]);
 
     return (
-
-
         <div className="navbar">
             <nav className="nav">
+                <div className="nav-logo-div">
+                    <Link onClick={() => setLightStyle(false)} style={navStyle} to='/'>
+                        <li style={getLinkStyle(isNavLight)} className="nav-link"><img src={logo} alt="Logo img" className="nav-logo" /></li>
+                    </Link>
+                </div>
                 <Link onClick={() => setLightStyle(false)} style={navStyle} to='/'>
                     <li style={getLinkStyle(isNavLight)} className="nav-link">Home</li>
                 </Link>
@@ -54,7 +58,6 @@ let isNavLight = useSelector(state => state.isLightNav);
 
                 <AccountSection getLinkStyle={getLinkStyle} setLightStyle={setLightStyle} navStyle={navStyle} lightStyle={isNavLight}/>
             </nav>
-
         </div>
     )
 }

@@ -40,7 +40,7 @@ function Module() {
                     <br />
                     You can then personalise these by palnning for success by inputting "Action Items" specific to you.    
                     </p>
-                    <Button className="Module__Page__Header__Text__btn" onClick={() => {alert("Todo Do something")}}>Start Now</Button>
+                    <Button className="Module__Page__Header__Text__btn button-style" onClick={() => {alert("Todo Do something")}}>Start Now</Button>
                 </div>
             </div>
             <div className="Module__Page__Body">

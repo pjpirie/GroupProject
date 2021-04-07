@@ -1,3 +1,6 @@
+import { useSelector } from 'react-redux'
+import { Redirect } from 'react-router';
+
 import { Button } from '@material-ui/core';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
@@ -58,13 +61,16 @@ function Contact() {
                         <textarea className="textarea" rows="5" cols="74" required name="enquiry"/>
                     </label>
 
-                    <Button type="submit" className="submitBtn">Submit</Button>
+                    <Button type="submit" className="submitBtn button-style">Submit</Button>
                 </form>
                 : null
                 }
                 {
                     display?
-                    <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
+                    <div className="contact-message">
+                        <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
+                        <h2 className="formSubmit">We will be in touch</h2>
+                    </div>
                     : null
                 }
             </div>

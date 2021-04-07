@@ -12,6 +12,7 @@
 
 .nav {
 	display: flex;
+	width: 100%;
 	/* background: transparent; */
 }
 
@@ -26,3 +27,15 @@
 .nav-link:hover {
 	color: red;
 }
+
+.nav-logo-div{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+.nav-logo{
+	width: 5rem;
+	height: 5rem;
+}
+
+/* Mobile */
