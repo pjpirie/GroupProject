@@ -14,17 +14,18 @@
 	text-align: center;
 
 	margin-top: 3rem;
-
+	margin-bottom: 10rem;
 	width: 100%;
 	max-width: 800px;
 
-	height: 80vh;
+	min-height: 50vh;
 
 	/* outline: 1px solid red; */
 
 }
 
 .contact-header {
+	padding-top: 7rem;
 	margin-left: 35rem;
 }
 
@@ -35,6 +36,21 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	padding-top: 5rem;
+	text-align: left;
+
+}
+
+.container-form{
+	border-radius: 15px;
+    box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.form-h4{
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 15px;
+	padding-top: 15px;
+
 }
 
 .input, .input-select {
@@ -43,7 +59,7 @@
 	padding: 0.5rem !important;
 	border: 1px solid #000 !important;
 	border-radius: 10px !important;
-	width: 30ch !important;
+	width: 39ch !important;
 	height: 6.7ch !important;
 }
 
@@ -60,13 +76,20 @@ option {
 	padding: 0.5rem;
 	border: 1px solid #000 !important;
 	border-radius: 10px !important;
+	font-family: "Rubik", sans-serif !important;
 }
 
 .submitBtn {
 	background: #71a068 !important;
 	margin-top: 1rem !important;
 	margin-left: 25rem !important;
+	margin-bottom: 2rem !important;
 	color: #fff !important;
+	border-radius: 15px !important;
+	width: 120px !important;
+	height: 35px !important;
+	font-weight: 800 !important;
+	text-transform: none !important;
 }
 
 .contact-message{
@@ -86,6 +109,7 @@ option {
 	.contact-form {
 		flex-direction: column;
 		margin-bottom: 5rem !important;
+		text-align: center !important;
 	}
 
 	.contact{
@@ -97,13 +121,7 @@ option {
 	}
 
 	.submitBtn {
-		/* margin-right: 20px !important; */
 		margin-top: 0 !important;
 		margin-left: 0 !important;
-		/* width: 50px; */
 	}
 }
-
-/* .link {
-	border: 1px solid green !important;
-} */

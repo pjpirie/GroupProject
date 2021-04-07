@@ -26,43 +26,46 @@ function Contact() {
 
     return (
         <div className="contact-page">
-            <div className="contact">
-                <h1 className="contact-header">Contact Us</h1>
+            <h1 className="contact-header">Contact Us</h1>
+            <div className="contact">            
                 {
-                    !display?
-                <form onSubmit={handelSubmit} className="contact-form">
-                    <label className="label">
-                        <p>Name</p>
-                        <input type="text" className="input" required name="name" />
-                    </label>
+                    !display? 
+                <div className="container-form">
+                    <h2 className="form-h4">Get in touch below</h2>
+                    <form onSubmit={handelSubmit} className="contact-form">
+                        <label className="label">
+                            <p>Name</p>
+                            <input type="text" className="input" required name="name" />
+                        </label>
 
-                    <label className="label">
-                        <p>Email</p>
-                        <input type="email" className="input" required name="email"/>
-                    </label>
-                    
-                    <label className="label">
-                        <p>Number</p>
-                        <input type="text" className="input" required name="number" pattern="^\d{11}$" />
-                    </label>
+                        <label className="label">
+                            <p>Email</p>
+                            <input type="email" className="input" required name="email"/>
+                        </label>
+                        
+                        <label className="label">
+                            <p>Number</p>
+                            <input type="text" className="input" required name="number" pattern="^\d{11}$" />
+                        </label>
 
-                    <label className="label">
-                        <p>Category</p>
-                        <select required className="input-select" name="category">
-                            <option></option>
-                            <option>Select 1</option>
-                            <option>Select 2</option>
-                            <option>Select 3</option>
-                        </select> 
-                    </label>
+                        <label className="label">
+                            <p>Category</p>
+                            <select required className="input-select" name="category">
+                                <option></option>
+                                <option>Select 1</option>
+                                <option>Select 2</option>
+                                <option>Select 3</option>
+                            </select> 
+                        </label>
 
-                    <label className="label">
-                        <p>Enquiry</p>
-                        <textarea className="textarea" rows="5" cols="74" required name="enquiry"/>
-                    </label>
+                        <label className="label">
+                            <p>Enquiry</p>
+                            <textarea className="textarea" rows="5" cols="64" required name="enquiry"/>
+                        </label>
 
-                    <Button type="submit" className="submitBtn button-style">Submit</Button>
-                </form>
+                        <Button type="submit" className="submitBtn">Submit</Button>
+                    </form>
+                </div>
                 : null
                 }
                 {

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightNav } from '../../actions';
 import AccountSection from '../AccountSection/AccountSection';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logoBlue.png'
 import './Navbar.css';
 
 

@@ -1,6 +1,6 @@
 import './Footer.css';
 import './Footer.responsive.css';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logoWhite.png';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
