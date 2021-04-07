@@ -57,7 +57,8 @@ function Edit(props) {
             body: JSON.stringify(inData), 
             credentials: 'same-origin'
         })
-        .then(data => console.log(data));
+        .then(data => console.log(data))
+        .then(() => props.checkAuth());
     }
 
     const checkMatch = p => {

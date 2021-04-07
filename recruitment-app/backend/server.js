@@ -153,23 +153,6 @@ app.post('/user/auth', (req, res) => {
                         
                     }
                 });
-                // User.findById(UserHeaders.UserId, function (err, data) {
-                //     if (err) {
-                //         res.send(err);
-                //     } else {
-                //         let user = {
-                //             firstName: data.firstName,
-                //             lastName: data.lastName,
-                //                email: data.email,
-                //             paidAccess: data.paidAccess,
-                //             modulesCompleted: data.modulesCompleted,
-                //             dob: data.dob
-                //         }
-                //         res.json({tokenValid: true, user: user});
-                        
-                //     }
-                // });
-                // res.json({tokenValid: true});
             }else{
                 console.log("Token Invalid");
                 res.json({tokenValid: false});
@@ -245,28 +228,7 @@ app.post('/user/edit', (req, res) => {
                 res.status(400).json("Record Updated")
             }
         }
-    });
-
-
-
-
-    User.findOne({ email: email }, function (err, data){
-        if (err) {
-            res.send(err);
-        } else {
-            let user = {
-                firstName: data.firstName,
-                lastName: data.lastName,
-                email: data.email,
-                paidAccess: data.paidAccess,
-                modulesCompleted: data.modulesCompleted,
-                dob: data.dob,
-                auth: data.auth
-            }
-            res.json({tokenValid: true, user: user});
-            
-        }
-    });   
+    });  
 });
 
 app.get('/module', (req, res) => {
