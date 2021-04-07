@@ -187,43 +187,86 @@ app.post('/user/logout', (req, res) => {
     res.status(200).send("Cleared token");
 });
 
-app.post('/user/edit/password', (req, res) => {
-    console.log("[Server] Password Change");
-    console.log(req.headers.cookie);
-    if(req.headers.cookie == undefined){
-        console.log("Cookie Undefined");
-        res.json({tokenValid: false});
-    }else{
-        let UserHeaders = req.headers.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
-        if(UserHeaders.token != (null || undefined)){
-            if(jwt.verify(UserHeaders.token, jwtSecret)){
-                let email = UserHeaders.User_Id;
-                User.findOne({ email: email }, function (err, data){
-                    if (err) {
-                        res.send(err);
-                    } else {
-                        let user = {
-                            firstName: data.firstName,
-                            lastName: data.lastName,
-                            email: data.email,
-                            paidAccess: data.paidAccess,
-                            modulesCompleted: data.modulesCompleted,
-                            dob: data.dob,
-                            auth: data.auth
-                        }
-                        res.json({tokenValid: true, user: user});
-                        
+app.post('/user/edit', (req, res) => {
+    console.log("[Server] Info Change");
+    const email = req.body.C_email;
+    const newEmail = req.body.N_email
+    const password = req.body.Password;
+    const FName = req.body.firstName;
+    const LName = req.body.lastName;
+
+    // ! Check if the Password is correct for the old email's account
+    // * Continue Logic
+    // ? Return Error, Cancel Logic
+
+    if ((email || password) == (undefined || null)) {
+        res.status(400).json('Error: Required Data Missing')
+        console.log("Required Data Missing")
+    }
+    User.findOne({ email: email }, function (err, data) {
+        if (err) {
+            res.status(400).send(err);
+        } else {
+            if (passwordHash.verify(password, data.password)) {
+                // ! Check if the current email is the same as the new email
+                // * Skip Email Change Logic
+                // ? Continue Logic
+                if(newEmail !== undefined){
+                    if(data.email !== newEmail){
+                        // ! Check if the new email us already being used
+                        // * Return Error, Cancel Logic 
+                        // ? Change Email in Db payload
+                        const query = User.find({email: newEmail});
+                        query.countDocuments(function (err, count) {
+                            if (err) console.log(err);
+                            if(count > 0){
+                                res.status(400).json("Error: Email Address In Use");
+                            }else{
+                                data.email = newEmail;
+                            }
+                        });
+                    }else{
+                        data.email = newEmail;
                     }
-                });
-            }else{
-                console.log("Token Invalid");
-                res.json({tokenValid: false});
+                }   
+                // ! Check if the current First & Last Name is the same as the current First & Last Name
+                // * Skip Name Change Logic
+                // ? Change First & Last Name in Db payload
+                if(FName !== undefined){
+                    data.firstName = FName;
+                }
+                if(LName !== undefined){
+                    data.lastName = LName;
+                }
+                // console.table(data)
+                data.save();
+                res.status(200).json("Record Updated")
+            } else {
+                res.status(400).json("Record Updated")
             }
-        }else{
-            console.log("Token Undefined");
-            res.json({tokenValid: false});
         }
-    }   
+    });
+
+
+
+
+    User.findOne({ email: email }, function (err, data){
+        if (err) {
+            res.send(err);
+        } else {
+            let user = {
+                firstName: data.firstName,
+                lastName: data.lastName,
+                email: data.email,
+                paidAccess: data.paidAccess,
+                modulesCompleted: data.modulesCompleted,
+                dob: data.dob,
+                auth: data.auth
+            }
+            res.json({tokenValid: true, user: user});
+            
+        }
+    });   
 });
 
 app.get('/module', (req, res) => {
