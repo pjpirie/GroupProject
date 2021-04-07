@@ -3,8 +3,13 @@ import Check from '@material-ui/icons/CheckCircleOutlineRounded';
 import Bulb from '@material-ui/icons/EmojiObjects';
 import Arrow from '@material-ui/icons/OpenWithRounded';
 import Gear from '@material-ui/icons/Settings';
-import Msg from '../../assets/FaceToFaceIcon.png';
-import People from '../../assets/GroupIcon.png';
+import Clipboard from '../../assets/1x/Dark_CourseGuide_Icon-8.png';
+import Msg from '../../assets/1x/Dark_FaceToFace_Icon-8.png';
+import People from '../../assets/1x/Dark_Group_Icon-8.png';
+import Faces from '../../assets/1x/Dark_RolePlay_Icon-8.png';
+import Laptop from '../../assets/1x/Dark_Virtual_Icon-8.png';
+import Pencil from '../../assets/1x/Dark_Written_Icon-8.png';
+import Quote from '../../assets/1x/QuotesIcon-8.png';
 import ModuleImg4 from '../../assets/Image-1.png';
 import ModuleImg3 from '../../assets/Image-2.png';
 import ModuleImg1 from '../../assets/Image-3.png';
@@ -12,12 +17,9 @@ import ModuleImg2 from '../../assets/Image-4.png';
 import ModuleImg5 from '../../assets/Image-5.png';
 import ModuleImg6 from '../../assets/Image.png';
 import ModuleBottom from '../../assets/modules-bottom.png';
-import Clipboard from '../../assets/PrepIcon.png';
-import Faces from '../../assets/RolePlayIcon.png';
-import Laptop from '../../assets/VirtualIcon.png';
 import Wheels from '../../assets/wheel.png';
-import Pencil from '../../assets/WrittenIcon.png';
 import './Module.css';
+import './Module.responsive.css';
 
 
 
@@ -117,16 +119,19 @@ function Module() {
                     {/* Item 6 End */}
                 </div>
                 <div className="Module__Page__Quote">
-                    <h3>
-                    “ This programme is designed to provide a template 
-                    for you to access skills and techniques and target 
-                    these on achieving your goal of succeeding in 
-                    recruitment situations. ”
-                    </h3>
-                    <div className="Module__Page__Quote__Image">
-                        <img src={People} alt="Vince Coogans Avatar" />
-                        <h3>Vince Coogans</h3>
-                        <p>Director XPC International Ltd.</p>
+                        <img className="Module__Page__Quote__BG" src={Quote} alt="Quotes" />
+                    <div className="Module__Page__Quote__Container">
+                        <h3>
+                        “ This programme is designed to provide a template 
+                        for you to access skills and techniques and target 
+                        these on achieving your goal of succeeding in 
+                        recruitment situations. ”
+                        </h3>
+                        <div className="Module__Page__Quote__Image">
+                            <img src={People} alt="Vince Coogans Avatar" />
+                            <h3>Vince Coogans</h3>
+                            <p>Director XPC International Ltd.</p>
+                        </div>
                     </div>
                 </div>
                 <div className='Module__Page__About' >
@@ -137,7 +142,7 @@ function Module() {
                 </div>
                 <div className='Module__Page__CTA' >
                     <h1>Ready to begin your journey to success?</h1>
-                    <Button />
+                    <Button className="Module__Page__CTA__btn">Begin Here</Button>
                 </div>
                 <div className='Module__Page__Values' >
                     <h1>Our Core Values</h1>
