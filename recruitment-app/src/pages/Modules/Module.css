@@ -20,12 +20,14 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	transform: translate(-45%, -50%)
+	transform: translate(-45%, -50%);
+	z-index: 1;
 }
 
 .Module__Page__Header__Text {
 	max-width: 40vw;
 	width: 100%;
+	z-index: 2;
 }
 
 .Module__Page__Header__Text h1 {
@@ -38,20 +40,20 @@
 }
 
 .Module__Page__Header__Text__btn {
-	margin: 2rem 0 0 0;
-	padding: 5px 20px;
-	background: #71A068;
-	border-radius: 20px;
-	color: #fff;
-	font-size: 1.3rem;
-	font-weight: 700;
-	border: none;
-	outline: none;
-	display: flex;
+	margin: 2rem 0 0 0 !important;
+	padding: 5px 20px !important;
+	background: #71A068 !important;
+	border-radius: 20px !important;
+	color: #fff !important;
+	font-size: 1.3rem !important;
+	font-weight: 700 !important;
+	border: none !important;
+	outline: none !important;
+	display: flex !important;
 }
 
 .Module__Page__Header__Text__btn:hover {
-	background: #6877a0;
+	background: #6877a0 !important;
 }
 
 .Module__Page__Body {
@@ -98,13 +100,14 @@
 }
 
 .Module__Page__Item__Text img {
-	max-height: 50px;
-	max-width: 50px;
+	max-height: 75px;
+	max-width: 75px;
 	margin: 1rem 0;
 }
 
 .Module__Page__Item__Text h2 {
 	margin: 1rem 0;
+	color: #0E1B31;
 }
 
 .Module__Page__Item__Text p {
@@ -124,17 +127,38 @@
 }
 
 .Module__Page__Quote {
+	position: relative;
+	z-index: 999;
+	margin: 4rem 0 0 0;
+}
+
+.Module__Page__Quote__Container {
 	background: #565788;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	padding: 2rem;
+	padding: 0 10rem;
+	height: 40vh;
+	clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+	position: relative;
+	z-index: 1;
 }
 
-.Module__Page__Quote h3 {
+.Module__Page__Quote__BG {
+	position: absolute;
+	top: 0;
+	left: 15%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.Module__Page__Quote__Container>h3 {
 	color: #fff;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
+	line-height: 2rem;
+	width: 70%;
+	text-align: center;
 }
 
 .Module__Page__Quote__Image {
@@ -142,30 +166,73 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	flex-direction: column;
+	color: #fff;
+}
+
+.Module__Page__Quote__Image>h3 {
+	margin: 1rem 0 0.5rem;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
 }
 
 .Module__Page__About {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin: -5rem 0 0;
+}
+
+.Module__Page__About>p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 2rem;
+	line-height: 2.6rem;
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 .Module__Page__CTA {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	background: url('../../assets/Banner.png');
 	background-position: center;
 	background-size: cover;
+	width: 100vw;
+	height: 30vh;
+	margin-top: -5rem;
 }
 
-.Module__Page__CTA h1 {}
+.Module__Page__CTA__btn {
+	margin: 2rem 0 0 0 !important;
+	padding: 5px 20px !important;
+	background: #71A068 !important;
+	border-radius: 20px !important;
+	color: #fff !important;
+	font-size: 1rem !important;
+	font-weight: 700 !important;
+	border: none !important;
+	outline: none !important;
+	display: flex !important;
+}
+
+.Module__Page__CTA h1 {
+	color: #0E1B31;
+}
 
 .Module__Page__Values {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin: 4rem 0;
+	width: 100%;
 }
 
 .Module__Page__Values h1 {}
@@ -174,9 +241,25 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	width: 100%;
+	margin-top: 4rem;
 }
 
-.Module__Page__Values__Item {}
+.Module__Page__Values__Item {
+	width: 150px;
+	height: 150px;
+	margin: 0 1rem;
+}
+
+.Module__Page__Values__Item svg {
+	width: 100% !important;
+	height: 100% !important;
+	fill: #888888;
+}
+
+.Module__Page__Values__Item svg:hover {
+	fill: #71A068;
+}
 
 .Module__Page__Values__Item--Check {}
 

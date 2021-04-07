@@ -187,6 +187,45 @@ app.post('/user/logout', (req, res) => {
     res.status(200).send("Cleared token");
 });
 
+app.post('/user/edit/password', (req, res) => {
+    console.log("[Server] Password Change");
+    console.log(req.headers.cookie);
+    if(req.headers.cookie == undefined){
+        console.log("Cookie Undefined");
+        res.json({tokenValid: false});
+    }else{
+        let UserHeaders = req.headers.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+        if(UserHeaders.token != (null || undefined)){
+            if(jwt.verify(UserHeaders.token, jwtSecret)){
+                let email = UserHeaders.User_Id;
+                User.findOne({ email: email }, function (err, data){
+                    if (err) {
+                        res.send(err);
+                    } else {
+                        let user = {
+                            firstName: data.firstName,
+                            lastName: data.lastName,
+                            email: data.email,
+                            paidAccess: data.paidAccess,
+                            modulesCompleted: data.modulesCompleted,
+                            dob: data.dob,
+                            auth: data.auth
+                        }
+                        res.json({tokenValid: true, user: user});
+                        
+                    }
+                });
+            }else{
+                console.log("Token Invalid");
+                res.json({tokenValid: false});
+            }
+        }else{
+            console.log("Token Undefined");
+            res.json({tokenValid: false});
+        }
+    }   
+});
+
 app.get('/module', (req, res) => {
     Module.find()
         .then(modules => res.json(modules))
