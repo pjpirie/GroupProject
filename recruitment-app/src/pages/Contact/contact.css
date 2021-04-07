@@ -79,6 +79,10 @@ option {
 	font-family: "Rubik", sans-serif !important;
 }
 
+.textarea{
+	width: 62ch !important;
+}
+
 .submitBtn {
 	background: #71a068 !important;
 	margin-top: 1rem !important;

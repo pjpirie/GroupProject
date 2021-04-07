@@ -60,7 +60,7 @@ function Contact() {
 
                         <label className="label">
                             <p>Enquiry</p>
-                            <textarea className="textarea" rows="5" cols="64" required name="enquiry"/>
+                            <textarea className="textarea" required name="enquiry"/>
                         </label>
 
                         <Button type="submit" className="submitBtn">Submit</Button>
