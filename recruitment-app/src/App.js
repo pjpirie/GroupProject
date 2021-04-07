@@ -11,12 +11,12 @@ import Login from './components/Login/Login';
 import ModuleNav from './components/ModuleHeader/ModuleNav';
 import Register from './components/Register/Register';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import Account from './pages/Account/Account';
+import CMS from './pages/CMS/CMS';
 import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
+import Edit from './pages/Edit/Edit';
 import Help from './pages/Help/Help';
 import Landing from './pages/Landing/landing';
-import CMS from './pages/CMS/CMS';
 import { default as Module1 } from './pages/Modules/1/Module';
 import { default as Module2 } from './pages/Modules/2/Module';
 import { default as Module3 } from './pages/Modules/3/Module';
@@ -93,6 +93,7 @@ function App() {
                   <Route path="/contact" component={Contact} />
                   <Route path="/company" component={Company} />
                   <Route path="/modules" component={Modules} />
+                  <Route component={Landing} />
                   {/* <Route path="/CMS" component={CMS} /> */}
                 </Switch>
               </Fragment>
@@ -106,7 +107,9 @@ function App() {
                   </div>
                   <Switch>
                     <Route path="/" exact component={ModuleTree} />
-                    <Route path="/account" component={Account} />
+                    <Route path="/edit">
+                      <Edit checkAuth={checkAuth} />
+                    </Route>
                     <Route path="/help" component={Help} />
                     <Route path="/module/1" component={Module1} />
                     <Route path="/module/2" component={Module2} />
@@ -116,6 +119,7 @@ function App() {
                     <Route path="/module/6" component={Module6} />
                     <Route path="/module/7" component={Module7} />
                     <Route path="/CMS" component={CMS} />
+                    <Route component={ModuleTree} />
                   </Switch>
                   <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon style={{opacity: 0}} />
