@@ -7,8 +7,18 @@ import './Module.css';
 
 function Module() {
 
+    async function DownloadMedia() {
+        return fetch('http://localhost:5000/download1', {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(data => data.json())
+    }
+
     const handleDownload = () => {
-        alert("//TODO Download");
+        DownloadMedia();
     };
     return (
         <div className="Module__Page__Wrapper">
@@ -84,7 +94,7 @@ function Module() {
                     </div>
                 </div>
                 <div className="Module__Page__Btn__Container">
-                    <button onClick={() => { handleDownload(); }}>Download</button>
+                    <button onClick={() => { DownloadMedia(); }}>Download</button>
                 </div>
             </div>      
         </div>

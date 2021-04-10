@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { Redirect } from 'react-router';
 import { useDispatch } from 'react-redux';
-import {setLightNav} from '../../actions';
-
+import { Redirect } from 'react-router';
+import { setLightNav } from '../../actions';
 import './Register.css';
 import './Register.responsive.css';
+
 
 
 
@@ -13,7 +12,7 @@ export default function Register() {
     const dispatch = useDispatch();
     
     useEffect(() =>{
-        dispatch(setLightNav(true));
+        dispatch(setLightNav(false));
     }, []);
 
     let PasswordsMatch = false;
@@ -25,7 +24,7 @@ export default function Register() {
     const [redirect, setRedirect] = useState(false);
 
     async function RegisterUser(credentials) {
-        return fetch('http://localhost:5000/user/register', {
+        return fetch('http://86.11.53.197:5000/user/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

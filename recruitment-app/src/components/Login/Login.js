@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Redirect } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router';
 import { setAccount, setLightNav, setLogged, setRedirect } from '../../actions';
 import './Login.css';
 import './Login.responsive.css';
@@ -42,7 +42,7 @@ export default function Login(props) {
     const dispatch = useDispatch();
     
     useEffect(() =>{
-        dispatch(setLightNav(true));
+        dispatch(setLightNav(false));
     }, []);
 
     if(isLogged){

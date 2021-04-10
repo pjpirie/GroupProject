@@ -17,10 +17,10 @@ function ModulesCompleted(props) {
                 return 0;
             }
             else{
-                return (UserData.modulesCompleted.length / 7) * 100;
+                return Math.floor((UserData.modulesCompleted.length / 7) * 100);
             }
         }else{
-            return (UserData.modulesCompleted.length / 7) * 100;
+            return Math.floor((UserData.modulesCompleted.length / 7) * 100);
         }
 
     }
