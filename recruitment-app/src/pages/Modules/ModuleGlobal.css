@@ -4,12 +4,12 @@
     max-width: 100vw;
 }
 
-.Module__Page__Header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5rem 4rem 1rem;
+.Module__Page__Header__Modules {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 5rem 4rem 1rem !important;
 }
 
 .Module__Page__Header__Text {

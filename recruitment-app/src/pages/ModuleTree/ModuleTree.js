@@ -56,36 +56,36 @@ function ModuleTree() {
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod2">
-                                <img onClick={() => {setMod2Open(!isMod2Open)}} src={PrepIcon} alt="Interview Preperation"/>
+                                <img onClick={() => {setMod2Open(!isMod2Open); completeModule({email: UserData.email}, 2)}} src={PrepIcon} alt="Interview Preperation"/>
                             </div>
                         </div>
                         <div className="ModuleTree__Tree__row ModuleTree__Tree__row--duo">
                             <span className="ModuleTree__Line TopLineM45 "></span>
                             <span className="ModuleTree__Line TopLineP45 "></span>
                             <div className="ModuleTree__Tree_item Mod3">
-                                <img onClick={() => {setMod3Open(!isMod3Open)}} src={FaceToFaceIcon} alt="Face To Face Interview"/>
+                                <img onClick={() => {setMod3Open(!isMod3Open); completeModule({email: UserData.email}, 3)}} src={FaceToFaceIcon} alt="Face To Face Interview"/>
                             </div>
                             <div className="ModuleTree__Tree_item Mod4">
-                                <img onClick={() => {setMod4Open(!isMod4Open)}} src={VirtualIcon} alt="Virtual Interview"/>
+                                <img onClick={() => {setMod4Open(!isMod4Open); completeModule({email: UserData.email}, 4)}} src={VirtualIcon} alt="Virtual Interview"/>
                             </div>
                             <span className="ModuleTree__Line M45"></span>
                             <span className="ModuleTree__Line P45"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod5">
-                                <img onClick={() => {setMod5Open(!isMod5Open)}} src={GroupIcon} alt="Group Exercises"/>
+                                <img onClick={() => {setMod5Open(!isMod5Open); completeModule({email: UserData.email}, 5)}} src={GroupIcon} alt="Group Exercises"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod6">
-                                <img onClick={() => {setMod6Open(!isMod6Open)}} src={RolePlayIcon} alt="Written Exercises"/>
+                                <img onClick={() => {setMod6Open(!isMod6Open); completeModule({email: UserData.email}, 6)}} src={RolePlayIcon} alt="Written Exercises"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod7">
-                                <img onClick={() => {setMod7Open(!isMod7Open)}} src={WrittenIcon} alt="Role Play Exercises"/>
+                                <img onClick={() => {setMod7Open(!isMod7Open); completeModule({email: UserData.email}, 7)}} src={WrittenIcon} alt="Role Play Exercises"/>
                             </div>
                         </div>
                         {isMod1Open ? <ModuleModal number={1} modalOpen={setMod1Open}/> : ''}

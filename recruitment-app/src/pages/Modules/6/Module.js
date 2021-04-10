@@ -12,7 +12,7 @@ function Module() {
     };
     return (
         <div className="Module__Page__Wrapper">
-            <div className="Module__Page__Header">
+            <div className="Module__Page__Header__Modules">
                 <div className="Module__Page__Header__Text">
                     <h3>Module 5</h3>
                     <h1>Role Play</h1>

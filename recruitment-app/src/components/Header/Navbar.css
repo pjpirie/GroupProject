@@ -8,6 +8,7 @@
 	position: absolute;
 	margin: 1rem 2rem 2rem 0;
 	top: 0;
+	z-index: 99999;
 }
 
 .nav {
@@ -28,12 +29,13 @@
 	color: red;
 }
 
-.nav-logo-div{
+.nav-logo-div {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 }
-.nav-logo{
+
+.nav-logo {
 	width: 5rem;
 	height: 5rem;
 }
