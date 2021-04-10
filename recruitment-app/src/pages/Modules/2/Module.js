@@ -8,7 +8,7 @@ import './Module.css';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('http://localhost:5000/download1', {
+        return fetch('download1', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
