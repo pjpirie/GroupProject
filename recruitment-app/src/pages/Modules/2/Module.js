@@ -8,7 +8,7 @@ import './Module.css';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('http://localhost:5000/download1', {
+        return fetch('download1', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ function Module() {
     };
     return (
         <div className="Module__Page__Wrapper">
-            <div className="Module__Page__Header">
+            <div className="Module__Page__Header__Modules">
                 <div className="Module__Page__Header__Text">
                     <h3>Module 1</h3>
                     <h1>Preparation</h1>

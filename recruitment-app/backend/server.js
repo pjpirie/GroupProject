@@ -37,8 +37,20 @@ app.get('/', (req, res) => {
 *   <X Returns the error / JSON [400]
 */
 app.get('/user', (req, res) => {
+    let safeUser = [];
     User.find()
-        .then(users => res.json(users))
+        .then(users => users.map(user => {
+            safeUser.push({
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email,
+                paidAccess: user.paidAccess,
+                dob: user.dob,
+                auth: user.auth,
+                modulesCompleted: user.modulesCompleted
+            })
+        }))
+        .then(users => res.json(safeUser))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -325,6 +337,6 @@ app.post('/user/moduleComplete/:moduleNumber', (req, res) => {
         res.download(file); // Set disposition and send it.
         });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`App listening on port ${port}!`);
 });

@@ -2,7 +2,7 @@
   "name": "recruitment-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://86.11.53.197:5000",
+  "proxy": "https://group-54-rct.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
