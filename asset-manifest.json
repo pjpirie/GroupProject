@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GroupProject/static/css/main.6760d270.chunk.css",
-    "main.js": "/GroupProject/static/js/main.bde18d6d.chunk.js",
-    "main.js.map": "/GroupProject/static/js/main.bde18d6d.chunk.js.map",
+    "main.css": "/GroupProject/static/css/main.5519d79f.chunk.css",
+    "main.js": "/GroupProject/static/js/main.6803af84.chunk.js",
+    "main.js.map": "/GroupProject/static/js/main.6803af84.chunk.js.map",
     "runtime-main.js": "/GroupProject/static/js/runtime-main.42a28727.js",
     "runtime-main.js.map": "/GroupProject/static/js/runtime-main.42a28727.js.map",
-    "static/js/2.2c2ff200.chunk.js": "/GroupProject/static/js/2.2c2ff200.chunk.js",
-    "static/js/2.2c2ff200.chunk.js.map": "/GroupProject/static/js/2.2c2ff200.chunk.js.map",
+    "static/js/2.0af6aa85.chunk.js": "/GroupProject/static/js/2.0af6aa85.chunk.js",
+    "static/js/2.0af6aa85.chunk.js.map": "/GroupProject/static/js/2.0af6aa85.chunk.js.map",
     "index.html": "/GroupProject/index.html",
-    "static/css/main.6760d270.chunk.css.map": "/GroupProject/static/css/main.6760d270.chunk.css.map",
-    "static/js/2.2c2ff200.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.2c2ff200.chunk.js.LICENSE.txt",
+    "static/css/main.5519d79f.chunk.css.map": "/GroupProject/static/css/main.5519d79f.chunk.css.map",
+    "static/js/2.0af6aa85.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.0af6aa85.chunk.js.LICENSE.txt",
     "static/media/Module.css": "/GroupProject/static/media/Banner.68f9513c.png",
     "static/media/CourseGuideImage.38108320.png": "/GroupProject/static/media/CourseGuideImage.38108320.png",
     "static/media/Group 41.f960d5fa.png": "/GroupProject/static/media/Group 41.f960d5fa.png",
@@ -20,6 +20,7 @@
     "static/media/Image-4.ce108a3b.png": "/GroupProject/static/media/Image-4.ce108a3b.png",
     "static/media/Image-5.21bf0a83.png": "/GroupProject/static/media/Image-5.21bf0a83.png",
     "static/media/Image.e68be32a.png": "/GroupProject/static/media/Image.e68be32a.png",
+    "static/media/FAQ.css": "/GroupProject/static/media/question-mark-faq.e7d5b537.svg",
     "static/media/landing.css": "/GroupProject/static/media/hero_img.34c210e3.png",
     "static/media/laptopandsmartphone.617c4491.png": "/GroupProject/static/media/laptopandsmartphone.617c4491.png",
     "static/media/logo.25811f46.svg": "/GroupProject/static/media/logo.25811f46.svg",
@@ -29,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.42a28727.js",
-    "static/js/2.2c2ff200.chunk.js",
-    "static/css/main.6760d270.chunk.css",
-    "static/js/main.bde18d6d.chunk.js"
+    "static/js/2.0af6aa85.chunk.js",
+    "static/css/main.5519d79f.chunk.css",
+    "static/js/main.6803af84.chunk.js"
   ]
 }
