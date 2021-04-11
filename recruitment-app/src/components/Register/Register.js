@@ -24,7 +24,7 @@ export default function Register() {
     const [redirect, setRedirect] = useState(false);
 
     async function RegisterUser(credentials) {
-        return fetch('/user/register', {
+        return fetch('https://group-54-rct.herokuapp.com/user/register', {
             method: 'POST',
             credentials: 'include',
             headers: {
