@@ -1,8 +1,8 @@
 {
+  "homepage": "https://pjpirie.github.io/GroupProject/",
   "name": "recruitment-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://group-54-rct.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -25,7 +25,8 @@
     "react-scripts": "4.0.1",
     "react-spinners": "^0.10.6",
     "redux": "^4.0.5",
-    "styled-components": "^5.2.3",
+    "redux-devtools-extension": "^2.13.9",
+    "styled-components": "^5.2.1",
     "validator": "^13.5.2",
     "web-vitals": "^0.2.4"
   },
@@ -35,7 +36,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

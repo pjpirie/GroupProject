@@ -2,7 +2,6 @@ import React, { useEffect, useState, Component } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightNav } from '../../actions';
-import AccountSection from '../AccountSection/AccountSection';
 import logo from '../../assets/logoBlue.png'
 import menu from '../../assets/menu.svg'
 import './Navbar.css';
@@ -53,15 +52,6 @@ function Navbar(props){
                 <i className={mobile ? 'fas fa-times' : 'fas fa-bars'}><img src={menu} alt="-" className="menu-image" /></i>
             </div>
             <ul className={mobile ? 'nav-menu active' : 'nav-menu'}>
-                {/* {MenuItems.map((item, index)=>{
-                    return(
-                        <li key={index}>
-                            <a className={item.cName} href={item.url}>
-                                {item.title}
-                            </a>
-                        </li>
-                    )
-                })} */}
                 <Link onClick={() => setLightStyle(false)} style={navStyle} to='/'>
                     <li style={getLinkStyle(isNavLight)} onClick={handleClick} className="nav-links">Home</li>
                 </Link>
@@ -77,7 +67,6 @@ function Navbar(props){
                 <Link onClick={() => setLightStyle(false)} style={navStyle} to='/register'>
                     <li style={getLinkStyle(isNavLight)} onClick={handleClick} className="nav-links">Register</li>
                 </Link>
-                {/* <AccountSection getLinkStyle={getLinkStyle} setLightStyle={setLightStyle} navStyle={navStyle} lightStyle={isNavLight}/> */}
             </ul>
         </nav>
     )

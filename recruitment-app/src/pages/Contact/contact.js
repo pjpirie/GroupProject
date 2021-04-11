@@ -1,13 +1,14 @@
-import { useSelector } from 'react-redux'
-import { Redirect } from 'react-router';
-
 import { Button } from '@material-ui/core';
 import emailjs from 'emailjs-com';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setLightNav } from '../../actions';
 import './contact.css';
+
 function Contact() {
 
-    const [display, setDisplay] = useState(false)
+    const [display, setDisplay] = useState(false);
+    const dispatch = useDispatch();
 
     const handelSubmit = (e) =>{
 
@@ -23,6 +24,10 @@ function Contact() {
             });
         // e.target.reset()
     }
+
+    useEffect(() => {
+        dispatch(setLightNav(false))
+    }, [])
 
     return (
         <div className="contact-page">

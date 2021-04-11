@@ -1,6 +1,7 @@
 
 import CloseIcon from '@material-ui/icons/Close';
 import CreateIcon from '@material-ui/icons/Create';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import HelpIcon from '@material-ui/icons/Help';
 import SchoolIcon from '@material-ui/icons/School';
 import { useEffect } from 'react';
@@ -15,14 +16,17 @@ import './ModuleNav.responsive.css';
 
 
 async function logout() {
-    return await fetch('/user/logout', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        }, 
-        credentials: 'same-origin'
-    })
-    .then(data => console.log(data));
+    // return await fetch('/user/logout', {
+    //     method: 'POST',
+    //     headers: {
+    //     'Content-Type': 'application/json'
+    //     }, 
+    //     credentials: 'same-origin'
+    // })
+    // .then(data => console.log(data));
+    window.localStorage.removeItem('token');
+    window.localStorage.removeItem('User_Id');
+    window.localStorage.removeItem('logged_in');
 }
 
 function ModuleNav(props) {
@@ -34,7 +38,7 @@ function ModuleNav(props) {
     const dispatch = useDispatch();
     const isSideNavOpen = useSelector(state => state.isSideNavOpen);
     const UserData = useSelector(state => state.getAccount).user;
-    console.log(UserData);
+    // console.log(UserData);
 
     const GetUserName = () => {
         return <h3 className="ModuleNav__user" >{UserData.firstName} {UserData.lastName}</h3>
@@ -56,6 +60,12 @@ function ModuleNav(props) {
                 <Link to="/help">
                     <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>Help</span></li>
                 </Link>
+                {UserData.auth ?  (
+                <Link to="/CMS">
+                    <li className="ModuleNav__link"><DashboardIcon fontSize="large" /> <span>CMS</span></li>
+                </Link>
+                ):''
+                }
                 <Link className="ModuleNav__link link_center" to="/">
                     <li onClick={() => {
                         logout();

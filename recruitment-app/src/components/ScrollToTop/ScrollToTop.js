@@ -10,7 +10,7 @@ window.scrollTo(0, 0);
 // setTimeout(() =>{
 //     props.loading(false);
 // }, 1000)
-props.checkAuth();
+// props.checkAuth();
 }, [pathname]);
 
 return null;
