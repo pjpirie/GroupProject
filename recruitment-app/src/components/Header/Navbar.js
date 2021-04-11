@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightNav } from '../../actions';
+import logo from '../../assets/logoBlue.png';
 import AccountSection from '../AccountSection/AccountSection';
-import logo from '../../assets/logoBlue.png'
 import './Navbar.css';
 
 

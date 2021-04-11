@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector,useDispatch } from 'react-redux';
-import {setLogged} from '../../actions';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import React, { Fragment } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { setLogged } from '../../actions';
 
 function AccountSection(props) {
 
@@ -44,10 +44,10 @@ function AccountSection(props) {
     }else{
         return (
             <Fragment>
-                <Link onClick={() => setLightStyle(true)} style={navStyle} to="/login">
+                <Link onClick={() => setLightStyle(false)} style={navStyle} to="/login">
                     <li style={getLinkStyle(lightStyle)} className="nav-link">Login</li>
                 </Link>
-                <Link onClick={() => setLightStyle(true)} style={navStyle} to="/register">
+                <Link onClick={() => setLightStyle(false)} style={navStyle} to="/register">
                     <li style={getLinkStyle(lightStyle)} className="nav-link">Register</li>
                 </Link>
             </Fragment>

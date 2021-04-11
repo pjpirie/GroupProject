@@ -15,14 +15,17 @@ import './ModuleNav.responsive.css';
 
 
 async function logout() {
-    return await fetch('/user/logout', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        }, 
-        credentials: 'same-origin'
-    })
-    .then(data => console.log(data));
+    // return await fetch('/user/logout', {
+    //     method: 'POST',
+    //     headers: {
+    //     'Content-Type': 'application/json'
+    //     }, 
+    //     credentials: 'same-origin'
+    // })
+    // .then(data => console.log(data));
+    window.localStorage.removeItem('token');
+    window.localStorage.removeItem('User_Id');
+    window.localStorage.removeItem('logged_in');
 }
 
 function ModuleNav(props) {
@@ -34,7 +37,7 @@ function ModuleNav(props) {
     const dispatch = useDispatch();
     const isSideNavOpen = useSelector(state => state.isSideNavOpen);
     const UserData = useSelector(state => state.getAccount).user;
-    console.log(UserData);
+    // console.log(UserData);
 
     const GetUserName = () => {
         return <h3 className="ModuleNav__user" >{UserData.firstName} {UserData.lastName}</h3>
@@ -55,6 +58,9 @@ function ModuleNav(props) {
                 </Link>
                 <Link to="/help">
                     <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>Help</span></li>
+                </Link>
+                <Link to="/CMS">
+                    <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>CMS</span></li>
                 </Link>
                 <Link className="ModuleNav__link link_center" to="/">
                     <li onClick={() => {

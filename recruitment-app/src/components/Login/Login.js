@@ -7,7 +7,7 @@ import './Login.responsive.css';
 
 
 async function LoginUser(credentials) {
-    return fetch('/user/login', {
+    return fetch('https://group-54-rct.herokuapp.com/user/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -21,17 +21,17 @@ async function LoginUser(credentials) {
 async function accountExists(email) {
     const emailJSONObject = { Email: email };
     // console.log("Email: " + email);
-    return fetch('/user/check', {
+    return fetch('https://group-54-rct.herokuapp.com/user/check', {
         method: 'POST',
+        credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(emailJSONObject)
     })
+        // .then(data => console.log(data))
         .then(data => data.json());
 }
-
-let cookie = document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 
 export default function Login(props) {
 
@@ -58,12 +58,15 @@ export default function Login(props) {
                 Password
             });
 
-            console.log(logged_in);
-            console.log(logged_in.token);
+            // console.log(logged_in);
+            // console.log(logged_in.token);
             if(logged_in.token != undefined){
-                dispatch(setLogged());
+                window.localStorage.setItem('token', logged_in.token);
+                window.localStorage.setItem('User_Id', logged_in.data.User_Id);
+                window.localStorage.setItem('logged_in', logged_in.data.logged_in);
                 dispatch(setAccount(true, logged_in.user));
-                dispatch(setRedirect(true, `/`))
+                dispatch(setLogged(true));
+                dispatch(setRedirect(true, `/`));
             }
         } catch (e) {
             console.error(e);

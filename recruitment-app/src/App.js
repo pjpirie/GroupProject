@@ -2,7 +2,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Fragment, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
-// import HashLoader from 'react-spinners/HashLoader';
+import HashLoader from 'react-spinners/HashLoader';
 import { setAccount, setLogged, setRedirect, setSideNavOpen } from './actions';
 import './App.css';
 import Footer from './components/Footer/Footer';
@@ -11,14 +11,13 @@ import Login from './components/Login/Login';
 import ModuleNav from './components/ModuleHeader/ModuleNav';
 import Register from './components/Register/Register';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import CMS from './pages/CMS/CMS';
 import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
 import Edit from './pages/Edit/Edit';
+import FAQ from './pages/FAQ/FAQ';
 import Help from './pages/Help/Help';
 import Landing from './pages/Landing/landing';
-import CMS from './pages/CMS/CMS';
-import Privacy from './pages/Privacy/Privacy';
-import FAQ from './pages/FAQ/FAQ';
 import { default as Module1 } from './pages/Modules/1/Module';
 import { default as Module2 } from './pages/Modules/2/Module';
 import { default as Module3 } from './pages/Modules/3/Module';
@@ -28,6 +27,7 @@ import { default as Module6 } from './pages/Modules/6/Module';
 import { default as Module7 } from './pages/Modules/7/Module';
 import Modules from './pages/Modules/Module';
 import ModuleTree from './pages/ModuleTree/ModuleTree';
+import Privacy from './pages/Privacy/Privacy';
 
 
 
@@ -44,11 +44,12 @@ function App() {
   
   const checkAuth = async (msg = "App") => {
     console.log("Checking Auth from " + msg)
-    return await fetch('/user/auth', {
+    return await fetch('https://group-54-rct.herokuapp.com/user/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify({payload: { token: window.localStorage.getItem('token'), User_Id: window.localStorage.getItem('User_Id')}})
     })
     .then(data => data.json())
     // .then(data => console.log(data.user))
@@ -69,12 +70,12 @@ function App() {
   if(loading){
     return (
     <div className="hashLoader__container">
-      {/* <HashLoader color={'#ffffff'} className="hashLoader"/> */}
+      <HashLoader color={'#ffffff'} className="hashLoader"/>
     </div>
     );
   }else{
     return (
-      <Router>
+      <Router basename="/GroupProject">
         {console.log(isRedirect)}
         { isRedirect.redirect ? (
           <Redirect to={isRedirect.location}/>

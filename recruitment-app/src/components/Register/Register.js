@@ -24,8 +24,9 @@ export default function Register() {
     const [redirect, setRedirect] = useState(false);
 
     async function RegisterUser(credentials) {
-        return fetch('http://86.11.53.197:5000/user/register', {
+        return fetch('/user/register', {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },

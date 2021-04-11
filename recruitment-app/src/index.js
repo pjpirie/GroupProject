@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { createStore } from 'redux';
-import allReducers from './reducers';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import * as actionCreators from './actions';
+import App from './App';
+import './index.css';
+import allReducers from './reducers';
+const composeEnhancers = composeWithDevTools({ actionCreators, trace: true, traceLimit: 25 });
 
 const store = createStore(
   allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeEnhancers()
   );
 
 ReactDOM.render(
