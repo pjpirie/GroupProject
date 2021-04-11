@@ -1,12 +1,11 @@
-import './ModuleModal.css';
-import './ModuleModal.responsive.css'
-import { useEffect, useState } from 'react';
-import { Redirect } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
-
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setRedirect } from '../../actions';
 import CourseGuideImage from '../../assets/CourseGuideImage.png';
-import { useSelector,useDispatch } from 'react-redux';
-import {setRedirect} from '../../actions';
+import './ModuleModal.css';
+import './ModuleModal.responsive.css';
+
 
 
 
@@ -21,7 +20,7 @@ const [ModuleInfo, setModuleInfo] = useState({
 });
 
     const getModuleInfo = async (number) => {
-        return await fetch(`/module/${number}`, {
+        return await fetch(`https://group-54-rct.herokuapp.com/module/${number}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

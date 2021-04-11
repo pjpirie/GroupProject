@@ -1,6 +1,7 @@
 
 import CloseIcon from '@material-ui/icons/Close';
 import CreateIcon from '@material-ui/icons/Create';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import HelpIcon from '@material-ui/icons/Help';
 import SchoolIcon from '@material-ui/icons/School';
 import { useEffect } from 'react';
@@ -59,9 +60,12 @@ function ModuleNav(props) {
                 <Link to="/help">
                     <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>Help</span></li>
                 </Link>
+                {UserData.auth ?  (
                 <Link to="/CMS">
-                    <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>CMS</span></li>
+                    <li className="ModuleNav__link"><DashboardIcon fontSize="large" /> <span>CMS</span></li>
                 </Link>
+                ):''
+                }
                 <Link className="ModuleNav__link link_center" to="/">
                     <li onClick={() => {
                         logout();

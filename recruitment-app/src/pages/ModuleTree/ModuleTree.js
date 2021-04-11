@@ -33,8 +33,7 @@ function ModuleTree() {
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify(inData), 
-            credentials: 'same-origin'
+            body: JSON.stringify(inData)
         })
         .then(data => console.log(data));
     }

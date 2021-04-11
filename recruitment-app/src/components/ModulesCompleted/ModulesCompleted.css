@@ -8,6 +8,16 @@
     margin: 1rem auto;
 }
 
+.ModulesCompleted__bar {
+    position: relative;
+}
+
+.ModulesCompleted__container__bar {
+    width: 80%;
+    position: relative;
+    margin: 1rem auto;
+}
+
 .ModulesCompleted__progress__bar {
     max-width: 156px;
     max-height: 20px;
@@ -63,13 +73,12 @@
 }
 
 .ModulesCompleted .circle_animation {
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
+    /* stroke-dasharray: 440; */
+    /* stroke-dashoffset: 440; */
 }
 
 .ModulesCompleted .html .circle_animation {
-    -webkit-animation: html 1s ease-out forwards;
-    animation: html 1s ease-out forwards;
+    transition: all 0.8s ease-in-out;
 }
 
 @keyframes html {
