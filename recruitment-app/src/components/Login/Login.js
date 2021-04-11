@@ -54,8 +54,8 @@ export default function Login(props) {
             if (await !accountExists(Email)) throw ("LoginError: No account with that email address");
             console.log("Submitted");
             let logged_in = await LoginUser({
-                Email,
-                Password
+                Email: Email,
+                Password: Password
             });
 
             // console.log(logged_in);

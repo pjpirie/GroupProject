@@ -49,13 +49,12 @@ function Edit(props) {
     }
 
     async function changeUserInfo(inData) {
-        return await fetch(`/user/edit`, {
+        return await fetch(`https://group-54-rct.herokuapp.com/user/edit`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify(inData), 
-            credentials: 'same-origin'
+            body: JSON.stringify(inData)
         })
         .then(data => console.log(data))
         .then(() => props.checkAuth());
