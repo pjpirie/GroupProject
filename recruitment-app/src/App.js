@@ -129,7 +129,9 @@ function App() {
                     <Route path="/CMS" component={CMS} />
                     <Route path="/FAQ" component={FAQ} />
                     <Route path="/contact" component={Contact} />
-                    <Route component={ModuleTree} />
+                    <Route>
+                      <ModuleTree checkAuth={checkAuth} />
+                    </Route>
                   </Switch>
                   <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon style={{opacity: 0}} />

@@ -25,6 +25,7 @@ import './ModuleTree.responsive.css';
 function ModuleTree(props) {
     
     useEffect(() => {
+        console.log(props)
         props.checkAuth();
     }, [])
     
