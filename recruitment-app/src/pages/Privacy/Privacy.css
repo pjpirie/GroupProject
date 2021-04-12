@@ -1,4 +1,42 @@
 .priv{
+    min-height: 100vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contact-bubble{
+	position: absolute;
+	top: -300px;
+	left: -300px;
+	width: 50rem;
+	height: 50rem;
+	background: url('../../assets/ContactBG.png') center no-repeat;
+	z-index: -2;
+}
+
+.contact-bg{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: 50rem;
+	height: 50rem;
+	background: url('../../assets/ContactBubbles.png') center no-repeat;
+	z-index: -1;
+}
+
+
+.policy-container{
+    margin-top: 25rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding-top: 7rem !important;
+}
+
+.policy-container>h4{
+    margin-top: 1rem;
 }
