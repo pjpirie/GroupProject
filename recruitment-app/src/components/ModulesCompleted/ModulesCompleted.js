@@ -40,7 +40,7 @@ function ModulesCompleted(props) {
                 <div className="ModulesCompleted__container__bar">
                         <h6 className="ModulesCompleted__text" style={getStyle(props.theme)}>{getPercentage()}% Completed</h6>
                         <span className="ModulesCompleted__progress__bar">
-                            <span className="ModulesCompleted__progress__bar__level" style={{ width: '100%'}}></span>
+                            <span className="ModulesCompleted__progress__bar__level" style={{ width: `${getPercentage()}%`}}></span>
                         </span>
                 </div>
             </div>

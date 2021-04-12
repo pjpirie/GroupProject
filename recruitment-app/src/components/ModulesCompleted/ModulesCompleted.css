@@ -22,7 +22,7 @@
     max-width: 156px;
     max-height: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     width: 60vw;
@@ -45,6 +45,7 @@
     border-radius: 10px;
     /* margin-bottom: 3rem; */
     transition: width ease-in-out 300ms;
+    margin: 0 3px;
 }
 
 .ModulesCompleted__text {
