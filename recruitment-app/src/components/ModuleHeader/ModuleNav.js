@@ -7,7 +7,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setLogged, setSideNavOpen } from '../../actions';
+import { setAlert, setLogged, setSideNavOpen } from '../../actions';
 import ModulesCompleted from '../ModulesCompleted/ModulesCompleted';
 import './ModuleNav.css';
 import './ModuleNav.responsive.css';
@@ -41,7 +41,11 @@ function ModuleNav(props) {
     // console.log(UserData);
 
     const GetUserName = () => {
-        return <h3 className="ModuleNav__user" >{UserData.firstName} {UserData.lastName}</h3>
+        if((UserData == undefined || UserData == null)) {
+            return <h3 className="ModuleNav__user" >Data Error</h3>
+        }else{
+            return <h3 className="ModuleNav__user" >{UserData.firstName} {UserData.lastName}</h3>
+        }
     }
     return (
         <div className={(isSideNavOpen ? "ModuleNav" : "ModuleNav hidden")}>
@@ -67,7 +71,11 @@ function ModuleNav(props) {
                     <Link to="/CMS">
                         <li className="ModuleNav__link"><DashboardIcon fontSize="large" /> <span>CMS</span></li>
                     </Link>
-                    ):''
+                    ):(
+                        <li onClick={() => {
+                        dispatch(setAlert(true, {AlertTitle: 'Hello, World!', AlertMessage: 'Hola, Niños!'}));
+                    }} className="ModuleNav__link">Alert Test</li>
+                    )
                 ) }
                 <Link className="ModuleNav__link link_center" to="/">
                     <li onClick={() => {

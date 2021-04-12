@@ -105,3 +105,21 @@ export const getAccount = () => {
         type: 'CHECK'
     }
 }
+
+export const setAlert = (data, alert) => {
+    if(data){
+        return {
+            type: 'SET_ALERT',
+            alert: alert,
+        }
+    }else{
+        return {
+            type: 'UNSET_ALERT'
+        }
+    }
+}
+export const getAlert = () => {
+    return {
+        type: 'CHECK'
+    }
+}

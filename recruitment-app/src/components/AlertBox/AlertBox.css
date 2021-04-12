@@ -1,0 +1,46 @@
+.AlertBox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.AlertBox__Container {
+    width: 30vw;
+    height: 15vw;
+    max-width: 400px;
+    max-height: 200px;
+    background: #fefefe;
+    box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+}
+
+.AlertBox__Header {
+    border-radius: 7px 7px 0 0;
+    background: #f1f1f1;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.AlertBox__Header h3 {
+    color: #2f2f2f;
+}
+
+.AlertBox__Close {}
+
+.AlertBox__Body {
+    padding: 0.5rem;
+}
+
+.AlertBox__Body p {}

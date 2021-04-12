@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-d
 // import HashLoader from 'react-spinners/HashLoader';
 import { setAccount, setLogged, setRedirect, setSideNavOpen } from './actions';
 import './App.css';
+import AlertBox from './components/AlertBox/AlertBox';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Header/Navbar';
 import Login from './components/Login/Login';
@@ -41,6 +42,7 @@ function App() {
   const isLogged = useSelector(state => state.isLogged);
   const isSideNavOpen = useSelector(state => state.isSideNavOpen);
   const isRedirect = useSelector(state => state.toRedirect)
+  const getAlert = useSelector(state => state.getAlert)
   
   const checkAuth = async (msg = "App") => {
     console.log("Checking Auth from " + msg)
@@ -141,6 +143,7 @@ function App() {
             )}
               <span className="footer__divider"></span>
             <Footer />
+            {getAlert.alert ? (<AlertBox AlertData={getAlert.AlertData} />): ('')}
           </div>
         </div>
       </Router>

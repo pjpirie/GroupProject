@@ -32,6 +32,10 @@
     align-items: center;
 }
 
+.editForm p {
+    padding: 1rem;
+}
+
 .editForm .names {
     width: 100%;
     display: flex;

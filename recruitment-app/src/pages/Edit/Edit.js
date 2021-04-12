@@ -26,7 +26,7 @@ function Edit(props) {
         e.preventDefault();
         
         if(props.Formtype === "info"){
-            checkMatch(document.getElementById("confirmPass").value);
+            // checkMatch(document.getElementById("confirmPass").value);
             setFirstName(document.getElementById("FirstNameID").value)
             setLastName(document.getElementById("LastNameID").value)
             console.log('Info Form Works')
@@ -38,7 +38,7 @@ function Edit(props) {
                         Password: Password,
                     })
             try {
-                if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
+                // if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
                 console.log("Submitted");
                 const User = await changeUserInfo({
                     firstName: FirstName,
@@ -84,6 +84,9 @@ function Edit(props) {
             },
             body: JSON.stringify(inData)
         })
+        
+        .then(data => data.json())
+        .then(data => window.localStorage.setItem('User_Id', data.newEmail))
         .then(data => console.log(data))
         .then(() => props.checkAuth());
     }
@@ -114,9 +117,9 @@ function Edit(props) {
         <div className='Edit__Page__Container' >
             <div className='Edit__Page__Form' >
                 <h1>{UserData.firstName} {UserData.lastName}</h1>
-                <h3>{props.Formtype}</h3>
                 {props.Formtype === "info" ? (
                     <form onSubmit={handleSubmit} className="editForm">
+                    <p>Use this form to edit your name and email on our records, use the password change form to change your password.</p>
                     <div className="names">
                         <label>
                             <p>First Name</p>
@@ -135,10 +138,10 @@ function Edit(props) {
                             <p>Password</p>
                             <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
                         </label>
-                        <label>
+                        {/* <label>
                             <p>Confirm Password</p>
                             <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
-                        </label>
+                        </label> */}
                         <div>
                             <button class=" btn-clearing main-btn" type="submit">Request Change</button>
                         </div>
@@ -161,6 +164,7 @@ function Edit(props) {
                     </form>
                 ) : (
                     <form onSubmit={handleSubmit} className="editForm">
+                        <p>Use this form to edit your account password, use the information change form to change your name and email on our records.</p>
                         <label>
                             <p>Current Password</p>
                             <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
