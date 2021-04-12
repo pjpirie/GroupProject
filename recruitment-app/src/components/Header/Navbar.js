@@ -44,7 +44,6 @@ function Navbar(props){
         setMobile(!mobile)
     }
 
-
     return(
         <nav className="NavbarItems">
             <div className="navbar-logo"><img src={logo} alt="Logo" className="navbar-image" /><i className="fab fa-react"></i></div>

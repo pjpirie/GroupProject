@@ -24,14 +24,22 @@
 .logo {
 	height: 5rem;
 	width: 5rem;
-
-
 }
 
 .footerBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #71a068 !important;
-	color: #fff !important;
 	margin-top: 1rem !important;
+	margin-bottom: 2rem !important;
+	color: #fff !important;
+	border-radius: 15px !important;
+	width: 120px !important;
+	height: 35px !important;
+	font-weight: 800 !important;
+	text-transform: none !important;
+	/* padding: 0.5rem 1rem 0.5rem 1rem !important; */
 }
 
 .list-unstyled{
@@ -62,8 +70,14 @@
 }
 
 .col{
-	margin-left: 10px;
+	/* margin-left: 10px;
 	margin-right: 10px;
 	width: 25%;
-
+	outline: 1px solid red; */
+	width: 25%;
+	outline: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

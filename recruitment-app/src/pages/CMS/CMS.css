@@ -43,3 +43,15 @@
 .email-single-display:nth-child(even){
     background: #eeeeee;
 }
+
+.button-style{
+    background: #71a068 !important;
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+	color: #fff !important;
+	border-radius: 15px !important;
+	/* width: 120px !important; */
+	height: 35px !important;
+	font-weight: 800 !important;
+	text-transform: none !important;
+}
