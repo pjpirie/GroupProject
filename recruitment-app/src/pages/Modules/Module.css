@@ -50,10 +50,13 @@
 	border: none !important;
 	outline: none !important;
 	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	/* text-align: center !important; */
 }
 
 .Module__Page__Header__Text__btn:hover {
-	background: #6877a0 !important;
+	/* background: #6877a0 !important; */
 }
 
 .Module__Page__Body {

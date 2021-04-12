@@ -1,13 +1,9 @@
-import { Button } from '@material-ui/core';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setRedirect } from '../../actions';
 import logo from '../../assets/logoWhite.png';
 import './Footer.css';
 import './Footer.responsive.css';
 
 function Footer() {
-  const dispatch = useDispatch();
     
   return (
     <div className="footer-main">
@@ -15,10 +11,10 @@ function Footer() {
           {/* Column 1 */}
           <div className="col">
             <h3>Ready to improve your skills?</h3>
-            <Button  
-            onClick={() => { dispatch(setRedirect(true, `/register`))} } 
+            <Link  
+            to="/register"
             className="footerBtn"
-            >Sign Up!</Button>
+            >Sign Up!</Link>
           </div>
           {/* Column 2 */}
           <div className="col">

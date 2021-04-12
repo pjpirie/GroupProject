@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import Check from '@material-ui/icons/CheckCircleOutlineRounded';
 import Bulb from '@material-ui/icons/EmojiObjects';
 import Arrow from '@material-ui/icons/OpenWithRounded';
@@ -21,11 +21,6 @@ import Wheels from '../../assets/wheel.png';
 import './Module.css';
 import './Module.responsive.css';
 
-
-
-
-
-
 function Module() {
     return (
         <div className="Module__Page">
@@ -40,7 +35,7 @@ function Module() {
                     <br />
                     You can then personalise these by palnning for success by inputting "Action Items" specific to you.    
                     </p>
-                    <Button className="Module__Page__Header__Text__btn button-style" onClick={() => {alert("Todo Do something")}}>Start Now</Button>
+                    <Link to="/register" className="Module__Page__Header__Text__btn" >Start Now</Link>
                 </div>
             </div>
             <div className="Module__Page__Body">
@@ -142,7 +137,7 @@ function Module() {
                 </div>
                 <div className='Module__Page__CTA' >
                     <h1>Ready to begin your journey to success?</h1>
-                    <Button className="Module__Page__CTA__btn">Begin Here</Button>
+                    <Link to="/register" className="Module__Page__CTA__btn">Begin Here</Link>
                 </div>
                 <div className='Module__Page__Values' >
                     <h1>Our Core Values</h1>

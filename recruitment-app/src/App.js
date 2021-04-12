@@ -2,7 +2,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Fragment, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
-import HashLoader from 'react-spinners/HashLoader';
+// import HashLoader from 'react-spinners/HashLoader';
 import { setAccount, setLogged, setRedirect, setSideNavOpen } from './actions';
 import './App.css';
 import Footer from './components/Footer/Footer';
@@ -70,7 +70,7 @@ function App() {
   if(loading){
     return (
     <div className="hashLoader__container">
-      <HashLoader color={'#ffffff'} className="hashLoader"/>
+      {/* <HashLoader color={'#ffffff'} className="hashLoader"/> */}
     </div>
     );
   }else{
