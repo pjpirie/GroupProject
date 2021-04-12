@@ -1,12 +1,19 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import FaceToFaceIcon from '../../assets/FaceToFaceIcon.png';
-import GroupIcon from '../../assets/GroupIcon.png';
-import GuideIcon from '../../assets/GuideIconV2.png';
-import PrepIcon from '../../assets/PrepIcon.png';
-import RolePlayIcon from '../../assets/RolePlayIcon.png';
-import VirtualIcon from '../../assets/VirtualIcon.png';
-import WrittenIcon from '../../assets/WrittenIcon.png';
+import GuideIcon from '../../assets/2x/CourseGuide_Gray@2x.png';
+import GuideIconGreen from '../../assets/2x/CourseGuide__Green@2x.png';
+import FaceToFaceIcon from '../../assets/2x/FaceToFace_Gray@2x.png';
+import FaceToFaceIconGreen from '../../assets/2x/FaceToFace_Green@2x.png';
+import GroupIcon from '../../assets/2x/Group_Gray@2x.png';
+import GroupIconGreen from '../../assets/2x/Group_Green@2x.png';
+import PrepIcon from '../../assets/2x/Prep_Gray@2x.png';
+import PrepIconGreen from '../../assets/2x/Prep_Green@2x.png';
+import RolePlayIcon from '../../assets/2x/RolePlay_Gray@2x.png';
+import RolePlayIconGreen from '../../assets/2x/RolePlay_Green@2x.png';
+import VirtualIcon from '../../assets/2x/Virtual_Gray@2x.png';
+import VirtualIconGreen from '../../assets/2x/Virtual_Green@2x.png';
+import WrittenIconGreen from '../../assets/2x/Written_Green@2x.png';
+import WrittenIcon from '../../assets/2x/Written_Green_1@2x.png';
 import ModuleModal from '../../components/ModuleModal/ModuleModal';
 import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted';
 import './ModuleTree.css';
@@ -15,8 +22,11 @@ import './ModuleTree.responsive.css';
 
 
 
-function ModuleTree() {
+function ModuleTree(props) {
     
+    useEffect(() => {
+        props.checkAuth();
+    }, [])
     
     const UserData = useSelector(state => state.getAccount).user;
     const [isMod1Open, setMod1Open] = useState(false);
@@ -26,17 +36,6 @@ function ModuleTree() {
     const [isMod5Open, setMod5Open] = useState(false);
     const [isMod6Open, setMod6Open] = useState(false);
     const [isMod7Open, setMod7Open] = useState(false);
-
-    async function completeModule(inData, moduleNumber) {
-        return await fetch(`/user/moduleComplete/${moduleNumber}`, {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(inData)
-        })
-        .then(data => console.log(data));
-    }
 
     return (
         <Fragment>
@@ -49,42 +48,42 @@ function ModuleTree() {
                     <div className="ModuleTree__Tree">
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod1" >
-                                <img onClick={() => {setMod1Open(!isMod1Open); completeModule({email: UserData.email}, 1)}} src={GuideIcon} alt="Course Guide"/>
+                                <img onClick={() => {setMod1Open(!isMod1Open)}} src={UserData.modulesCompleted[0] ? GuideIconGreen : GuideIcon} alt="Course Guide"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod2">
-                                <img onClick={() => {setMod2Open(!isMod2Open); completeModule({email: UserData.email}, 2)}} src={PrepIcon} alt="Interview Preperation"/>
+                                <img onClick={() => {setMod2Open(!isMod2Open)}} src={UserData.modulesCompleted[1] ? PrepIconGreen : PrepIcon} alt="Interview Preperation"/>
                             </div>
                         </div>
                         <div className="ModuleTree__Tree__row ModuleTree__Tree__row--duo">
                             <span className="ModuleTree__Line TopLineM45 "></span>
                             <span className="ModuleTree__Line TopLineP45 "></span>
                             <div className="ModuleTree__Tree_item Mod3">
-                                <img onClick={() => {setMod3Open(!isMod3Open); completeModule({email: UserData.email}, 3)}} src={FaceToFaceIcon} alt="Face To Face Interview"/>
+                                <img onClick={() => {setMod3Open(!isMod3Open)}} src={UserData.modulesCompleted[2] ? FaceToFaceIconGreen : FaceToFaceIcon} alt="Face To Face Interview"/>
                             </div>
                             <div className="ModuleTree__Tree_item Mod4">
-                                <img onClick={() => {setMod4Open(!isMod4Open); completeModule({email: UserData.email}, 4)}} src={VirtualIcon} alt="Virtual Interview"/>
+                                <img onClick={() => {setMod4Open(!isMod4Open)}} src={UserData.modulesCompleted[3] ? VirtualIconGreen : VirtualIcon} alt="Virtual Interview"/>
                             </div>
                             <span className="ModuleTree__Line M45"></span>
                             <span className="ModuleTree__Line P45"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod5">
-                                <img onClick={() => {setMod5Open(!isMod5Open); completeModule({email: UserData.email}, 5)}} src={GroupIcon} alt="Group Exercises"/>
+                                <img onClick={() => {setMod5Open(!isMod5Open)}} src={UserData.modulesCompleted[4] ? GroupIconGreen : GroupIcon} alt="Group Exercises"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod6">
-                                <img onClick={() => {setMod6Open(!isMod6Open); completeModule({email: UserData.email}, 6)}} src={RolePlayIcon} alt="Written Exercises"/>
+                                <img onClick={() => {setMod6Open(!isMod6Open)}} src={UserData.modulesCompleted[5] ? RolePlayIconGreen : RolePlayIcon} alt="Written Exercises"/>
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod7">
-                                <img onClick={() => {setMod7Open(!isMod7Open); completeModule({email: UserData.email}, 7)}} src={WrittenIcon} alt="Role Play Exercises"/>
+                                <img onClick={() => {setMod7Open(!isMod7Open)}} src={UserData.modulesCompleted[6] ? WrittenIconGreen : WrittenIcon} alt="Role Play Exercises"/>
                             </div>
                         </div>
                         {isMod1Open ? <ModuleModal number={1} modalOpen={setMod1Open}/> : ''}

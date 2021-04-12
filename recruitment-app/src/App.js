@@ -109,7 +109,9 @@ function App() {
                       <MenuIcon onClick={() => dispatch(setSideNavOpen(!isSideNavOpen))} />
                   </div>
                   <Switch>
-                    <Route path="/" exact component={ModuleTree} />
+                    <Route path="/" exact>
+                      <ModuleTree checkAuth={checkAuth} />
+                    </Route>
                     <Route path="/edit">
                       <Edit checkAuth={checkAuth} />
                     </Route>

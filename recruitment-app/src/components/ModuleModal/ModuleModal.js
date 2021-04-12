@@ -1,6 +1,6 @@
 import CloseIcon from '@material-ui/icons/Close';
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setRedirect } from '../../actions';
 import CourseGuideImage from '../../assets/CourseGuideImage.png';
 import './ModuleModal.css';
@@ -11,6 +11,8 @@ import './ModuleModal.responsive.css';
 
 function ModuleModal(props) {
     
+
+const UserData = useSelector(state => state.getAccount).user;
 const dispatch = useDispatch();
 const [ModuleInfo, setModuleInfo] = useState({
     title: 'Loading...',
@@ -28,6 +30,19 @@ const [ModuleInfo, setModuleInfo] = useState({
         })
         .then(data => data.json())
         .then(data => setModuleInfo(data));
+    }
+
+    
+
+    async function completeModule(inData, moduleNumber) {
+        return await fetch(`https://group-54-rct.herokuapp.com/user/moduleComplete/${moduleNumber}`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inData)
+        })
+        .then(data => console.log(data));
     }
     
     useEffect(() => {
@@ -64,7 +79,11 @@ const [ModuleInfo, setModuleInfo] = useState({
                     </div>
                 </div> */}
                 <div className="ModuleTree__Modal__ButtonContainer">
-                    <button className="ModuleModal__btn" onClick={() => { dispatch(setRedirect(true, `/module/${props.number}`))} }>Start</button>
+                    <h6>Completed</h6>
+                    <button className="ModuleModal__btn" onClick={() => { 
+                        dispatch(setRedirect(true, `/module/${props.number}`));
+                        completeModule({email: UserData.email}, props.number);
+                        } }>Start</button>
                 </div>
             </div>
         </div>
