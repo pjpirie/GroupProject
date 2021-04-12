@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GroupProject/static/css/main.399d01f2.chunk.css",
-    "main.js": "/GroupProject/static/js/main.442f6c08.chunk.js",
-    "main.js.map": "/GroupProject/static/js/main.442f6c08.chunk.js.map",
+    "main.css": "/GroupProject/static/css/main.4d4343f1.chunk.css",
+    "main.js": "/GroupProject/static/js/main.de4d323e.chunk.js",
+    "main.js.map": "/GroupProject/static/js/main.de4d323e.chunk.js.map",
     "runtime-main.js": "/GroupProject/static/js/runtime-main.42a28727.js",
     "runtime-main.js.map": "/GroupProject/static/js/runtime-main.42a28727.js.map",
-    "static/js/2.debfbfad.chunk.js": "/GroupProject/static/js/2.debfbfad.chunk.js",
-    "static/js/2.debfbfad.chunk.js.map": "/GroupProject/static/js/2.debfbfad.chunk.js.map",
+    "static/js/2.e5a8392a.chunk.js": "/GroupProject/static/js/2.e5a8392a.chunk.js",
+    "static/js/2.e5a8392a.chunk.js.map": "/GroupProject/static/js/2.e5a8392a.chunk.js.map",
     "index.html": "/GroupProject/index.html",
-    "static/css/main.399d01f2.chunk.css.map": "/GroupProject/static/css/main.399d01f2.chunk.css.map",
-    "static/js/2.debfbfad.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.debfbfad.chunk.js.LICENSE.txt",
+    "static/css/main.4d4343f1.chunk.css.map": "/GroupProject/static/css/main.4d4343f1.chunk.css.map",
+    "static/js/2.e5a8392a.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.e5a8392a.chunk.js.LICENSE.txt",
     "static/media/Module.css": "/GroupProject/static/media/Banner.68f9513c.png",
     "static/media/CourseGuideImage.38108320.png": "/GroupProject/static/media/CourseGuideImage.38108320.png",
     "static/media/Group 41.f960d5fa.png": "/GroupProject/static/media/Group 41.f960d5fa.png",
@@ -24,14 +24,15 @@
     "static/media/landing.css": "/GroupProject/static/media/hero_img.34c210e3.png",
     "static/media/laptopandsmartphone.617c4491.png": "/GroupProject/static/media/laptopandsmartphone.617c4491.png",
     "static/media/logo.25811f46.svg": "/GroupProject/static/media/logo.25811f46.svg",
+    "static/media/menu.28107808.svg": "/GroupProject/static/media/menu.28107808.svg",
     "static/media/modules-bottom.dc99669f.png": "/GroupProject/static/media/modules-bottom.dc99669f.png",
     "static/media/testVideo.d5a27fde.mp4": "/GroupProject/static/media/testVideo.d5a27fde.mp4",
     "static/media/wheel.bd3f4d8a.png": "/GroupProject/static/media/wheel.bd3f4d8a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.42a28727.js",
-    "static/js/2.debfbfad.chunk.js",
-    "static/css/main.399d01f2.chunk.css",
-    "static/js/main.442f6c08.chunk.js"
+    "static/js/2.e5a8392a.chunk.js",
+    "static/css/main.4d4343f1.chunk.css",
+    "static/js/main.de4d323e.chunk.js"
   ]
 }
