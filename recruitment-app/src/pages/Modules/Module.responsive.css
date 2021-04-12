@@ -1,4 +1,7 @@
 @media (max-width:1100px) {
+	.Module__Page{
+		padding-top: 3.5rem;
+	}
 	.Module__Page__Header {
 		height: auto;
 	}
@@ -87,7 +90,7 @@
 
 }
 
-@media (max-width:600px) {
+/* @media (max-width:600px) {
 	.Module__Page__Quote__Container {
 		flex-direction: column-reverse;
 		height: auto;
@@ -111,9 +114,12 @@
 	.Module__Page__CTA {
 		text-align: center;
 	}
-}
+} */
 
-@media (max-width:500px) {
+@media (max-width:700px) {
+	.Module__Page{
+		padding: 0;
+	}
 	.Module__Page__Header__Wheels {
 		display: none !important;
 	}

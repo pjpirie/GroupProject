@@ -21,6 +21,9 @@ import Wheels from '../../assets/wheel.png';
 import './Module.css';
 import './Module.responsive.css';
 
+import ReactTooltip from 'react-tooltip';
+
+
 function Module() {
     return (
         <div className="Module__Page">
@@ -143,17 +146,18 @@ function Module() {
                     <h1>Our Core Values</h1>
                     <div className='Module__Page__Values__Items' >
                         <div className='Module__Page__Values__Item' >
-                            <Check className="Module__Page__Values__Item--Check" />
+                            <Check className="Module__Page__Values__Item--Check" data-tip="Simplicity" />
                         </div>
                         <div className='Module__Page__Values__Item' >
-                            <Arrow className="Module__Page__Values__Item--Arrow" />
+                            <Arrow className="Module__Page__Values__Item--Arrow" data-tip="Flexibility" />
                         </div>
                         <div className='Module__Page__Values__Item' >
-                            <Gear className="Module__Page__Values__Item--Gear" />
+                            <Gear className="Module__Page__Values__Item--Gear"  data-tip="Focus on practical tools"/>
                         </div>
                         <div className='Module__Page__Values__Item' >
-                            <Bulb className="Module__Page__Values__Item--Bulb" />
+                            <Bulb className="Module__Page__Values__Item--Bulb" data-tip="Assist users to achieve their potential"/>
                         </div>
+                        <ReactTooltip place="top" type="dark" effect="solid"/>
                     </div>
                 </div>
             </div>

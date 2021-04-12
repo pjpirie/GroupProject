@@ -4,7 +4,7 @@ import './Footer.css';
 import './Footer.responsive.css';
 
 function Footer() {
-    
+
   return (
     <div className="footer-main">
       <div className="footer__container">
