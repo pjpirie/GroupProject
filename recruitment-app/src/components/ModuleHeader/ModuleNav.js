@@ -60,12 +60,15 @@ function ModuleNav(props) {
                 <Link to="/help">
                     <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>Help</span></li>
                 </Link>
-                {UserData.auth ?  (
-                <Link to="/CMS">
-                    <li className="ModuleNav__link"><DashboardIcon fontSize="large" /> <span>CMS</span></li>
-                </Link>
-                ):''
-                }
+                {(UserData == undefined || UserData == null) ? (
+                    ''
+                ) : (
+                    UserData.auth ?  (
+                    <Link to="/CMS">
+                        <li className="ModuleNav__link"><DashboardIcon fontSize="large" /> <span>CMS</span></li>
+                    </Link>
+                    ):''
+                ) }
                 <Link className="ModuleNav__link link_center" to="/">
                     <li onClick={() => {
                         logout();

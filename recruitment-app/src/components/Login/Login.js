@@ -58,7 +58,7 @@ export default function Login(props) {
                 Password: Password
             });
 
-            // console.log(logged_in);
+            console.log(logged_in);
             // console.log(logged_in.token);
             if(logged_in.token != undefined){
                 window.localStorage.setItem('token', logged_in.token);

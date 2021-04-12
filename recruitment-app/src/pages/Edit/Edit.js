@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setRedirect } from '../../actions';
 import './Edit.css';
 import './Edit.responsive.css';
 
@@ -10,7 +11,7 @@ function Edit(props) {
     useEffect(() => {
         props.checkAuth();
     },[])
-    
+    const dispatch = useDispatch();
     const UserData = useSelector(state => state.getAccount).user;
 
     
@@ -19,33 +20,60 @@ function Edit(props) {
     const [LastName, setLastName] = useState();
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
+    const [newPassword, setNewPassword] = useState();
 
     const handleSubmit = async e => {
-        checkMatch(document.getElementById("confirmPass").value);
         e.preventDefault();
-        setFirstName(document.getElementById("FirstNameID").value)
-        setLastName(document.getElementById("LastNameID").value)
-        console.log('Form Works')
-        console.table({
+        
+        if(props.Formtype === "info"){
+            checkMatch(document.getElementById("confirmPass").value);
+            setFirstName(document.getElementById("FirstNameID").value)
+            setLastName(document.getElementById("LastNameID").value)
+            console.log('Info Form Works')
+            console.table({
+                        firstName: FirstName,
+                        lastName : LastName,
+                        C_email: UserData.email,
+                        N_email: Email,
+                        Password: Password,
+                    })
+            try {
+                if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
+                console.log("Submitted");
+                const User = await changeUserInfo({
                     firstName: FirstName,
                     lastName : LastName,
                     C_email: UserData.email,
                     N_email: Email,
                     Password: Password,
-                })
-        try {
-            if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
-            console.log("Submitted");
-            const User = await changeUserInfo({
-                firstName: FirstName,
-                lastName : LastName,
-                C_email: UserData.email,
-                N_email: Email,
-                Password: Password,
-            });
-        } catch (e) {
-            console.error(e);
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }else{
+            checkMatch(document.getElementById("confirmNewPass").value);
+            console.log('Password Form Works')
+            console.table({
+                        firstName: FirstName,
+                        lastName : LastName,
+                        C_email: UserData.email,
+                        N_email: Email,
+                        Password: Password,
+                    })
+            try {
+                if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
+                console.log("Submitted");
+                const User = await changeUserPassword({
+                    email: UserData.email,
+                    Password: Password,
+                    N_Password: newPassword,
+                });
+            } catch (e) {
+                console.error(e);
+            }
         }
+
+        
     }
 
     async function changeUserInfo(inData) {
@@ -60,16 +88,35 @@ function Edit(props) {
         .then(() => props.checkAuth());
     }
 
+    async function changeUserPassword(inData) {
+        return await fetch(`https://group-54-rct.herokuapp.com/user/edit/password`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inData)
+        })
+        .then(data => console.log(data))
+        .then(() => props.checkAuth());
+    }
+
     const checkMatch = p => {
-        p === Password ? PasswordsMatch = true : PasswordsMatch = false;
-        console.table([p, Password, PasswordsMatch]);
+        if(props.Formtype === "info"){
+            p === Password ? PasswordsMatch = true : PasswordsMatch = false;
+            console.table([p, Password, PasswordsMatch]);
+        }else{
+            p === newPassword ? PasswordsMatch = true : PasswordsMatch = false;
+            console.table([p, newPassword, PasswordsMatch]);
+        }
     }
 
     return (
         <div className='Edit__Page__Container' >
             <div className='Edit__Page__Form' >
                 <h1>{UserData.firstName} {UserData.lastName}</h1>
-                <form onSubmit={handleSubmit} className="editForm">
+                <h3>{props.Formtype}</h3>
+                {props.Formtype === "info" ? (
+                    <form onSubmit={handleSubmit} className="editForm">
                     <div className="names">
                         <label>
                             <p>First Name</p>
@@ -80,33 +127,74 @@ function Edit(props) {
                             <input id="LastNameID" type="text" onChange={e => setLastName(e.target.value)} defaultValue={UserData.lastName} />
                         </label>
                     </div>
-                    <label>
-                        <p>Email</p>
-                        <input type="text" onChange={e => setEmail(e.target.value)} defaultValue={UserData.email} />
-                    </label>
-                    <label>
-                        <p>Password</p>
-                        <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
-                    </label>
-                    <label>
-                        <p>Confirm Password</p>
-                        <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
-                    </label>
-                    <div>
-                        <button class=" btn-clearing main-btn" type="submit">Request Change</button>
-                    </div>
-                    <div>
-                        <button 
-                        class="btn-clearing alt-btn" 
-                        onClick={() => {alert("TODO")}}
-                                >Delete Account</button>
+                        <label>
+                            <p>Email</p>
+                            <input type="text" onChange={e => setEmail(e.target.value)} defaultValue={UserData.email} />
+                        </label>
+                        <label>
+                            <p>Password</p>
+                            <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                        </label>
+                        <label>
+                            <p>Confirm Password</p>
+                            <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
+                        </label>
+                        <div>
+                            <button class=" btn-clearing main-btn" type="submit">Request Change</button>
+                        </div>
+                        <div>
+                            <button 
+                            class="btn-clearing alt-btn" 
+                            onClick={() => {alert("TODO")}}
+                                    >Delete Account</button>
 
-                        <button 
-                        class="btn-clearing alt-btn" 
-                        onClick={() => {alert("TODO")}}
-                                >Request Data</button>
-                    </div>
-                </form>
+                            <button 
+                            class="btn-clearing alt-btn" 
+                            onClick={() => {alert("TODO")}}
+                                    >Request Data</button>
+
+                            <button 
+                            class="btn-clearing alt-btn" 
+                            onClick={() => { dispatch(setRedirect(true, `/edit/password`))} }
+                                    >Change Password Form</button>
+                        </div>
+                    </form>
+                ) : (
+                    <form onSubmit={handleSubmit} className="editForm">
+                        <label>
+                            <p>Current Password</p>
+                            <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                        </label>
+                        <label>
+                            <p>New Password</p>
+                            <input id="newPass" type="password" onChange={e => setNewPassword(e.target.value)} />
+                        </label>
+                        <label>
+                            <p>Confirm New Password</p>
+                            <input id="confirmNewPass" type="password" onChange={e => checkMatch(e.target.value)} />
+                        </label>
+                        <div>
+                            <button class=" btn-clearing main-btn" type="submit">Request Change</button>
+                        </div>
+                        <div>
+                            <button 
+                            class="btn-clearing alt-btn" 
+                            onClick={() => {alert("TODO")}}
+                                    >Delete Account</button>
+
+                            <button 
+                            class="btn-clearing alt-btn" 
+                            onClick={() => {alert("TODO")}}
+                                    >Request Data</button>
+
+                            <button 
+                            class="btn-clearing alt-btn" 
+                            onClick={() => { dispatch(setRedirect(true, `/edit`))} }
+                                    >Change Info Form</button>
+                        </div>
+                    </form>
+                )}
+                
             </div>
         </div>
     );

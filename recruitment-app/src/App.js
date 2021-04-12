@@ -112,8 +112,11 @@ function App() {
                     <Route path="/" exact>
                       <ModuleTree checkAuth={checkAuth} />
                     </Route>
-                    <Route path="/edit">
-                      <Edit checkAuth={checkAuth} />
+                    <Route path="/edit" exact>
+                      <Edit checkAuth={checkAuth} Formtype="info"/>
+                    </Route>
+                    <Route path="/edit/password">
+                      <Edit checkAuth={checkAuth} Formtype="password"/>
                     </Route>
                     <Route path="/help" component={Help} />
                     <Route path="/module/1" component={Module1} />

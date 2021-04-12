@@ -1,4 +1,5 @@
 import CloseIcon from '@material-ui/icons/Close';
+import DoneIcon from '@material-ui/icons/Done';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setRedirect } from '../../actions';
@@ -79,7 +80,11 @@ const [ModuleInfo, setModuleInfo] = useState({
                     </div>
                 </div> */}
                 <div className="ModuleTree__Modal__ButtonContainer">
-                    <h6>Completed</h6>
+                    { UserData.modulesCompleted[props.number] ? (
+                        <h6><DoneIcon /> Completed</h6>
+                    ) : (
+                        <h6><CloseIcon /> Not Completed</h6>
+                    )}
                     <button className="ModuleModal__btn" onClick={() => { 
                         dispatch(setRedirect(true, `/module/${props.number}`));
                         completeModule({email: UserData.email}, props.number);
