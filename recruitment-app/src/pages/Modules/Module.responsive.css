@@ -1,7 +1,8 @@
 @media (max-width:1100px) {
-	.Module__Page{
+	.Module__Page {
 		padding-top: 3.5rem;
 	}
+
 	.Module__Page__Header {
 		height: auto;
 	}
@@ -11,11 +12,13 @@
 	}
 
 	.Module__Page__Header__Wheels img {
-		position: absolute;
+		/* position: absolute;
 		top: 25%;
 		left: 0;
-		transform: translate(-60%, -60%);
+		width: 60vw; */
+		transform: translate(-50%, -0%);
 		width: 60vw;
+		height: 60vw;
 	}
 
 	.Module__Page__Item {
@@ -65,15 +68,23 @@
 		margin: 5rem 0;
 		padding: 0 2rem;
 	}
+
+	.Module__Page__Values__Items {
+		flex-direction: column;
+	}
+
+	.Module__Page__Values__Item {
+		margin: 0 1rem 3rem 1rem;
+	}
 }
 
 @media (max-width:750px) {
 	.Module__Page__Header__Wheels img {
-		position: absolute;
+		/* position: absolute;
 		top: 30%;
 		left: 0;
 		transform: translate(-70%, -60%);
-		width: 100vw;
+		width: 100vw; */
 	}
 
 	.Module__Page__Quote__Container {
@@ -117,9 +128,10 @@
 } */
 
 @media (max-width:700px) {
-	.Module__Page{
+	.Module__Page {
 		padding: 0;
 	}
+
 	.Module__Page__Header__Wheels {
 		display: none !important;
 	}

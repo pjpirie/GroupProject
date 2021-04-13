@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
 import Check from '@material-ui/icons/CheckCircleOutlineRounded';
 import Bulb from '@material-ui/icons/EmojiObjects';
 import Arrow from '@material-ui/icons/OpenWithRounded';
 import Gear from '@material-ui/icons/Settings';
+import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 import Clipboard from '../../assets/1x/Dark_CourseGuide_Icon-8.png';
 import Msg from '../../assets/1x/Dark_FaceToFace_Icon-8.png';
 import People from '../../assets/1x/Dark_Group_Icon-8.png';
@@ -16,18 +17,19 @@ import ModuleImg1 from '../../assets/Image-3.png';
 import ModuleImg2 from '../../assets/Image-4.png';
 import ModuleImg5 from '../../assets/Image-5.png';
 import ModuleImg6 from '../../assets/Image.png';
+import ModuleBG from '../../assets/ModulePageBG.png';
 import ModuleBottom from '../../assets/modules-bottom.png';
-import Wheels from '../../assets/wheel.png';
+import Wheels from '../../assets/NewWheels.png';
 import './Module.css';
 import './Module.responsive.css';
 
-import ReactTooltip from 'react-tooltip';
 
 
 function Module() {
     return (
         <div className="Module__Page">
             <div className="Module__Page__Header">
+                <img src={ModuleBG} className="ModuleBG"/>
                 <div className='Module__Page__Header__Wheels' >
                     <img src={Wheels} alt="Recruitment Training User" />
                 </div>
@@ -147,15 +149,19 @@ function Module() {
                     <div className='Module__Page__Values__Items' >
                         <div className='Module__Page__Values__Item' >
                             <Check className="Module__Page__Values__Item--Check" data-tip="Simplicity" />
+                            <h2>Simplicity</h2>
                         </div>
                         <div className='Module__Page__Values__Item' >
                             <Arrow className="Module__Page__Values__Item--Arrow" data-tip="Flexibility" />
+                            <h2>Flexibility</h2>
                         </div>
                         <div className='Module__Page__Values__Item' >
                             <Gear className="Module__Page__Values__Item--Gear"  data-tip="Focus on practical tools"/>
+                            <h2>Practicality</h2>
                         </div>
                         <div className='Module__Page__Values__Item' >
                             <Bulb className="Module__Page__Values__Item--Bulb" data-tip="Assist users to achieve their potential"/>
+                            <h2>Potential</h2>
                         </div>
                         <ReactTooltip place="top" type="dark" effect="solid"/>
                     </div>

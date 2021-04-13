@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setRedirect } from '../../actions';
+import { setAlert, setRedirect } from '../../actions';
 import './Edit.css';
 import './Edit.responsive.css';
 
@@ -47,6 +47,10 @@ function Edit(props) {
                     N_email: Email,
                     Password: Password,
                 });
+                console.log(`[User Log] ${User}`)
+                if(User.pass === undefined || User.pass === null){
+                    dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: User.error}));
+                }
             } catch (e) {
                 console.error(e);
             }
@@ -54,8 +58,6 @@ function Edit(props) {
             checkMatch(document.getElementById("confirmNewPass").value);
             console.log('Password Form Works')
             console.table({
-                        firstName: FirstName,
-                        lastName : LastName,
                         C_email: UserData.email,
                         N_email: Email,
                         Password: Password,
@@ -68,6 +70,10 @@ function Edit(props) {
                     Password: Password,
                     N_Password: newPassword,
                 });
+                console.log(User);
+                if(User.error === undefined || User.error === null){
+                    dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: User.error}));
+                }
             } catch (e) {
                 console.error(e);
             }
@@ -86,9 +92,16 @@ function Edit(props) {
         })
         
         .then(data => data.json())
-        .then(data => window.localStorage.setItem('User_Id', data.newEmail))
-        .then(data => console.log(data))
-        .then(() => props.checkAuth());
+        .then(data => {
+            console.log(data);
+            if(data.error === undefined || data.error === null){
+                if(data.newEmail !== undefined){
+                    window.localStorage.setItem('User_Id', data.newEmail)
+                }
+            }
+            props.checkAuth();
+            return data;
+        });
     }
 
     async function changeUserPassword(inData) {
@@ -99,8 +112,11 @@ function Edit(props) {
             },
             body: JSON.stringify(inData)
         })
-        .then(data => console.log(data))
-        .then(() => props.checkAuth());
+        // .then(data => console.log(data))
+        .then(data => {
+            props.checkAuth();
+            return data.json();
+        });
     }
 
     const checkMatch = p => {

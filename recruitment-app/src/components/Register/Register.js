@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router';
-import { setLightNav } from '../../actions';
+import { setAlert, setLightNav } from '../../actions';
 import './Register.css';
 import './Register.responsive.css';
 
@@ -49,6 +49,10 @@ export default function Register() {
                 Password,
                 DateOfBirth
             });
+
+            if(token.error === undefined || token.error === null){
+                dispatch(setAlert(true, {AlertTitle: 'Register Error', AlertMessage: token.error}));
+            }
         } catch (e) {
             console.error(e);
         }

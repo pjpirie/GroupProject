@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
-import { setAccount, setLightNav, setLogged, setRedirect } from '../../actions';
+import { setAccount, setAlert, setLightNav, setLogged, setRedirect } from '../../actions';
 import './Login.css';
 import './Login.responsive.css';
 
@@ -59,6 +59,10 @@ export default function Login(props) {
             });
 
             console.log(logged_in);
+
+            if(logged_in.error !== undefined){
+                dispatch(setAlert(true, {AlertTitle: 'Login Error', AlertMessage: logged_in.error}));
+            }
             // console.log(logged_in.token);
             if(logged_in.token != undefined){
                 window.localStorage.setItem('token', logged_in.token);
