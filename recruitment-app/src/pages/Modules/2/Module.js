@@ -7,7 +7,7 @@ import './Module.css';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('download1', {
+        return fetch('https://group-54-rct.herokuapp.com/download1', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'

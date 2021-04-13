@@ -6,8 +6,18 @@ import './Module.css';
 
 function Module() {
 
+    async function DownloadMedia() {
+        return fetch('https://group-54-rct.herokuapp.com/download3', {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(data => data.json())
+    }
+
     const handleDownload = () => {
-        alert("//TODO Download");
+        DownloadMedia();
     };
     return (
         <div className="Module__Page__Wrapper">
