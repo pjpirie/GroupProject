@@ -1,13 +1,13 @@
-import { useSelector } from 'react-redux'
-
-import React, { useEffect, useState }  from 'react'
-import { Redirect } from 'react-router';
-import axios from 'axios'
 import { Button } from '@material-ui/core';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Redirect } from 'react-router';
+import './CMS.css';
 
-import './CMS.css'
 
-function CMS(props) {
+
+function CMSPage(props) {
 
     const [users, setUsers] = useState([])
     useEffect(()=>{
@@ -41,6 +41,7 @@ function CMS(props) {
 
 
     const checker = useSelector(state => state.getAccount).user.auth
+    console.log("CMS OPEN")
     if(!checker) return <Redirect to='/'/>
 
     return (
@@ -72,4 +73,4 @@ function CMS(props) {
         </div>
     )  
 }
-export default CMS
+export default CMSPage

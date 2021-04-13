@@ -132,7 +132,7 @@ function Edit(props) {
     return (
         <div className='Edit__Page__Container' >
             <div className='Edit__Page__Form' >
-                <h1>{UserData.firstName} {UserData.lastName}</h1>
+                <h1 className="sans-heading">{UserData.firstName} {UserData.lastName}</h1>
                 {props.Formtype === "info" ? (
                     <form onSubmit={handleSubmit} className="editForm">
                     <p>Use this form to edit your name and email on our records, use the password change form to change your password.</p>

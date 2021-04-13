@@ -3,7 +3,13 @@ import DoneIcon from '@material-ui/icons/Done';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setRedirect } from '../../actions';
-import CourseGuideImage from '../../assets/CourseGuideImage.png';
+import Image from '../../assets/CourseGuideImage.png';
+import Image2 from '../../assets/Image-1.png';
+import Image3 from '../../assets/Image-2.png';
+import Image4 from '../../assets/Image-3.png';
+import Image5 from '../../assets/Image-4.png';
+import Image6 from '../../assets/Image-5.png';
+import Image1 from '../../assets/Image.png';
 import './ModuleModal.css';
 import './ModuleModal.responsive.css';
 
@@ -50,12 +56,41 @@ const [ModuleInfo, setModuleInfo] = useState({
         console.log(props.number)
         getModuleInfo(props.number);
     },[])
+    
+    const getImg = (number) => {
+        console.log(`[MODULE MODAL] NUMBER: ${number}`)
+        switch(number) {
+            case 1:
+                return Image;
+                break;
+            case 2:
+                return Image1;
+                break;
+            case 3:
+                return Image2;
+            break;
+            case 4:
+                return Image3;
+            break;
+            case 5:
+                return Image4;
+            break;
+            case 6:
+                return Image5;
+            break;
+            case 7:
+                return Image6;
+            break;
+            default:
+                return Image;
+        } 
+    }
 
     
     return (
         <div className="ModuleTree__Modal ModuleTree__Modal--Mod7">
             <div className="ModuleTree__Modal__Header">
-                <img src={CourseGuideImage} alt="placeholder" />
+                <img src={getImg(props.number)} alt="placeholder" />
                 <div className="ModuleTree__Modal__Header__Text">
                     <div className="ModuleTree__Modal__Header__Text__Main">
                     <h3>{ModuleInfo.title ?? "Loading..."}</h3>   
@@ -81,9 +116,9 @@ const [ModuleInfo, setModuleInfo] = useState({
                 </div> */}
                 <div className="ModuleTree__Modal__ButtonContainer">
                     { UserData.modulesCompleted[props.number - 1]  ? (
-                        <h6><DoneIcon /> Completed {props.number}</h6>
+                        <h6><DoneIcon fontSize="large" className="]" /> Completed</h6>
                     ) : ( 
-                        <h6><CloseIcon /> Not Completed {props.number}</h6>
+                        <h6><CloseIcon fontSize="large" className="not_completed"/> Not Completed</h6>
                     )}
                     <button className="ModuleModal__btn" onClick={() => { 
                         dispatch(setRedirect(true, `/module/${props.number}`));

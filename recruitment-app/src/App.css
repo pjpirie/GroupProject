@@ -24,18 +24,27 @@
 	color: #fff;
 }
 
-.heading {
+.heading,
+h1,
+h2,
+h3 {
 	font-family: "Plantin", sans-serif !important;
 	font-weight: 700 !important;
+	color: #213142;
 }
 
-.sans-heading {
+.sans-heading,
+h4,
+h5,
+h6 {
 	font-family: "Rubik", sans-serif !important;
 	font-weight: 700 !important;
+	color: #213142;
 }
 
 body {
 	font-family: "Rubik", sans-serif !important;
+	color: #213142;
 }
 
 .footer__divider {

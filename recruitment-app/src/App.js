@@ -12,12 +12,11 @@ import Login from './components/Login/Login';
 import ModuleNav from './components/ModuleHeader/ModuleNav';
 import Register from './components/Register/Register';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import CMS from './pages/CMS/CMS';
+import CMSPage from './pages/CMS/CMS';
 import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
 import Edit from './pages/Edit/Edit';
-import FAQ from './pages/FAQ/FAQ';
-import Help from './pages/Help/Help';
+import FAQPage from './pages/FAQ/FAQ';
 import Landing from './pages/Landing/landing';
 import { default as Module1 } from './pages/Modules/1/Module';
 import { default as Module2 } from './pages/Modules/2/Module';
@@ -29,7 +28,6 @@ import { default as Module7 } from './pages/Modules/7/Module';
 import Modules from './pages/Modules/Module';
 import ModuleTree from './pages/ModuleTree/ModuleTree';
 import NoAccess from './pages/NoAccess/NoAccess.js';
-import Page_404 from './pages/Page_404/Page_404.js';
 import Privacy from './pages/Privacy/Privacy';
 
 
@@ -49,6 +47,7 @@ function App() {
   
   const checkAuth = async (msg = "App") => {
     console.log("Checking Auth from " + msg)
+    // if(window.localStorage.getItem('token') || window.localStorage.getItem('User_Id') == (undefined || null)){return {tokenValid: false};}
     return await fetch('https://group-54-rct.herokuapp.com/user/auth', {
       method: 'POST',
       headers: {
@@ -125,8 +124,12 @@ function App() {
                     <Route path="/edit/password">
                       <Edit checkAuth={checkAuth} Formtype="password"/>
                     </Route>
-                    <Route path="/help" component={Help} />
-                    { getUser.paidAccess ? (
+                    <Route path="/help" component={FAQPage} />
+                    <Route path="/CMS" component={CMSPage} />
+                    <Route path="/FAQ" component={FAQPage} />
+                    <Route path="/contact" component={Contact} />
+                    { 
+                    getUser.paidAccess ? (
                       <Fragment>
                         <Route path="/module/1" component={Module1} />
                         <Route path="/module/2" component={Module2} />
@@ -146,17 +149,9 @@ function App() {
                         <Route path="/module/6" component={NoAccess} />
                         <Route path="/module/7" component={NoAccess} />
                       </Fragment>
-                    )}
-
-                    {console.log(getUser)}
-
-                    { getUser.auth ? (
-                      <Route path="/CMS" component={CMS} />
-                    ) : (
-                      <Route path="/CMS" component={Page_404} />
-                    )}
-                    <Route path="/FAQ" component={FAQ} />
-                    <Route path="/contact" component={Contact} />
+                    )
+                    }
+                    
                     <Route>
                       <ModuleTree checkAuth={checkAuth} />
                     </Route>

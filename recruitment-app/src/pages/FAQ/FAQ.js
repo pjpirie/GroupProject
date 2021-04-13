@@ -1,13 +1,13 @@
-import React, { useState}from 'react'
-import './FAQ.css'
-import Logic from './Logic.js'
-import { useDispatch, useSelector  } from 'react-redux';
-import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { setRedirect } from '../../actions';
+import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted';
+import './FAQ.css';
+import Logic from './Logic.js';
 
 // import image from '../../assets/msg.png'
 
-function FAQ() {
+function FAQPage() {
     const dispatch = useDispatch();
 
     const name = useSelector(state => state.getAccount).user.firstName + " " + useSelector(state => state.getAccount).user.lastName
@@ -68,4 +68,4 @@ function FAQ() {
     )
 }
 
-export default FAQ
+export default FAQPage

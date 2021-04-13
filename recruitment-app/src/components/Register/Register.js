@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 import { setAlert, setLightNav } from '../../actions';
 import './Register.css';
 import './Register.responsive.css';
@@ -71,7 +71,7 @@ export default function Register() {
         
         <div className="registerPage__Wrapper">
             <div className="registerWrapper">
-                <h1>Please Register</h1>
+                <h1 className="sans-heading">Please Register</h1>
                 <form onSubmit={handleSubmit} className="registerForm">
                     <div className="names">
                         <label>

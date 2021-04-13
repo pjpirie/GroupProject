@@ -47,7 +47,7 @@
 .ModuleTree__Modal__Header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     position: relative;
 }
 
@@ -105,13 +105,33 @@
 
 .ModuleTree__Modal__ButtonContainer {
     width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ModuleTree__Modal__ButtonContainer h6 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.ModuleTree__Modal__ButtonContainer h6 svg {
+    margin: 0 1rem;
+}
+
+.ModuleTree__Modal__ButtonContainer h6 svg.completed {
+    fill: #71A068;
+}
+
+.ModuleTree__Modal__ButtonContainer h6 svg.not_completed {
+    fill: #c75e5e;
 }
 
 .ModuleModal__btn {
-    width: 100px;
-    height: 40px;
+    /* width: 100px; */
+    /* height: 40px; */
     margin: 0 0 0 auto;
-    margin-top: -30px;
+    /* margin-top: -30px; */
     padding: 5px 20px;
     background: #71A068;
     border-radius: 20px;
