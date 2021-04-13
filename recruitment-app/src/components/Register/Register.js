@@ -61,7 +61,7 @@ export default function Register() {
 
     const checkMatch = p => {
         p === Password ? PasswordsMatch = true : PasswordsMatch = false;
-        console.table([p, Password, PasswordsMatch]);
+        // console.table([p, Password, PasswordsMatch]);
         
         if(PasswordsMatch == false){
             dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: "Passwords Don't Match"}));
@@ -97,7 +97,7 @@ export default function Register() {
                     </label>
                     <label>
                         <p>Confirm Password</p>
-                        <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} required />
+                        <input id="confirmPass" type="password" required />
                     </label>
                     <label>
                         <p>Date of Birth</p>

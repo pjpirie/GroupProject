@@ -124,10 +124,10 @@ function Edit(props) {
     const checkMatch = p => {
         if(props.Formtype === "info"){
             p === Password ? PasswordsMatch = true : PasswordsMatch = false;
-            console.table([p, Password, PasswordsMatch]);
+            // console.table([p, Password, PasswordsMatch]);
         }else{
             p === newPassword ? PasswordsMatch = true : PasswordsMatch = false;
-            console.table([p, newPassword, PasswordsMatch]);
+            // console.table([p, newPassword, PasswordsMatch]);
         }
         if(PasswordsMatch == false){
             dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: "Passwords Don't Match"}));
@@ -196,7 +196,7 @@ function Edit(props) {
                         </label>
                         <label>
                             <p>Confirm New Password</p>
-                            <input id="confirmNewPass" type="password" onChange={e => checkMatch(e.target.value)} required />
+                            <input id="confirmNewPass" type="password" required />
                         </label>
                         <div>
                             <button class=" btn-clearing main-btn" type="submit">Save Changes</button>
