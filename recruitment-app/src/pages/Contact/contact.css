@@ -115,20 +115,31 @@ option {
 	text-transform: none !important;
 }
 
+.contact-message-container{
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+
+	width: auto;
+	height: 20rem;
+
+	outline: 1px solid red;
+}
+
 .contact-message{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 150%;
 	height: 10rem;
 	margin: 0 auto;
-	/* padding: 1rem; */
+	padding: 1rem;
 	border-radius: 10px;
 	box-shadow: 13px 15px 22px -10px rgba(167, 167, 167, 0.75);
 	background: #FAFAFA;
-	margin-top: 6rem;
-	margin-left: -25%;
+	margin-top: 6rem; 
+	/* margin-left: -25%; */
 }
 
 @media (max-width: 870px) {
@@ -160,9 +171,4 @@ option {
 		margin-top: 0 !important;
 		margin-left: 0 !important;
 	}
-}
-
-*{
-	/* outline: 1px solid red; */
-
 }

@@ -36,7 +36,7 @@ function Contact() {
             <div className="contact-bubble" />            
             <div className="contact-bg" />            
                 {
-                    !   display? 
+                    !display? 
                 <div className="container-form">
                     <h2 className="form-h4">Get in touch below</h2>
                     <form onSubmit={handelSubmit} className="contact-form">
@@ -77,9 +77,11 @@ function Contact() {
                 }
                 {
                     display?
-                    <div className="contact-message">
-                        <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
-                        <h2 className="formSubmit">We will be in touch</h2>
+                    <div className="contact-message-container">
+                        <div className="contact-message">
+                            <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
+                            <h2 className="formSubmit">We will be in touch</h2>
+                        </div>
                     </div>
                     : null
                 }
