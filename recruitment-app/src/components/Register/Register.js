@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import { setAlert, setLightNav } from '../../actions';
 import './Register.css';
@@ -99,11 +100,8 @@ export default function Register() {
                         <input type="date" onChange={e => setDateOfBirth(e.target.value)} />
                     </label>
                     <div>
-                        <p>Got an account?
-                        <button 
-                        class="btn-clearing alt-btn" 
-                        onClick={() => {return <Redirect to='/login'/>}}
-                                >Log in here</button></p>
+                        <p>Got an account?</p>
+                        <Link to="/login" className="btn-clearing alt-btn">Sign Up!</Link>
                         <button class=" btn-clearing main-btn" type="submit">Register</button>
                     </div>
                 </form>
