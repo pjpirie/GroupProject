@@ -2,7 +2,7 @@ import React, { useEffect, useState, Component } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightNav } from '../../actions';
-import logo from '../../assets/logoBlue.png'
+import logo from '../../assets/logoBlack.png'
 import menu from '../../assets/menu.svg'
 import './Navbar.css';
 
