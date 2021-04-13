@@ -71,7 +71,7 @@ function Edit(props) {
                     N_Password: newPassword,
                 });
                 console.log(User);
-                if(User.error === undefined || User.error === null){
+                if(User.error !== undefined || User.error !== null){
                     dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: User.error}));
                 }
             } catch (e) {

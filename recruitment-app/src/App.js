@@ -28,8 +28,8 @@ import { default as Module6 } from './pages/Modules/6/Module';
 import { default as Module7 } from './pages/Modules/7/Module';
 import Modules from './pages/Modules/Module';
 import ModuleTree from './pages/ModuleTree/ModuleTree';
-import NoAccess from './pages/NoAccess/NoAccess';
-import Page_404 from './pages/Page_404/Page_404';
+import NoAccess from './pages/NoAccess/NoAccess.js';
+import Page_404 from './pages/Page_404/Page_404.js';
 import Privacy from './pages/Privacy/Privacy';
 
 
@@ -90,6 +90,8 @@ function App() {
         {hasRedirected ? dispatch(setRedirect(false)) : ""}
         <ScrollToTop checkAuth={checkAuth} loading={setLoading}/>
         <div className="App">
+          
+        {console.log(getUser)}
           <div className="main">
             {!isLogged ?  (
               <Fragment>
@@ -145,6 +147,9 @@ function App() {
                         <Route path="/module/7" component={NoAccess} />
                       </Fragment>
                     )}
+
+                    {console.log(getUser)}
+
                     { getUser.auth ? (
                       <Route path="/CMS" component={CMS} />
                     ) : (

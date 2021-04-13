@@ -1,5 +1,4 @@
 import React from 'react';
-import Video from '../../../assets/testVideo.mp4';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.css';
@@ -21,8 +20,8 @@ function Module() {
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
-                    <video id="Video" autoplay>
-                        <source src={Video}></source>
+                <video id="Video" autoplay controls>
+                        <source src="https://group-54-rct.herokuapp.com/video/2" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="Module__Page__Text">

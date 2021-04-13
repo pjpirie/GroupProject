@@ -80,10 +80,10 @@ const [ModuleInfo, setModuleInfo] = useState({
                     </div>
                 </div> */}
                 <div className="ModuleTree__Modal__ButtonContainer">
-                    { UserData.modulesCompleted[props.number] ? (
-                        <h6><DoneIcon /> Completed</h6>
-                    ) : (
-                        <h6><CloseIcon /> Not Completed</h6>
+                    { UserData.modulesCompleted[props.number - 1]  ? (
+                        <h6><DoneIcon /> Completed {props.number}</h6>
+                    ) : ( 
+                        <h6><CloseIcon /> Not Completed {props.number}</h6>
                     )}
                     <button className="ModuleModal__btn" onClick={() => { 
                         dispatch(setRedirect(true, `/module/${props.number}`));
