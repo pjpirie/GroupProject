@@ -84,11 +84,11 @@ export default function Login(props) {
                 <form onSubmit={handleSubmit} className="loginForm">
                     <label>
                         <p>Email</p>
-                        <input type="text" onChange={e => setEmail(e.target.value)} />
+                        <input type="email" onChange={e => setEmail(e.target.value)} required />
                     </label>
                     <label>
                         <p>Password</p>
-                        <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                        <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} required />
                     </label>
                     <div>
 

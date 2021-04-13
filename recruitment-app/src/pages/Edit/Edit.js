@@ -139,20 +139,20 @@ function Edit(props) {
                     <div className="names">
                         <label>
                             <p>First Name</p>
-                            <input id="FirstNameID" type="text" onChange={e => setFirstName(e.target.value)} defaultValue={UserData.firstName} />
+                            <input id="FirstNameID" type="text" onChange={e => setFirstName(e.target.value)} defaultValue={UserData.firstName} required />
                         </label>
                         <label>
                             <p>Last Name</p>
-                            <input id="LastNameID" type="text" onChange={e => setLastName(e.target.value)} defaultValue={UserData.lastName} />
+                            <input id="LastNameID" type="text" onChange={e => setLastName(e.target.value)} defaultValue={UserData.lastName} required />
                         </label>
                     </div>
                         <label>
                             <p>Email</p>
-                            <input type="text" onChange={e => setEmail(e.target.value)} defaultValue={UserData.email} />
+                            <input type="email" onChange={e => setEmail(e.target.value)} defaultValue={UserData.email} required />
                         </label>
                         <label>
                             <p>Password</p>
-                            <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                            <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} required />
                         </label>
                         {/* <label>
                             <p>Confirm Password</p>
@@ -183,15 +183,15 @@ function Edit(props) {
                         <p>Use this form to edit your account password, use the information change form to change your name and email on our records.</p>
                         <label>
                             <p>Current Password</p>
-                            <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} />
+                            <input id="Pass" type="password" onChange={e => setPassword(e.target.value)} required />
                         </label>
                         <label>
                             <p>New Password</p>
-                            <input id="newPass" type="password" onChange={e => setNewPassword(e.target.value)} />
+                            <input id="newPass" type="password" onChange={e => setNewPassword(e.target.value)} required />
                         </label>
                         <label>
                             <p>Confirm New Password</p>
-                            <input id="confirmNewPass" type="password" onChange={e => checkMatch(e.target.value)} />
+                            <input id="confirmNewPass" type="password" onChange={e => checkMatch(e.target.value)} required />
                         </label>
                         <div>
                             <button class=" btn-clearing main-btn" type="submit">Save Changes</button>
