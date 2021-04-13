@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GroupProject/static/css/main.d70db3b3.chunk.css",
-    "main.js": "/GroupProject/static/js/main.a2b8b35c.chunk.js",
-    "main.js.map": "/GroupProject/static/js/main.a2b8b35c.chunk.js.map",
+    "main.css": "/GroupProject/static/css/main.75a0c3d2.chunk.css",
+    "main.js": "/GroupProject/static/js/main.fe7d481f.chunk.js",
+    "main.js.map": "/GroupProject/static/js/main.fe7d481f.chunk.js.map",
     "runtime-main.js": "/GroupProject/static/js/runtime-main.42a28727.js",
     "runtime-main.js.map": "/GroupProject/static/js/runtime-main.42a28727.js.map",
-    "static/js/2.dfc277f7.chunk.js": "/GroupProject/static/js/2.dfc277f7.chunk.js",
-    "static/js/2.dfc277f7.chunk.js.map": "/GroupProject/static/js/2.dfc277f7.chunk.js.map",
+    "static/js/2.61df0897.chunk.js": "/GroupProject/static/js/2.61df0897.chunk.js",
+    "static/js/2.61df0897.chunk.js.map": "/GroupProject/static/js/2.61df0897.chunk.js.map",
     "index.html": "/GroupProject/index.html",
-    "static/css/main.d70db3b3.chunk.css.map": "/GroupProject/static/css/main.d70db3b3.chunk.css.map",
-    "static/js/2.dfc277f7.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.dfc277f7.chunk.js.LICENSE.txt",
+    "static/css/main.75a0c3d2.chunk.css.map": "/GroupProject/static/css/main.75a0c3d2.chunk.css.map",
+    "static/js/2.61df0897.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.61df0897.chunk.js.LICENSE.txt",
     "static/media/Module.css": "/GroupProject/static/media/Banner.68f9513c.png",
     "static/media/Privacy.css": "/GroupProject/static/media/ContactBubbles.4a988c9b.png",
     "static/media/CourseGuideImage.38108320.png": "/GroupProject/static/media/CourseGuideImage.38108320.png",
@@ -28,13 +28,12 @@
     "static/media/laptopandsmartphone.617c4491.png": "/GroupProject/static/media/laptopandsmartphone.617c4491.png",
     "static/media/logo.25811f46.svg": "/GroupProject/static/media/logo.25811f46.svg",
     "static/media/menu.28107808.svg": "/GroupProject/static/media/menu.28107808.svg",
-    "static/media/modules-bottom.dc99669f.png": "/GroupProject/static/media/modules-bottom.dc99669f.png",
-    "static/media/testVideo.d5a27fde.mp4": "/GroupProject/static/media/testVideo.d5a27fde.mp4"
+    "static/media/modules-bottom.dc99669f.png": "/GroupProject/static/media/modules-bottom.dc99669f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.42a28727.js",
-    "static/js/2.dfc277f7.chunk.js",
-    "static/css/main.d70db3b3.chunk.css",
-    "static/js/main.a2b8b35c.chunk.js"
+    "static/js/2.61df0897.chunk.js",
+    "static/css/main.75a0c3d2.chunk.css",
+    "static/js/main.fe7d481f.chunk.js"
   ]
 }
