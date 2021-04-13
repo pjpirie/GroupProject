@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 import { setAccount, setAlert, setLightNav, setLogged, setRedirect } from '../../actions';
 import './Login.css';
 import './Login.responsive.css';
@@ -92,18 +93,15 @@ export default function Login(props) {
                     <div>
 
                         <button class=" btn-clearing main-btn" type="submit">Login</button>
-                        <p>Need an account?
-                        <button 
-                        class="btn-clearing alt-btn" 
-                        onClick={() => { dispatch(setRedirect(true, `/register`))} }
-                                >Sign up here</button></p>
+                        <p>Need an account?</p>
+                        <Link to="/register" className="btn-clearing alt-btn">Sign up here</Link>
                     </div>
                 </form>
             </div>
         </div>
     )
 }
-
+// btn-clearing alt-btn
 // Login.propTypes = {
 //     setToken: PropTypes.func.isRequired
 // }
