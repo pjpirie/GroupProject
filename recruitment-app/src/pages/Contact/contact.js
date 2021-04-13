@@ -3,6 +3,8 @@ import emailjs from 'emailjs-com';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setLightNav } from '../../actions';
+import contactBg from '../../assets/ContactBG.png'
+import contactBubbles from '../../assets/ContactBubbles.png'
 import './contact.css';
 
 function Contact() {
@@ -31,10 +33,16 @@ function Contact() {
 
     return (
         <div className="contact-page">
-            <h1 className="contact-header">Contact Us</h1>
-            <div className="contact">
-            <div className="contact-bubble" />            
-            <div className="contact-bg" />            
+            <div className="contact-header">
+                <div className="contact-left">
+                    <img src={contactBg} alt="" className="bigcircle"/>
+                    <img src={contactBubbles} alt="" className="bubble"/>
+                </div>
+                <div className="contact-right">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+            <div className="contact">        
                 {
                     !display? 
                 <div className="container-form">
