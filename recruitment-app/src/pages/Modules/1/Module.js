@@ -2,13 +2,15 @@ import React from 'react';
 import Video from '../../../assets/testVideo.mp4';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
+import '../ModuleGlobal.responsive.css';
 import './Module.css';
 
 
 function Module() {
 
     const handleDownload = () => {
-        alert("//TODO Download");
+        // alert();
+
     };
     return (
         <div className="Module__Page__Wrapper">
@@ -65,7 +67,7 @@ function Module() {
                     </div>
                 </div>
                 <div className="Module__Page__Btn__Container">
-                    {/* <button onClick={() => { handleDownload(); }}>Download</button> */}
+                    <button onClick={handleDownload()}>Download</button>
                 </div>
             </div>      
         </div>

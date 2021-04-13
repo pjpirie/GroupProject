@@ -1,0 +1,7 @@
+@media (max-width:500px){
+    .Module__Page__Wrapper{
+        min-width: 100vw !important;
+        margin-left: -56px;
+        z-index: -1;
+    }
+}
