@@ -73,6 +73,8 @@ function Edit(props) {
                 console.log(User);
                 if(User.error !== undefined){
                     dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: User.error}));
+                }else{
+                    dispatch(setAlert(true, {AlertTitle: 'Edit', AlertMessage: "Password Changed"}));
                 }
             } catch (e) {
                 console.error(e);
