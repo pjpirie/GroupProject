@@ -123,8 +123,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .MouleModal__Close__btn {
     margin-left: 1rem;
+    cursor: pointer;
+
 }
