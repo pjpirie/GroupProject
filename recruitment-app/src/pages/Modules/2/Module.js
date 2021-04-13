@@ -13,7 +13,11 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-            .then(data => data.json())
+        .then( res => res.blob() )
+        .then( blob => {
+            const file = window.URL.createObjectURL(blob);
+            window.location.assign(file);
+        });
     }
 
     const handleDownload = () => {

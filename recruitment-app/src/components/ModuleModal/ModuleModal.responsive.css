@@ -31,9 +31,75 @@
         transform: translate(-50%, -50%);
         background: #fff;
         box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
-        padding: 2rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .ModuleTree__Modal__Header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ModuleTree__Modal__Header img {
+        /* max-width: 250px; */
+        max-height: 80%;
+        height: 100%;
+        width: auto;
+        margin: 2rem 1rem 1rem 1rem;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .MouleModal__Close__btn {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        /* margin: 1rem; */
+    }
+
+    .ModuleTree__Modal__ButtonContainer {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width:400px) {
+
+    .MouleModal__Close__btn {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        /* margin: 1rem; */
+    }
+
+    .ModuleTree__Modal {
+        padding: 1rem;
+    }
+
+    .ModuleTree__Modal__Header img {
+        /* max-width: 250px; */
+        max-height: 80%;
+        height: 100%;
+        width: auto;
+        margin: 2rem 1rem 1rem 1rem;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .ModuleTree__Modal__ButtonContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem;
+    }
+
+    .ModuleModal__btn {
+        margin: 0;
+    }
+
+    .ModuleTree__Modal__ButtonContainer h6 svg {
+        margin: 0;
     }
 }

@@ -116,7 +116,7 @@ const [ModuleInfo, setModuleInfo] = useState({
                 </div> */}
                 <div className="ModuleTree__Modal__ButtonContainer">
                     { UserData.modulesCompleted[props.number - 1]  ? (
-                        <h6><DoneIcon fontSize="large" className="]" /> Completed</h6>
+                        <h6><DoneIcon fontSize="large" className="completed" /> Completed</h6>
                     ) : ( 
                         <h6><CloseIcon fontSize="large" className="not_completed"/> Not Completed</h6>
                     )}

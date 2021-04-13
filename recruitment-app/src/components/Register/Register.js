@@ -62,6 +62,10 @@ export default function Register() {
     const checkMatch = p => {
         p === Password ? PasswordsMatch = true : PasswordsMatch = false;
         console.table([p, Password, PasswordsMatch]);
+        
+        if(PasswordsMatch == false){
+            dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: "Passwords Don't Match"}));
+        }
     }
     if(redirect){
         return <Redirect to='/login'/>

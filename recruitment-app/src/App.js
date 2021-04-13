@@ -111,7 +111,7 @@ function App() {
                 <div className="LoggedIn__Module__Container">
   
                   <ModuleNav checkAuth={checkAuth}/>
-                  <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
+                  <div className={(!isSideNavOpen ? "App__MenuOpen__button left" : "App__MenuOpen__button hidden right")}>
                       <MenuIcon onClick={() => dispatch(setSideNavOpen(!isSideNavOpen))} />
                   </div>
                   <Switch>

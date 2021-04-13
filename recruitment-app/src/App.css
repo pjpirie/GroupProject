@@ -79,3 +79,15 @@ body {
 a {
 	text-decoration: none;
 }
+
+@media (max-width:500px) {
+	.App__MenuOpen__button.left {
+		margin: 1rem;
+		margin-right: 0;
+	}
+
+	.App__MenuOpen__button.right {
+		margin: 1rem;
+		margin-left: 0;
+	}
+}

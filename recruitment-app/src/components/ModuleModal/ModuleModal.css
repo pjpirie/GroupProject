@@ -52,12 +52,13 @@
 }
 
 .ModuleTree__Modal__Header img {
-    max-width: 20vw;
+    max-width: 250px;
     max-height: 80%;
     height: 100%;
     width: auto;
     margin-right: 2rem;
     border-radius: 5px;
+    width: 20vw;
 }
 
 .ModuleTree__Modal__Header__Text {
