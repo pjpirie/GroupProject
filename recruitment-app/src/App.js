@@ -28,6 +28,8 @@ import { default as Module6 } from './pages/Modules/6/Module';
 import { default as Module7 } from './pages/Modules/7/Module';
 import Modules from './pages/Modules/Module';
 import ModuleTree from './pages/ModuleTree/ModuleTree';
+import NoAccess from './pages/NoAccess/NoAccess';
+import Page_404 from './pages/Page_404/Page_404';
 import Privacy from './pages/Privacy/Privacy';
 
 
@@ -41,8 +43,9 @@ function App() {
   
   const isLogged = useSelector(state => state.isLogged);
   const isSideNavOpen = useSelector(state => state.isSideNavOpen);
-  const isRedirect = useSelector(state => state.toRedirect)
-  const getAlert = useSelector(state => state.getAlert)
+  const isRedirect = useSelector(state => state.toRedirect);
+  const getAlert = useSelector(state => state.getAlert);
+  const getUser = useSelector(state => state.getAccount).user;
   
   const checkAuth = async (msg = "App") => {
     console.log("Checking Auth from " + msg)
@@ -121,14 +124,32 @@ function App() {
                       <Edit checkAuth={checkAuth} Formtype="password"/>
                     </Route>
                     <Route path="/help" component={Help} />
-                    <Route path="/module/1" component={Module1} />
-                    <Route path="/module/2" component={Module2} />
-                    <Route path="/module/3" component={Module3} />
-                    <Route path="/module/4" component={Module4} />
-                    <Route path="/module/5" component={Module5} />
-                    <Route path="/module/6" component={Module6} />
-                    <Route path="/module/7" component={Module7} />
-                    <Route path="/CMS" component={CMS} />
+                    { getUser.paidAccess ? (
+                      <Fragment>
+                        <Route path="/module/1" component={Module1} />
+                        <Route path="/module/2" component={Module2} />
+                        <Route path="/module/3" component={Module3} />
+                        <Route path="/module/4" component={Module4} />
+                        <Route path="/module/5" component={Module5} />
+                        <Route path="/module/6" component={Module6} />
+                        <Route path="/module/7" component={Module7} />
+                      </Fragment>
+                    ) : (
+                      <Fragment>
+                        <Route path="/module/1" component={NoAccess} />
+                        <Route path="/module/2" component={NoAccess} />
+                        <Route path="/module/3" component={NoAccess} />
+                        <Route path="/module/4" component={NoAccess} />
+                        <Route path="/module/5" component={NoAccess} />
+                        <Route path="/module/6" component={NoAccess} />
+                        <Route path="/module/7" component={NoAccess} />
+                      </Fragment>
+                    )}
+                    { getUser.auth ? (
+                      <Route path="/CMS" component={CMS} />
+                    ) : (
+                      <Route path="/CMS" component={Page_404} />
+                    )}
                     <Route path="/FAQ" component={FAQ} />
                     <Route path="/contact" component={Contact} />
                     <Route>

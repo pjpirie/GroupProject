@@ -87,7 +87,9 @@ const [ModuleInfo, setModuleInfo] = useState({
                     )}
                     <button className="ModuleModal__btn" onClick={() => { 
                         dispatch(setRedirect(true, `/module/${props.number}`));
-                        completeModule({email: UserData.email}, props.number);
+                        if(UserData.paidAccess){
+                            completeModule({email: UserData.email}, props.number);
+                        }
                         } }>Start</button>
                 </div>
             </div>

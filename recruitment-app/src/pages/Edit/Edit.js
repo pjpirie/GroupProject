@@ -159,22 +159,22 @@ function Edit(props) {
                             <input id="confirmPass" type="password" onChange={e => checkMatch(e.target.value)} />
                         </label> */}
                         <div>
-                            <button class=" btn-clearing main-btn" type="submit">Request Change</button>
+                            <button class=" btn-clearing main-btn" type="submit">Save Changes</button>
                         </div>
                         <div>
                             <button 
                             class="btn-clearing alt-btn" 
-                            onClick={() => {alert("TODO")}}
+                            onClick={(e) => { e.preventDefault(); alert("TODO")}}
                                     >Delete Account</button>
 
                             <button 
                             class="btn-clearing alt-btn" 
-                            onClick={() => {alert("TODO")}}
+                            onClick={(e) => { e.preventDefault(); alert("TODO")}}
                                     >Request Data</button>
 
                             <button 
                             class="btn-clearing alt-btn" 
-                            onClick={() => { dispatch(setRedirect(true, `/edit/password`))} }
+                            onClick={(e) => { e.preventDefault(); dispatch(setRedirect(true, `/edit/password`))} }
                                     >Change Password Form</button>
                         </div>
                     </form>
@@ -194,22 +194,22 @@ function Edit(props) {
                             <input id="confirmNewPass" type="password" onChange={e => checkMatch(e.target.value)} />
                         </label>
                         <div>
-                            <button class=" btn-clearing main-btn" type="submit">Request Change</button>
+                            <button class=" btn-clearing main-btn" type="submit">Save Changes</button>
                         </div>
                         <div>
                             <button 
                             class="btn-clearing alt-btn" 
-                            onClick={() => {alert("TODO")}}
+                            onClick={(e) => { e.preventDefault(); alert("TODO")}}
                                     >Delete Account</button>
 
                             <button 
                             class="btn-clearing alt-btn" 
-                            onClick={() => {alert("TODO")}}
+                            onClick={(e) => { e.preventDefault(); alert("TODO")}}
                                     >Request Data</button>
 
                             <button 
                             class="btn-clearing alt-btn" 
-                            onClick={() => { dispatch(setRedirect(true, `/edit`))} }
+                            onClick={(e) => { e.preventDefault(); dispatch(setRedirect(true, `/edit`))} }
                                     >Change Info Form</button>
                         </div>
                     </form>
