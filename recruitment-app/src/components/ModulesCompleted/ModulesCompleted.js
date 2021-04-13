@@ -14,18 +14,17 @@ function ModulesCompleted(props) {
     console.log(UserData.modulesCompleted);
     
     const getPercentage = () =>{
-        if(UserData.modulesCompleted.length == 1){
-            if(UserData.modulesCompleted[0] == "" || UserData.modulesCompleted[0] == "{}"){
-                return 0;
+        let completedCount = 0;
+        for(let i = 0; i < UserData.modulesCompleted.length; i++){
+            if(UserData.modulesCompleted[i]){
+                completedCount++;
             }
-            else{
-                return Math.floor((UserData.modulesCompleted.length / 7) * 100);
-            }
-        }else{
-            return Math.floor((UserData.modulesCompleted.length / 7) * 100);
         }
         
-    }
+        return Math.floor((completedCount / 7) * 100);
+        }
+        
+    
     
     useEffect(() => {
         setPercentage(getPercentage());
