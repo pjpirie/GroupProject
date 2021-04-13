@@ -111,6 +111,10 @@
 	margin: 0 2.5rem 2.5rem 2.5rem;
 }
 
+.label>p{
+	margin-bottom: 0.5rem;
+}
+
 .textarea,
 option {
 	height: 3rem !important;
@@ -124,11 +128,20 @@ option {
 	width: 54em !important;
 }
 
+.submitBtn-container{
+	display: flex;
+	justify-content: flex-end;
+	height: 4rem;
+	width: 45em;
+	/* outline: 1px solid red; */
+}
+
 .submitBtn {
+	/* display: flex !important; */
 	background: #71a068 !important;
-	margin-top: 1rem !important;
-	margin-left: 25rem !important;
-	margin-bottom: 2rem !important;
+	/* margin-top: 1rem !important; */
+	/* margin-left: 25rem !important; */
+	/* margin-bottom: 2rem !important; */
 	color: #fff !important;
 	border-radius: 15px !important;
 	width: 120px !important;
@@ -217,9 +230,14 @@ option {
 		width: 20rem !important;
 	}
 
-	.submitBtn {
+	.submitBtn-container {
+		width: 100%;
 		margin: 0 auto !important;
-		justify-self: center;
+		justify-content: center;
+	}
+
+	.submitBtn{
+		/* justify-self: center; */
 	}
 }
 

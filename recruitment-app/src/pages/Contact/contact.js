@@ -77,8 +77,9 @@ function Contact() {
                             <p>Enquiry</p>
                             <textarea className="textarea" required name="enquiry"/>
                         </label>
-
-                        <Button type="submit" className="submitBtn">Submit</Button>
+                        <div className="submitBtn-container">
+                            <Button type="submit" className="submitBtn">Submit</Button>
+                        </div>
                     </form>
                 </div>
                 : null
