@@ -132,15 +132,20 @@ option {
 }
 
 @media (max-width: 870px) {
+	.contact-bubble, .contact-bg{
+		display: none;
+	}
 	.contact-header {
 		text-align: center;
 		margin-left: 0;
 	}
 
 	.contact-form {
+		flex-wrap: inherit;
 		flex-direction: column;
 		margin-bottom: 5rem !important;
 		text-align: center !important;
+		width: auto;
 	}
 
 	.contact{
@@ -148,7 +153,7 @@ option {
 	}
 
 	.textarea {
-		width: 80%;
+		width: 50% !important;
 	}
 
 	.submitBtn {

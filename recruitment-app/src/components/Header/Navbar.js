@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightNav } from '../../actions';
@@ -46,7 +46,7 @@ function Navbar(props){
 
     return(
         <nav className="NavbarItems">
-            <div className="navbar-logo"><img src={logo} alt="Logo" className="navbar-image" /><i className="fab fa-react"></i></div>
+            <div className="navbar-logo"><Link to="/"><img src={logo} alt="Logo" className="navbar-image" /></Link><i className="fab fa-react"></i></div>
             <div className="menu-icon" onClick={handleClick}>
                 <i className={mobile ? 'fas fa-times' : 'fas fa-bars'}><img src={menu} alt="-" className="menu-image" /></i>
             </div>
