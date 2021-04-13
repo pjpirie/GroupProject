@@ -129,6 +129,9 @@ function Edit(props) {
             p === newPassword ? PasswordsMatch = true : PasswordsMatch = false;
             console.table([p, newPassword, PasswordsMatch]);
         }
+        if(PasswordsMatch == false){
+            dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: "Passwords Don't Match"}));
+        }
     }
 
     return (
