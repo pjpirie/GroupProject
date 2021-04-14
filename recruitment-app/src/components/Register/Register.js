@@ -105,7 +105,7 @@ export default function Register() {
                     </label>
                     <div>
                         <p>Got an account?</p>
-                        <Link to="/login" className="btn-clearing alt-btn">Sign Up!</Link>
+                        <Link to="/login" className="btn-clearing alt-btn">Login!</Link>
                         <button class=" btn-clearing main-btn" type="submit">Register</button>
                     </div>
                 </form>
