@@ -1,40 +1,40 @@
-.faq-container{
-    min-height: 100%;
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5rem;
+.faq-container {
+	min-height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5rem;
 }
 
-.faq-info{
-    margin-bottom: 5rem;
+.faq-info {
+	margin-bottom: 5rem;
 }
 
-.faq-dropdown{
-    border-radius: 10px;
+.faq-dropdown {
+	border-radius: 10px;
 	box-shadow: 13px 15px 22px -10px rgba(167, 167, 167, 0.75);
 	background: #FAFAFA;
-    min-width: 50%;
-    margin-bottom: 4rem;
-    /* min-height: 50%; */
+	min-width: 50%;
+	margin-bottom: 4rem;
+	/* min-height: 50%; */
 }
 
-.faq-drop-heading{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+.faq-drop-heading {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
 }
 
-.faq-drop-heading>h1{
-    text-decoration: 6px underline #71a068;
+.faq-drop-heading>h1 {
+	text-decoration: 6px underline #71a068;
 }
 
 .faq {
 	margin: 15px;
 	padding: 15px;
-    border-bottom: 1px solid #707070;
+	border-bottom: 1px solid #707070;
 }
 
 .faq .faq-question {
@@ -44,9 +44,9 @@
 
 	transition: all 0.4s ease;
 
-    cursor: pointer;
+	cursor: pointer;
 
-    padding-left: 35px;
+	padding-left: 35px;
 }
 
 
@@ -88,7 +88,7 @@
 	max-height: 0;
 	overflow-y: hidden;
 	transition: all 0.4s ease-out;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .faq.open .faq-question {
@@ -104,30 +104,31 @@
 	opacity: 1;
 }
 
-.faq-contact-container{
-    display: flex;
-    justify-content: flex-end;
+.faq-contact-container {
+	display: flex;
+	justify-content: flex-end;
 
-    margin: 2rem;
+	margin: 2rem;
 }
 
-.faq-pi{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 20%;
+.faq-pi {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	height: 20%;
 }
 
-@media (max-width: 1000px){
-    .faq-container{
-        margin-left: -7%;
-    }
-    .faq-pi{
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 4rem;
-        position: relative;
-    }
+@media (max-width: 1000px) {
+	.faq-container {
+		/* margin-left: -7%; */
+	}
+
+	.faq-pi {
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 4rem;
+		position: relative;
+	}
 
 }

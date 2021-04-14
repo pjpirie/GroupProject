@@ -59,22 +59,22 @@ Everyone will access Module 1, Preparation, as this is relevant irrespective of 
                     <h2>Key Module Elements</h2>
                     <div className="module__grid">
                         <div className="module__grid__item">
-                            <img src={ClipboardImage} alt="representing the preparation module" data-tip="representing the preparation module"></img>
+                            <img src={ClipboardImage} alt="representing the preparation module" data-tip="The Preparation Module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={MessageImage} alt="representing the face to face interview module" data-tip="representing the face to face interview module"></img>
+                            <img src={MessageImage} alt="representing the face to face interview module" data-tip="The Face To Face Interview Module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={LaptopImage} alt="representing the virtual/remote interview module" data-tip="representing the virtual/remote interview module" ></img>
+                            <img src={LaptopImage} alt="representing the virtual/remote interview module" data-tip="The Virtual/Remote Interview Module" ></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={PeopleImage} alt="representing the group exercises module" data-tip="representing the group exercises module"></img>
+                            <img src={PeopleImage} alt="representing the group exercises module" data-tip="The Group Exercises Module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={FacesImage} alt="representing the role play module" data-tip="representing the role play module"></img>
+                            <img src={FacesImage} alt="representing the role play module" data-tip="The Role-Play Module"></img>
                         </div>
                         <div className="module__grid__item">
-                            <img src={PencilImage} alt="representing the written exercise module" data-tip="representing the written exercise module"></img>
+                            <img src={PencilImage} alt="representing the written exercise module" data-tip="The Written Exercise Module"></img>
                         </div>
                     </div> 
                 </div>
