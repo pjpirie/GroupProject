@@ -116,7 +116,7 @@ function Module() {
                         <h2>Activity</h2>
                     </div>
                     <div className="Module__Page__Activity__Body">
-                        <p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</p>
+                        <p>Download the Module 6 activity sheet and work through the exercises to be fully prepared for written exercises.</p>
                     </div>
                 </div>
                 <div className="Module__Page__Btn__Container">

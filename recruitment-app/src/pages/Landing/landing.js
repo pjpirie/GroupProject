@@ -1,20 +1,19 @@
-import {useEffect, useState} from 'react';
+import AddIcon from '@material-ui/icons/Add';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import { setLightNav } from '../../actions';
 import ClipboardImage from '../../assets/clipboard.png';
-import MessageImage from '../../assets/msg.png';
-import LaptopImage from '../../assets/laptop.png';
-import PeopleImage from '../../assets/people.png';
 import FacesImage from '../../assets/faces.png';
-import PencilImage from '../../assets/pencil.png';
-import ComputerImage from '../../assets/laptopandsmartphone.png';
 import GirlWithComputerImage from '../../assets/Group 41.png';
+import BGImage1 from '../../assets/Group 58.png';
+import LaptopImage from '../../assets/laptop.png';
+import ComputerImage from '../../assets/laptopandsmartphone.png';
+import MessageImage from '../../assets/msg.png';
+import PencilImage from '../../assets/pencil.png';
+import PeopleImage from '../../assets/people.png';
 import './landing.css';
 import './landing.responsive.css';
-import ModuleStartCard from '../../components/ModuleStartCard/ModuleStartCard';
-import BGImage1 from '../../assets/Group 58.png';
-import AddIcon from '@material-ui/icons/Add';
-import {setLightNav} from '../../actions';
-import {useDispatch} from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 
 
 
@@ -28,7 +27,7 @@ function Landing() {
     return (
         <div className="Landing">
             <div className="hero__section">
-                <p className="hero__text">Prepare to Succeed</p>
+                <p className="hero__text">Recruitment Skills Development Programme</p>
             </div>
             <div className="about__section">
                 <img src={GirlWithComputerImage} alt="Imagery of woman using a computer"></img>
