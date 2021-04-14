@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/GroupProject/static/css/main.5699f65c.chunk.css",
-    "main.js": "/GroupProject/static/js/main.3c579d78.chunk.js",
-    "main.js.map": "/GroupProject/static/js/main.3c579d78.chunk.js.map",
+    "main.css": "/GroupProject/static/css/main.d516afb8.chunk.css",
+    "main.js": "/GroupProject/static/js/main.89748f12.chunk.js",
+    "main.js.map": "/GroupProject/static/js/main.89748f12.chunk.js.map",
     "runtime-main.js": "/GroupProject/static/js/runtime-main.42a28727.js",
     "runtime-main.js.map": "/GroupProject/static/js/runtime-main.42a28727.js.map",
     "static/js/2.aab1f993.chunk.js": "/GroupProject/static/js/2.aab1f993.chunk.js",
     "static/js/2.aab1f993.chunk.js.map": "/GroupProject/static/js/2.aab1f993.chunk.js.map",
     "index.html": "/GroupProject/index.html",
-    "static/css/main.5699f65c.chunk.css.map": "/GroupProject/static/css/main.5699f65c.chunk.css.map",
+    "static/css/main.d516afb8.chunk.css.map": "/GroupProject/static/css/main.d516afb8.chunk.css.map",
     "static/js/2.aab1f993.chunk.js.LICENSE.txt": "/GroupProject/static/js/2.aab1f993.chunk.js.LICENSE.txt",
     "static/media/Module.css": "/GroupProject/static/media/Banner.68f9513c.png",
     "static/media/Privacy.css": "/GroupProject/static/media/ContactBubbles.4a988c9b.png",
@@ -34,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.42a28727.js",
     "static/js/2.aab1f993.chunk.js",
-    "static/css/main.5699f65c.chunk.css",
-    "static/js/main.3c579d78.chunk.js"
+    "static/css/main.d516afb8.chunk.css",
+    "static/js/main.89748f12.chunk.js"
   ]
 }
