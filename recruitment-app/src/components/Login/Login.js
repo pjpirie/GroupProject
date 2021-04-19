@@ -16,7 +16,7 @@ async function LoginUser(credentials) {
         body: JSON.stringify(credentials)
     })
         .then(data => data.json());
-        // .then(data => document.cookie = "Authorisation=" + JSON.stringify(data) + "; SameSite=None; Secure");
+    // .then(data => document.cookie = "Authorisation=" + JSON.stringify(data) + "; SameSite=None; Secure");
 }
 
 async function accountExists(email) {
@@ -36,17 +36,17 @@ async function accountExists(email) {
 
 export default function Login(props) {
 
-    
+
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
     const isLogged = useSelector(state => state.isLogged);
     const dispatch = useDispatch();
-    
-    useEffect(() =>{
+
+    useEffect(() => {
         dispatch(setLightNav(false));
     }, []);
 
-    if(isLogged){
+    if (isLogged) {
         return <Redirect to='/' />
     }
     const handleSubmit = async e => {
@@ -61,11 +61,11 @@ export default function Login(props) {
 
             console.log(logged_in);
 
-            if(logged_in.error !== undefined){
-                dispatch(setAlert(true, {AlertTitle: 'Login Error', AlertMessage: logged_in.error}));
+            if (logged_in.error !== undefined) {
+                dispatch(setAlert(true, { AlertTitle: 'Login Error', AlertMessage: logged_in.error }));
             }
             // console.log(logged_in.token);
-            if(logged_in.token != undefined){
+            if (logged_in.token != undefined) {
                 window.localStorage.setItem('token', logged_in.token);
                 window.localStorage.setItem('User_Id', logged_in.data.User_Id);
                 window.localStorage.setItem('logged_in', logged_in.data.logged_in);

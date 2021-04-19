@@ -13,11 +13,11 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-        .then( res => res.blob() )
-        .then( blob => {
-            const file = window.URL.createObjectURL(blob);
-            window.location.assign(file);
-        });
+            .then(res => res.blob())
+            .then(blob => {
+                const file = window.URL.createObjectURL(blob);
+                window.location.assign(file);
+            });
     }
 
     const handleDownload = () => {
@@ -30,7 +30,7 @@ function Module() {
                     <h3>Module 3</h3>
                     <h1>Virtual Interview</h1>
                 </div>
-                <Eta time={15}/>
+                <Eta time={15} />
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
@@ -59,7 +59,7 @@ function Module() {
                         </div>
                         <div className="Module__Page__Point__Body">
                             <p>
-                            •	Passport or other documents confirming your right to work.<br />
+                                •	Passport or other documents confirming your right to work.<br />
                             •	Provide a contact number in case of any connectivity issues.<br />
                             •	Download the required software for the assessment such as Zoom, Google Hangouts and Microsoft Teams.<br />
                             •	Ensure you have a strong WiFi connection.<br />
@@ -84,12 +84,12 @@ function Module() {
                         </div>
                         <div className="Module__Page__Point__Body">
                             <p>
-                            Preparation - Many organisations require candidates to complete pre-recorded interviews as part of their recruitment process. Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation. Although you will not be face to face you should consider how to dress as you will be visible to the interviewer.   <br />
-                            <br />
+                                Preparation - Many organisations require candidates to complete pre-recorded interviews as part of their recruitment process. Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation. Although you will not be face to face you should consider how to dress as you will be visible to the interviewer.   <br />
+                                <br />
                             Conducting the interview – You will be given the question a very short time in advance. Focus intensely on understanding what is being asked and formulate a quick outline plan.    <br />
-                            <br />
-                            One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use as most, or all, the time available. This will require you to monitor time taken in an unobtrusive way.  <br />
-                            <br />
+                                <br />
+                            One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use most, or all, the time available. This will require you to monitor time taken in an unobtrusive way.  <br />
+                                <br />
                             </p>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ function Module() {
                 <div className="Module__Page__Btn__Container">
                     <button onClick={() => { handleDownload(); }}>Download</button>
                 </div>
-            </div>      
+            </div>
         </div>
     )
 }

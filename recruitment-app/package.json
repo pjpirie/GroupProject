@@ -1,5 +1,5 @@
 {
-  "homepage": "https://pjpirie.github.io/GroupProject/",
+  "homepage": "http://vince.ultroniq.co.uk/",
   "name": "recruitment-app",
   "version": "0.1.0",
   "private": true,
@@ -48,16 +48,14 @@
       "react-app",
       "react-app/jest"
     ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
+    "overrides": [{
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
       }
-    ]
+    }]
   },
   "browserslist": {
     "production": [

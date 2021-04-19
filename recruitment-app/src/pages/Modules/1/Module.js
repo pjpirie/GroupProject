@@ -18,11 +18,11 @@ function Module() {
                     <h3>Module 0</h3>
                     <h1>Course Guide</h1>
                 </div>
-                <Eta time={15}/>
+                <Eta time={15} />
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
-                <video id="Video" autoplay controls>
+                    <video id="Video" autoplay controls>
                         <source src="https://group-54-rct.herokuapp.com/video/0" type="video/mp4"></source>
                     </video>
                 </div>
@@ -66,9 +66,8 @@ function Module() {
                     </div>
                 </div>
                 <div className="Module__Page__Btn__Container">
-                    <button onClick={handleDownload()}>Download</button>
                 </div>
-            </div>      
+            </div>
         </div>
     )
 }

@@ -10,7 +10,7 @@ function Footer() {
       <div className="footer__container">
           {/* Column 1 */}
           <div className="col">
-            <h3>Ready to improve your skills?</h3>
+            <h3 className="LightHeader">Ready to improve your skills?</h3>
             <Link  
             to="/register"
             className="footerBtn"
@@ -23,7 +23,7 @@ function Footer() {
           {/* Column 3 */}
           <div className="col">
             <ul className="list-unstyled link-col">
-              <h3>Quick Links</h3>
+              <h3 className="LightHeader">Quick Links</h3>
               <Link to="/" className="footer-nav">
                 <li className="footer-nav-links">Home</li>
               </Link>

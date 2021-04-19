@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import GuideIcon from '../../assets/2x/CourseGuide_Gray@2x.png';
 import GuideIconGreen from '../../assets/2x/CourseGuide__Green@2x.png';
 import FaceToFaceIcon from '../../assets/2x/FaceToFace_Gray@2x.png';
@@ -19,19 +20,18 @@ import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted
 import './ModuleTree.css';
 import './ModuleTree.responsive.css';
 
-import ReactTooltip from 'react-tooltip';
 
 
 
 
 
 function ModuleTree(props) {
-    
+
     useEffect(() => {
         console.log(props)
         props.checkAuth();
     }, [])
-    
+
     const UserData = useSelector(state => state.getAccount).user;
     const [isMod1Open, setMod1Open] = useState(false);
     const [isMod2Open, setMod2Open] = useState(false);
@@ -52,51 +52,51 @@ function ModuleTree(props) {
                     <div className="ModuleTree__Tree">
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod1" >
-                                <img onClick={() => {setMod1Open(!isMod1Open)}} src={UserData.modulesCompleted[0] ? GuideIconGreen : GuideIcon} alt="Course Guide" data-for="toolRight" data-tip="Course Guide"/>
+                                <img onClick={() => { setMod1Open(!isMod1Open) }} src={UserData.modulesCompleted[0] ? GuideIconGreen : GuideIcon} alt="Course Guide" data-for="toolRight" data-tip="Course Guide" />
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod2">
-                                <img onClick={() => {setMod2Open(!isMod2Open)}} src={UserData.modulesCompleted[1] ? PrepIconGreen : PrepIcon} alt="Interview Preparation" data-for="toolRight" data-tip="Interview Preparation" />
+                                <img onClick={() => { setMod2Open(!isMod2Open) }} src={UserData.modulesCompleted[1] ? PrepIconGreen : PrepIcon} alt="Interview Preparation" data-for="toolRight" data-tip="Recruitment Event Preparation" />
                             </div>
                         </div>
                         <div className="ModuleTree__Tree__row ModuleTree__Tree__row--duo">
                             <span className="ModuleTree__Line TopLineM45 "></span>
                             <span className="ModuleTree__Line TopLineP45 "></span>
                             <div className="ModuleTree__Tree_item Mod3">
-                                <img onClick={() => {setMod3Open(!isMod3Open)}} src={UserData.modulesCompleted[2] ? FaceToFaceIconGreen : FaceToFaceIcon} alt="Face To Face Interview" data-for="toolLeft" data-tip="Face To Face Interview!" />
+                                <img onClick={() => { setMod3Open(!isMod3Open) }} src={UserData.modulesCompleted[2] ? FaceToFaceIconGreen : FaceToFaceIcon} alt="Face To Face Interview" data-for="toolLeft" data-tip="Face To Face Interview!" />
                             </div>
                             <div className="ModuleTree__Tree_item Mod4">
-                                <img onClick={() => {setMod4Open(!isMod4Open)}} src={UserData.modulesCompleted[3] ? VirtualIconGreen : VirtualIcon} alt="Virtual Interview" data-for="toolRight" data-tip="Virtual Interview" />
+                                <img onClick={() => { setMod4Open(!isMod4Open) }} src={UserData.modulesCompleted[3] ? VirtualIconGreen : VirtualIcon} alt="Virtual Interview" data-for="toolRight" data-tip="Virtual Interview" />
                             </div>
                             <span className="ModuleTree__Line M45"></span>
                             <span className="ModuleTree__Line P45"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod5">
-                                <img onClick={() => {setMod5Open(!isMod5Open)}} src={UserData.modulesCompleted[4] ? GroupIconGreen : GroupIcon} alt="Group Exercises" data-for="toolRight" data-tip="Group Exercises"/>
+                                <img onClick={() => { setMod5Open(!isMod5Open) }} src={UserData.modulesCompleted[4] ? GroupIconGreen : GroupIcon} alt="Group Exercises" data-for="toolRight" data-tip="Group Exercises" />
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod6">
-                                <img onClick={() => {setMod6Open(!isMod6Open)}} src={UserData.modulesCompleted[5] ? RolePlayIconGreen : RolePlayIcon} alt="Written Exercises" data-for="toolRight" data-tip="Written Exercises"/>
+                                <img onClick={() => { setMod6Open(!isMod6Open) }} src={UserData.modulesCompleted[5] ? RolePlayIconGreen : RolePlayIcon} alt="Written Exercises" data-for="toolRight" data-tip="Role Play Exercises" />
                             </div>
                             <span className="ModuleTree__Line"></span>
                         </div>
                         <div className="ModuleTree__Tree__row">
                             <div className="ModuleTree__Tree_item Mod7">
-                                <img onClick={() => {setMod7Open(!isMod7Open)}} src={UserData.modulesCompleted[6] ? WrittenIconGreen : WrittenIcon} alt="Role Play Exercises" data-for="toolRight" data-tip="Role Play Exercises"/>
+                                <img onClick={() => { setMod7Open(!isMod7Open) }} src={UserData.modulesCompleted[6] ? WrittenIconGreen : WrittenIcon} alt="Role Play Exercises" data-for="toolRight" data-tip="Written Exercises" />
                             </div>
                         </div>
-                        {isMod1Open ? <ModuleModal number={1} modalOpen={setMod1Open}/> : ''}
-                        {isMod2Open ? <ModuleModal number={2} modalOpen={setMod2Open}/> : ''}
-                        {isMod3Open ? <ModuleModal number={3} modalOpen={setMod3Open}/> : ''}
-                        {isMod4Open ? <ModuleModal number={4} modalOpen={setMod4Open}/> : ''}
-                        {isMod5Open ? <ModuleModal number={5} modalOpen={setMod5Open}/> : ''}
-                        {isMod6Open ? <ModuleModal number={6} modalOpen={setMod6Open}/> : ''}
-                        {isMod7Open ? <ModuleModal number={7} modalOpen={setMod7Open}/> : ''}
+                        {isMod1Open ? <ModuleModal number={1} modalOpen={setMod1Open} /> : ''}
+                        {isMod2Open ? <ModuleModal number={2} modalOpen={setMod2Open} /> : ''}
+                        {isMod3Open ? <ModuleModal number={3} modalOpen={setMod3Open} /> : ''}
+                        {isMod4Open ? <ModuleModal number={4} modalOpen={setMod4Open} /> : ''}
+                        {isMod5Open ? <ModuleModal number={5} modalOpen={setMod5Open} /> : ''}
+                        {isMod6Open ? <ModuleModal number={6} modalOpen={setMod6Open} /> : ''}
+                        {isMod7Open ? <ModuleModal number={7} modalOpen={setMod7Open} /> : ''}
                         <ReactTooltip place="right" type="info" effect="solid" id="toolRight" />
                         <ReactTooltip place="left" type="info" effect="solid" id="toolLeft" />
                     </div>
