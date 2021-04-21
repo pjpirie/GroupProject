@@ -13,11 +13,20 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-        .then( res => res.blob() )
-        .then( blob => {
-            const file = window.URL.createObjectURL(blob);
-            window.location.assign(file);
-        });
+            .then(res => res.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // the filename you want
+                a.download = 'Module 6 Written Exercise Activity Sheet';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                // alert('your file has downloaded!'); // or you know, something with better UX...
+            })
+            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
 
     const handleDownload = () => {
@@ -30,7 +39,7 @@ function Module() {
                     <h3>Module 6</h3>
                     <h1>Written Exercise</h1>
                 </div>
-                <Eta time={15}/>
+                <Eta time={15} />
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
@@ -40,8 +49,8 @@ function Module() {
                 </div>
                 <div className="Module__Page__Text">
                     <p>
-                    Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.<br />
-                    <br />
+                        Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.<br />
+                        <br />
                     Invariably in these exercises candidates are given a large amount of information and are asked to produce a report and make specific recommendations.<br />
 
                     </p>
@@ -93,18 +102,18 @@ function Module() {
                     <div className="Module__Page__Point">
                         <div className="Module__Page__Point__Body">
                             <p>
-                            Candidates are given a pile of documents outlining issues to be dealt with and actions to be taken requiring them to prioritise items and suggest what should be done.<br />
-                            <br />
-                            The items are usually varied in number (10 to 30?), requiring a range of actions to be highlighted within a strict timescale.<br /> 
-                            <br />
+                                Candidates are given a pile of documents outlining issues to be dealt with and actions to be taken requiring them to prioritise items and suggest what should be done.<br />
+                                <br />
+                            The items are usually varied in number (10 to 30?), requiring a range of actions to be highlighted within a strict timescale.<br />
+                                <br />
                             Candidates may be required to make numerical calculations, draft written responses to documents, prioritise tasks and decide upon courses of action. <br />
-                            <br />
+                                <br />
                             Key Suggestions:<br />
-                            <br />
+                                <br />
                             -   Although it may sound obvious, study the instructions carefully and follow them exactly as they contain critical information for the successful completion of the exercise.<br />
-                            <br />
+                                <br />
                             -  Time management is critical as you will have a number of items to action within a tight deadline.<br />
-                            <br />
+                                <br />
                             -  As prioritisation within the exercise is crucial ensure that you cover all items as those at the end may have a high priority. Running out of time and not dealing with later items can seriously impact your performance. Also, prioritise your time during the exercise. Items which are clearly of lower importance should receive as little time as possible, enabling you to concentrate on making the more important decisions and judgements. <br />
 
                             </p>
@@ -122,7 +131,7 @@ function Module() {
                 <div className="Module__Page__Btn__Container">
                     <button onClick={() => { handleDownload(); }}>Download</button>
                 </div>
-            </div>      
+            </div>
         </div>
     )
 }

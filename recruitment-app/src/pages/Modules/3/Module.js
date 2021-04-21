@@ -13,11 +13,20 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-        .then( res => res.blob() )
-        .then( blob => {
-            const file = window.URL.createObjectURL(blob);
-            window.location.assign(file);
-        });
+            .then(res => res.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // the filename you want
+                a.download = 'Module 2 Interview Activity Sheet';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                // alert('your file has downloaded!'); // or you know, something with better UX...
+            })
+            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
 
     const handleDownload = () => {
@@ -30,11 +39,11 @@ function Module() {
                     <h3>Module 2</h3>
                     <h1>Interview</h1>
                 </div>
-                <Eta time={15}/>
+                <Eta time={15} />
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
-                <video id="Video" autoplay controls>
+                    <video id="Video" autoplay controls>
                         <source src="https://group-54-rct.herokuapp.com/video/2" type="video/mp4"></source>
                     </video>
                 </div>
@@ -250,15 +259,15 @@ function Module() {
                         S	Strengths – Things you can do well.<br />
                         <br />
                             Examples:- Organise, Communicate, Plan Ahead, Work in a Team, Deal with Pressure<br />
-                            <br />
+                        <br />
                         E	Enthusiasm – Intense and eager enjoyment<br />
                         <br />
                             Demonstrate this as you are describing your strengths<br />
-                            <br />
+                        <br />
                         E	Examples – Times when you have demonstrated your strengths<br />
                         <br />
                             Illustrations of when you have shown your strengths<br />
-                            <br />
+                        <br />
                         Sample Answer:<br />
                         <br />
                         Q)	What are you particularly good at?<br />
@@ -298,7 +307,7 @@ function Module() {
                 <div className="Module__Page__Btn__Container">
                     <button onClick={() => { handleDownload(); }}>Download</button>
                 </div>
-            </div>       
+            </div>
         </div>
     )
 }

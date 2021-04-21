@@ -13,11 +13,20 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-        .then( res => res.blob() )
-        .then( blob => {
-            const file = window.URL.createObjectURL(blob);
-            window.location.assign(file);
-        });
+            .then(res => res.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // the filename you want
+                a.download = 'Module 1 Preparation Activity Sheet';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                // alert('your file has downloaded!'); // or you know, something with better UX...
+            })
+            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
 
     const handleDownload = () => {
@@ -30,7 +39,7 @@ function Module() {
                     <h3>Module 1</h3>
                     <h1>Preparation</h1>
                 </div>
-                <Eta time={10}/>
+                <Eta time={10} />
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
@@ -99,7 +108,7 @@ function Module() {
                 <div className="Module__Page__Btn__Container">
                     <button onClick={() => { DownloadMedia(); }}>Download</button>
                 </div>
-            </div>      
+            </div>
         </div>
     )
 }

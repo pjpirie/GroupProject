@@ -14,11 +14,24 @@ function Module() {
             },
         })
             .then(res => res.blob())
+            // .then(blob => {
+            //     const file = window.URL.createObjectURL(blob);
+            //     // window.location.assign(file);
+            //     window.open(file, "_blank");
+            // });
             .then(blob => {
-                const file = window.URL.createObjectURL(blob);
-                // window.location.assign(file);
-                window.open(file, "_blank");
-            });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // the filename you want
+                a.download = 'Module 5 Role Play Activity Sheet';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                // alert('your file has downloaded!'); // or you know, something with better UX...
+            })
+            .catch(() => alert('oh no!'));
     }
 
     const handleDownload = () => {

@@ -13,11 +13,20 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-        .then( res => res.blob() )
-        .then( blob => {
-            const file = window.URL.createObjectURL(blob);
-            window.location.assign(file);
-        });
+            .then(res => res.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // the filename you want
+                a.download = 'Module 4 Group Exercise Activity Sheet';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                // alert('your file has downloaded!'); // or you know, something with better UX...
+            })
+            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
 
     const handleDownload = () => {
@@ -30,28 +39,28 @@ function Module() {
                     <h3>Module 4</h3>
                     <h1>Group Exercise</h1>
                 </div>
-                <Eta time={15}/>
+                <Eta time={15} />
             </div>
             <div className="Module__Page__Body">
                 <div className="Module__Page__Video__Container">
-                <video id="Video" autoplay controls>
+                    <video id="Video" autoplay controls>
                         <source src="https://group-54-rct.herokuapp.com/video/4" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="Module__Page__Text">
                     <p>
-                    This is a discussion exercise in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale.  <br />
-                    <br />
+                        This is a discussion exercise in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale.  <br />
+                        <br />
                     These exercises can be structured in one of two ways: <br />
                     1)	Assigned Roles: Each person is given relevant details of the scenario to be addressed together with an outline of his/her remit in the organisation with a few indicators of their position in relation to the topic being addressed. <br />
-                    <br />
+                        <br />
                     2)	Unassigned Roles:  <br />Each person is given relevant details of the scenario to be addressed and everyone in the group is free to deal with matters arising in whatever way they wish.
                     In either structure candidates may be given a specified period for individual preparation or they may be directed to start the discussion immediately. <br />
-                    <br />
+                        <br />
                     The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork, leadership. <br />
-                    <br />
+                        <br />
                     Assessors will be looking for candidates to demonstrate competencies such as: <br />
-                    <br />
+                        <br />
                     •	Effective communication <br />
                     •	Constructive team behaviours <br />
                     •	Confident and assertive delivery of key messages <br />
@@ -71,16 +80,16 @@ function Module() {
                         </div>
                         <div className="Module__Page__Point__Body">
                             <p>
-                            - Be clear and concise when you speak. Ensure that you make eye contact with all of your colleagues in the team. <br />
-                            <br />
+                                - Be clear and concise when you speak. Ensure that you make eye contact with all of your colleagues in the team. <br />
+                                <br />
                             - Ensure that your contributions are consistently constructive.  <br />
-                            <br />
+                                <br />
                             - Try to ensure that everybody in the group has opportunities to contribute. If necessary ask quieter members for their thoughts or opinions <br />
-                            <br />
+                                <br />
                             - Check how others are reacting to your contributions and adjust accordingly. For example, if people look disinterested or bored, change your style or stop talking. <br />
-                            <br />
+                                <br />
                             - If necessary be prepared to stand up for yourself and argue why your opinions are valid using conciliatory language. <br />
-                            <br />
+                                <br />
                             - Keep the group focused on reaching a conclusion. If necessary take on the role of timekeeper reminding your colleagues of the time at regular intervals. <br />
 
 
@@ -94,12 +103,12 @@ function Module() {
                         </div>
                         <div className="Module__Page__Point__Body">
                             <p>
-                            - Do not interrupt or speak over others <br />
-                            <br />
+                                - Do not interrupt or speak over others <br />
+                                <br />
                             - Don’t criticise or moan. <br />
-                            <br />
+                                <br />
                             - Do not dominate the meeting. <br />
-                            <br />
+                                <br />
                             - Do not remain quiet for long periods. Even when you are not speaking, demonstrate your involvement through active body language (eye contact, nodding, etc.) <br />
                             </p>
                         </div>
@@ -116,7 +125,7 @@ function Module() {
                 <div className="Module__Page__Btn__Container">
                     <button onClick={() => { handleDownload(); }}>Download</button>
                 </div>
-            </div>      
+            </div>
         </div>
     )
 }
