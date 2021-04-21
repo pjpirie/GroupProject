@@ -180,7 +180,7 @@ function Edit(props) {
                             <button 
                             class="btn-clearing alt-btn" 
                             onClick={(e) => { e.preventDefault(); dispatch(setRedirect(true, `/edit/password`))} }
-                                    >Change Password Form</button>
+                                    >Change Password</button>
                         </div>
                     </form>
                 ) : (
@@ -215,7 +215,7 @@ function Edit(props) {
                             <button 
                             class="btn-clearing alt-btn" 
                             onClick={(e) => { e.preventDefault(); dispatch(setRedirect(true, `/edit`))} }
-                                    >Change Info Form</button>
+                                    >Change Info</button>
                         </div>
                     </form>
                 )}

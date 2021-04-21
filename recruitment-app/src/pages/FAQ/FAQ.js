@@ -76,7 +76,7 @@ function FAQPage() {
                     )
                 }
                 <div className="faq-contact-container">
-                    <p onClick={() => { dispatch(setRedirect(true, `/contact`)) }} className="faq-contact">Sign Up!</p>
+                    <p onClick={() => { dispatch(setRedirect(true, `/contact`)) }} className="faq-contact">Contact us</p>
                 </div>
             </div>
         </div>
