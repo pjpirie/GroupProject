@@ -111,6 +111,9 @@
 
 	margin: 2rem;
 }
+.faq-contact{
+	cursor: pointer;
+}
 
 .faq-pi {
 	position: absolute;
