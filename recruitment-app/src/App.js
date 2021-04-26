@@ -44,10 +44,11 @@ function App() {
   const isRedirect = useSelector(state => state.toRedirect);
   const getAlert = useSelector(state => state.getAlert);
   const getUser = useSelector(state => state.getAccount).user;
+
+  
   
   const checkAuth = async (msg = "App") => {
     console.log("Checking Auth from " + msg)
-    // if(window.localStorage.getItem('token') || window.localStorage.getItem('User_Id') == (undefined || null)){return {tokenValid: false};}
     return await fetch('https://group-54-rct.herokuapp.com/user/auth', {
       method: 'POST',
       headers: {
@@ -56,7 +57,6 @@ function App() {
       body: JSON.stringify({payload: { token: window.localStorage.getItem('token'), User_Id: window.localStorage.getItem('User_Id')}})
     })
     .then(data => data.json())
-    // .then(data => console.log(data.user))
     .then(data => {
       (data.tokenValid) === true ? dispatch(setLogged(true)) : dispatch(setLogged(false));
       dispatch(setAccount(true, data.user));
