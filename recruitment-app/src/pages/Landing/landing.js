@@ -26,7 +26,19 @@ function Landing() {
     }, []);
     return (
         <div className="landing">
-            
+            <div className="landing__hero">
+                <div className="landing__text">
+
+                </div>
+                <div className="landing__image">
+
+                </div>
+                <div className="landing__cta">
+                    <Link to='/register'>
+                        <li className="navbar__item">SIGN UP</li>
+                    </Link>
+                </div>
+            </div>
         </div>
 
 
