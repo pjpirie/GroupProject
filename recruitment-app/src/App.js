@@ -34,7 +34,7 @@ import Privacy from './pages/Privacy/Privacy';
 
 function App() {
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [hasRedirected, setRedirected] = useState(false);
   
   const dispatch = useDispatch();
@@ -63,13 +63,13 @@ function App() {
     });
   }
   
-  useEffect(() => {
-    checkAuth();
-    setLoading(true);
-    setTimeout(()=> {
-      setLoading(false);
-    }, 3000);
-  }, [])
+  // useEffect(() => {
+  //   checkAuth();
+  //   setLoading(true);
+  //   setTimeout(()=> {
+  //     setLoading(false);
+  //   }, 3000);
+  // }, [])
   
   if(loading){
     return (
