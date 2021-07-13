@@ -1,0 +1,134 @@
+.landing{
+    padding: 70px 140px;
+
+    &__hero{
+        display: flex;
+        justify-content: space-between;
+        
+        &__text{
+            h1{
+                font-size: 44px;
+                line-height: 60px;
+                margin-bottom: 50px;
+            }
+            p{
+                font-size: 24px;
+                line-height: 40px;
+                margin-bottom: 50px;
+            }
+            
+            &__cta{
+                list-style: none;
+                display: inline-block;
+                &__button{
+                    padding: 15px 30px;
+                    background: #2A9D8F;
+                    border-radius: 10px;
+                    width: auto;
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: 'Roboto';
+                    font-weight: 900;
+                }
+            }
+        }
+        &__image{
+
+        }
+    }
+}
+.textSection{
+    height: 50vh;
+    margin: 140px 0 0 0;
+    padding: 0 90px;
+    display: flex;
+    flex-direction: row;
+
+    &__large{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        p{
+            color: #2A9D8F;
+            font-size: 28px;
+        }
+        h1{
+            color: #264653;
+            font-size: 60px;
+            font-family: Roboto;
+        }
+    }   
+    &__small{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        p{
+            color: #262626;
+            font-size: 22px;
+        }
+        span{
+            color: #F4A261;
+        }
+    }
+}
+
+.cardSection{
+    margin: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__card{
+        margin: 35px 0;
+        display: flex;
+
+        img{
+            margin: 0 40px 0 0;
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 600px;
+
+            h1{
+                margin: 0 0 30px 0;
+                font-family: Roboto;
+                font-size: 32px;
+                font-weight: 900;
+            }
+
+            p{
+                margin: 0 0 20px 0;
+                font-size: 14px;
+
+            }
+
+            &__cta{
+                align-items: flex-start;
+                list-style: none;
+                display: flex;
+                &__button{
+                    padding: 15px 30px;
+                    background: #2A9D8F;
+                    border-radius: 10px;
+                    width: auto;
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: 'Roboto';
+                    font-weight: 900;
+                }
+            }
+        }
+        &--reverse{
+            flex-direction: row-reverse;
+            img{
+                margin: 0 0 0 40px;
+            }
+        }
+    }
+}

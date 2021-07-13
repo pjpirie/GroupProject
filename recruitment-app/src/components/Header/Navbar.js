@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import RSDPLOGO from '../../assets/v2/RSDP_LOGO_V2.svg';
 import './Navbar.scss';
 
@@ -14,29 +14,29 @@ function Navbar(props){
     return(
         <nav className="navbar">
             <div>
-                <div className="navbar__logo"><Link to="/"><img src={RSDPLOGO} alt="Recruitment Skills Development Programme Logo" className="navbar-image" /></Link><i className="fab fa-react"></i></div>
+                <div className="navbar__logo"><NavLink exact to="/"><img src={RSDPLOGO} alt="Recruitment Skills Development Programme Logo" className="navbar-image" /></NavLink><i className="fab fa-react"></i></div>
             </div>
             <div>
                 <ul className="navbar__menu">
-                    <Link to='/'>
+                    <NavLink exact activeClassName="is-active" to='/'>
                         <li className="navbar__item">HOME</li>
-                    </Link>
-                    <Link to='/modules'>
+                    </NavLink>
+                    <NavLink activeClassName="is-active" to='/modules'>
                         <li className="nav-navbar__item">ABOUT</li>
-                    </Link>
-                    <Link to='/contact'>
+                    </NavLink>
+                    <NavLink activeClassName="is-active" to='/contact'>
                         <li className="navbar__item">CONTACT</li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
             <div>
                 <ul className="navbar__account">
-                    <Link to='/login'>
+                    <NavLink to='/login'>
                         <li className="navbar__item">LOGIN</li>
-                    </Link>
-                    <Link to='/register'>
-                        <li className="navbar__item">SIGN UP</li>
-                    </Link>
+                    </NavLink>
+                    <NavLink to='/register'>
+                        <li className="navbar__account__button">SIGN UP</li>
+                    </NavLink>
                 </ul>
             </div>
         </nav>
