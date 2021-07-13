@@ -164,7 +164,6 @@ function App() {
                 </div>
               </Fragment>
             )}
-              <span className="footer__divider"></span>
             <Footer />
             {getAlert.alert ? (<AlertBox AlertData={getAlert.AlertData} />): ('')}
           </div>

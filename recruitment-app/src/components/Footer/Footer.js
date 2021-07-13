@@ -1,51 +1,24 @@
+import Logo from '../../assets/v2/RSDP_LOGO_V2_WHITE.svg';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logoWhite.png';
-import './Footer.css';
-import './Footer.responsive.css';
+import './Footer.scss';
 
 function Footer() {
-
-  return (
-    <div className="footer-main">
-      <div className="footer__container">
-          {/* Column 1 */}
-          <div className="col">
-            <h3 className="LightHeader">Ready to improve your skills?</h3>
-            <Link  
-            to="/register"
-            className="footerBtn"
-            >Sign Up!</Link>
-          </div>
-          {/* Column 2 */}
-          <div className="col">
-            <img src={logo} alt="Logo" className="logo" />
-          </div>
-          {/* Column 3 */}
-          <div className="col">
-            <ul className="list-unstyled link-col">
-              <h3 className="LightHeader">Quick Links</h3>
-              <Link to="/" className="footer-nav">
-                <li className="footer-nav-links">Home</li>
-              </Link>
-              <Link to="/modules" className="footer-nav">
-                <li className="footer-nav-links">Course Information</li>
-              </Link>
-              <Link to="/contact" className="footer-nav">
-                <li className="footer-nav-links">Contact</li>
-              </Link >
-              <Link to="/privacy" className="footer-nav">           
-                <li className="footer-nav-links">Privacy Policy</li>
-              </Link>
-            </ul>
-          </div>
+    return(
+        <div className="footer">
+            <div className="footer__container">
+                <div className="footer__container__text">
+                    <h1 className="footer__container__text__word">PREPARE TO SUCCEED</h1>
+                </div>
+                <div className="footer__container__logo">
+                    <img src={Logo} alt="RSDP" className="footer__container__logo__image" /> <br />
+                    <Link to="/privacy" className="footer__container__logo__priv">Privacy Policy</Link>
+                </div>
+            </div>
+            <div className="footer__xpc">
+                <p>© XPC INTERNATIONAL  </p>
+            </div>
         </div>
-        <div className="footer-bottom">
-          <p className="text-xs-center margin-bottom-reset">
-            &copy;{new Date().getFullYear} Recruitment App
-          </p>
-      </div>      
-    </div>
-  );
+    )
 }
 
 export default Footer;
