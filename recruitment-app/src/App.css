@@ -9,6 +9,10 @@
 	max-width: 100vw;
 	overflow-x: hidden;
 }
+.contentWrapper{
+	max-width: 1400px;
+	margin: 0 auto;
+}
 
 .hashLoader__container {
 	display: flex;
@@ -28,18 +32,19 @@
 h1,
 h2,
 h3 {
-	font-family: "Plantin", sans-serif !important;
-	font-weight: 700 !important;
-	color: #213142;
+	font-family: source-serif-pro,serif ;
+	font-weight: 900 ;
+	font-style: normal ;
+	color: #262626;
 }
 
 .sans-heading,
 h4,
 h5,
 h6 {
-	font-family: "Rubik", sans-serif !important;
-	font-weight: 700 !important;
-	color: #213142;
+	font-family: "Roboto", sans-serif ;
+	font-weight: 700 ;
+	color: #262626;
 }
 
 .LightHeader {
@@ -47,8 +52,8 @@ h6 {
 }
 
 body {
-	font-family: "Rubik", sans-serif !important;
-	color: #213142;
+	font-family: "Roboto", sans-serif !important;
+	color: #262626;
 }
 
 .footer__divider {

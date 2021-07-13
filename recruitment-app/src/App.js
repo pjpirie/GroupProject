@@ -95,16 +95,18 @@ function App() {
             {!isLogged ?  (
               <Fragment>
                 <Navbar checkAuth={checkAuth} />
+                  <div className="contentWrapper">
                 <Switch>
-                  <Route path="/" exact component={Landing} />
-                  <Route path="/login" component={Login} />
-                  <Route path="/register" component={Register} />
-                  <Route path="/contact" component={Contact} />
-                  <Route path="/company" component={Company} />
-                  <Route path="/modules" component={Modules} />
-                  <Route path="/privacy" component={Privacy} />
-                  <Route component={Landing} />
+                    <Route path="/" exact component={Landing} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/company" component={Company} />
+                    <Route path="/modules" component={Modules} />
+                    <Route path="/privacy" component={Privacy} />
+                    <Route component={Landing} />
                 </Switch>
+                  </div>
               </Fragment>
             ) : (
               <Fragment>

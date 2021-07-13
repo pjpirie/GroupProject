@@ -14,6 +14,19 @@
     ul{
         list-style: none;
         height: 100%;
+        a{
+            color: #213142;
+            li{
+                padding-bottom: 2px;
+                border-bottom: 3px solid rgba(0,0,0, 0);
+            }
+            &:hover{
+                color: #324c68;
+            }
+            &.is-active li{
+                border-bottom: 3px solid #F4A261;
+            }
+        }
         li{
             margin: 0 20px;
         }
@@ -32,5 +45,17 @@
         padding: 0 90px 0 0;
         justify-content: end;
         align-items: center;
+        
+        &__button{
+            padding: 10px 20px !important;
+            background: #2A9D8F;
+            border-radius: 10px;
+            width: auto;
+            color: #fff !important;
+            font-size: 16px;
+            font-family: 'Roboto';
+            font-weight: 700;
+            border: none !important;
+        }
     }
 }
