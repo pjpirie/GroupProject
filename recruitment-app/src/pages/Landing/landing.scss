@@ -85,8 +85,28 @@
         margin: 35px 0;
         display: flex;
 
-        img{
-            margin: 0 40px 0 0;
+        &__image{
+            position: relative;
+
+            &__bg--orange{
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(-50%, -30%);
+                z-index: 1;
+            }
+            &__bg--blue{
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(100%, -150%);
+                z-index: 1;
+            }
+            &__img{
+                margin: 0 100px 0 0;
+                position: relative;
+                z-index: 2;
+            }
         }
 
         &__text{
@@ -100,6 +120,14 @@
                 font-family: Roboto;
                 font-size: 32px;
                 font-weight: 900;
+                position: relative;
+                
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(-50%, -50%);
+                }
             }
 
             p{
@@ -127,7 +155,7 @@
         &--reverse{
             flex-direction: row-reverse;
             img{
-                margin: 0 0 0 40px;
+                margin: 0 0 0 100px;
             }
         }
     }
