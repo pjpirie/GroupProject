@@ -1,4 +1,5 @@
-.Module__Page {}
+.Module__Page {
+}
 
 .Module__Page__Header {
 	display: flex;
@@ -55,7 +56,7 @@
 .Module__Page__Header__Text__btn {
 	margin: 2rem 0 0 0 !important;
 	padding: 5px 20px !important;
-	background: #71A068 !important;
+	background: #71a068 !important;
 	border-radius: 20px !important;
 	color: #fff !important;
 	font-size: 1.3rem !important;
@@ -90,7 +91,7 @@
 	justify-content: space-between;
 }
 
-.Module__Page__Item>div {
+.Module__Page__Item > div {
 	margin: 1rem 2rem;
 }
 
@@ -124,12 +125,12 @@
 
 .Module__Page__Item__Text h2 {
 	margin: 1rem 0;
-	color: #0E1B31;
+	color: #0e1b31;
 }
 
 .Module__Page__Item__Text p {
 	font-size: 1.1rem;
-	line-height: 1.8rem
+	line-height: 1.8rem;
 }
 
 .Module__Page__Item__Img {
@@ -169,7 +170,7 @@
 	z-index: 2;
 }
 
-.Module__Page__Quote__Container>h3 {
+.Module__Page__Quote__Container > h3 {
 	color: #fff;
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -187,7 +188,7 @@
 	color: #fff;
 }
 
-.Module__Page__Quote__Image>h3 {
+.Module__Page__Quote__Image > h3 {
 	margin: 1rem 0 0.5rem;
 	color: #fff;
 	font-size: 1.5rem;
@@ -203,7 +204,7 @@
 	margin: -5rem 0 0;
 }
 
-.Module__Page__About>p {
+.Module__Page__About > p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -218,7 +219,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background: url('../../assets/Banner.png');
+	background: url("../../assets/Banner.png");
 	background-position: center;
 	background-size: cover;
 	width: 100vw;
@@ -229,7 +230,7 @@
 .Module__Page__CTA__btn {
 	margin: 2rem 0 0 0 !important;
 	padding: 5px 20px !important;
-	background: #71A068 !important;
+	background: #71a068 !important;
 	border-radius: 20px !important;
 	color: #fff !important;
 	font-size: 1rem !important;
@@ -240,7 +241,7 @@
 }
 
 .Module__Page__CTA h1 {
-	color: #0E1B31;
+	color: #0e1b31;
 }
 
 .Module__Page__Values {
@@ -252,7 +253,8 @@
 	width: 100%;
 }
 
-.Module__Page__Values h1 {}
+.Module__Page__Values h1 {
+}
 
 .Module__Page__Values__Items {
 	display: flex;
@@ -282,13 +284,17 @@
 }
 
 .Module__Page__Values__Item svg:hover {
-	fill: #71A068;
+	fill: #71a068;
 }
 
-.Module__Page__Values__Item--Check {}
+.Module__Page__Values__Item--Check {
+}
 
-.Module__Page__Values__Item--Arrow {}
+.Module__Page__Values__Item--Arrow {
+}
 
-.Module__Page__Values__Item--Gear {}
+.Module__Page__Values__Item--Gear {
+}
 
-.Module__Page__Values__Item--Bulb {}
+.Module__Page__Values__Item--Bulb {
+}

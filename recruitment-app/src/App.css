@@ -9,7 +9,7 @@
 	max-width: 100vw;
 	overflow-x: hidden;
 }
-.contentWrapper{
+.contentWrapper {
 	max-width: 1400px;
 	margin: 0 auto;
 }
@@ -32,9 +32,9 @@
 h1,
 h2,
 h3 {
-	font-family: source-serif-pro,serif ;
-	font-weight: 900 ;
-	font-style: normal ;
+	font-family: source-serif-pro, serif;
+	font-weight: 900;
+	font-style: normal;
 	color: #262626;
 }
 
@@ -42,8 +42,8 @@ h3 {
 h4,
 h5,
 h6 {
-	font-family: "Roboto", sans-serif ;
-	font-weight: 700 ;
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
 	color: #262626;
 }
 
@@ -75,7 +75,8 @@ body {
 
 .App__MenuOpen__button {
 	margin: 1rem;
-	transition: opacity 400ms ease-in-out, transform 800ms ease-in-out, margin 800ms ease-in-out;
+	transition: opacity 400ms ease-in-out, transform 800ms ease-in-out,
+		margin 800ms ease-in-out;
 }
 
 .App__MenuOpen__button.hidden {
@@ -89,7 +90,7 @@ a {
 	text-decoration: none;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
 	.App__MenuOpen__button.left {
 		margin: 1rem;
 		margin-right: 0;

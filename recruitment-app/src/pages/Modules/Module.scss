@@ -1,0 +1,243 @@
+.module {
+	max-width: 80vw;
+	min-height: 100vh;
+	margin: 0 auto 8em auto;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	&__head {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 10em;
+		&__left,
+		&__right {
+			width: 50%;
+			// outline: 1px solid red;
+		}
+		&__left {
+			&__h4 {
+				color: var(--light-green);
+				font-size: 2em;
+				font-weight: 200;
+			}
+			&__h3 {
+				color: var(--dark-green);
+				font-size: 6em;
+				padding-right: 1em;
+			}
+		}
+		&__right {
+			&__img {
+				width: 50em;
+				margin-top: 6em;
+			}
+		}
+	}
+	&__body {
+		&__banner {
+			margin-bottom: 10em;
+			display: flex;
+			flex-direction: row !important;
+			&__img,
+			&__shape {
+				border-radius: 15px;
+			}
+			&__img {
+				height: 50em;
+			}
+			&__shape {
+				width: 30em;
+				background: var(--dark-green);
+
+				background-image: url("../../assets/v2/module-style.svg");
+				background-position: center;
+				background-position-y: 10%;
+				background-position-x: 90%;
+				background-repeat: no-repeat;
+
+				color: #fff;
+				margin: 3em 0 0 -8em;
+				font-size: 2em;
+				&__text {
+					padding: 4em;
+				}
+			}
+		}
+		&__modules {
+			text-align: center;
+			h1 {
+				color: var(--light-green);
+				font-size: 4em;
+			}
+			span {
+				color: #000 !important;
+			}
+			&__list {
+				margin-top: 5em;
+				&__first {
+					display: flex;
+					flex-direction: rows !important;
+					margin-bottom: 6em;
+					&__left {
+						width: 60%;
+						padding-right: 5em;
+						h3 {
+							border-radius: 15px;
+							background-color: var(--orange-bg);
+							color: var(--orange);
+							width: 10em;
+							height: 2em;
+							padding-top: 0.3em;
+							font-size: 1em;
+						}
+						h2 {
+							text-align: left;
+							color: var(--light-green);
+							font-size: 2.5em;
+						}
+						p {
+							text-align: left;
+							font-size: 1.6em;
+						}
+					}
+					&__right {
+						width: 40%;
+						display: flex;
+						justify-content: center;
+						flex-direction: row;
+						img {
+							height: 19em;
+							width: 20em;
+							border-radius: 50px;
+						}
+						&__shape {
+							border-radius: 50px;
+							z-index: -1;
+							width: 10em;
+							background: var(--light-green);
+							color: #fff;
+							margin: -1em 0 1em -9em;
+							font-size: 2em;
+						}
+					}
+				}
+				&__second {
+					display: flex;
+					flex-direction: rows !important;
+					margin-bottom: 6em;
+					&__left {
+						width: 40%;
+						display: flex;
+						justify-content: flex-start;
+						flex-direction: row;
+						img {
+							height: 19em;
+							width: 20em;
+							border-radius: 50px;
+						}
+						&__shape {
+							border-radius: 50px;
+							z-index: -1;
+							width: 10em;
+							background: var(--light-green);
+							color: #fff;
+							margin: -1em 0 1em -9em;
+							font-size: 2em;
+						}
+					}
+					&__right {
+						width: 60%;
+						padding-right: 5em;
+						h3 {
+							border-radius: 15px;
+							background-color: var(--orange-bg);
+							color: var(--orange);
+							width: 10em;
+							height: 2em;
+							padding-top: 0.3em;
+							font-size: 1em;
+						}
+						h2 {
+							text-align: left;
+							color: var(--light-green);
+							font-size: 2.5em;
+						}
+						p {
+							text-align: left;
+							font-size: 1.6em;
+						}
+					}
+				}
+			}
+			&__features {
+				margin-bottom: 10em;
+				h3 {
+					border-radius: 15px;
+					background-color: var(--orange-bg);
+					color: var(--orange);
+					width: 10em;
+					height: 2em;
+					padding-top: 0.3em;
+					font-size: 1em;
+					margin: 0 auto;
+				}
+				h1 {
+					color: #000;
+				}
+				&__icons {
+					display: flex;
+					justify-content: space-evenly;
+					h4 {
+						color: #fff;
+						width: 6em;
+						margin: -8em 0 0 2em;
+					}
+					&__heading1 {
+						margin-left: 3.8em !important;
+					}
+				}
+			}
+			&__quote {
+				background: var(--dark-green);
+				padding: 10em 16em 10em 16em;
+				border-radius: 30px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10em;
+				&__mark::before {
+					font-size: 20em;
+					margin: -0.9em 0 0 -2.35em;
+					content: open-quote;
+					display: block;
+					width: 0.5em;
+					height: 0.5em;
+					color: var(--light-green);
+				}
+				h2,
+				h3,
+				h4 {
+					color: #fff;
+				}
+			}
+			&__bottom {
+				h1 {
+					color: #000 !important;
+					font-size: 3em;
+					margin-bottom: 0.5em;
+				}
+				input {
+					background: var(--light-green);
+					color: #fff;
+					border: none;
+					border-radius: 10px;
+					font-size: 1.2em;
+					width: 10em;
+					height: 1.6em;
+				}
+			}
+		}
+	}
+}

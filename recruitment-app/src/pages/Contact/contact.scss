@@ -1,11 +1,7 @@
-:root {
-	--green: #2a9d8f;
-	--orange: #f4a261;
-}
-
 .contact {
 	min-height: 100vh;
 	width: 70vw;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-self: center;
@@ -23,10 +19,9 @@
 		&__left,
 		&__right {
 			width: 40%;
-			// outline: 1px solid blue;
 		}
 		&__h4 {
-			color: var(--green) !important;
+			color: var(--light-green) !important;
 			font-size: 2em;
 			font-weight: 100 !important;
 		}
@@ -50,7 +45,6 @@
 			margin-top: 6em;
 			width: 30%;
 			border-top: 6px solid var(--orange);
-			// outline: 1px solid blue;
 
 			&__info {
 				width: 19ch;
@@ -59,7 +53,7 @@
 				margin-bottom: 2em;
 			}
 			&__email {
-				color: var(--green);
+				color: var(--light-green);
 				font-weight: 600;
 			}
 		}
@@ -96,7 +90,7 @@
 				width: 30%;
 				height: 2em;
 				font-size: 1.2em !important;
-				background: var(--green) !important;
+				background: var(--light-green) !important;
 				color: #fff !important;
 				align-self: flex-end !important;
 			}
@@ -110,3 +104,50 @@
 		}
 	}
 }
+
+@media (max-width: 1250px) {
+	.contact {
+		&__header {
+			margin-bottom: 2em;
+			&__h3 {
+				font-size: 3em;
+			}
+			&__letter {
+				width: 19em;
+			}
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.contact {
+		&__header {
+			margin-bottom: 2em;
+			&__h3 {
+				font-size: 3em;
+			}
+			&__letter {
+				width: 19em;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.contact {
+		&__header {
+			margin-bottom: 2em;
+			&__h3 {
+				font-size: 3em;
+			}
+			&__letter {
+				width: 19em;
+			}
+		}
+	}
+}
+
+// 1250
+// 1100
+// 700
+// 400
