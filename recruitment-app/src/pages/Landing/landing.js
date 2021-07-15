@@ -87,6 +87,28 @@ function Landing() {
                 </div>
             </div>
             {/* Card Section End */}
+            {/* Feature Section Start */}
+            <div className="featureSection">
+                <p className="featureSection__pill">FEATURE</p>
+                <h1>Features of the programme</h1>
+                <p>
+                    The programme is divided into <span>six modules</span> covering various skills and techniques <br />
+                    that enable you to showcase your personality and wining attributes. <span>Get the job you’ve always wanted</span><br />
+                    by following the key learning points and completing the action items that accompany the modules.<br />
+                    The Preparation Module is the foundation for a successful interview and it is here where<br />
+                    you will start your skills development journey.
+                </p>
+            </div>
+            {/* Feature Section End */}
+            
+            {/* CTA Section Start */}
+            <div className="ctaSection">
+                <h1>Ready to begin your journey to success?</h1>
+                <Link to='/register'>
+                    <li className="ctaSection__button">Begin Now</li>
+                </Link> 
+            </div>
+            {/* CTA Section End */}
         </div>
 
     );
