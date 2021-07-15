@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import './landing.scss';
 import './landing.responsive.scss';
 import LadningImage from '../../assets/v2/LandingImage.svg';
+import orange_tri from '../../assets/v2/bg_orange_tri.svg';
+import blue_circle from '../../assets/v2/bg_circle.svg';
 import orange_hash from '../../assets/v2/orange_hash.svg';
 import blue_hash from '../../assets/v2/blue_hash.svg';
 import ExpertImage from '../../assets/v2/expert.png';
@@ -45,9 +47,12 @@ function Landing() {
             {/* Card Section Start */}
             <div className="cardSection">
                 <div className="cardSection__card">
-                    <img src={ExpertImage} alt="Image of our experts" />
+                    <div className="cardSection__card__image">
+                        <img className="cardSection__card__image__bg--orange" src={orange_tri} alt="Background Imagery" />
+                        <img className="cardSection__card__image__img"src={ExpertImage} alt="Image of our experts" />
+                    </div>
                     <div className="cardSection__card__text">
-                        <h1>Made By Experts</h1>
+                        <h1><img src={blue_hash} />Made By Experts</h1>
                         <p>
                             Recruitment Skills Development Scotland™ has been developed by<br />
                             experts in the field of recruitment and recruitment training. <br />
@@ -62,7 +67,10 @@ function Landing() {
                     </div>
                 </div>
                 <div className="cardSection__card cardSection__card--reverse">
-                    <img src={EveryoneImage} alt="Image of our experts" />
+                    <div className="cardSection__card__image">
+                        <img className="cardSection__card__image__bg--blue" src={blue_circle} alt="Background Imagery" />
+                        <img className="cardSection__card__image__img"src={EveryoneImage} alt="Image of our experts" />
+                    </div>
                     <div className="cardSection__card__text">
                         <h1>Designed For Everyone</h1>
                         <p>
