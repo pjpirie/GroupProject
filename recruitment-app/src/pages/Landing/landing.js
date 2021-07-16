@@ -8,6 +8,12 @@ import orange_hash from '../../assets/v2/orange_hash.svg';
 import blue_hash from '../../assets/v2/blue_hash.svg';
 import ExpertImage from '../../assets/v2/expert.png';
 import EveryoneImage from '../../assets/v2/everyone.png';
+import Card01 from '../../assets/v2/Group 261.svg';
+import Card02 from '../../assets/v2/Group 262.svg';
+import Card03 from '../../assets/v2/Group 265.svg';
+import Card04 from '../../assets/v2/Group 260.svg';
+import Card05 from '../../assets/v2/Group 263.svg';
+import Card06 from '../../assets/v2/Group 264.svg';
 
 
 
@@ -79,6 +85,7 @@ function Landing() {
                             various programme module along with activities to reinforce your new knowledge.
                         </p>
                         <div className="cardSection__card__text__cta">
+                            <img src={orange_hash} />
                             <Link to='/register'>
                                 <li className="cardSection__card__text__cta__button">Sign up</li>
                             </Link>
@@ -100,6 +107,76 @@ function Landing() {
                 </p>
             </div>
             {/* Feature Section End */}
+            
+            {/* Modules Section Start */}
+            <div className="modulesSection">
+                <div className="modulesSection__card">
+                    <img src={Card01} />
+                    <h1>
+                        All the <br />
+                        <span>preparation</span> <br />
+                        you need to do<br />
+                        For blah blah <br /> 
+                    </h1>
+                    <p className="modulesSection__pill">FEATURE</p>
+                </div>
+
+                <div className="modulesSection__card">
+                    <img src={Card02} />
+                    <h1>
+                        All the <br />
+                        <span>preparation</span> <br />
+                        you need to do<br />
+                        For blah blah  <br />
+                    </h1>
+                    <p className="modulesSection__pill">FEATURE</p>
+                </div> 
+
+                <div className="modulesSection__card">
+                    <img src={Card03} />
+                    <h1>
+                        All the <br />
+                        <span>preparation</span> <br />
+                        you need to do<br />
+                        For blah blah <br /> 
+                    </h1>
+                    <p className="modulesSection__pill">FEATURE</p>
+                </div> 
+
+                <div className="modulesSection__card">
+                    <img src={Card04} />
+                    <h1>
+                        All the <br />
+                        <span>preparation</span> <br />
+                        you need to do<br />
+                        For blah blah  <br />
+                    </h1>
+                    <p className="modulesSection__pill">FEATURE</p>
+                </div> 
+
+                <div className="modulesSection__card">
+                    <img src={Card05} />
+                    <h1>
+                        All the <br />
+                        <span>preparation</span> <br />
+                        you need to do<br />
+                        For blah blah  <br />
+                    </h1>
+                    <p className="modulesSection__pill">FEATURE</p>
+                </div> 
+
+                <div className="modulesSection__card">
+                    <img src={Card06} />
+                    <h1>
+                        All the <br />
+                        <span>preparation</span> <br />
+                        you need to do<br />
+                        For blah blah  <br />
+                    </h1>
+                    <p className="modulesSection__pill">FEATURE</p>
+                </div> 
+            </div>
+            {/* Modules Section End */}
             
             {/* CTA Section Start */}
             <div className="ctaSection">

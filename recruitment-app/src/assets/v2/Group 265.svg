@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103.278" height="102.176" viewBox="0 0 103.278 102.176">
+  <defs>
+    <filter id="Path_833" x="1.101" y="0" width="102.177" height="102.176" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_67" data-name="Rectangle 67" width="94.278" height="59.1" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_265" data-name="Group 265" transform="translate(0 6)">
+    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Path_833)">
+      <path id="Path_833-2" data-name="Path 833" d="M42.088,0A42.088,42.088,0,1,1,0,42.088,42.088,42.088,0,0,1,42.088,0Z" transform="translate(10.1 6)" fill="#2a9d8f"/>
+    </g>
+    <path id="Icon_material-computer" data-name="Icon material-computer" d="M43.837,39.628a4.6,4.6,0,0,0,4.362-4.8L48.22,10.8A4.622,4.622,0,0,0,43.837,6H8.767a4.622,4.622,0,0,0-4.384,4.8v24.02a4.622,4.622,0,0,0,4.384,4.8H0v4.8H52.6v-4.8ZM8.767,10.8H43.837v24.02H8.767Z" transform="translate(26.095 16.728)" fill="#fbfbfb"/>
+  </g>
+</svg>
