@@ -14,10 +14,46 @@ import Card03 from '../../assets/v2/Group 265.svg';
 import Card04 from '../../assets/v2/Group 260.svg';
 import Card05 from '../../assets/v2/Group 263.svg';
 import Card06 from '../../assets/v2/Group 264.svg';
+import ModuleBG from '../../assets/v2/ModuleBG.svg';
+import { useState, useEffect, useRef } from 'react'
+
+
 
 
 
 function Landing() {
+
+    function useOnScreen(ref, rootMargin) {
+
+        const [isIntersecting, setIntersecting] = useState(false)
+      
+        const observer = new IntersectionObserver(
+          ([entry]) => setIntersecting(entry.isIntersecting),{rootMargin: `${rootMargin}px`}
+        )
+      
+        useEffect(() => {
+          observer.observe(ref.current)
+          // Remove the observer as soon as the component is unmounted
+          return () => { observer.disconnect() }
+        }, [])
+      
+        return isIntersecting
+      }
+
+      const ref = useRef()
+      const ref2 = useRef()
+      const isVisible = useOnScreen(ref, -200);
+
+      useEffect(() =>{
+        console.log(isVisible);
+        if(!ref.current.classList.contains('active') && isVisible){
+            ref.current.classList.add('active');
+            ref2.current.classList.add('active');
+        }else{
+            return;
+        }
+      }, [isVisible])
+    
     return (
         <div className="landing">
             {/* Hero Start */}
@@ -110,71 +146,77 @@ function Landing() {
             
             {/* Modules Section Start */}
             <div className="modulesSection">
-                <div className="modulesSection__card">
-                    <img src={Card01} />
-                    <h1>
-                        All the <br />
-                        <span>preparation</span> <br />
-                        you need to do<br />
-                        For blah blah <br /> 
-                    </h1>
-                    <p className="modulesSection__pill">FEATURE</p>
+                {/* <div className="modulesSection__BG">
+                    <img src={ModuleBG} />   
+                </div> */}
+                <div className="modulesSection__grid">
+                    <div className="modulesSection__card">
+                        <img src={Card01} />
+                        <h1>
+                            All the <br />
+                            <span>preparation</span> <br />
+                            you need to do<br />
+                            For blah blah <br /> 
+                        </h1>
+                        <p className="modulesSection__pill">FEATURE</p>
+                    </div>
+
+                    <div className="modulesSection__card" ref={ref}>
+                        <img src={Card02} />
+                        <h1>
+                            All the <br />
+                            <span>preparation</span> <br />
+                            you need to do<br />
+                            For blah blah  <br />
+                        </h1>
+                        <p className="modulesSection__pill">FEATURE</p>
+                    </div> 
+
+                    <div className="modulesSection__card">
+                        <img src={Card03} />
+                        <h1>
+                            All the <br />
+                            <span>preparation</span> <br />
+                            you need to do<br />
+                            For blah blah <br /> 
+                        </h1>
+                        <p className="modulesSection__pill">FEATURE</p>
+                    </div> 
+
+                    <div className="modulesSection__card">
+                        <img src={Card04} />
+                        <h1>
+                            All the <br />
+                            <span>preparation</span> <br />
+                            you need to do<br />
+                            For blah blah  <br />
+                        </h1>
+                        <p className="modulesSection__pill">FEATURE</p>
+                    </div> 
+
+                    <div className="modulesSection__card" ref={ref2}>
+                        <img src={Card05} />
+                        <h1>
+                            All the <br />
+                            <span>preparation</span> <br />
+                            you need to do<br />
+                            For blah blah  <br />
+                        </h1>
+                        <p className="modulesSection__pill">FEATURE</p>
+                    </div> 
+
+                    <div className="modulesSection__card">
+                        <img src="" alt="" />
+                        <img src={Card06} />
+                        <h1>
+                            All the <br />
+                            <span>preparation</span> <br />
+                            you need to do<br />
+                            For blah blah  <br />
+                        </h1>
+                        <p className="modulesSection__pill">FEATURE</p>
+                    </div> 
                 </div>
-
-                <div className="modulesSection__card">
-                    <img src={Card02} />
-                    <h1>
-                        All the <br />
-                        <span>preparation</span> <br />
-                        you need to do<br />
-                        For blah blah  <br />
-                    </h1>
-                    <p className="modulesSection__pill">FEATURE</p>
-                </div> 
-
-                <div className="modulesSection__card">
-                    <img src={Card03} />
-                    <h1>
-                        All the <br />
-                        <span>preparation</span> <br />
-                        you need to do<br />
-                        For blah blah <br /> 
-                    </h1>
-                    <p className="modulesSection__pill">FEATURE</p>
-                </div> 
-
-                <div className="modulesSection__card">
-                    <img src={Card04} />
-                    <h1>
-                        All the <br />
-                        <span>preparation</span> <br />
-                        you need to do<br />
-                        For blah blah  <br />
-                    </h1>
-                    <p className="modulesSection__pill">FEATURE</p>
-                </div> 
-
-                <div className="modulesSection__card">
-                    <img src={Card05} />
-                    <h1>
-                        All the <br />
-                        <span>preparation</span> <br />
-                        you need to do<br />
-                        For blah blah  <br />
-                    </h1>
-                    <p className="modulesSection__pill">FEATURE</p>
-                </div> 
-
-                <div className="modulesSection__card">
-                    <img src={Card06} />
-                    <h1>
-                        All the <br />
-                        <span>preparation</span> <br />
-                        you need to do<br />
-                        For blah blah  <br />
-                    </h1>
-                    <p className="modulesSection__pill">FEATURE</p>
-                </div> 
             </div>
             {/* Modules Section End */}
             

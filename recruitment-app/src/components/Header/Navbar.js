@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import RSDPLOGO from '../../assets/v2/RSDP_LOGO_V2.svg';
+import RSDPLOGO from '../../assets/v2/NewLogoHeader.svg';
 import './Navbar.scss';
 
 
