@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102.177" height="102.176" viewBox="0 0 102.177 102.176">
+  <defs>
+    <filter id="Ellipse_20" x="0" y="0" width="102.177" height="102.176" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_264" data-name="Group 264" transform="translate(9 6)">
+    <g id="Group_86" data-name="Group 86">
+      <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Ellipse_20)">
+        <circle id="Ellipse_20-2" data-name="Ellipse 20" cx="42.088" cy="42.088" r="42.088" transform="translate(9 6)" fill="#2a9d8f"/>
+      </g>
+      <path id="Icon_awesome-pencil-alt" data-name="Icon awesome-pencil-alt" d="M47.436,12.614l-4.392,4.093a1.2,1.2,0,0,1-1.62,0L30.849,6.852a1.016,1.016,0,0,1,0-1.509L35.241,1.25a4.824,4.824,0,0,1,6.469,0l5.726,5.336A4.053,4.053,0,0,1,47.436,12.614ZM27.076,8.859,2.057,32.172.038,42.959a2.215,2.215,0,0,0,2.649,2.468l11.576-1.891L39.281,20.223a1.016,1.016,0,0,0,0-1.509L28.705,8.859a1.217,1.217,0,0,0-1.629,0ZM11.823,30.175a1.179,1.179,0,0,1,0-1.758L26.5,14.745a1.4,1.4,0,0,1,1.886,0,1.179,1.179,0,0,1,0,1.758L13.709,30.175a1.4,1.4,0,0,1-1.886,0ZM8.384,37.641h4.573v3.223l-6.145,1L3.848,39.106,4.925,33.38H8.384Z" transform="translate(17.697 19.356)" fill="#fbfbfb"/>
+    </g>
+  </g>
+</svg>
