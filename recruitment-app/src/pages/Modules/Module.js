@@ -10,8 +10,6 @@ import Feature3 from '../../assets/v2/feature1.svg';
 import Feature1 from '../../assets/v2/feature2.svg';
 import Feature2 from '../../assets/v2/feature3.svg';
 
-import Style from '../../assets/v2/module-style.svg';
-
 import './Module.scss'
 
 function Module() {
@@ -91,7 +89,7 @@ function Module() {
                                 <div className="module__body__modules__list__first__right__shape"></div>
                             </div>
                         </div> 
-                        <div className="module__body__modules__list__second">
+                        <div className="module__body__modules__list__second"> 
                             <div className="module__body__modules__list__second__left">
                                 <img src={ModuleImg6} alt="Room" className="" />
                                 <div className="module__body__modules__list__second__left__shape"></div>
