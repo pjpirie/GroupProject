@@ -102,19 +102,19 @@ function Module() {
                         </div> 
                     </div>
                     <div className="module__body__modules__features">
-                        <h3>MODULE SIX</h3>
+                        <h3>FEATURES</h3>
                         <h1>Featured in Each Module</h1>
                         <div className="module__body__modules__features__icons">
                             <div> 
-                                <img src={Feature1} alt="Video" className="" />
+                                <img src={Feature1} alt="Video" className="module__body__modules__features__icons__img1" />
                                 <h4 className="module__body__modules__features__icons__heading1">Video with Audio Commentary</h4>
                             </div>
                             <div>
-                                <img src={Feature2} alt="Video" className="" />
+                                <img src={Feature2} alt="Video" className="module__body__modules__features__icons__img2" />
                                 <h4 className="module__body__modules__features__icons__heading2">Key Learning Points</h4>
                             </div>
                             <div>
-                                <img src={Feature3} alt="Video" className="" />
+                                <img src={Feature3} alt="Video" className="module__body__modules__features__icons__img3" />
                                 <h4 className="module__body__modules__features__icons__heading3">Action Items</h4>
                             </div>
                         </div>
