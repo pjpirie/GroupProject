@@ -1,8 +1,7 @@
 import React from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
-import './Module.css';
-
+import './Module.scss';
 
 function Module() {
 

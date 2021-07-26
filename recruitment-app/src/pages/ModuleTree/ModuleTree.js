@@ -31,8 +31,9 @@ function ModuleTree(props) {
         console.log(props)
         props.checkAuth();
     }, [])
-
+    
     const UserData = useSelector(state => state.getAccount).user;
+
     const [isMod1Open, setMod1Open] = useState(false);
     const [isMod2Open, setMod2Open] = useState(false);
     const [isMod3Open, setMod3Open] = useState(false);

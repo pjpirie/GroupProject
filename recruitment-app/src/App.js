@@ -131,7 +131,7 @@ function App() {
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
                     { 
-                    getUser.paidAccess ? (
+                      getUser.paidAccess ? (
                       <Fragment>
                         <Route path="/module/1" component={Module1} />
                         <Route path="/module/2" component={Module2} />

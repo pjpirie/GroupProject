@@ -1,19 +1,48 @@
 @import '../../breakpoints.scss';
 
 .landing{
-    padding: 70px 140px;
+    padding: 70px 40px;
+    
+    @include media("<=900px"){
+        display: flex;
+        flex-direction: column;
+    }
 
     &__hero{
         display: flex;
         justify-content: space-between;
+        @include media("<=1300px"){
+            // flex-direction: column-reverse;
+            // align-items: center;
+        }
+        @include media("<=600px"){
+            justify-content: center;
+            align-items: center;
+        }
         
         &__text{
+            @include media("<=1300px"){
+                width: 60vw;
+            }
+            @include media("<=600px"){
+                text-align: center;
+                width: 80vw;
+            }
             h1{
+                @include media("<=1300px"){
+                    font-size: 44px;
+                    line-height: 60px;
+                    margin-bottom: 50px;
+                }
                 font-size: 44px;
                 line-height: 60px;
                 margin-bottom: 50px;
             }
             p{
+                @include media("<=1300px"){
+                    font-size: 20px;
+                    line-height: 30px;
+                }
                 font-size: 24px;
                 line-height: 40px;
                 margin-bottom: 50px;
@@ -34,8 +63,19 @@
                 }
             }
         }
-        &__image{
-
+        &__image {
+            @include media("<=1300px"){
+                width: 50vw;
+            }
+            @include media("<=600px"){
+                display: none;
+            }
+            img{
+                @include media("<=1300px"){
+                    position: absolute;
+                    // transform: translateX(30%);
+                }
+            }
         }
     }
 }
@@ -45,20 +85,45 @@
     padding: 0 90px;
     display: flex;
     flex-direction: row;
+    @include media("<=1300px"){
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 
     &__large{
         width: 50%;
         display: flex;
         flex-direction: column;
+        @include media("<=900px"){
+            align-self: flex-start;
+            margin-left: 10vw;
+            width: auto;
+            max-width: 70vw;
+        }
+        @include media("<=600px"){
+            align-self: center;
+            margin-left: 0vw;
+            width: auto;
+            max-width: 70vw;
+        }
 
         p{
             color: #2A9D8F;
             font-size: 28px;
+            @include media("<=1300px"){
+                font-size: 22px;
+            }
         }
         h1{
             color: #264653;
             font-size: 60px;
             font-family: Roboto;
+            @include media("<=1300px"){
+                font-size: 40px;
+            }
         }
     }   
     &__small{
@@ -67,9 +132,27 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
+        @include media("<=1300px"){
+            margin-top: 5vh;
+        }
+        @include media("<=900px"){
+            align-self: flex-end;
+            margin-right: 10vw;
+            width: auto;
+            max-width: 70vw;
+        }
+        @include media("<=600px"){
+            align-self: center;
+            margin-right: 0vw;
+            width: auto;
+            max-width: 70vw;
+        }
         p{
             color: #262626;
             font-size: 22px;
+            @include media("<=1300px"){
+                font-size: 18px;
+            }
         }
         span{
             color: #F4A261;
@@ -82,13 +165,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include media("<=900px"){
+        align-self: center;
+    }
 
     &__card{
         margin: 35px 0;
         display: flex;
+        @include media("<=900px"){
+            align-self: center;
+            justify-content: center;
+            flex-direction:column;
+            margin: 5vw 0;
+        }
 
         &__image{
             position: relative;
+            @include media("<=900px"){
+                align-self: center;
+                justify-content: center;
+                flex-direction:column;
+            }
 
             &__bg--orange{
                 position: absolute;
@@ -108,6 +205,9 @@
                 margin: 0 100px 0 0;
                 position: relative;
                 z-index: 2;
+                @include media("<=900px"){
+                    margin: 0 0 5vw 0;
+                }
             }
         }
 
@@ -116,6 +216,9 @@
             flex-direction: column;
             justify-content: flex-end;
             width: 600px;
+            @include media("<=1100px"){
+                width: auto;
+            }
 
             h1{
                 margin: 0 0 30px 0;
@@ -123,6 +226,9 @@
                 font-size: 32px;
                 font-weight: 900;
                 position: relative;
+                @include media("<=900px"){
+                    text-align: center;
+                }
                 
                 img{
                     position: absolute;
@@ -135,6 +241,10 @@
             p{
                 margin: 0 0 20px 0;
                 font-size: 14px;
+                @include media("<=900px"){
+                    text-align: center;
+                }
+                
 
             }
 
@@ -143,6 +253,10 @@
                 list-style: none;
                 display: flex;
                 position: relative;
+                @include media("<=900px"){
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 img{
                     position: absolute;
@@ -165,8 +279,16 @@
         }
         &--reverse{
             flex-direction: row-reverse;
+            @include media("<=900px"){
+                align-self: center;
+                justify-content: center;
+                flex-direction:column;
+            }
             img{
                 margin: 0 0 0 100px;
+                @include media("<=900px"){
+                    margin: 0 0 5vw 0;
+                }
             }
         }
     }
@@ -241,14 +363,25 @@
     position: relative;
     display: flex;
     z-index: 100;
+    @include media("<=900px"){
+        margin: 5vw 0;
+    }
 
     &__grid{
         margin: 0 auto;
         display: grid;
+        width: 100%;
+        height: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         position: relative;
         z-index: 100 !important;
+        @include media("<=900px"){
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__BG{
@@ -276,6 +409,12 @@
         position: relative;
         z-index: 2;
         transition: all 1000ms ease-in-out;
+        @include media("<=900px"){
+            width: 60vw;
+        }
+        @include media("<=500px"){
+            width: 80vw;
+        }
 
         img{
             width: 45%;
