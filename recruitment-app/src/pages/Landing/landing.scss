@@ -15,10 +15,18 @@
             // flex-direction: column-reverse;
             // align-items: center;
         }
+        @include media("<=600px"){
+            justify-content: center;
+            align-items: center;
+        }
         
         &__text{
             @include media("<=1300px"){
                 width: 60vw;
+            }
+            @include media("<=600px"){
+                text-align: center;
+                width: 80vw;
             }
             h1{
                 @include media("<=1300px"){
