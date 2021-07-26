@@ -25,20 +25,20 @@ function Landing() {
 
     function useOnScreen(ref, rootMargin) {
 
-        const [isIntersecting, setIntersecting] = useState(false)
-      
-        const observer = new IntersectionObserver(
-          ([entry]) => setIntersecting(entry.isIntersecting),{rootMargin: `${rootMargin}px`}
-        )
-      
-        useEffect(() => {
-          observer.observe(ref.current)
-          // Remove the observer as soon as the component is unmounted
-          return () => { observer.disconnect() }
-        }, [])
-      
-        return isIntersecting
-      }
+    const [isIntersecting, setIntersecting] = useState(false)
+    
+    const observer = new IntersectionObserver(
+        ([entry]) => setIntersecting(entry.isIntersecting),{rootMargin: `${rootMargin}px`}
+    )
+    
+    useEffect(() => {
+        observer.observe(ref.current)
+        // Remove the observer as soon as the component is unmounted
+        return () => { observer.disconnect() }
+    }, [])
+    
+    return isIntersecting
+    }
 
       const ref = useRef()
       const ref2 = useRef()
@@ -46,7 +46,7 @@ function Landing() {
 
       useEffect(() =>{
         console.log(isVisible);
-        if(!ref.current.classList.contains('active') && isVisible){
+        if(!ref.current.classList.contains('active') && isVisible && window.innerWidth > 900){
             ref.current.classList.add('active');
             ref2.current.classList.add('active');
         }else{
@@ -59,8 +59,8 @@ function Landing() {
             {/* Hero Start */}
             <div className="landing__hero">
                 <div className="landing__hero__text">
-                    <h1>Everything you need<br />to ace the interview<br />and get that job</h1>
-                    <p>Recruitment Skills Development Programme™ is<br />a modern skill development programme that gives<br />you the skills you need for interview success.</p>
+                    <h1>Everything you need{window.innerWidth >900 ? <br />: " "}to ace the interview{window.innerWidth >900 ? <br />: " "}and get that job</h1>
+                    <p>Recruitment Skills Development Programme™ is a modern skill development programme that gives you the skills you need for interview success.</p>
                     <div className="landing__hero__text__cta">
                     <Link to='/register'>
                         <li className="landing__hero__text__cta__button">Sign up</li>
@@ -76,7 +76,7 @@ function Landing() {
             <div className="textSection">
                 <div className="textSection__large">
                     <p>Don't Worry</p>
-                    <h1>Getting a job is hard,but<br />not too hard!</h1>
+                    <h1>Getting a job is hard,{window.innerWidth >900 ? <br />: " "} but not too hard!</h1>
                 </div>
                 <div className="textSection__small">
                     <p>Our programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific needs.<br />
