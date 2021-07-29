@@ -2,6 +2,7 @@ import React from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
+import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal';
 
 
 function Module() {
@@ -49,17 +50,37 @@ function Module() {
                 </div>
                 <div className="module__body__main">
                     <p>
-                        Increasingly organisations are conducting recruitment remotely. 
-                        Some basic elements are the same as in face to face events, however, some additional factors have to be considered.
+                    This is a discussion exercise in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale. 
                     </p>
-                    <div className="module__body__main__text">
-                        <div className="module__body__main__text__left">
-                            
+                    {/* Modal Button Section Start */}
+                    <ModuleButtonModal>
+                        <p>test 1</p>
+                        <div>
+                            <h1>test 2</h1>
+                            <h3>test 3</h3>
                         </div>
-                        <div className="module__body__main__text__right">
-                            
+                        <h2>test 4</h2>
+                    </ModuleButtonModal>
+                    {/* Modal Button Section Start */}
+                    {/* Text Section Start */}
+                    <div className="textSection">
+                        <div className="textSection__large">
+                            <p>Important</p>
+                            <h1>Sample Content{window.innerWidth >900 ? <br />: " "} but not too hard!</h1>
+                        </div>
+                        <div className="textSection__small">
+                            <p>
+                             The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork an leadership.<br />
+                            <span>••••••••••••••••••••••</span><br />
+                            </p>
                         </div>
                     </div>
+                    {/* Text Section End */}
+                    {/* Competencies Section Start */}
+                    <div>
+
+                    </div>
+                    {/* Competencies Section End */}
                 </div>
             </div>
         </div>

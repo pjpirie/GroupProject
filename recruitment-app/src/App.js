@@ -63,13 +63,13 @@ function App() {
     });
   }
   
-  // useEffect(() => {
-  //   checkAuth();
-  //   setLoading(true);
-  //   setTimeout(()=> {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, [])
+  useEffect(() => {
+    checkAuth();
+    setLoading(true);
+    setTimeout(()=> {
+      setLoading(false);
+    }, 3000);
+  }, [])
   
   if(loading){
     return (
@@ -131,27 +131,30 @@ function App() {
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
                     { 
-                      getUser.paidAccess ? (
-                      <Fragment>
-                        <Route path="/module/1" component={Module1} />
-                        <Route path="/module/2" component={Module2} />
-                        <Route path="/module/3" component={Module3} />
-                        <Route path="/module/4" component={Module4} />
-                        <Route path="/module/5" component={Module5} />
-                        <Route path="/module/6" component={Module6} />
-                        <Route path="/module/7" component={Module7} />
-                      </Fragment>
-                    ) : (
-                      <Fragment>
-                        <Route path="/module/1" component={NoAccess} />
-                        <Route path="/module/2" component={NoAccess} />
-                        <Route path="/module/3" component={NoAccess} />
-                        <Route path="/module/4" component={NoAccess} />
-                        <Route path="/module/5" component={NoAccess} />
-                        <Route path="/module/6" component={NoAccess} />
-                        <Route path="/module/7" component={NoAccess} />
-                      </Fragment>
-                    )
+                      getUser ? (
+
+                          getUser.paidAccess ? (
+                            <Fragment>
+                              <Route path="/module/1" component={Module1} />
+                              <Route path="/module/2" component={Module2} />
+                              <Route path="/module/3" component={Module3} />
+                              <Route path="/module/4" component={Module4} />
+                              <Route path="/module/5" component={Module5} />
+                              <Route path="/module/6" component={Module6} />
+                              <Route path="/module/7" component={Module7} />
+                            </Fragment>
+                          ) : (
+                            <Fragment>
+                              <Route path="/module/1" component={NoAccess} />
+                              <Route path="/module/2" component={NoAccess} />
+                              <Route path="/module/3" component={NoAccess} />
+                              <Route path="/module/4" component={NoAccess} />
+                              <Route path="/module/5" component={NoAccess} />
+                              <Route path="/module/6" component={NoAccess} />
+                              <Route path="/module/7" component={NoAccess} />
+                            </Fragment>
+                          ) 
+                      ) : ( console.log("UserData Not Set") )
                     }
                     
                     <Route>
