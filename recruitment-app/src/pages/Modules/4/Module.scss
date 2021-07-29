@@ -1,4 +1,5 @@
 .module {
+	width: 70vw;
 	&__header {
 		display: flex;
 		flex-direction: row;
@@ -28,7 +29,7 @@
 			justify-content: center;
 			margin-bottom: 1em;
 			video {
-				width: 80%;
+				width: 100%;
 			}
 		}
 		&__main {
@@ -45,6 +46,7 @@
 				&__left,
 				&__right {
 					width: 50%;
+					min-height: 30vh;
 				}
 				&__left {
 					text-align: left;
@@ -60,8 +62,10 @@
 					}
 				}
 				&__right {
-					// outline: 1px solid red;
-					margin: 15vh 8vw 0 8vw;
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-end;
+					margin-left: 10vw;
 					border-bottom: 6px dotted var(--orange-bg);
 					h3 {
 						text-align: left;
@@ -83,24 +87,68 @@
 						border: none;
 						border-radius: 15px;
 						height: 4em;
-						width: 10vw;
+						min-width: 10em;
+						font-weight: 400;
 						// padding: 1em;
 						color: #fff;
 						margin: 2vh 5vw 2vh 5vw;
+					}
+					&__active {
+						background: #000 !important;
+					}
+				}
+				&__modal {
+					&__show {
+						padding: 3em 2em 3em 2em;
+						width: 40vw;
+						text-align: left !important;
+						display: flex;
+						flex-direction: column;
+						box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+						border-radius: 15px;
+						margin-bottom: 5em;
+						button {
+							cursor: pointer;
+							font-size: 2em;
+							align-self: flex-end;
+							text-align: center;
+							border: none;
+							border-radius: 100%;
+							background-color: var(--light-green);
+							color: #fff;
+							width: 1em;
+							z-index: 1;
+						}
+						h1 {
+							margin: -3vh 0 2vh 0;
+						}
+						h4 {
+							font-weight: 400;
+							span {
+								padding-left: 20px;
+							}
+						}
+						p {
+							color: var(--light-green);
+							font-size: 1em;
+							margin-top: 1em;
+						}
+						h5 {
+							font-size: 1em;
+							font-weight: 300;
+							transform: translate(10%, -94%);
+						}
 					}
 				}
 			}
 			&__interview {
 				display: flex;
 				flex-direction: row;
-				flex-wrap: wrap;
 				margin-bottom: 5em;
-				p {
-					width: 100%;
-				}
 				&__left,
 				&__right {
 					width: 50%;
+					min-height: 30vh;
 				}
 				&__left {
 					text-align: left;
@@ -116,8 +164,10 @@
 					}
 				}
 				&__right {
-					justify-content: flex-end;
-					margin: 16vh 0vw 0 0vw;
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-end;
+					margin-left: 10vw;
 					border-bottom: 6px dotted var(--orange-bg);
 					h3 {
 						text-align: left;
@@ -154,12 +204,40 @@
 				h2 {
 					font-size: 2em;
 					margin-bottom: 1vh;
+					font-weight: 200;
 				}
 				h3 {
 					font-size: 1.5em;
-					font-weight: 300 !important;
+					font-weight: 500 !important;
+					max-width: 50%;
+					margin: 0 auto;
+				}
+				button {
+					color: #fff;
+					background: var(--light-green);
+					border: none;
+					border-radius: 15px;
+					font-size: 1.3em;
+					padding: 10px;
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.module__body__main__text,
+	.module__body__main__interview {
+		flex-direction: column;
+		&__right,
+		&__left {
+			width: 100%;
+			min-height: 1px;
+			margin: 0;
+			text-align: center !important;
+		}
+		&__right {
+			margin-top: 4em;
 		}
 	}
 }

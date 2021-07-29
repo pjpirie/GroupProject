@@ -63,13 +63,13 @@ function App() {
     });
   }
   
-  // useEffect(() => {
-  //   checkAuth();
-  //   setLoading(true);
-  //   setTimeout(()=> {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, [])
+  useEffect(() => {
+    checkAuth();
+    setLoading(true);
+    setTimeout(()=> {
+      setLoading(false);
+    }, 3000);
+  }, [])
   
   if(loading){
     return (
@@ -130,7 +130,7 @@ function App() {
                     <Route path="/CMS" component={CMSPage} />
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
-                    { 
+                    {
                       getUser.paidAccess ? (
                       <Fragment>
                         <Route path="/module/1" component={Module1} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
@@ -33,8 +33,10 @@ function Module() {
         DownloadMedia();
     };
 
-    const btnClick=()=>{
-        // alert();
+    const [btnVal, btnClick] = useState(false)
+    const [active, isActive] = useState(false)
+    const docuClick =(num)=>{
+        btnClick(num)
     }
 
     return (
@@ -69,14 +71,80 @@ function Module() {
                     <div className="module__body__main__buttons">
                         <p>Keep in mind some things you can do to ensure a smooth virtual interview</p>
                         <div className="module__body__main__buttons__wrapper">
-                            <button value="Documentation" onClick={btnClick()} className="module__body__main__buttons__wrapper__1">Documentation</button>
-                            <button value="Connectivity" onClick={btnClick()} className="module__body__main__buttons__wrapper__2">Connectivity</button> <br />
-                            <button value="Appearance" onClick={btnClick()} className="module__body__main__buttons__wrapper__3">Appearance</button>
-                            <button value="Location" onClick={btnClick()} className="module__body__main__buttons__wrapper__4">Location</button>
+                            <button value="Documentation" onClick={()=>docuClick(1)} className={active ? 'module__body__main__buttons__wrapper__1 module__body__main__buttons__wrapper__active' : 'module__body__main__buttons__wrapper__1'}>Documentation</button>
+                            <button value="Connectivity" onClick={()=>docuClick(2)} className="module__body__main__buttons__wrapper__2">Connectivity</button> <br />
+                            <button value="Appearance" onClick={()=>docuClick(3)} className="module__body__main__buttons__wrapper__3">Appearance</button>
+                            <button value="Location" onClick={()=>docuClick(4)} className="module__body__main__buttons__wrapper__4">Location</button>
                         </div>
-                    </div>
+                        <div className="module__body__main__buttons__modal">
+                            {
+                                btnVal === 0?
+                                <>
+                                </>
+                                :null
+                            }
+                            {
+                                btnVal === 1?
+                                    <div className="module__body__main__buttons__modal__show">
+                                        <button onClick={()=>docuClick(0)}>X</button>
+                                        <h1>Documentation</h1>
+                                        <h4>You may be required to bring along your Passport or other documents confirming your right to work and address etc.</h4>
+                                    </div>
+                                
+                                :null
+                            }
+                            {
+                                btnVal === 2?
+                                    <div className="module__body__main__buttons__modal__show">
+                                        <button onClick={()=>docuClick(0)}>X</button>
+                                        <h1>Connectivity</h1>
+                                        <h4>
+                                            • Provide a contact number in case of any connectivity issues. <br />
+                                            • Download the required software for the assessment such as Zoom, Google Hangouts and Microsoft Teams.<br />
+                                            • Ensure you have a strong WiFi connection.<br />
+                                            • Test microphone and webcam.<br />
+                                            • If required plug your device into a charging socket. <br />
+                                            • Activate the invitation link 15 minutes early, so that you can resolve any technical  issues.<br />
+                                            • Use a headset if it helps with your audio.
+                                        </h4>
+                                    </div>
+                                :null
+                            }
+                            {
+                                btnVal === 3?
+                                    <div className="module__body__main__buttons__modal__show">
+                                        <button onClick={()=>docuClick(0)}>X</button>
+                                        <h1>Appearance</h1>
+                                        <h4>
+                                            • Dress appropriately, as if you were attending in person. <br />
+                                            • Consider your body language <br />
+                                            <span />- Sit straight  <br />
+                                            <span />- Minimise your movement without appearing stiff  <br />
+                                            <span />- Make eye contact.   <br />
+                                        </h4>
+                                        <p>Note</p>
+                                        <h5>This will require you to look directly at your  webcam or camera, so avoid looking at the interviewer(s) on your screen.</h5>
+                                        
+
+                                    </div>
+                                :null
+                            }
+                            {
+                                btnVal === 4?
+                                    <div className="module__body__main__buttons__modal__show">
+                                        <button onClick={()=>docuClick(0)}>X</button>
+                                        <h1>Location</h1>
+                                        <h4>
+                                            • Position yourself in a comfortable, bright space. <br />
+                                            • Ensure that you will not be interrupted.
+                                        </h4>
+                                    </div>
+                                :null
+                            }
+                        </div>
+                    </div>                        
+                    <p>Pre-recorded Interviews</p>
                     <div className="module__body__main__interview">
-                        <p>Pre-recorded Interviews</p>
                         <div className="module__body__main__interview__left">
                             <h4>Be prepared</h4>
                             <h3>Many organisations require candidates to complete pre-recorded interviews.</h3>
@@ -87,7 +155,7 @@ function Module() {
                     </div>
                     <div className="module__body__main__consider">
                         <h1>Things to Consider</h1>
-                        <h3>Dree to Impress</h3>
+                        <h3>Dress to Impress</h3>
                         <h4>Although you will not be face to face you should consider how to dress as you will be visible to the interviewer. </h4>
                         <h3>Prepare your Answers</h3>
                         <h4>You will be given the question a very short time in advance. Focus intensely on understanding what is being asked and formulate a quick outline plan.</h4>
@@ -96,7 +164,7 @@ function Module() {
                     </div>
                     <div className="module__body__main__download">
                         <h2>Now it's time to work on you action plan</h2>
-                        <h3>Download the Module 4 activity sheet and work through the <br /> exercises to be fully prepared for group exercises.</h3>
+                        <h3>Download the Module 4 activity sheet and work through the exercises to be fully prepared for group exercises.</h3>
                         <button onClick={handleDownload}>Download</button>
                     </div>
                 </div>
