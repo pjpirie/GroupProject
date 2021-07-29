@@ -3,7 +3,6 @@ import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
 
-
 function Module() {
 
     async function DownloadMedia() {
@@ -34,9 +33,18 @@ function Module() {
     };
 
     const [btnVal, btnClick] = useState(false)
-    const [active, isActive] = useState(false)
-    const docuClick =(num)=>{
+
+    const modalOpen =(num)=>{
         btnClick(num)
+        let active = document.querySelector('.module__body__main__buttons__wrapper__active')
+        if(active){
+            active.classList.remove('module__body__main__buttons__wrapper__active')
+        }
+        document.querySelector(`#btn${num}`).classList.add('module__body__main__buttons__wrapper__active')
+    }
+    const modalClose=()=>{
+        btnClick(0)
+        document.querySelector('.module__body__main__buttons__wrapper__active').classList.remove('module__body__main__buttons__wrapper__active')
     }
 
     return (
@@ -71,10 +79,10 @@ function Module() {
                     <div className="module__body__main__buttons">
                         <p>Keep in mind some things you can do to ensure a smooth virtual interview</p>
                         <div className="module__body__main__buttons__wrapper">
-                            <button value="Documentation" onClick={()=>docuClick(1)} className={active ? 'module__body__main__buttons__wrapper__1 module__body__main__buttons__wrapper__active' : 'module__body__main__buttons__wrapper__1'}>Documentation</button>
-                            <button value="Connectivity" onClick={()=>docuClick(2)} className="module__body__main__buttons__wrapper__2">Connectivity</button> <br />
-                            <button value="Appearance" onClick={()=>docuClick(3)} className="module__body__main__buttons__wrapper__3">Appearance</button>
-                            <button value="Location" onClick={()=>docuClick(4)} className="module__body__main__buttons__wrapper__4">Location</button>
+                            <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module__body__main__buttons__wrapper__1">Documentation</button>
+                            <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module__body__main__buttons__wrapper__2">Connectivity</button> <br />
+                            <button value="Appearance" onClick={()=>modalOpen(3)} id="btn3" className="module__body__main__buttons__wrapper__3">Appearance</button>
+                            <button value="Location" onClick={()=>modalOpen(4)} id="btn4" className="module__body__main__buttons__wrapper__4">Location</button>
                         </div>
                         <div className="module__body__main__buttons__modal">
                             {
@@ -86,7 +94,7 @@ function Module() {
                             {
                                 btnVal === 1?
                                     <div className="module__body__main__buttons__modal__show">
-                                        <button onClick={()=>docuClick(0)}>X</button>
+                                    <button onClick={modalClose}>X</button>
                                         <h1>Documentation</h1>
                                         <h4>You may be required to bring along your Passport or other documents confirming your right to work and address etc.</h4>
                                     </div>
@@ -96,7 +104,7 @@ function Module() {
                             {
                                 btnVal === 2?
                                     <div className="module__body__main__buttons__modal__show">
-                                        <button onClick={()=>docuClick(0)}>X</button>
+                                        <button onClick={modalClose}>X</button>
                                         <h1>Connectivity</h1>
                                         <h4>
                                             • Provide a contact number in case of any connectivity issues. <br />
@@ -113,7 +121,7 @@ function Module() {
                             {
                                 btnVal === 3?
                                     <div className="module__body__main__buttons__modal__show">
-                                        <button onClick={()=>docuClick(0)}>X</button>
+                                    <button onClick={modalClose}>X</button>
                                         <h1>Appearance</h1>
                                         <h4>
                                             • Dress appropriately, as if you were attending in person. <br />
@@ -132,7 +140,7 @@ function Module() {
                             {
                                 btnVal === 4?
                                     <div className="module__body__main__buttons__modal__show">
-                                        <button onClick={()=>docuClick(0)}>X</button>
+                                    <button onClick={modalClose}>X</button>
                                         <h1>Location</h1>
                                         <h4>
                                             • Position yourself in a comfortable, bright space. <br />

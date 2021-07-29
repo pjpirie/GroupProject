@@ -94,7 +94,9 @@
 						margin: 2vh 5vw 2vh 5vw;
 					}
 					&__active {
-						background: #000 !important;
+						background: #fff !important;
+						border: 1px solid var(--light-green) !important;
+						color: var(--light-green) !important;
 					}
 				}
 				&__modal {
