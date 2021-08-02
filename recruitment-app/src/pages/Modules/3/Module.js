@@ -261,7 +261,6 @@ function Module() {
                                 btnVal === 8?
                                 <div className="module3__body__main__mistake__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Too General</h1>
                                         <h2>Give a general answer not referring to a specific situation</h2>
                                         <h4>“I used to get lots of angry customers. How I dealt with them was to use my customer service skills and my empathy to show that I always put the customer first.”</h4>
@@ -273,7 +272,6 @@ function Module() {
                                 btnVal === 9?
                                 <div className="module3__body__main__mistake__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Team Focus</h1>
                                         <h2>Refer to team performance rather than focusing on what YOU did</h2>
                                         <h4>“Our team dealt with complaints so we had to talk to angry customers every day. We used to apply the skills we learned in our customer service training and if anyone had difficulties we all came in to help.”</h4>
@@ -284,7 +282,6 @@ function Module() {
                                 btnVal === 10?
                                 <div className="module3__body__main__mistake__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Job Focus</h1>
                                         <h2>Describe jobs you held when you had to deal with this kind of situation</h2>
                                         <h4>“I worked in a bar in the city centre where many of the customers drank heavily and would then get awkward, so I had to learn quickly how to deal with them. Later I became a receptionist in a busy hotel where the system kept breaking down and rooms were double booked regularly. This really upset the customers and I had to figure out how to calm them down.”</h4>
@@ -347,7 +344,6 @@ function Module() {
                                 btnVal === 11?
                                     <div className="module3__body__main__mistake__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Strengths</h1>
                                         <h2>Things you can do well</h2>
                                         <h4>Organise, Communicate, Plan Ahead, Work in a Team, Deal with Pressure</h4>
@@ -359,7 +355,6 @@ function Module() {
                                 btnVal === 12?
                                     <div className="module3__body__main__mistake__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Enthusiasm</h1>
                                         <h2>Intense and eager enjoyment</h2>
                                         <h4>Demonstrate this as you are describing your strengths</h4>
@@ -371,7 +366,6 @@ function Module() {
                                 btnVal === 13?
                                     <div className="module3__body__main__mistake__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Examples</h1>
                                         <h2>Times when you have demonstrated your strengths</h2>
                                         <h4>Illustrations of when you have shown your strengths</h4>

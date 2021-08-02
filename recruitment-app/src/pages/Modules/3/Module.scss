@@ -167,6 +167,7 @@
 						}
 						h1 {
 							margin: -3vh 0 2vh 0;
+							max-width: 95%;
 						}
 
 						h2::before {
@@ -422,18 +423,24 @@
 							margin: 0;
 						}
 						h1 {
-							margin: -12vh 0 0 0;
+							margin: -6vh 0 0 0;
 						}
 						h2 {
 							color: var(--light-green);
 							font-size: 1.3em;
 							margin-bottom: 1em;
+							max-width: 95%;
 						}
 						h4 {
 							font-weight: 400;
 							span {
 								padding-left: 20px;
 							}
+						}
+						h4::before {
+							content: "A";
+							color: var(--light-green);
+							margin: 0 20px 0 -30px;
 						}
 						p {
 							color: var(--light-green);
