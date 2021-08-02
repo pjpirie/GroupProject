@@ -1,13 +1,20 @@
 import React from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
-import './Module.css';
+import './Module.scss';
+import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal.js';
+import DoDontModal from '../../../components/DoDontModal/DoDontModal.js';
+import EffectiveImage from '../../../assets/1x/effective.png';
+import FocusImage from '../../../assets/1x/focus.png';
+import AwarenessImage from '../../../assets/1x/awareness.png';
+import TeamImage from '../../../assets/1x/team.png';
+import ConfidentImage from '../../../assets/1x/confident.png';
 
 
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download4', {
+        return fetch('https://group-54-rct.herokuapp.com/download3', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +27,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 4 Group Exercise Activity Sheet';
+                a.download = 'Module 3 RemoteVirtule Interview Activity Sheet';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -33,97 +40,71 @@ function Module() {
         DownloadMedia();
     };
     return (
-        <div className="Module__Page__Wrapper">
-            <div className="Module__Page__Header__Modules">
-                <div className="Module__Page__Header__Text">
-                    <h3>Module 4</h3>
+        <div className="module">
+            <div className="module__header">
+                <div className="module__header__text">
+                    <h3>Module Four</h3>
                     <h1>Group Exercise</h1>
                 </div>
                 <Eta time={15} />
             </div>
-            <div className="Module__Page__Body">
-                <div className="Module__Page__Video__Container">
+            <div className="module__body">
+                <div className="module__body__video">
                     <video id="Video" autoplay controls>
                         <source src="https://group-54-rct.herokuapp.com/video/4" type="video/mp4"></source>
                     </video>
                 </div>
-                <div className="Module__Page__Text">
+                <div className="module__body__main">
                     <p>
-                        This is a discussion exercise in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale.  <br />
-                        <br />
-                    These exercises can be structured in one of two ways: <br />
-                    1)	Assigned Roles: Each person is given relevant details of the scenario to be addressed together with an outline of his/her remit in the organisation with a few indicators of their position in relation to the topic being addressed. <br />
-                        <br />
-                    2)	Unassigned Roles:  <br />Each person is given relevant details of the scenario to be addressed and everyone in the group is free to deal with matters arising in whatever way they wish.
-                    In either structure candidates may be given a specified period for individual preparation or they may be directed to start the discussion immediately. <br />
-                        <br />
-                    The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork, leadership. <br />
-                        <br />
-                    Assessors will be looking for candidates to demonstrate competencies such as: <br />
-                        <br />
-                    •	Effective communication <br />
-                    •	Constructive team behaviours <br />
-                    •	Confident and assertive delivery of key messages <br />
-                    •	Focus on team goals <br />
-                    •	Awareness of time <br />
-
-
+                    This is a discussion exercise in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale. 
                     </p>
-                </div>
-                <div className="Module__Page__LearningPoints">
-                    <h2>Key Learning Points</h2>
-                    <p>Consequently, participants should focus on doing/not doing the following:</p>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>01</h4>
-                            <h3>Do:</h3>
+                    {/* Modal Button Section Start */}
+                    <div className="module__body__buttons">
+                        <p>These exercises can be structured in one of two ways</p>
+                        <ModuleButtonModal />
+                    </div>
+                    {/* Modal Button Section Start */}
+                    {/* Text Section Start */}
+                    <div className="textSection">
+                        <div className="textSection__large">
+                            <p>Important!</p>
+                            <h1>Sample Content{window.innerWidth >900 ? <br />: " "} but not too hard!</h1>
                         </div>
-                        <div className="Module__Page__Point__Body">
+                        <div className="textSection__small">
                             <p>
-                                - Be clear and concise when you speak. Ensure that you make eye contact with all of your colleagues in the team. <br />
-                                <br />
-                            - Ensure that your contributions are consistently constructive.  <br />
-                                <br />
-                            - Try to ensure that everybody in the group has opportunities to contribute. If necessary ask quieter members for their thoughts or opinions <br />
-                                <br />
-                            - Check how others are reacting to your contributions and adjust accordingly. For example, if people look disinterested or bored, change your style or stop talking. <br />
-                                <br />
-                            - If necessary be prepared to stand up for yourself and argue why your opinions are valid using conciliatory language. <br />
-                                <br />
-                            - Keep the group focused on reaching a conclusion. If necessary take on the role of timekeeper reminding your colleagues of the time at regular intervals. <br />
-
-
+                             The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork an leadership.<br />
+                            <span>••••••••••••••••••••••</span><br />
                             </p>
                         </div>
                     </div>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>02</h4>
-                            <h3>Don't:</h3>
-                        </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>
-                                - Do not interrupt or speak over others <br />
-                                <br />
-                            - Don’t criticise or moan. <br />
-                                <br />
-                            - Do not dominate the meeting. <br />
-                                <br />
-                            - Do not remain quiet for long periods. Even when you are not speaking, demonstrate your involvement through active body language (eye contact, nodding, etc.) <br />
-                            </p>
+                    {/* Text Section End */}
+                    {/* Competencies Section Start */}
+                    <div className="compSection">
+                        <p>Assessors will be looking for candidates to demonstrate competencies such as:</p>
+                        <div className="compSection__container">
+                            <img src={EffectiveImage} alt="Effective communication"/>
+                            <img src={FocusImage} alt="Focus on team goals"/>
+                            <img src={AwarenessImage} alt="Awareness of time"/>
+                            <img src={TeamImage} alt="Constructive team behavious"/>
+                            <img src={ConfidentImage} alt="Confident delivery of key messages"/>
                         </div>
                     </div>
-                </div>
-                <div className="Module__Page__Activity__Container">
-                    <div className="Module__Page__Activity__Header">
-                        <h2>Activity</h2>
+                    {/* Competencies Section End */}
+
+                    {/* Do's and Don'ts Section Start */}
+                    <div className="module__body__dodont">
+                        <h1>The do's and don'ts</h1>
+                        <DoDontModal />
                     </div>
-                    <div className="Module__Page__Activity__Body">
-                        <p>Download the Module 4 activity sheet and work through the exercises to be fully prepared for group exercises.</p>
+                    {/* Do's and Don'ts Section End */}
+
+                    {/* Activity Section Start */}
+                    <div className="module__body__activity">
+                        <h1>Now its time to work on your action plan</h1>
+                        <p>Download the Module 4 activity sheet and work througb the exercised to be fully prepared for group exercises.</p>
+                        <button onClick={() => { handleDownload(); }}>Download</button>
                     </div>
-                </div>
-                <div className="Module__Page__Btn__Container">
-                    <button onClick={() => { handleDownload(); }}>Download</button>
+                    {/* Activity Section End */}
                 </div>
             </div>
         </div>

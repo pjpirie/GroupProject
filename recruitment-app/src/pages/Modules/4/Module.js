@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
+import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal';
 
 function Module() {
 
