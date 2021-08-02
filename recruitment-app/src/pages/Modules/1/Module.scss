@@ -7,7 +7,7 @@
 		justify-content: center;
 		text-align: center;
 		&__top {
-			margin-bottom: 4em;
+			margin: 5em 0 4em 0;
 			h1 {
 				text-align: left;
 				margin-bottom: 1em;
@@ -97,6 +97,7 @@
 			}
 		}
 		&__tips {
+			margin-bottom: 3em;
 			h1 {
 				color: var(--light-green);
 				text-align: left;

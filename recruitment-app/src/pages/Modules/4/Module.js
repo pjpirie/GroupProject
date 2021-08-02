@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
-import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal';
+import ModuleLogo from '../ModuleLogo.js';
 
 function Module() {
 
@@ -50,6 +50,7 @@ function Module() {
 
     return (
         <div className="module4">
+            <ModuleLogo />
             <div className="module4__header">
                 <div>
                     <h4>MODULE THREE</h4>

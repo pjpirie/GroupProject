@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
+import ModuleLogo from '../ModuleLogo.js';
+
 
 function Module() {
 
@@ -54,6 +56,7 @@ function Module() {
 
     return (
         <div className="module3">
+            <ModuleLogo />
             <div className="module3__header">
                 <div>
                     <h4>MODULE TWO</h4>

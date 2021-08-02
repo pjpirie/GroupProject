@@ -3,6 +3,7 @@ import Eta from '../../../components/ETA/Eta';
 import Feature1 from '../../../assets/v2/guidebean1.svg';
 import Feature2 from '../../../assets/v2/guidebean2.svg';
 import Feature3 from '../../../assets/v2/guidebean3.svg';
+import ModuleLogo from '../ModuleLogo.js';
 import '../ModuleGlobal.css';
 import '../ModuleGlobal.responsive.css';
 import './Module.scss';
