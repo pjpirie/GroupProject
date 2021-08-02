@@ -1,0 +1,45 @@
+.module {
+
+    &__header{
+        max-width: 100vw;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    
+        &__text{
+            display: flex;
+            flex-direction: column;
+
+            h3{
+
+            }
+            h1{
+
+            }
+        }
+    }
+
+    &__body{
+
+        &__video{
+            max-width: 90vw;
+            width: 100%;
+
+            video{
+                max-width: 90vw;
+                width: 100%;
+            }
+        }
+
+        &__main{
+
+            &__text{
+
+
+            }
+        }
+
+    }
+}

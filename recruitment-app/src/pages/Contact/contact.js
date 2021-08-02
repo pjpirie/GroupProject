@@ -7,7 +7,6 @@ import './contact.scss';
 function Contact() {
 
     const [display, setDisplay] = useState(false);
-
     const handelSubmit = (e) =>{
 
         e.preventDefault()

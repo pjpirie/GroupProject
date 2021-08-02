@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Fragment, useState, useEffect } from 'react';
 import './ModuleButtonModal.scss';
 import CloseButtonImage from '../../assets/1x/closeicon.png';
@@ -155,6 +156,14 @@ const ModuleButtonModal = (props) => {
                 }
                 </Fragment>
             )}
+=======
+import React from 'react';
+
+const ModuleButtonModal = (props) => {
+    console.debug(props.children);
+    return (
+        <div>
+>>>>>>> v2c
             
         </div>
     );
