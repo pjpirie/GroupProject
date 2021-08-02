@@ -1,4 +1,4 @@
-.module4 {
+.module6 {
 	width: 70vw;
 	&__header {
 		display: flex;
@@ -82,12 +82,6 @@
 					width: 100%;
 				}
 				&__wrapper {
-					display: flex;
-					flex-direction: row !important;
-					flex-wrap: wrap;
-					width: 50%;
-					justify-content: center;
-					align-items: center;
 					button {
 						background: var(--light-green);
 						border: none;
@@ -149,14 +143,38 @@
 					}
 				}
 			}
-			&__example {
+			&__interview {
+				display: flex;
+				flex-direction: row;
 				margin-bottom: 5em;
-				h1 {
-					font-weight: 400;
-					margin-top: 2em;
+				&__left,
+				&__right {
+					width: 50%;
+					min-height: 30vh;
 				}
-				p {
-					margin-top: 2em;
+				&__left {
+					text-align: left;
+					padding: 0 5vw 0 1vw;
+
+					h4 {
+						color: var(--light-green);
+						font-size: 1.5em;
+					}
+					h3 {
+						font-size: 2.4em;
+						font-weight: 300 !important;
+					}
+				}
+				&__right {
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-end;
+					margin-left: 10vw;
+					border-bottom: 6px dotted var(--orange-bg);
+					h3 {
+						text-align: left;
+						font-weight: 300 !important;
+					}
 				}
 			}
 			&__consider {
@@ -218,8 +236,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module__body__main__text,
-	.module__body__main__interview {
+	.module__body__main__text {
 		flex-direction: column;
 		&__right,
 		&__left {

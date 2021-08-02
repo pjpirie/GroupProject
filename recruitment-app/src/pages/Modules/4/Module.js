@@ -36,55 +36,55 @@ function Module() {
 
     const modalOpen =(num)=>{
         btnClick(num)
-        let active = document.querySelector('.module__body__main__buttons__wrapper__active')
+        let active = document.querySelector('.module4__body__main__buttons__wrapper__active')
         if(active){
-            active.classList.remove('module__body__main__buttons__wrapper__active')
+            active.classList.remove('module4__body__main__buttons__wrapper__active')
         }
-        document.querySelector(`#btn${num}`).classList.add('module__body__main__buttons__wrapper__active')
+        document.querySelector(`#btn${num}`).classList.add('module4__body__main__buttons__wrapper__active')
     }
     const modalClose=()=>{
         btnClick(0)
-        document.querySelector('.module__body__main__buttons__wrapper__active').classList.remove('module__body__main__buttons__wrapper__active')
+        document.querySelector('.module4__body__main__buttons__wrapper__active').classList.remove('module4__body__main__buttons__wrapper__active')
     }
 
     return (
-        <div className="module">
-            <div className="module__header">
+        <div className="module4">
+            <div className="module4__header">
                 <div>
                     <h4>MODULE THREE</h4>
                     <h1>Virtual Interview</h1>
                 </div>
                 <Eta time={10} />
             </div>
-            <div className="module__body">
-                <div className="module__body__video">
+            <div className="module4__body">
+                <div className="module4__body__video">
                     <video id="Video" autoplay controls>
                         <source src="https://group-54-rct.herokuapp.com/video/3" type="video/mp4"></source>
                     </video>
                 </div>
-                <div className="module__body__main">
+                <div className="module4__body__main">
                     <p>
                         Increasingly organisations are conducting recruitment remotely. <br/>
                         Some basic elements are the same as in face to face events, however, some additional <br/> factors have to be considered.
                     </p>
-                    <div className="module__body__main__text">
-                        <div className="module__body__main__text__left">
+                    <div className="module4__body__main__text">
+                        <div className="module4__body__main__text__left">
                             <h4>Preparation is Key</h4>
                             <h3>You may be asked to bring along some personal documents.</h3>
                         </div>
-                        <div className="module__body__main__text__right">
+                        <div className="module4__body__main__text__right">
                             <h3>When you are invited to attend a virtual assessment a briefing email will normally arrive containing instructions on how to join on the day. There may also be some administration and ID tasks to be completed.</h3>
                         </div>
                     </div>
-                    <div className="module__body__main__buttons">
+                    <div className="module4__body__main__buttons">
                         <p>Keep in mind some things you can do to ensure a smooth virtual interview</p>
-                        <div className="module__body__main__buttons__wrapper">
-                            <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module__body__main__buttons__wrapper__1">Documentation</button>
-                            <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module__body__main__buttons__wrapper__2">Connectivity</button> <br />
-                            <button value="Appearance" onClick={()=>modalOpen(3)} id="btn3" className="module__body__main__buttons__wrapper__3">Appearance</button>
-                            <button value="Location" onClick={()=>modalOpen(4)} id="btn4" className="module__body__main__buttons__wrapper__4">Location</button>
+                        <div className="module4__body__main__buttons__wrapper">
+                            <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module4__body__main__buttons__wrapper__1">Documentation</button>
+                            <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module4__body__main__buttons__wrapper__2">Connectivity</button> <br />
+                            <button value="Appearance" onClick={()=>modalOpen(3)} id="btn3" className="module4__body__main__buttons__wrapper__3">Appearance</button>
+                            <button value="Location" onClick={()=>modalOpen(4)} id="btn4" className="module4__body__main__buttons__wrapper__4">Location</button>
                         </div>
-                        <div className="module__body__main__buttons__modal">
+                        <div className="module4__body__main__buttons__modal">
                             {
                                 btnVal === 0?
                                 <>
@@ -93,7 +93,7 @@ function Module() {
                             }
                             {
                                 btnVal === 1?
-                                    <div className="module__body__main__buttons__modal__show">
+                                    <div className="module4__body__main__buttons__modal__show">
                                     <button onClick={modalClose}>X</button>
                                         <h1>Documentation</h1>
                                         <h4>You may be required to bring along your Passport or other documents confirming your right to work and address etc.</h4>
@@ -103,7 +103,7 @@ function Module() {
                             }
                             {
                                 btnVal === 2?
-                                    <div className="module__body__main__buttons__modal__show">
+                                    <div className="module4__body__main__buttons__modal__show">
                                         <button onClick={modalClose}>X</button>
                                         <h1>Connectivity</h1>
                                         <h4>
@@ -120,8 +120,8 @@ function Module() {
                             }
                             {
                                 btnVal === 3?
-                                    <div className="module__body__main__buttons__modal__show">
-                                    <button onClick={modalClose}>X</button>
+                                    <div className="module4__body__main__buttons__modal__show">
+                                        <button onClick={modalClose}>X</button>
                                         <h1>Appearance</h1>
                                         <h4>
                                             • Dress appropriately, as if you were attending in person. <br />
@@ -130,17 +130,13 @@ function Module() {
                                             <span />- Minimise your movement without appearing stiff  <br />
                                             <span />- Make eye contact.   <br />
                                         </h4>
-                                        <p>Note</p>
-                                        <h5>This will require you to look directly at your  webcam or camera, so avoid looking at the interviewer(s) on your screen.</h5>
-                                        
-
                                     </div>
                                 :null
                             }
                             {
                                 btnVal === 4?
-                                    <div className="module__body__main__buttons__modal__show">
-                                    <button onClick={modalClose}>X</button>
+                                    <div className="module4__body__main__buttons__modal__show">
+                                        <button onClick={modalClose}>X</button>
                                         <h1>Location</h1>
                                         <h4>
                                             • Position yourself in a comfortable, bright space. <br />
@@ -152,25 +148,25 @@ function Module() {
                         </div>
                     </div>                        
                     <p>Pre-recorded Interviews</p>
-                    <div className="module__body__main__interview">
-                        <div className="module__body__main__interview__left">
+                    <div className="module4__body__main__interview">
+                        <div className="module4__body__main__interview__left">
                             <h4>Be prepared</h4>
                             <h3>Many organisations require candidates to complete pre-recorded interviews.</h3>
                         </div>
-                        <div className="module__body__main__interview__right">
+                        <div className="module4__body__main__interview__right">
                             <h3>Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation.</h3>
                         </div>
                     </div>
-                    <div className="module__body__main__consider">
+                    <div className="module4__body__main__consider">
                         <h1>Things to Consider</h1>
                         <h3>Dress to Impress</h3>
                         <h4>Although you will not be face to face you should consider how to dress as you will be visible to the interviewer. </h4>
                         <h3>Prepare your Answers</h3>
                         <h4>You will be given the question a very short time in advance. Focus intensely on understanding what is being asked and formulate a quick outline plan.</h4>
                         <h3>Monitor Time</h3>
-                        <h4>One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use as most, or all, the time available. This will require you to monitor time taken in an unobtrusive way. </h4>
+                        <h4>One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use most, or all of the time available. This will require you to monitor time in an unobtrusive way. </h4>
                     </div>
-                    <div className="module__body__main__download">
+                    <div className="module4__body__main__download">
                         <h2>Now it's time to work on you action plan</h2>
                         <h3>Download the Module 4 activity sheet and work through the exercises to be fully prepared for group exercises.</h3>
                         <button onClick={handleDownload}>Download</button>

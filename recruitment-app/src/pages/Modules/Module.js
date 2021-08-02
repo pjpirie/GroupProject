@@ -14,7 +14,7 @@ import './Module.scss'
 
 function Module() {
     return (
-        <div className="module">
+        <div className="module6">
             <div className="module__head">
                 <div className="module__head__left">
                     <h4 className="module__head__left__h4">About Our Program</h4>
