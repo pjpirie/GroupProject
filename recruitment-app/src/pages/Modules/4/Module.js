@@ -149,12 +149,12 @@ function Module() {
                         </div>
                     </div>                        
                     <p>Pre-recorded Interviews</p>
-                    <div className="module4__body__main__interview">
-                        <div className="module4__body__main__interview__left">
+                    <div className="module4__body__main__text">
+                        <div className="module4__body__main__text__left">
                             <h4>Be prepared</h4>
                             <h3>Many organisations require candidates to complete pre-recorded interviews.</h3>
                         </div>
-                        <div className="module4__body__main__interview__right">
+                        <div className="module4__body__main__text__right">
                             <h3>Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation.</h3>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ function Module() {
                     </div>
                     <div className="module4__body__main__download">
                         <h2>Now it's time to work on you action plan</h2>
-                        <h3>Download the Module 4 activity sheet and work through the exercises to be fully prepared for group exercises.</h3>
+                        <h3>Download the Module 3 activity sheet and work through the exercises to be fully prepared for group exercises.</h3>
                         <button onClick={handleDownload}>Download</button>
                     </div>
                 </div>

@@ -68,7 +68,7 @@ function Module() {
                     </video>
                 </div>
                 <div className="module3__body__main">
-                    <p>Interviews can be a daunting and nerve-racking experience but you can prepare to succeed with the tips and techniques within this module. Learn all about the three styles of questions you may experience at your next interview and start preparing your answers today.</p>
+                    <p className="module3__body__main__p">Interviews can be a daunting and nerve-racking experience but you can prepare to succeed with the tips and techniques within this module. Learn all about the three styles of questions you may experience at your next interview and start preparing your answers today.</p>
                     <div className="module3__body__main__text">
                         <div className="module3__body__main__text__left">
                             <h3>Follow the tips and techniques below to ace your interview</h3>
@@ -212,7 +212,6 @@ function Module() {
                                 btnVal === 5?
                                     <div className="module3__body__main__star__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Task</h1>
                                         <h2>What were you trying to achieve in this situation?</h2>
                                         <h4>“I tried to resolve this customer’s problem in the most effective way for her and for the business”                                  </h4>
@@ -224,7 +223,6 @@ function Module() {
                                 btnVal === 6?
                                     <div className="module3__body__main__star__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Action</h1>
                                         <h2>What did you do? What actions did you take?</h2>
                                         <h4>“Firstly I began to calm her down by indicating that I was sorry that she was upset and I assured her that I would help. Then I asked her to tell me what was the problem. I assured her that I could resolve this and offered to exchange the item or give her a refund provided she had the receipt”.</h4>
@@ -236,7 +234,6 @@ function Module() {
                                 btnVal === 7?
                                     <div className="module3__body__main__star__modal__show">   
                                         <button onClick={modalClose}>X</button>
-                                        <p>A</p>
                                         <h1>Result</h1>
                                         <h2>What was the overall outcome?</h2>
                                         <h4>“The customer calmed down and I showed her a number of other jackets and she chose one, apologised for shouting and left the store”.</h4>

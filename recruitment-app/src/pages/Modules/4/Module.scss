@@ -28,7 +28,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-bottom: 1em;
+			margin-bottom: 3em;
 			video {
 				width: 100%;
 			}
@@ -38,7 +38,7 @@
 			p {
 				line-height: 1.5em;
 				font-size: 1.5em;
-				margin-bottom: 1em;
+				margin-bottom: 3em;
 			}
 			&__text {
 				display: flex;
@@ -79,6 +79,7 @@
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
+				margin-bottom: 5em;
 				p {
 					width: 100%;
 				}
@@ -86,7 +87,7 @@
 					display: flex;
 					flex-direction: row !important;
 					flex-wrap: wrap;
-					width: 50%;
+					width: 80%;
 					justify-content: center;
 					align-items: center;
 					button {
@@ -94,7 +95,7 @@
 						border: none;
 						border-radius: 15px;
 						height: 4em;
-						min-width: 10em;
+						width: 20em;
 						font-weight: 400;
 						// padding: 1em;
 						color: #fff;
