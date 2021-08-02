@@ -99,7 +99,7 @@
         flex-direction: column;
         @include media("<=900px"){
             align-self: flex-start;
-            margin-left: 10vw;
+            margin-left: 0vw;
             width: auto;
             max-width: 70vw;
         }
@@ -137,7 +137,7 @@
         }
         @include media("<=900px"){
             align-self: flex-end;
-            margin-right: 10vw;
+            margin-right: 0vw;
             width: auto;
             max-width: 70vw;
         }

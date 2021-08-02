@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import HashLoader from 'react-spinners/HashLoader';
 import { setAccount, setLogged, setRedirect, setSideNavOpen } from './actions';
-import './App.css';
+import './App.scss';
 import AlertBox from './components/AlertBox/AlertBox';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Header/Navbar';
@@ -63,13 +63,13 @@ function App() {
     });
   }
   
-  // useEffect(() => {
-  //   checkAuth();
-  //   setLoading(true);
-  //   setTimeout(()=> {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, [])
+  useEffect(() => {
+    checkAuth();
+    setLoading(true);
+    setTimeout(()=> {
+      setLoading(false);
+    }, 3000);
+  }, [])
   
   if(loading){
     return (
