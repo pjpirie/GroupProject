@@ -1,10 +1,9 @@
-.module6 {
+.modulefront {
 	background-image: url("../../assets/v2/about-dec-1.svg");
 	background-position: top;
 	background-position-y: 6em;
 	background-position-x: 80%;
 	background-repeat: no-repeat;
-	//
 	max-width: 80vw;
 	min-height: 100vh;
 	margin: 0 auto 8em auto;
@@ -212,14 +211,6 @@
 				align-items: center;
 				justify-content: center;
 				margin-bottom: 10em;
-				// &__mark::before {
-				// 	font-size: 20em;
-				// 	content: open-quote;
-				// 	display: flex;
-				// 	width: 0.5em;
-				// 	height: 0.5em;
-				// 	color: var(--light-green);
-				// }
 				h2,
 				h3,
 				h4 {
@@ -344,11 +335,6 @@
 							}
 							&__img3 {
 								margin-left: 50% !important;
-							}
-							h4 {
-								// margin: -8em auto !important;
-							}
-							&__heading1 {
 							}
 							&__heading2 {
 								transform: translateY(-150%) translateX(-90%);
