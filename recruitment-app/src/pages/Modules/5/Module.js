@@ -14,7 +14,7 @@ import ConfidentImage from '../../../assets/1x/confident.png';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download3', {
+        return fetch('https://group-54-rct.herokuapp.com/download4 ', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'

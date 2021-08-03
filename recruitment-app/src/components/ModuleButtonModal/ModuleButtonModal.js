@@ -26,28 +26,28 @@ const ModuleButtonModal = (props) => {
                             setModal2Open(false);
                             setModal3Open(false);
                             setModal4Open(false);
-                            } }>Read</button>
+                            } }>The Brief</button>
 
                         <button btnID="2" onClick={ () => { 
                             setModal1Open(false); 
                             setModal2Open(!Modal2Open);
                             setModal3Open(false);
                             setModal4Open(false);
-                            } }>Manage Time</button>
+                            } }>Role Play</button>
 
                         <button btnID="3" onClick={ () => { 
                             setModal1Open(false); 
                             setModal2Open(false);
                             setModal3Open(!Modal3Open);
                             setModal4Open(false);
-                            } }>Language</button>
+                            } }>Preperation</button>
 
                         <button btnID="4" onClick={ () => { 
                             setModal1Open(false); 
                             setModal2Open(false);
                             setModal3Open(false);
                             setModal4Open(!Modal4Open);
-                            } }>Be Clear</button>
+                            } }>Observation</button>
                     </Fragment>
                 ):(
                     <Fragment>
@@ -69,7 +69,7 @@ const ModuleButtonModal = (props) => {
                                             {/* <CloseIcon /> */}
                                             <img src={CloseButtonImage} alt="Close Button"/>
                                         </div>
-                                        <p textID="1">Read through all of the information provided and identify the key points which you are asked to address. Highlight these and keep them visible as you prepare your answer, regularly checking that you are still on track and providing only relevant information.</p>
+                                        <p textID="1">The candidate is given a brief with instructions to try to achieve a particular outcome. The role player has an outline to follow which is different from the one given to the candidate. The candidate has to negotiate an amicable resolution which achieves the goal(s) whilst placating the role player.</p>
                                     </Fragment>
 
                                 ): (null)
@@ -81,7 +81,7 @@ const ModuleButtonModal = (props) => {
                                             {/* <CloseIcon /> */}
                                             <img src={CloseButtonImage} alt="Close Button"/>
                                         </div>
-                                        <p textID="2">Construct an outline plan. Allocate time limits for each part of your answer and regularly monitor your progress against these. Allow sufficient time at the end to check that you have done everything requested as you review your work checking spelling and grammar.
+                                        <p textID="2">The role player brief will test the candidate by raising challenging issues and they will respond according to how the candidate addresses these. Consequently, it is very important to respond to what the role player says and does whilst staying focused on the initial brief. A balanced approach together with demonstrating effective interpersonal skills is essential.
                                         </p>
                                     </Fragment>
 
@@ -94,7 +94,8 @@ const ModuleButtonModal = (props) => {
                                             {/* <CloseIcon /> */}
                                             <img src={CloseButtonImage} alt="Close Button"/>
                                         </div>
-                                        <p textID="2">Use language which is straightforward, jargon free and provides the specific information which is being asked for.</p>
+                                        <p textID="2">During the preparation time it is important to consider the required outcome and how to deal with possible arguments the role player might use and their potential reactions to any proposals put forward.  Study the brief in detail and think about ways to achieve the outcome your character wants. 
+                                        </p>
                                     </Fragment>
 
                             ): (null)
@@ -106,7 +107,8 @@ const ModuleButtonModal = (props) => {
                                             {/* <CloseIcon /> */}
                                             <img src={CloseButtonImage} alt="Close Button"/>
                                         </div>
-                                        <p textID="2">Ensure that your conclusions and recommendations are specific and unambiguous.</p>
+                                        <p textID="2">During the exercise the candidate will be assessed by the role player, an observer or the interaction will be recorded on camera.
+                                        </p>
                                     </Fragment>
 
                             ): (null)
