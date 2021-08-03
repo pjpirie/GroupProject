@@ -43,7 +43,7 @@
 			&__text {
 				display: flex;
 				flex-direction: row;
-				margin-bottom: 5em;
+				margin-bottom: 10em;
 				&__left,
 				&__right {
 					width: 50%;
@@ -84,8 +84,12 @@
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
+				h1 {
+					margin-bottom: 1em;
+				}
 				p {
 					max-width: 70%;
+					margin-bottom: 1em;
 				}
 				h6 {
 					font-size: 1.2em;
@@ -99,6 +103,7 @@
 					width: 30em;
 					justify-content: center;
 					align-items: center;
+					margin-bottom: 3em;
 					button {
 						background: var(--light-green);
 						border: none;
@@ -172,12 +177,12 @@
 
 						h2::before {
 							content: "A";
-							padding-right: 1.1em;
-							margin-left: -1.75em;
+							padding-right: 1.2em;
+							margin-left: -1.9em;
 							color: var(--light-green);
 						}
 						h2 {
-							font-size: 1.7em;
+							font-size: 1.4em;
 							font-weight: 400 !important;
 							span {
 								color: var(--light-green);
@@ -217,7 +222,7 @@
 				// border: 1px solid rgba(255, 255, 255, 0.16);
 				border-radius: 15px;
 				margin: 0 auto 10em auto;
-				width: 80%;
+				width: 100%;
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
@@ -238,20 +243,24 @@
 				}
 			}
 			&__questions {
+				display: flex;
+				flex-direction: column;
 				margin-top: 4em;
 				h1 {
 					font-size: 2em;
 				}
 				p {
-					margin-top: 2em;
+					margin: 4em auto;
 					font-size: 1.1em !important;
+					max-width: 50%;
+					text-align: center;
 				}
 				&__box {
 					box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
 					border: 1px solid rgba(255, 255, 255, 0.16);
 					border-radius: 15px;
 					margin: 2em auto 10vh auto;
-					width: 70%;
+					width: 100%;
 					display: flex;
 					justify-content: center;
 					flex-direction: column;
@@ -261,7 +270,7 @@
 						margin-bottom: 1em;
 					}
 					p {
-						margin: 10px 0 10px 0;
+						margin: 10px auto 10px auto;
 					}
 				}
 			}
@@ -375,7 +384,6 @@
 				}
 				&__wrapper {
 					display: flex;
-					// flex-direction: column !important;
 					justify-content: center;
 					align-items: center;
 					button {
@@ -483,7 +491,7 @@
 					border: 1px solid rgba(255, 255, 255, 0.16);
 					border-radius: 15px;
 					margin: 5em auto 10em auto;
-					width: 80%;
+					width: 100%;
 					display: flex;
 					justify-content: center;
 					flex-direction: column;
@@ -524,7 +532,7 @@
 						border-radius: 15px;
 						height: 4em;
 						min-width: 20em !important;
-						font-weight: 600;
+						font-weight: 700 !important;
 						color: var(--light-green);
 						margin: 2vh 5vw 2vh 5vw;
 					}
@@ -624,18 +632,42 @@
 }
 
 @media (max-width: 1200px) {
-	.module3__body__main__text,
-	.module3__body__main__interview {
-		flex-direction: column;
-		&__right,
-		&__left {
-			width: 100%;
-			min-height: 1px;
-			margin: 0;
-			text-align: center !important;
+	.module3__body__main {
+		&__text,
+		&__interview,
+		&__mistake__wrapper {
+			flex-direction: column;
+			&__right,
+			&__left {
+				width: 100%;
+				min-height: 1px;
+				margin: 0;
+				text-align: center !important;
+			}
+			&__right {
+				margin-top: 4em;
+			}
 		}
-		&__right {
-			margin-top: 4em;
+		&__mistake {
+			h1::before,
+			h1::after {
+				content: none !important;
+			}
+		}
+		&__buttons__modal,
+		&__star__modal,
+		&__mistake__modal {
+			width: 100% !important;
+			margin: 0 auto;
+			&__show {
+				width: 100%;
+			}
+			button {
+				margin-right: -50px;
+			}
+		}
+		&__card {
+			width: 100%;
 		}
 	}
 }
