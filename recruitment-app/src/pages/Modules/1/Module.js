@@ -3,16 +3,14 @@ import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import '../ModuleGlobal.responsive.css';
 import './Module.scss';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 
 function Module() {
 
-    const handleDownload = () => {
-        // alert();
-
-    };
     return (
         <div className="Module__Page__Wrapper">
+            <RSDPModuleLogo/>
             <div className="Module__Page__Header__Modules">
                 <div className="Module__Page__Header__Text">
                     <h3>Module 0</h3>
