@@ -1,45 +1,236 @@
-.module {
+.module4 {
+	width: 70vw;
+	margin: 0 auto;
+	&__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 3px;
+		h4 {
+			margin-top: 1em;
+			border-radius: 15px;
+			background-color: var(--orange-bg);
+			color: var(--orange);
+			text-align: center;
+			width: 10em;
+			height: 2em;
+			padding-top: 0.3em;
+			font-size: 1em;
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		&__video {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 1em;
+			video {
+				width: 100%;
+			}
+		}
+		&__main {
+			align-items: center;
+			p {
+				line-height: 1.5em;
+				font-size: 1.5em;
+				margin-bottom: 1em;
+			}
+			&__text {
+				display: flex;
+				flex-direction: row;
+				margin-bottom: 5em;
+				&__left,
+				&__right {
+					width: 50%;
+					min-height: 30vh;
+				}
+				&__left {
+					text-align: left;
+					padding: 0 5vw 0 1vw;
 
-    &__header{
-        max-width: 100vw;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+					h4 {
+						color: var(--light-green);
+						font-size: 1.5em;
+					}
+					h3 {
+						font-size: 2.4em;
+						font-weight: 300 !important;
+					}
+				}
+				&__right {
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-end;
+					margin-left: 10vw;
+					border-bottom: 6px dotted var(--orange-bg);
+					h3 {
+						text-align: left;
+						font-weight: 300 !important;
+					}
+				}
+			}
+			&__buttons {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				p {
+					width: 100%;
+				}
+				&__wrapper {
+					display: flex;
+					flex-direction: row !important;
+					flex-wrap: wrap;
+					width: 50%;
+					justify-content: center;
+					align-items: center;
+					button {
+						background: var(--light-green);
+						border: none;
+						border-radius: 15px;
+						height: 4em;
+						min-width: 10em;
+						font-weight: 400;
+						// padding: 1em;
+						color: #fff;
+						margin: 2vh 5vw 2vh 5vw;
+					}
+					&__active {
+						background: #fff !important;
+						border: 1px solid var(--light-green) !important;
+						color: var(--light-green) !important;
+					}
+				}
+				&__modal {
+					&__show {
+						padding: 3em 2em 3em 2em;
+						width: 40vw;
+						text-align: left !important;
+						display: flex;
+						flex-direction: column;
+						box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+						border-radius: 15px;
+						margin-bottom: 5em;
+						button {
+							cursor: pointer;
+							font-size: 2em;
+							align-self: flex-end;
+							text-align: center;
+							border: none;
+							border-radius: 100%;
+							background-color: var(--light-green);
+							color: #fff;
+							width: 1em;
+							z-index: 1;
+						}
+						h1 {
+							margin: -3vh 0 2vh 0;
+						}
+						h4 {
+							font-weight: 400;
+							span {
+								padding-left: 20px;
+							}
+						}
+						p {
+							color: var(--light-green);
+							font-size: 1em;
+							margin-top: 1em;
+						}
+						h5 {
+							font-size: 1em;
+							font-weight: 300;
+							transform: translate(10%, -94%);
+						}
+					}
+				}
+			}
+			&__example {
+				margin-bottom: 5em;
+				h1 {
+					font-weight: 400;
+					margin-top: 2em;
+				}
+				p {
+					margin-top: 2em;
+				}
+			}
+			&__consider {
+				box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+				// border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 15px;
+				margin: 0 auto 10vh auto;
+				width: 80%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				padding: 5vh 10% 0 10%;
+				h1 {
+					margin-bottom: 3vh;
+				}
+				h3 {
+					text-align: left;
+					color: var(--light-green) !important;
+					font-size: 1.4em;
+				}
+				h4 {
+					text-align: left;
+					margin-bottom: 5vh;
+					font-size: 1.2em;
+					font-weight: 300;
+				}
+			}
+			&__download {
+				h2 {
+					font-size: 2em;
+					margin-bottom: 1vh;
+					font-weight: 200;
+				}
+				h3 {
+					font-size: 1.5em;
+					font-weight: 500 !important;
+					max-width: 50%;
+					margin: 0 auto;
+				}
+				button {
+					display: flex;
+					margin: 2em auto;
+					color: #fff;
+					background: var(--light-green);
+					border: none;
+					border-radius: 15px;
+					font-size: 1.3em;
+					padding: 10px;
+					width: 10em;
+					align-items: center;
+				}
+				button::before {
+					content: url("../../../assets/v2/download-icon.svg");
+					margin: 0 1em 0 0;
+				}
+			}
+		}
+	}
+}
 
-    
-        &__text{
-            display: flex;
-            flex-direction: column;
-
-            h3{
-
-            }
-            h1{
-
-            }
-        }
-    }
-
-    &__body{
-
-        &__video{
-            max-width: 90vw;
-            width: 100%;
-
-            video{
-                max-width: 90vw;
-                width: 100%;
-            }
-        }
-
-        &__main{
-
-            &__text{
-
-
-            }
-        }
-
-    }
+@media (max-width: 1200px) {
+	.module__body__main__text,
+	.module__body__main__interview {
+		flex-direction: column;
+		&__right,
+		&__left {
+			width: 100%;
+			min-height: 1px;
+			margin: 0;
+			text-align: center !important;
+		}
+		&__right {
+			margin-top: 4em;
+		}
+	}
 }
