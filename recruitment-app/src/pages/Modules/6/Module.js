@@ -9,6 +9,7 @@ import FocusImage from '../../../assets/1x/focus.png';
 import AwarenessImage from '../../../assets/1x/awareness.png';
 import TeamImage from '../../../assets/1x/team.png';
 import ConfidentImage from '../../../assets/1x/confident.png';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 
 function Module() {
@@ -20,33 +21,34 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-            .then(res => res.blob())
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
-                // the filename you want
-                a.download = 'Module 6 Written Exercise Activity Sheet';
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                // alert('your file has downloaded!'); // or you know, something with better UX...
-            })
-            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
+        .then(res => res.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            // the filename you want
+            a.download = 'Module 6 Written Exercise Activity Sheet';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            // alert('your file has downloaded!'); // or you know, something with better UX...
+        })
+        .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
-
+    
     const handleDownload = () => {
         DownloadMedia();
     };
     return (
         <div className="module">
+            <RSDPModuleLogo />
             <div className="module__header">
                 <div className="module__header__text">
                     <h3>Module Five</h3>
                     <h1>Role Play</h1>
                 </div>
-                <Eta time={15} />
+                <Eta time={10} />
             </div>
             <div className="module__body">
                 <div className="module__body__video">
@@ -85,7 +87,7 @@ function Module() {
                     </div>
                     {/* Modal Button Section Start */}
                     {/* Competencies Section Start */}
-                    <div className="intray">
+                    {/* <div className="intray">
                         <p>Written Exercise Example - In Tray Exercise</p>
                         <div className="intray__container">
                             <p>
@@ -98,10 +100,7 @@ function Module() {
 
                                 </p>
                         </div>
-                    </div>
-                    {/* Competencies Section End */}
-
-                    {/* Do's and Don'ts Section Start */}
+                    </div> */}
                     <div className="module__body__key">
                         <h1>Things to Remember</h1>
 
@@ -127,12 +126,19 @@ function Module() {
                         </div>
                         
                     </div>
+                    {/* Competencies Section End */}
+
+                    {/* Do's and Don'ts Section Start */}
+                    <div className="module__body__dodont">
+                        <h1>The do's and don'ts</h1>
+                        <DoDontModal module={5}/>
+                    </div>
                     {/* Do's and Don'ts Section End */}
 
                     {/* Activity Section Start */}
                     <div className="module__body__activity">
                         <h1>Now its time to work on your action plan</h1>
-                        <p>Download the Module 6 activity sheet and work througb the exercised to be fully prepared for written exercises.</p>
+                        <p>Download the Module 4 activity sheet and work through the exercised to be fully prepared for role play exercises</p>
                         <button onClick={() => { handleDownload(); }}>Download</button>
                     </div>
                     {/* Activity Section End */}

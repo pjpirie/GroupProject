@@ -30,21 +30,42 @@ const DoDontModal = (props) => {
                                 {/* <CloseIcon /> */}
                                 <img src={CloseButtonImage} alt="Close Button"/>
                             </div>
-                            <p textID="1">
-                                - Be clear and concise when you speak. Ensure that you make eye contact with all of your colleagues in the team. <br /><br />
+                            {
+                                props.module !== 5 ?
+                                (
+                                <p textID="1">
+                                    - Be clear and concise when you speak. Ensure that you make eye contact with all of your colleagues in the team. <br /><br />
 
-                                - Ensure that your contributions are consistently constructive. <br /><br />
+                                    - Ensure that your contributions are consistently constructive. <br /><br />
 
-                                - Try to ensure that everybody in the group has opportunities to contribute. If necessary ask quieter members for their thoughts or opinions<br /><br />
+                                    - Try to ensure that everybody in the group has opportunities to contribute. If necessary ask quieter members for their thoughts or opinions<br /><br />
 
-                                - Check how others are reacting to your contributions and adjust accordingly. For example, if people look disinterested or bored, change your style or stop talking.<br /><br />
+                                    - Check how others are reacting to your contributions and adjust accordingly. For example, if people look disinterested or bored, change your style or stop talking.<br /><br />
 
-                                - If necessary be prepared to stand up for yourself and argue why your opinions are valid using conciliatory language.<br /><br />
+                                    - If necessary be prepared to stand up for yourself and argue why your opinions are valid using conciliatory language.<br /><br />
 
-                                - Keep the group focused on reaching a conclusion. If necessary take on the role of timekeeper reminding your colleagues of the time at regular intervals.<br /><br />
+                                    - Keep the group focused on reaching a conclusion. If necessary take on the role of timekeeper reminding your colleagues of the time at regular intervals.<br /><br />
+                                </p>
+                                )
+                                :
+                                (
+                                <p textID="1">
+                                    - Use the preparation time effectively by identifying key issues, anticipating possible   positions which the role player may take and preparing general reactions to these.<br /><br />
+
+                                    - Take time at the outset to build rapport with the role player by introducing yourself, asking about him/her before raising the issues in your brief.<br /><br />
+
+                                    - Monitor time carefully but unobtrusively.<br /><br />
+
+                                    - Listen “actively”. Show that you are listening.<br /><br />
+
+                                    - Summarise and outline next steps at the end of the meeting.<br /><br />
 
 
-                            </p>
+
+                                </p>
+                                )
+                            }
+                            
                         </Fragment>
 
                     ): (null)
@@ -57,15 +78,34 @@ const DoDontModal = (props) => {
                                 {/* <CloseIcon /> */}
                                 <img src={CloseButtonImage} alt="Close Button"/>
                             </div>
-                            <p textID="2">
-                                - Do not interrupt or speak over others<br /><br />
+                            {props.module !== 5 ?
+                                (
+                                <p textID="2">
+                                    - Do not interrupt or speak over others<br /><br />
 
-                                - Don’t criticise or moan.<br /><br />
+                                    - Don’t criticise or moan.<br /><br />
 
-                                - Do not dominate the meeting. <br /><br />
+                                    - Do not dominate the meeting. <br /><br />
 
-                                - Do not remain quiet for long periods. Even when you are not speaking, demonstrate your involvement through active body language (eye contact, nodding, etc.)<br /><br />
-                            </p>
+                                    - Do not remain quiet for long periods. Even when you are not speaking, demonstrate your involvement through active body language (eye contact, nodding, etc.)<br /><br />
+                                </p>
+                                )
+                                :
+                                (
+                                <p textID="2">
+                                    - Prepare a script.<br /><br />
+
+                                    - Fake it by “acting out” characteristics which are not natural to you.<br /><br />
+
+                                    - Be drawn into negative arguments.<br /><br />
+
+                                    - Avoid dealing with difficult issues.<br /><br />
+
+                                    - End the meeting without agreeing a detailed action plan to be followed up by both individuals.<br /><br />
+                                </p>
+                                )
+                            }
+                            
                         </Fragment>
 
                     ): (null)

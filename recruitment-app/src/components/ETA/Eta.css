@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+.ETA__Container img{
+}
 .ETA__Text {
     margin-left: 0.5rem;
+}
+
+.ETA__Text h6{
+    font-size: 14px;
+    color: #2A9D8F;
 }

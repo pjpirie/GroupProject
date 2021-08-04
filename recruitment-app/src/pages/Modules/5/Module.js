@@ -4,11 +4,13 @@ import '../ModuleGlobal.css';
 import './Module.scss';
 import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal.js';
 import DoDontModal from '../../../components/DoDontModal/DoDontModal.js';
-import EffectiveImage from '../../../assets/1x/effective.png';
-import FocusImage from '../../../assets/1x/focus.png';
-import AwarenessImage from '../../../assets/1x/awareness.png';
-import TeamImage from '../../../assets/1x/team.png';
-import ConfidentImage from '../../../assets/1x/confident.png';
+import EffectiveImage from '../../../assets/SVG/Effective.svg';
+import FocusImage from '../../../assets/SVG/Focus.svg';
+import AwarenessImage from '../../../assets/SVG/Awareness.svg';
+import TeamImage from '../../../assets/SVG/Team.svg';
+import ConfidentImage from '../../../assets/SVG/Confident.svg';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
+import DownloadIcon from '../../../assets/SVG/Download.svg';
 
 
 function Module() {
@@ -20,33 +22,34 @@ function Module() {
                 'Content-Type': 'application/json'
             },
         })
-            .then(res => res.blob())
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
-                // the filename you want
-                a.download = 'Module 3 RemoteVirtule Interview Activity Sheet';
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                // alert('your file has downloaded!'); // or you know, something with better UX...
-            })
-            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
+        .then(res => res.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            // the filename you want
+            a.download = 'Module 3 RemoteVirtule Interview Activity Sheet';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            // alert('your file has downloaded!'); // or you know, something with better UX...
+        })
+        .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
-
+    
     const handleDownload = () => {
         DownloadMedia();
     };
     return (
         <div className="module">
+            <RSDPModuleLogo />
             <div className="module__header">
                 <div className="module__header__text">
-                    <h3>Module Four</h3>
+                    <h3>MODULE FOUR</h3>
                     <h1>Group Exercise</h1>
                 </div>
-                <Eta time={15} />
+                <Eta time={10} />
             </div>
             <div className="module__body">
                 <div className="module__body__video">
@@ -55,9 +58,11 @@ function Module() {
                     </video>
                 </div>
                 <div className="module__body__main">
-                    <p>
-                    This is a discussion exercise in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale. 
-                    </p>
+                    <div className="module__body__main__text">
+                        <p>
+                        This is a <span className="highlightGreen">discussion exercise</span> in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale. 
+                        </p>
+                    </div>
                     {/* Modal Button Section Start */}
                     <div className="module__body__buttons">
                         <p>These exercises can be structured in one of two ways</p>
@@ -102,7 +107,7 @@ function Module() {
                     <div className="module__body__activity">
                         <h1>Now its time to work on your action plan</h1>
                         <p>Download the Module 4 activity sheet and work througb the exercised to be fully prepared for group exercises.</p>
-                        <button onClick={() => { handleDownload(); }}>Download</button>
+                        <button onClick={() => { handleDownload(); }}><img src={DownloadIcon} alt="Download Button"/>Download</button>
                     </div>
                     {/* Activity Section End */}
                 </div>

@@ -17,8 +17,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 50px;
+        margin: 25px;
         flex-wrap: wrap;
+        padding: 0 50px;
+        max-width: 70vw;
+        @include media("<=800px"){
+            flex-direction: column;
+            padding: 0;
+            max-width: unset;
+        }
         
         button{
             margin: 10px 0;
@@ -32,13 +39,18 @@
             box-shadow: none;
             border: none;   
             font-size: 20px;
-            width: 25vw;
+            width: 20vw;
+            flex-basis: calc(50% - 10px);
             transition: background ease-in-out 200ms;
             @include media("<=900px"){
                 
                 font-size: 20px;
                 border-radius: 10px;
                 padding: 5px 15px;
+            }
+            @include media("<=800px"){
+                width: 40vw;
+                margin-top: 20px;
             }
             @include media("<=500px"){
                 
@@ -54,9 +66,15 @@
 
             &:first-of-type{
                 margin-right: 10px;
+                @include media("<=800px"){
+                    margin-right: 0px;
+                }
             }
             &:last-of-type{
                 margin-left: 10px;
+                @include media("<=800px"){
+                    margin-left: 0px;
+                }
             }
         }
         @include media("<=500px"){
@@ -66,11 +84,13 @@
     }
 
     &__modal{
+        min-width: 100%;
         padding: 20px 20px;
         background: #ffffff;
-        position: absolute;
+        position: relative;
+        margin-top: 5vh;
         border-radius: 15px;
-        top: 0px;
+        top: 100%;
         border: #ffffff solid 1px;
         box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
         z-index: 2;
@@ -84,11 +104,10 @@
             position: relative;
             display: flex;
             background: #ffffff;
-            width: 35px;
+            width: 100%;
             height: 35px;
             border-radius: 50px;
-            align-self: flex-end;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
 
             svg{

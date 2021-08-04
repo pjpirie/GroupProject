@@ -65,10 +65,11 @@ const ModuleButtonModal = (props) => {
                             {
                                 Modal1Open ? (
                                     <Fragment>
-                                        <div onClick={() => {setModal1Open(false)}}>
-                                            {/* <CloseIcon /> */}
-                                            <img src={CloseButtonImage} alt="Close Button"/>
-                                        </div>
+                                    <div>
+                                        {/* <CloseIcon /> */}
+                                        <h3>The Brief</h3>
+                                        <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal1Open(false)}}/>
+                                    </div>
                                         <p textID="1">The candidate is given a brief with instructions to try to achieve a particular outcome. The role player has an outline to follow which is different from the one given to the candidate. The candidate has to negotiate an amicable resolution which achieves the goal(s) whilst placating the role player.</p>
                                     </Fragment>
 
@@ -77,10 +78,11 @@ const ModuleButtonModal = (props) => {
                             {
                                 Modal2Open ? (
                                     <Fragment>
-                                        <div onClick={() => {setModal2Open(false)}}>
-                                            {/* <CloseIcon /> */}
-                                            <img src={CloseButtonImage} alt="Close Button"/>
-                                        </div>
+                                    <div>
+                                        {/* <CloseIcon /> */}
+                                        <h3>Role Play</h3>
+                                        <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal2Open(false)}}/>
+                                    </div>
                                         <p textID="2">The role player brief will test the candidate by raising challenging issues and they will respond according to how the candidate addresses these. Consequently, it is very important to respond to what the role player says and does whilst staying focused on the initial brief. A balanced approach together with demonstrating effective interpersonal skills is essential.
                                         </p>
                                     </Fragment>
@@ -90,10 +92,11 @@ const ModuleButtonModal = (props) => {
                             {
                                 Modal3Open ? (
                                     <Fragment>
-                                        <div onClick={() => {setModal3Open(false)}}>
-                                            {/* <CloseIcon /> */}
-                                            <img src={CloseButtonImage} alt="Close Button"/>
-                                        </div>
+                                    <div>
+                                        {/* <CloseIcon /> */}
+                                        <h3>Preperation</h3>
+                                        <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal3Open(false)}}/>
+                                    </div>
                                         <p textID="2">During the preparation time it is important to consider the required outcome and how to deal with possible arguments the role player might use and their potential reactions to any proposals put forward.  Study the brief in detail and think about ways to achieve the outcome your character wants. 
                                         </p>
                                     </Fragment>
@@ -103,10 +106,11 @@ const ModuleButtonModal = (props) => {
                             {
                                 Modal4Open ? (
                                     <Fragment>
-                                        <div onClick={() => {setModal4Open(false)}}>
-                                            {/* <CloseIcon /> */}
-                                            <img src={CloseButtonImage} alt="Close Button"/>
-                                        </div>
+                                    <div>
+                                        {/* <CloseIcon /> */}
+                                        <h3>Observation</h3>
+                                        <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal4Open(false)}}/>
+                                    </div>
                                         <p textID="2">During the exercise the candidate will be assessed by the role player, an observer or the interaction will be recorded on camera.
                                         </p>
                                     </Fragment>
@@ -127,9 +131,10 @@ const ModuleButtonModal = (props) => {
                             {
                                 Modal1Open ? (
                                     <Fragment>
-                                        <div onClick={() => {setModal1Open(false)}}>
+                                        <div >
                                             {/* <CloseIcon /> */}
-                                            <img src={CloseButtonImage} alt="Close Button"/>
+                                            <h3>Assigned Roles</h3>
+                                            <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal1Open(false)}}/>
                                         </div>
                                         <p textID="1">Each person is given relevant details of the scenario to be addressed together with an outline of his/her remit in the organisation with a few indicators of their position in relation to the topic being addressed.</p>
                                     </Fragment>
@@ -140,9 +145,10 @@ const ModuleButtonModal = (props) => {
                             {
                                 Modal2Open ? (
                                     <Fragment>
-                                        <div onClick={() => {setModal2Open(false)}}>
+                                        <div>
                                             {/* <CloseIcon /> */}
-                                            <img src={CloseButtonImage} alt="Close Button"/>
+                                            <h3>Unassigned Roles</h3>
+                                            <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal2Open(false)}}/>
                                         </div>
                                         <p textID="2">Each person is given relevant details of the scenario to be addressed and everyone in the group is free to deal with matters arising in whatever way they wish. In either structure candidates may be given a specified period for individual preparation or they may be directed to start the discussion immediately.</p>
                                     </Fragment>

@@ -1,16 +1,18 @@
 import React from 'react';
-import Eta from '../../../components/ETA/Eta';
+// import Eta from '../../../components/ETA/Eta';
 import Feature1 from '../../../assets/v2/guidebean1.svg';
 import Feature2 from '../../../assets/v2/guidebean2.svg';
 import Feature3 from '../../../assets/v2/guidebean3.svg';
-import ModuleLogo from '../ModuleLogo.js';
+// import ModuleLogo from '../ModuleLogo.js';
 import '../ModuleGlobal.css';
 import '../ModuleGlobal.responsive.css';
 import './Module.scss';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 function Module() {
     return (
         <div className="module1">
+            <RSDPModuleLogo />
             <div className="module1__body">
                 <div className="module1__body__top">
                     <h1>Course Guide</h1>
