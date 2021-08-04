@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="218.144" height="183.169" viewBox="0 0 218.144 183.169">
+  <g id="Effective" transform="translate(-16286.907 11480.537)">
+    <g id="Group_418" data-name="Group 418" transform="translate(16288.986 -11478.516)">
+      <path id="Path_1044" data-name="Path 1044" d="M218.275,365.312c27.163-13.938,31.205-41.581,31.847-45.974,4.3-29.419-15.986-52.873-47.6-89.425-13.279-15.352-20.143-23.133-31.177-28.314-28.226-13.253-65.809-8.632-92.19,5.887-5.669,3.12-37.88,21.589-42.24,56.627-.3,2.378-3.923,36.363,22.8,58.589,18.18,15.123,28.709,6.751,66.712,26.631,23.5,12.294,27.964,19.936,46.263,22.707C177.128,372.713,198.382,375.519,218.275,365.312Z" transform="translate(-36.588 -193.762)" fill="none" stroke="#2a9d8f" stroke-miterlimit="10" stroke-width="4" style="isolation: isolate"/>
+      <path id="Path_1045" data-name="Path 1045" d="M88.253,201.059c-25.737,13.4-29.567,39.974-30.175,44.2-4.076,28.282,15.147,50.83,45.1,85.969,12.582,14.758,19.086,22.239,29.54,27.219,26.744,12.741,62.354,8.3,87.35-5.659,5.372-3,35.891-20.754,40.022-54.438.281-2.286,3.717-34.957-21.6-56.325-17.226-14.539-27.2-6.489-63.21-25.6-22.266-11.818-26.5-19.166-43.834-21.829C127.24,193.944,107.1,191.246,88.253,201.059Z" transform="translate(-50.314 -193.762)" fill="#264653" style="isolation: isolate"/>
+    </g>
+    <g id="Ellipse_346" data-name="Ellipse 346" transform="translate(16440.326 -11465.227)" fill="#2a9d8f" stroke="#fff" stroke-width="4">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="28" fill="none"/>
+    </g>
+    <path id="Icon_metro-bubble" data-name="Icon metro-bubble" d="M17.995,3.856c8.519,0,15.424,5.611,15.424,12.532S26.514,28.921,17.995,28.921a19.05,19.05,0,0,1-2.4-.152C12.277,32.082,8.322,32.676,4.5,32.763v-.811c2.065-1.012,3.856-2.854,3.856-4.96a5.818,5.818,0,0,0-.065-.864,11.8,11.8,0,0,1-5.719-9.74c0-6.921,6.906-12.532,15.424-12.532Z" transform="translate(16453.742 -11452.872)" fill="#fff"/>
+    <text id="Effective_Communication" data-name="Effective 
+Communication" transform="translate(16406.623 -11399.109)" fill="#fff" font-size="20" font-family="Roboto-Black, Roboto" font-weight="800" letter-spacing="0.05em"><tspan x="-47.176" y="0">Effective </tspan><tspan x="-77.372" y="26">Communication</tspan></text>
+  </g>
+</svg>
