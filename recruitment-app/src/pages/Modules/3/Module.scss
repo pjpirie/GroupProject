@@ -20,10 +20,11 @@
 	margin: 0 auto;
 	&__header {
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin-bottom: 3px;
+		margin: 7px 0 3px 0;
 		h4 {
 			margin-top: 1em;
 			border-radius: 15px;
