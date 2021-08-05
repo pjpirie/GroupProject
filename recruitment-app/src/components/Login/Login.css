@@ -82,6 +82,20 @@
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
+    margin: 10px 0;
+    /* padding: 10px 30px; */
+    background: #2A9D8F;
+    color: #fff;
+    font-family: 'roboto';
+    font-weight: 700;
+    border-radius: 15px;
+    outline: 0px;
+    box-shadow: none;
+    border: none;   
+    font-size: 20px;
+    width: 20vw;
+    /* flex-basis: calc(50% - 10px); */
+    transition: background ease-in-out 200ms;
 }
 
 .alt-btn {

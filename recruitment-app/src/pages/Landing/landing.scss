@@ -2,6 +2,7 @@
 
 .landing{
     padding: 70px 40px;
+    overflow-x: hidden;
     
     @include media("<=900px"){
         display: flex;
@@ -72,7 +73,7 @@
             }
             img{
                 @include media("<=1300px"){
-                    position: absolute;
+                    // position: absolute;
                     // transform: translateX(30%);
                 }
             }
