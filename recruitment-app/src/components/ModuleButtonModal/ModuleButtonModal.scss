@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 25px;
+        margin: 25px auto;
         flex-wrap: wrap;
         padding: 0 50px;
         max-width: 70vw;
@@ -59,6 +59,86 @@
                 padding: 5px 15px;
             
             }
+            
+            &.active{
+                background: #fff;
+                outline:#175a52 2px solid;
+                color: #175a52;
+            }
+            &:hover{
+                background: #175a52;
+            }
+
+            &:first-of-type{
+                margin-right: 10px;
+                @include media("<=800px"){
+                    margin-right: 0px;
+                }
+            }
+            &:last-of-type{
+                margin-left: 10px;
+                @include media("<=800px"){
+                    margin-left: 0px;
+                }
+            }
+        }
+        @include media("<=500px"){
+            margin: 0;
+        
+        }
+    }
+
+    &__buttons__1x3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px auto;
+        flex-wrap: wrap;
+        // padding: 0 50px;
+        max-width: 70vw;
+        @include media("<=900px"){
+            max-width: 90%;
+            width: 100%;
+        }
+        @include media("<=800px"){
+            flex-direction: column;
+            padding: 0;
+            max-width: unset;
+        }
+        
+        button{
+            margin: 10px 0;
+            padding: 10px 20px;
+            background: #2A9D8F;
+            color: #fff;
+            font-family: 'roboto';
+            font-weight: 700;
+            border-radius: 15px;
+            outline: 0px;
+            box-shadow: none;
+            border: none;   
+            font-size: 20px;
+            width: 20vw;
+            flex-basis: calc(33% - 10px);
+            word-wrap: none;
+            transition: background ease-in-out 200ms;
+            @include media("<=1000px"){
+                
+                font-size: 20px;
+                border-radius: 10px;
+                padding: 5px 15px;
+            }
+            @include media("<=800px"){
+                width: 40vw;
+                margin-top: 20px;
+            }
+            @include media("<=500px"){
+                
+                font-size: 16px;
+                border-radius: 10px;
+                padding: 5px 15px;
+            
+            }
 
             &:hover{
                 background: #175a52;
@@ -75,6 +155,11 @@
                 @include media("<=800px"){
                     margin-left: 0px;
                 }
+            }
+            &.active{
+                background: #fff;
+                outline:#175a52 2px solid;
+                color: #175a52;
             }
         }
         @include media("<=500px"){
