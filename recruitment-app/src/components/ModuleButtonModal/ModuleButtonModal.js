@@ -20,9 +20,9 @@ const ModuleButtonModal = (props) => {
                 <div className="ModuleButton">
                     <div className="ModuleButton__buttons">
                         <Fragment>
-                            <button btnID="1" onClick={ () => {setModal1Open(!Modal1Open); setModal2Open(false)} }>Assigned Roles</button>
+                            <button className={Modal1Open ? "active" : ""} btnID="1" onClick={ () => {setModal1Open(!Modal1Open); setModal2Open(false)} }>Assigned Roles</button>
 
-                            <button btnID="2" onClick={ () => { setModal1Open(false); setModal2Open(!Modal2Open)} }>Unassigned Roles</button>
+                            <button className={Modal2Open ? "active" : ""} btnID="2" onClick={ () => { setModal1Open(false); setModal2Open(!Modal2Open)} }>Unassigned Roles</button>
                         </Fragment>
                     </div>
                     <Fragment>
@@ -74,19 +74,19 @@ const ModuleButtonModal = (props) => {
                     <div className="ModuleButton">
                         <div className={"ModuleButton__buttons__" + props.type}>
                             <Fragment>
-                                <button btnID="1" onClick={ () => { 
+                                <button className={Modal1Open ? "active" : ""} btnID="1" onClick={ () => { 
                                     setModal1Open(!Modal1Open); 
                                     setModal2Open(false);
                                     setModal3Open(false);
                                     } }>Research</button>
     
-                                <button btnID="2" onClick={ () => { 
+                                <button className={Modal2Open ? "active" : ""} btnID="2" onClick={ () => { 
                                     setModal1Open(false); 
                                     setModal2Open(!Modal2Open);
                                     setModal3Open(false);
                                     } }>Personal Prep</button>
     
-                                <button btnID="3" onClick={ () => { 
+                                <button className={Modal3Open ? "active" : ""} btnID="3" onClick={ () => { 
                                     setModal1Open(false); 
                                     setModal2Open(false);
                                     setModal3Open(!Modal3Open);
@@ -164,28 +164,28 @@ const ModuleButtonModal = (props) => {
                 <div className="ModuleButton">
                     <div className="ModuleButton__buttons">
                         <Fragment>
-                            <button btnID="1" onClick={ () => { 
+                            <button className={Modal1Open ? "active" : ""} btnID="1" onClick={ () => { 
                                 setModal1Open(!Modal1Open); 
                                 setModal2Open(false);
                                 setModal3Open(false);
                                 setModal4Open(false);
                                 } }>The Brief test</button>
 
-                            <button btnID="2" onClick={ () => { 
+                            <button className={Modal2Open ? "active" : ""} btnID="2" onClick={ () => { 
                                 setModal1Open(false); 
                                 setModal2Open(!Modal2Open);
                                 setModal3Open(false);
                                 setModal4Open(false);
                                 } }>Role Play</button>
 
-                            <button btnID="3" onClick={ () => { 
+                            <button className={Modal3Open ? "active" : ""} btnID="3" onClick={ () => { 
                                 setModal1Open(false); 
                                 setModal2Open(false);
                                 setModal3Open(!Modal3Open);
                                 setModal4Open(false);
                                 } }>Preperation</button>
 
-                            <button btnID="4" onClick={ () => { 
+                            <button className={Modal4Open ? "active" : ""} btnID="4" onClick={ () => { 
                                 setModal1Open(false); 
                                 setModal2Open(false);
                                 setModal3Open(false);
