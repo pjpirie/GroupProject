@@ -74,14 +74,14 @@ function Module() {
                     <p className="module3__body__main__p">Interviews can be a daunting and nerve-racking experience but you can prepare to succeed with the tips and techniques within this module. Learn all about the three styles of questions you may experience at your next interview and start preparing your answers today.</p>
                     <div className="module3__body__main__text">
                         <div className="module3__body__main__text__left">
-                            <h3>Follow the tips and techniques below to ace your interview</h3>
+                            <h3>Follow the tips and techniques below to succeed at interview</h3>
                         </div>
                         <div className= "module3__body__main__text__right">
                             <h3>Feel confident and prepared in the interview with these tips and techniques that will enhance your chances of success. Learn the ten most important things you can do to leave a positive and lasting impression.</h3>
                         </div>
                     </div>
                     <div className="module3__body__main__consider">
-                        <h1>Things to Consider</h1>
+                        <h1>10 Tips</h1>
                         <h3>1. First Contact</h3>
                         <h4>A recent survey indicated that 33% of interviewers stated that they made their hiring decision within the first 90 seconds. So, what first impression do you want to create?</h4>
                         <h3>2. Body Language</h3>
@@ -167,7 +167,7 @@ function Module() {
                         <h1>Competency Based Questions</h1>
                         <p>These are sometimes called behavioural or situational questions and they are designed to check your skills or competencies. The interviewer wants to know that in the past you have demonstrated that you have the necessary behaviours required for the role on offer. If you can show that you have applied relevant skills, then you should be able to repeat this if you get this job. They are very different from general questions which tend to be more informal. Competency-based questions are much  more systematic and specific, therefore your answers need to follow a clear structure.</p>
                         <div className="module3__body__main__questions__box">
-                            <h1>Competency based questions often have a identifiable opening phrase or sentence. Check out these examples to help you identify them.</h1>
+                            <h1>Competency based questions often have an identifiable opening phrase or sentence. Check out these examples to help you identify them.</h1>
                             <p>“Describe a situation in which you had to…”</p>
                             <p>“Give an example of a time you…”</p>
                             <p>“Tell me/us about an important decision you had to make…”</p>
@@ -378,10 +378,10 @@ function Module() {
                         </div>
                     </div>
                     <div className="module3__body__main__buttons">
-                        <h6>Read the questions and have a think about your what your response might be. Click on the question to see an example answer.</h6>
+                        <h6>Read the questions and have a think about your what your response might be.</h6>
                         <div className="module3__body__main__buttons__wrapper">
-                            <button onClick={()=>modalOpen(14)} id="btn14" className="module3__body__main__buttons__wrapper__1"><p>Tell me/us a bit about yourself</p></button>
-                            <button onClick={()=>modalOpen(15)} id="btn15" className="module3__body__main__buttons__wrapper__2"><p>Why did you apply for this job?</p></button>
+                            <button onClick={()=>modalOpen(14)} id="btn14" className="module3__body__main__buttons__wrapper__1"><p>What are you particularly good at?</p></button>
+                            <button onClick={()=>modalOpen(15)} id="btn15" className="module3__body__main__buttons__wrapper__2"><p>How good are you at working to a tight deadline?</p></button>
                         </div>
                         <div className="module3__body__main__buttons__modal">
                             {
@@ -400,7 +400,7 @@ function Module() {
                                 
                                 :null
                             }
-                            {
+                            { 
                                 btnVal === 15?
                                     <div className="module3__body__main__buttons__modal__show">
                                         <button onClick={modalClose}>X</button>
@@ -413,7 +413,7 @@ function Module() {
                         </div>
                     </div>
                     <div className="module3__body__main__do">
-                        <h2>Enthusiasm - The Dos and Don’ts</h2>
+                        <h1>Enthusiasm - The Dos and Don’ts</h1>
                         <div className="module3__body__main__do__wrapper">
                             <button onClick={()=>modalOpen(16)} id="btn16" >Do</button>
                             <button onClick={()=>modalOpen(17)} id="btn17" >Don't</button>

@@ -4,7 +4,6 @@ import '../ModuleGlobal.css';
 import './Module.scss';
 import ModuleLogo from '../ModuleLogo.js';
 
-
 function Module() {
 
     async function DownloadMedia() {
@@ -21,7 +20,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 3 RemoteVirtule Interview Activity Sheet';
+                a.download = 'Module 6 RemoteVirtule Interview Activity Sheet';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);

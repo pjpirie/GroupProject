@@ -1,4 +1,11 @@
 .module6 {
+	button {
+		cursor: pointer;
+		transition: background ease-in-out 200ms;
+	}
+	button:hover {
+		background: var(--btn-green);
+	}
 	width: 70vw;
 	margin: 0 auto;
 	&__header {
@@ -58,6 +65,7 @@
 						font-size: 1.5em;
 					}
 					h3 {
+						color: var(--heading-blue);
 						font-size: 2.4em;
 						font-weight: 300 !important;
 					}
@@ -82,18 +90,27 @@
 				margin-bottom: 5em;
 				p {
 					width: 100%;
+					color: var(--heading-blue);
+					font-size: 1.8em;
+					margin-bottom: 2em;
 				}
 				&__wrapper {
+					margin-bottom: 2em;
 					button {
 						background: var(--light-green);
 						border: none;
 						border-radius: 15px;
-						height: 4em;
-						width: 20em;
-						font-weight: 400;
-						// padding: 1em;
+						width: 20vw;
+						font-weight: 700;
+						font-size: 20px;
 						color: #fff;
-						margin: 2vh 5vw 2vh 5vw;
+						margin: 0 5vw 2vh 5vw;
+						padding: 10px 30px;
+						transition: background ease-in-out 200ms;
+						cursor: pointer;
+					}
+					button:hover {
+						background: var(--btn-green);
 					}
 					&__active {
 						background: #fff !important;
@@ -145,38 +162,11 @@
 					}
 				}
 			}
-			&__interview {
-				display: flex;
-				flex-direction: row;
-				margin-bottom: 5em;
-				&__left,
-				&__right {
-					width: 50%;
-					min-height: 30vh;
-				}
-				&__left {
-					text-align: left;
-					padding: 0 5vw 0 1vw;
-
-					h4 {
-						color: var(--light-green);
-						font-size: 1.5em;
-					}
-					h3 {
-						font-size: 2.4em;
-						font-weight: 300 !important;
-					}
-				}
-				&__right {
-					display: flex;
-					flex-wrap: wrap;
-					align-content: flex-end;
-					margin-left: 10vw;
-					border-bottom: 6px dotted var(--orange-bg);
-					h3 {
-						text-align: left;
-						font-weight: 300 !important;
-					}
+			&__example {
+				h1 {
+					color: var(--heading-blue);
+					margin-bottom: 1em;
+					font-weight: 400;
 				}
 			}
 			&__consider {
@@ -208,7 +198,8 @@
 				h2 {
 					font-size: 2em;
 					margin-bottom: 1vh;
-					font-weight: 200;
+					font-weight: 400;
+					color: var(--heading-blue);
 				}
 				h3 {
 					font-size: 1.5em;
@@ -238,17 +229,28 @@
 }
 
 @media (max-width: 1200px) {
-	.module__body__main__text {
-		flex-direction: column;
-		&__right,
-		&__left {
-			width: 100%;
-			min-height: 1px;
-			margin: 0;
-			text-align: center !important;
+	.module6__body__main {
+		&____text {
+			flex-direction: column;
+			&__right,
+			&__left {
+				width: 100%;
+				min-height: 1px;
+				margin: 0;
+				text-align: center !important;
+			}
+			&__right {
+				margin-top: 4em;
+			}
 		}
-		&__right {
-			margin-top: 4em;
+		&__buttons {
+			flex-direction: column;
 		}
+	}
+}
+
+@media (max-width: 500px) {
+	.module6 {
+		width: 90vw;
 	}
 }
