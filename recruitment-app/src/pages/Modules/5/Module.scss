@@ -1,6 +1,9 @@
 @import "../../../breakpoints.scss";
 .module {
 	padding: 15px 0;
+    @include media("<=800px"){
+        margin-right: 56px !important;
+    }
 
 	&__header {
 		max-width: 100vw;

@@ -1,4 +1,8 @@
+@import '../../../breakpoints.scss';
 .module3 {
+    @include media("<=800px"){
+        margin-right: 56px !important;
+    }
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;

@@ -1,5 +1,8 @@
 @import '../../../breakpoints.scss';
 .module {
+    @include media("<=800px"){
+        margin-right: 56px !important;
+    }
     padding: 15px 10px;
     @include media(">=1200px"){
         max-width: 70vw;
