@@ -129,7 +129,7 @@
 		}
 	}
 	.module1__body__beans {
-		width: 70%;
+		width: 100%;
 		&__icons {
 			flex-direction: column !important;
 			align-items: center !important;
@@ -142,5 +142,11 @@
 				transform: translate(-5%, -160%);
 			}
 		}
+	}
+}
+
+@media (max-width: 500px) {
+	.module1__body__beans {
+		box-shadow: none;
 	}
 }
