@@ -2,6 +2,16 @@
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
+		font-family: "roboto";
+		font-weight: 700;
+		border-radius: 15px;
+		outline: 0px;
+		box-shadow: none;
+		font-weight: 700 !important;
+		font-size: 20px;
+		height: 2em !important;
+
+		// font-size: 20px;
 	}
 	button:hover {
 		background: var(--btn-green);
@@ -116,9 +126,9 @@
 						background: var(--light-green);
 						border: none;
 						border-radius: 15px;
-						height: 4em;
+						height: 2em;
 						width: 30em !important;
-						font-weight: 400;
+						// font-weight: 400;
 						// padding: 1em;
 						color: #fff;
 						margin: 2vh 5vw 2vh 5vw;
@@ -136,9 +146,9 @@
 							background: #fff;
 							color: var(--light-green);
 							content: "Q";
-							font-size: 1.8em;
+							font-size: 1.2em;
 							border-radius: 50%;
-							margin: -5px 0 0 10px;
+							margin: -1px 0 0 10px;
 							width: 1.2em;
 							height: 1.2em;
 							line-height: 125%;
@@ -536,11 +546,11 @@
 					align-items: center;
 					button {
 						background: #fff;
-						border: 1px solid var(--light-green);
-						border-radius: 15px;
-						height: 4em;
-						min-width: 20em !important;
-						font-weight: 700 !important;
+						border: 2px solid var(--light-green);
+						// padding: 5px;
+						width: 8em !important;
+						padding-top: 5px;
+						// padding: 0 5px 0 5px;
 						color: var(--light-green);
 						margin: 2vh 5vw 2vh 5vw;
 					}
@@ -548,11 +558,43 @@
 						background: var(--dark-green) !important;
 						color: #fff;
 					}
+					&__do,
+					&__dont {
+						p {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							padding-bottom: 6px;
+							height: 31.5px;
+						}
+					}
+					&__do {
+						p:before {
+							content: url("../../../assets/1x/GreenTick.png");
+							transform: scale(0.6);
+							margin: 3px 20px 0 -30px;
+							outline: none;
+						}
+						&__p__active:before {
+							content: url("../../../assets/1x/WhiteTick.png") !important;
+						}
+					}
+					&__dont {
+						p:before {
+							content: url("../../../assets/1x/GreenCross.png");
+							transform: scale(0.6);
+							margin: 3px 20px 0 -30px;
+						}
+						&__p__active:before {
+							content: url("../../../assets/1x/WhiteCross.png") !important;
+						}
+					}
 					&__active {
 						background: var(--dark-green) !important;
 						border: 1px solid var(--light-green) !important;
 						color: #fff !important;
 					}
+
 					&__active:hover {
 						button {
 							background: var(--dark-green) !important;

@@ -2,6 +2,16 @@
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
+		font-family: "roboto";
+		font-weight: 700;
+		border-radius: 15px;
+		outline: 0px;
+		box-shadow: none;
+		font-weight: 700 !important;
+		font-size: 20px;
+		height: 2em !important;
+
+		// font-size: 20px;
 	}
 	button:hover {
 		background: var(--btn-green);

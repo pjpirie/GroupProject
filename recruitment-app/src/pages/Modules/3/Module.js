@@ -37,9 +37,20 @@ function Module() {
     const [btnVal, btnClick] = useState(false)
 
     const modalOpen =(num)=>{
+        if(document.querySelector(`.module3__body__main__do__wrapper__do__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__do__p__active`).classList.remove(`module3__body__main__do__wrapper__do__p__active`)}
+        if(document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`).classList.remove(`module3__body__main__do__wrapper__dont__p__active`)}
         btnClick(num)
         let type = 'buttons'
-        if(num===16||num===17){type='do'}
+        console.log(num)
+        
+        
+        if(num===16||num===17){
+            type='do'
+            if(num===16){return document.querySelector(`.module3__body__main__do__wrapper__do__p`).classList.add(`module3__body__main__do__wrapper__do__p__active`)}
+            if(num===17){return document.querySelector(`.module3__body__main__do__wrapper__dont__p`).classList.add(`module3__body__main__do__wrapper__dont__p__active`)}
+            document.querySelector(`.module3__body__main__do__wrapper__do__p`).classList.add(`module3__body__main__do__wrapper__do__p__active`)
+            document.querySelector(`.module3__body__main__do__wrapper__dont__p`).classList.add(`module3__body__main__do__wrapper__dont__p__active`)
+        }
         let active = document.querySelector(`.module3__body__main__${type}__wrapper__active`)
         if(active){
             active.classList.remove(`module3__body__main__${type}__wrapper__active`)
@@ -49,7 +60,8 @@ function Module() {
 
     const modalClose=()=>{
         btnClick(0)
-
+        if(document.querySelector(`.module3__body__main__do__wrapper__do__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__do__p__active`).classList.remove(`module3__body__main__do__wrapper__do__p__active`)}
+        if(document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`).classList.remove(`module3__body__main__do__wrapper__dont__p__active`)}
         if(document.querySelector('.module3__body__main__buttons__wrapper__active')){document.querySelector('.module3__body__main__buttons__wrapper__active').classList.remove('module3__body__main__buttons__wrapper__active')}
         if(document.querySelector('.module3__body__main__do__wrapper__active')){document.querySelector('.module3__body__main__do__wrapper__active').classList.remove('module3__body__main__do__wrapper__active')}
     }
@@ -415,8 +427,8 @@ function Module() {
                     <div className="module3__body__main__do">
                         <h1>Enthusiasm - The Dos and Don’ts</h1>
                         <div className="module3__body__main__do__wrapper">
-                            <button onClick={()=>modalOpen(16)} id="btn16" >Do</button>
-                            <button onClick={()=>modalOpen(17)} id="btn17" >Don't</button>
+                            <button onClick={()=>modalOpen(16)} id="btn16" className="module3__body__main__do__wrapper__do"><p className="module3__body__main__do__wrapper__do__p">DO</p></button>
+                            <button onClick={()=>modalOpen(17)} id="btn17" className="module3__body__main__do__wrapper__dont"><p className="module3__body__main__do__wrapper__dont__p">DON'T</p></button>
                         </div>
                         <div className="module3__body__main__do__modal">
                             {

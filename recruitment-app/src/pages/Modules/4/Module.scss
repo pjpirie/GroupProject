@@ -2,6 +2,14 @@
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
+		font-family: "roboto";
+		font-weight: 700;
+		border-radius: 15px;
+		outline: 0px;
+		box-shadow: none;
+		font-weight: 700 !important;
+		font-size: 20px;
+		height: 2em !important;
 	}
 	button:hover {
 		background: var(--btn-green);
@@ -103,7 +111,7 @@
 						border: none;
 						border-radius: 15px;
 						height: 4em;
-						width: 20em;
+						width: 15em;
 						font-weight: 400;
 						// padding: 1em;
 						color: #fff;
@@ -163,7 +171,6 @@
 				color: var(--heading-blue);
 				font-size: 2em !important;
 				margin-top: 2em;
-				outline: 1px solid red;
 			}
 			&__consider {
 				box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
