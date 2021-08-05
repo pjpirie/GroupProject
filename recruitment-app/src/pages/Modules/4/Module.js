@@ -149,7 +149,7 @@ function Module() {
                             }
                         </div>
                     </div>                        
-                    <p>Pre-recorded Interviews</p>
+                    <p className="module4__body__main__p">Pre-recorded Interviews</p>
                     <div className="module4__body__main__text">
                         <div className="module4__body__main__text__left">
                             <h4>Be prepared</h4>

@@ -163,47 +163,6 @@ function Module() {
                             }
                         </div>
                     </div>
-                    {/* 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    copy and paste files
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                     */}
                     <div className="module3__body__main__questions">
                         <h1>Competency Based Questions</h1>
                         <p>These are sometimes called behavioural or situational questions and they are designed to check your skills or competencies. The interviewer wants to know that in the past you have demonstrated that you have the necessary behaviours required for the role on offer. If you can show that you have applied relevant skills, then you should be able to repeat this if you get this job. They are very different from general questions which tend to be more informal. Competency-based questions are much  more systematic and specific, therefore your answers need to follow a clear structure.</p>
@@ -454,7 +413,7 @@ function Module() {
                         </div>
                     </div>
                     <div className="module3__body__main__do">
-                        <h2>Enthusiasm - The Dos and Don’ts</h2>
+                        <h1>Enthusiasm - The Dos and Don’ts</h1>
                         <div className="module3__body__main__do__wrapper">
                             <button onClick={()=>modalOpen(16)} id="btn16" >Do</button>
                             <button onClick={()=>modalOpen(17)} id="btn17" >Don't</button>

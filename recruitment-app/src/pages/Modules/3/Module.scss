@@ -1,4 +1,11 @@
 .module3 {
+	button {
+		cursor: pointer;
+		transition: background ease-in-out 200ms;
+	}
+	button:hover {
+		background: var(--btn-green);
+	}
 	max-width: 70vw !important;
 	margin: 0 auto;
 	&__header {
@@ -52,7 +59,6 @@
 				&__left {
 					text-align: left;
 					padding: 0 5vw 0 1vw;
-
 					h4 {
 						color: var(--light-green);
 						font-size: 1.5em;
@@ -60,6 +66,7 @@
 					h3 {
 						font-size: 2.4em;
 						font-weight: 300 !important;
+						color: var(--heading-blue);
 					}
 				}
 				&__right {
@@ -86,6 +93,7 @@
 				flex-direction: column;
 				h1 {
 					margin-bottom: 1em;
+					color: var(--heading-blue);
 				}
 				p {
 					max-width: 70%;
@@ -207,16 +215,6 @@
 					}
 				}
 			}
-			&__example {
-				margin-bottom: 5em;
-				h1 {
-					font-weight: 400;
-					margin-top: 2em;
-				}
-				p {
-					margin-top: 2em;
-				}
-			}
 			&__consider {
 				box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
 				// border: 1px solid rgba(255, 255, 255, 0.16);
@@ -248,6 +246,7 @@
 				margin-top: 4em;
 				h1 {
 					font-size: 2em;
+					color: var(--heading-blue);
 				}
 				p {
 					margin: 4em auto;
@@ -275,6 +274,9 @@
 				}
 			}
 			&__star {
+				h1 {
+					color: var(--heading-blue);
+				}
 				span {
 					color: var(--light-green);
 				}
@@ -378,6 +380,8 @@
 				}
 				h2 {
 					font-size: 2em;
+					margin-block: 2em;
+					color: var(--heading-blue);
 				}
 				span {
 					color: var(--light-green);
@@ -482,6 +486,7 @@
 			&__strength {
 				h1 {
 					margin-bottom: 3em;
+					color: var(--heading-blue);
 				}
 				p {
 					margin-bottom: 1em !important;
@@ -517,6 +522,9 @@
 				}
 			}
 			&__do {
+				h1 {
+					color: var(--heading-blue);
+				}
 				margin-top: 4em;
 				display: flex;
 				justify-content: center;
@@ -536,10 +544,19 @@
 						color: var(--light-green);
 						margin: 2vh 5vw 2vh 5vw;
 					}
+					button:hover {
+						background: var(--dark-green) !important;
+						color: #fff;
+					}
 					&__active {
 						background: var(--dark-green) !important;
 						border: 1px solid var(--light-green) !important;
 						color: #fff !important;
+					}
+					&__active:hover {
+						button {
+							background: var(--dark-green) !important;
+						}
 					}
 				}
 				&__modal {
@@ -600,6 +617,7 @@
 			}
 			&__download {
 				h2 {
+					color: var(--heading-blue);
 					font-size: 2em;
 					margin-bottom: 1vh;
 					font-weight: 200;

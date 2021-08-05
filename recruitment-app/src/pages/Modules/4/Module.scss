@@ -1,4 +1,11 @@
 .module4 {
+	button {
+		cursor: pointer;
+		transition: background ease-in-out 200ms;
+	}
+	button:hover {
+		background: var(--btn-green);
+	}
 	width: 70vw;
 	margin: 0 auto;
 	&__header {
@@ -59,7 +66,8 @@
 					}
 					h3 {
 						font-size: 2.4em;
-						font-weight: 300 !important;
+						color: var(--heading-blue);
+						// font-weight: 500;
 					}
 				}
 				&__right {
@@ -151,15 +159,11 @@
 					}
 				}
 			}
-			&__example {
-				margin-bottom: 5em;
-				h1 {
-					font-weight: 400;
-					margin-top: 2em;
-				}
-				p {
-					margin-top: 2em;
-				}
+			&__p {
+				color: var(--heading-blue);
+				font-size: 2em !important;
+				margin-top: 2em;
+				outline: 1px solid red;
 			}
 			&__consider {
 				box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
@@ -173,6 +177,7 @@
 				padding: 5vh 10% 0 10%;
 				h1 {
 					margin-bottom: 3vh;
+					font-weight: 400;
 				}
 				h3 {
 					text-align: left;
@@ -188,6 +193,7 @@
 			}
 			&__download {
 				h2 {
+					color: var(--heading-blue);
 					font-size: 2em;
 					margin-bottom: 1vh;
 					font-weight: 200;
