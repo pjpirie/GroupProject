@@ -28,7 +28,7 @@ function Module() {
             a.style.display = 'none';
             a.href = url;
             // the filename you want
-            a.download = 'Module 6 Written Exercise Activity Sheet';
+            a.download = 'Module 5 Role Play Activity Sheet';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
@@ -45,7 +45,7 @@ function Module() {
             <RSDPModuleLogo />
             <div className="module__header">
                 <div className="module__header__text">
-                    <h3>Module Five</h3>
+                    <h3>MODULE FIVE</h3>
                     <h1>Role Play</h1>
                 </div>
                 <Eta time={10} />
@@ -68,11 +68,10 @@ function Module() {
                         </div>
                         <div className="textSection__small">
                             <p>
-                            For example, these may cover: 
-                            • Meeting a problematic supplier
-                            • Dealing with an angry customer
-                            • Engaging with a poor performing team   
-                            • member
+                            For example, these may cover: <br /><br />
+                            • Meeting a problematic supplier<br />
+                            • Dealing with an angry customer<br />
+                            • Engaging with a poor performing team member<br />
 
                             <br />
                             <span>••••••••••••••••••••••</span><br />
