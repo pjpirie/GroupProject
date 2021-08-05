@@ -61,7 +61,7 @@ function Module() {
             <div className="module6__body">
                 <div className="module6__body__video">
                     <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/3" type="video/mp4"></source>
+                        <source src="https://group-54-rct.herokuapp.com/video/6" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="module6__body__main">

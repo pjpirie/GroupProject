@@ -1,51 +1,52 @@
-:root {
-	--light-green: #2a9d8f;
-	--dark-green: #264653;
-	--btn-green: #175a52;
-	--heading-blue: #264653;
-	--orange: #f4a261;
-	--orange-bg: rgba(244, 162, 97, 0.36);
-}
+@import '../../breakpoints.scss';
 
-.footer {
-	background: var(--dark-green);
-	height: 19em;
-	&__container {
+.footer{
+
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	background: #264653;
+	padding: 2vh 20vw;
+
+	h1{
+		margin: 0 0 20px 0;
+		color: rgba(255, 255, 255, 0.25)	;
+		@include media("<=600px"){
+			text-align: center;
+		}
+	}
+
+	&__brand{
 		display: flex;
-		justify-content: space-between;
-		align-self: space-evenly;
-		height: 91%;
-		&__text,
-		&__logo {
-			width: 20%;
+		align-items: center;
+		@include media("<=600px"){
+			flex-direction: column;
 		}
-		&__text {
-			margin-left: 15em;
-			align-self: flex-start;
+
+		img{
+
 		}
-		&__text__word {
-			margin-top: 1em;
-			font-size: 2.5em;
-			color: rgba(255, 255, 255, 0.2) !important;
-			// outline: 1px solid red;
-		}
-		&__logo {
-			margin-right: 10em;
+
+		&__text{
 			align-self: flex-end;
-			justify-items: flex-end;
-			margin-bottom: 1em;
-			&__priv {
-				font-size: 1.8em;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			flex-direction: column;
+			@include media("<=600px"){
+				align-items: center;
+				margin: 20px 0;
+			}
+
+			h4{
+				color: #fff;
+			}
+
+			h3{
 				color: #fff;
 			}
 		}
-	}
-	&__xpc {
-		width: 100%;
-		height: 9%;
-		display: flex;
-		background: #fff;
-		justify-content: center;
-		align-items: flex-end;
 	}
 }
