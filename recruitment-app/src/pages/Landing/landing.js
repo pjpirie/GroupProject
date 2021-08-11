@@ -6,7 +6,7 @@ import orange_tri from '../../assets/v2/bg_orange_tri.svg';
 import blue_circle from '../../assets/v2/bg_circle.svg';
 import orange_hash from '../../assets/v2/orange_hash.svg';
 import blue_hash from '../../assets/v2/blue_hash.svg';
-import ExpertImage from '../../assets/v2/expert.png';
+import ExpertImage from '../../assets/LangingImg1.png';
 import EveryoneImage from '../../assets/v2/everyone.png';
 import Card01 from '../../assets/v2/Group 261.svg';
 import Card02 from '../../assets/v2/Group 262.svg';
@@ -75,8 +75,8 @@ function Landing() {
             {/* Text Section Start */}
             <div className="textSection">
                 <div className="textSection__large">
-                    <p>Don't Worry</p>
-                    <h1>Getting a job is hard,{window.innerWidth >900 ? <br />: " "} but not too hard!</h1>
+                    {/* <p>Don't Worry</p> */}
+                    <h1>Landing a job{window.innerWidth > 900 ? <br />: " "}can be hard{window.innerWidth >900 ? <br />: " "}but it’s not{window.innerWidth >900 ? <br />: " "}impossible.</h1>
                 </div>
                 <div className="textSection__small">
                     <p>The programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific requirements.<br />
@@ -130,11 +130,12 @@ function Landing() {
                 <p className="featureSection__pill">FEATURE</p>
                 <h1>Features of the programme</h1>
                 <p>
-                    The programme is divided into <span>six modules</span> covering various skills and techniques <br />
+                    {/* The programme is divided into <span>six modules</span> covering various skills and techniques <br />
                     that enable you to showcase your personality and wining attributes. <span>Get the job you’ve always wanted</span><br />
                     by following the key learning points and completing the action items that accompany the modules.<br />
                     The Preparation Module is the foundation for a successful interview and it is here where<br />
-                    you will start your skills development journey.
+                    you will start your skills development journey. */}
+                    Six modules covering a range of skills and techniques that enable you to showcase your personality and attributes. Follow the key learning points and complete action items accompanying each module.
                 </p>
             </div>
             {/* Feature Section End */}
@@ -159,10 +160,9 @@ function Landing() {
                     <div className="modulesSection__card" ref={ref}>
                         <img src={Card02} />
                         <h1>
-                            Everything <br />
-                            you need to know<br />
-                            for your <span>face to<br />
-                            face interview</span> <br />
+                            How to deal with <br />
+                            a <span>Face to<br />
+                            Face interview</span> <br />
                         </h1>
                         <p className="modulesSection__pill">MODULE TWO</p>
                     </div> 
@@ -170,9 +170,8 @@ function Landing() {
                     <div className="modulesSection__card">
                         <img src={Card03} />
                         <h1>
-                            Get ready <br />
-                            for your<br />
-                            <span> virtual/remote <br />
+                            Specific aspects <br />
+                            of a<span> virtual/remote <br />
                             interview <br /> </span>
                         </h1>
                         <p className="modulesSection__pill">MODULE THREE</p>
@@ -204,10 +203,9 @@ function Landing() {
                         <img src="" alt="" />
                         <img src={Card06} />
                         <h1>
-                            How to ace your <br />
-                            requirement<br />
-                            event <span>written</span> <br />
-                            exercise  <br />
+                            How to give your<br />
+                            best in a <span>written <br />
+                            exercise  </span><br />
                         </h1>
                         <p className="modulesSection__pill">MODULE SIX</p>
                     </div> 

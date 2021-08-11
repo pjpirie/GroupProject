@@ -86,11 +86,12 @@
     padding: 0 90px;
     display: flex;
     flex-direction: row;
-    @include media("<=1300px"){
+    @include media("<=900px"){
         padding: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-left: 0px;
     }
     
 
@@ -98,17 +99,24 @@
         width: 50%;
         display: flex;
         flex-direction: column;
+        // justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 20px;
+        flex-basis: 50%;
         @include media("<=900px"){
-            align-self: flex-start;
+            align-self: center;
             margin-left: 0vw;
             width: auto;
             max-width: 70vw;
+            margin-right: 0px;
+            text-align: center;
         }
         @include media("<=600px"){
             align-self: center;
             margin-left: 0vw;
             width: auto;
             max-width: 70vw;
+            justify-content: center;
         }
 
         p{
@@ -120,10 +128,13 @@
         }
         h1{
             color: #264653;
-            font-size: 40px;
+            font-size: 60px;
             font-family: Roboto;
-            @include media("<=1300px"){
-                font-size: 40px;
+            @include media("<=1000px"){
+                font-size: 50px;
+            }
+            @include media("<=600px"){
+                font-size: 30px;
             }
         }
     }   
@@ -132,27 +143,36 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: flex-start;
+        margin-left: 20px;
+        flex-basis: 50%;
         @include media("<=1300px"){
             margin-top: 5vh;
         }
         @include media("<=900px"){
-            align-self: flex-end;
-            margin-right: 0vw;
+            align-self: center;
+            margin-left: 0vw;
             width: auto;
             max-width: 70vw;
+            margin-left: 0px;
         }
         @include media("<=600px"){
             align-self: center;
             margin-right: 0vw;
             width: auto;
             max-width: 70vw;
+            margin-top: 0;
+            justify-content: start;
         }
         p{
             color: #262626;
-            font-size: 22px;
-            @include media("<=1300px"){
-                font-size: 18px;
+            font-size: 26px;
+            @include media("<=1000px"){
+                font-size: 22px;
+            }
+            
+            @include media("<=600px"){
+                font-size: 16px;
             }
         }
         span{
@@ -241,7 +261,7 @@
 
             p{
                 margin: 0 0 20px 0;
-                font-size: 14px;
+                font-size: 18px;
                 @include media("<=900px"){
                     text-align: center;
                 }
@@ -311,6 +331,7 @@
         font-weight: 700;
         font-size: 12px !important;
         color: #E76F51 !important;
+        width: auto !important;
     }
 
     h1{
@@ -322,6 +343,8 @@
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
+        width: 600px;
+        max-width: 90vw;
         color: #2F2E41;
         font-size: 18px;
         
