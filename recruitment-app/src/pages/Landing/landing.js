@@ -79,9 +79,9 @@ function Landing() {
                     <h1>Getting a job is hard,{window.innerWidth >900 ? <br />: " "} but not too hard!</h1>
                 </div>
                 <div className="textSection__small">
-                    <p>Our programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific needs.<br />
+                    <p>The programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific requirements.<br />
                     <span>••••••••••••••••••••••</span><br />
-                    This programme applies many years’<br />experience in all aspects of recruitment<br />assessment and people development.
+                    The content draws on many years’<br />experience in all aspects of recruitment<br />assessment and people development.
                     </p>
                 </div>
             </div>
@@ -94,12 +94,9 @@ function Landing() {
                         <img className="cardSection__card__image__img"src={ExpertImage} alt="Image of our experts" />
                     </div>
                     <div className="cardSection__card__text">
-                        <h1><img src={blue_hash} />Made By Experts</h1>
+                        <h1><img src={blue_hash} />Utilising expertise targeted on individual needs</h1>
                         <p>
-                            Recruitment Skills Development Scotland™ has been developed by<br />
-                            experts in the field of recruitment and recruitment training. <br />
-                            By using proven methods to accelerate skills development to secure <br />
-                            a successful interviewv
+                        RSDP condenses this expertise in recruitment and provides accelerated skills development to enhance success.
                         </p>
                         <div className="cardSection__card__text__cta">
                             <Link to='/register'>
@@ -114,11 +111,9 @@ function Landing() {
                         <img className="cardSection__card__image__img"src={EveryoneImage} alt="Image of our experts" />
                     </div>
                     <div className="cardSection__card__text">
-                        <h1>Designed For Everyone</h1>
+                        <h1>Easy to access</h1>
                         <p>
-                            Recruitment Skills Development Scotland™ is designed to be simple<br />
-                            and easily followed by all. With engaging videos giving information on the<br />
-                            various programme module along with activities to reinforce your new knowledge.
+                        RSVP is straightforward, easy to follow and combines engaging video with individual learning.
                         </p>
                         <div className="cardSection__card__text__cta">
                             <img src={orange_hash} />
@@ -155,66 +150,66 @@ function Landing() {
                         <h1>
                             All the <br />
                             <span>preparation</span> <br />
-                            you need to do<br />
-                            For blah blah <br /> 
+                            you need for your<br />
+                            recruitment event <br /> 
                         </h1>
-                        <p className="modulesSection__pill">FEATURE</p>
+                        <p className="modulesSection__pill">MODULE ONE</p>
                     </div>
 
                     <div className="modulesSection__card" ref={ref}>
                         <img src={Card02} />
                         <h1>
-                            All the <br />
-                            <span>preparation</span> <br />
-                            you need to do<br />
-                            For blah blah  <br />
+                            Everything <br />
+                            you need to know<br />
+                            for your <span>face to<br />
+                            face interview</span> <br />
                         </h1>
-                        <p className="modulesSection__pill">FEATURE</p>
+                        <p className="modulesSection__pill">MODULE TWO</p>
                     </div> 
 
                     <div className="modulesSection__card">
                         <img src={Card03} />
                         <h1>
-                            All the <br />
-                            <span>preparation</span> <br />
-                            you need to do<br />
-                            For blah blah <br /> 
+                            Get ready <br />
+                            for your<br />
+                            <span> virtual/remote <br />
+                            interview <br /> </span>
                         </h1>
-                        <p className="modulesSection__pill">FEATURE</p>
+                        <p className="modulesSection__pill">MODULE THREE</p>
                     </div> 
 
                     <div className="modulesSection__card">
                         <img src={Card04} />
                         <h1>
-                            All the <br />
-                            <span>preparation</span> <br />
-                            you need to do<br />
-                            For blah blah  <br />
+                            The key do's and <br />
+                            don'ts in <span>group<br />
+                            exercise</span> <br />
+                            scenarios  <br />
                         </h1>
-                        <p className="modulesSection__pill">FEATURE</p>
+                        <p className="modulesSection__pill">MODULE FOUR</p>
                     </div> 
 
                     <div className="modulesSection__card" ref={ref2}>
                         <img src={Card05} />
                         <h1>
-                            All the <br />
-                            <span>preparation</span> <br />
-                            you need to do<br />
-                            For blah blah  <br />
+                            How to succeed <br />
+                            in any recruitment<br />
+                            event <span>role play</span> <br />
+                            scenario  <br />
                         </h1>
-                        <p className="modulesSection__pill">FEATURE</p>
+                        <p className="modulesSection__pill">MODULE FIVE</p>
                     </div> 
 
                     <div className="modulesSection__card">
                         <img src="" alt="" />
                         <img src={Card06} />
                         <h1>
-                            All the <br />
-                            <span>preparation</span> <br />
-                            you need to do<br />
-                            For blah blah  <br />
+                            How to ace your <br />
+                            requirement<br />
+                            event <span>written</span> <br />
+                            exercise  <br />
                         </h1>
-                        <p className="modulesSection__pill">FEATURE</p>
+                        <p className="modulesSection__pill">MODULE SIX</p>
                     </div> 
                 </div>
             </div>

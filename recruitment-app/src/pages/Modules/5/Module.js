@@ -73,7 +73,11 @@ function Module() {
                     <div className="textSection">
                         <div className="textSection__large">
                             <p>Important!</p>
-                            <h1>Sample Content{window.innerWidth >900 ? <br />: " "} but not too hard!</h1>
+                            <h1>
+                                You will be observed by {window.innerWidth >900 ? <br />: " "}
+                                assessors but they {window.innerWidth >900 ? <br />: " "}
+                                will not take any part {window.innerWidth >900 ? <br />: " "}
+                                in the team discussion</h1>
                         </div>
                         <div className="textSection__small">
                             <p>
