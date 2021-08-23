@@ -60,6 +60,9 @@ function App() {
     .then(data => {
       (data.tokenValid) === true ? dispatch(setLogged(true)) : dispatch(setLogged(false));
       dispatch(setAccount(true, data.user));
+      setTimeout(()=> {
+        setLoading(false);
+      }, 1000);
     });
   }
 
@@ -68,9 +71,9 @@ function App() {
   useEffect(() => {
     checkAuth();
     setLoading(true);
-    setTimeout(()=> {
-      setLoading(false);
-    }, 3500);
+    // setTimeout(()=> {
+    //   setLoading(false);
+    // }, 3500);
   }, [])
   
   if(loading){
