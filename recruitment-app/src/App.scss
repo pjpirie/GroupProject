@@ -91,9 +91,17 @@ body {
 }
 
 .App__MenuOpen__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 1rem;
+	position: fixed;
+	background: #fff;
+	border-radius: 100px;
+	padding: 10px;
 	transition: opacity 400ms ease-in-out, transform 800ms ease-in-out,
 		margin 800ms ease-in-out;
+	z-index: 998;
 }
 
 .App__MenuOpen__button.hidden {

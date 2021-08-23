@@ -56,13 +56,13 @@ function ModuleNav(props) {
                 <GetUserName />
                 <ModulesCompleted form="bar" theme="light"/>
                 <Link to="/">
-                    <li className="ModuleNav__link"><SchoolIcon fontSize="large"/> <span>Module</span></li>
+                    <li className="ModuleNav__link" onClick={() => dispatch(setSideNavOpen(false))}><SchoolIcon fontSize="large"/> <span>Module</span></li>
                 </Link>
                 <Link to="/edit">
-                    <li className="ModuleNav__link"><CreateIcon fontSize="large" /> <span>Edit</span></li>
+                    <li className="ModuleNav__link" onClick={() => dispatch(setSideNavOpen(false))}><CreateIcon fontSize="large" /> <span>Edit</span></li>
                 </Link>
                 <Link to="/help">
-                    <li className="ModuleNav__link"><HelpIcon fontSize="large" /> <span>Help</span></li>
+                    <li className="ModuleNav__link" onClick={() => dispatch(setSideNavOpen(false))}><HelpIcon fontSize="large" /> <span>Help</span></li>
                 </Link>
                 {(UserData == undefined || UserData == null) ? (
                     ''

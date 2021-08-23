@@ -7,10 +7,10 @@
     width: 90%;
     z-index: 1;
     @include media("<=900px"){
-        width: 80vw;
+        // width: 80vw;
     }
     @include media("<=400px"){
-        width: 90vw;
+        // width: 90vw;
     }
 
     &__buttons{
@@ -54,7 +54,8 @@
             }
             @include media("<=500px"){
                 
-                font-size: 16px;
+                font-size: 18px;
+                width: 60vw;
                 border-radius: 10px;
                 padding: 5px 15px;
             

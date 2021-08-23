@@ -2,7 +2,7 @@
 .module {
 	padding: 15px 0;
     @include media("<=800px"){
-        margin-right: 56px !important;
+        // margin-right: 56px !important;
     }
 
 	&__header {

@@ -1,9 +1,10 @@
 @import '../../../breakpoints.scss';
-.module {
+.module5 {
+    padding: .5rem 2rem !important;
     @include media("<=800px"){
-        margin-right: 56px !important;
+        // margin-right: 56px !important;
     }
-    padding: 15px 10px;
+    // padding: 15px 10px;
     @include media(">=1200px"){
         max-width: 70vw;
         margin-left: auto;
@@ -66,7 +67,7 @@
                 p{
                     color: #264653;
                     font-size: 22px;
-                    font-weight: 500;
+                    font-weight: 400;
                 }
             }
         }
@@ -169,7 +170,7 @@
     }
 }
 
-.module__body__dodont{
+.module5__body__dodont{
     margin: 100px 0;
     display: flex;
     justify-content: center;
@@ -177,7 +178,7 @@
     flex-direction: column;
 }
 
-.module__body__activity{
+.module5__body__activity{
     width: 50vw;
     margin: 100px auto;
     display: flex;
