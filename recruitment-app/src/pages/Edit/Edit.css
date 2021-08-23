@@ -112,7 +112,7 @@
     box-shadow: none;
     border: none;   
     font-size: 20px;
-    width: 20vw;
+    /* width: 20vw; */
     transition: background ease-in-out 200ms;
 }
 
@@ -120,4 +120,5 @@
     padding: 0px 10px;
     font-weight: 500;
     color: #213142;
+    margin: 10px 0;
 }

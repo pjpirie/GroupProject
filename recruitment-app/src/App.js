@@ -84,7 +84,8 @@ function App() {
     );
   }else{
     return (
-      <Router basename="/GroupProject">
+      // <Router basename="/GroupProject">
+      <Router>
         {/* {console.log(isRedirect)} */}
         { isRedirect.redirect ? (
           <Redirect to={isRedirect.location}/>
@@ -166,9 +167,9 @@ function App() {
                       <ModuleTree checkAuth={checkAuth} />
                     </Route>
                   </Switch>
-                  <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
+                  {/* <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon style={{opacity: 0}} />
-                  </div>
+                  </div> */}
                 </div>
               </Fragment>
             )}
