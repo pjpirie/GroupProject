@@ -148,7 +148,7 @@ function Module() {
                                     <div className="module3__body__main__buttons__modal__show">
                                         <button onClick={modalClose}>X</button>
                                         <h1>Tell me/us a bit about yourself</h1>
-                                        <h2>This question is often used at the start of the interview, so it gives you a great chance to create a positive first impression. Talk about your skills and achievements, work related or in any other areas, for example voluntary activities or at school/college/university. Try to connect these to the role you’ve applied for. Keep your answer short, two or three minutes.</h2>
+                                        <h2>This question is often used at the start of the interview, so it gives you a great chance to create a positive first impression. Talk about your skills and achievements, work related or in any other areas, for example voluntary activities or at school / college / university. Try to connect these to the role you’ve applied for. Keep your answer short, two or three minutes.</h2>
                                     </div>
                                 
                                 :null
@@ -393,7 +393,7 @@ function Module() {
                         <h6>Read the questions and have a think about your what your response might be.</h6>
                         <div className="module3__body__main__buttons__wrapper">
                             <button onClick={()=>modalOpen(14)} id="btn14" className="module3__body__main__buttons__wrapper__1"><p>What are you particularly good at?</p></button>
-                            <button onClick={()=>modalOpen(15)} id="btn15" className="module3__body__main__buttons__wrapper__2"><p>How good are you at working to a tight deadline?</p></button>
+                            <button onClick={()=>modalOpen(15)} id="btn15" className="module3__body__main__buttons__wrapper__2__1"><p>How good are you at working a tight deadline?</p></button>
                         </div>
                         <div className="module3__body__main__buttons__modal">
                             {

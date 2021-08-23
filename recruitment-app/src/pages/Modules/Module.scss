@@ -240,7 +240,11 @@
 	.modulefront {
 		&__head {
 			&__left {
-				min-width: 100%;
+				width: 100%;
+				margin: 0 auto;
+			}
+			&__right {
+				display: none;
 			}
 			h3 {
 				font-size: 3em;
@@ -258,8 +262,9 @@
 				}
 				&__shape {
 					margin: 0 !important;
-
-					width: 70%;
+					width: 90%;
+					font-size: 1.3em;
+					text-align: center;
 				}
 			}
 			&__modules {
@@ -328,20 +333,24 @@
 						color: #000;
 					}
 					&__icons {
+						margin-top: 2em;
+						min-height: auto;
 						display: flex;
 						flex-direction: column;
 						align-items: center;
 						&__img2 {
-							margin: 5em 0 5em -90% !important;
+							// margin: 5em 0 5em -90% !important;
+							margin-top: 5em;
 						}
 						&__img3 {
-							margin-left: 50% !important;
+							// margin-left: 50% !important;
+							margin-top: 8em;
 						}
 						&__heading2 {
-							transform: translateY(-150%) translateX(-90%);
+							// transform: translateY(-150%) translateX(-90%);
 						}
 						&__heading3 {
-							transform: translateY(150%) translateX(90%);
+							// transform: translateY(150%) translateX(90%);
 						}
 					}
 				}
@@ -353,61 +362,19 @@
 	}
 }
 @media (max-width: 450px) {
-	.modulefront__body__modules__list__first__left,
-	.modulefront__body__modules__list__second__right {
-		h3 {
-			width: 8em;
+	.modulefront__body__modules__list {
+		&__first__left,
+		&__second__right {
+			h3 {
+				width: 8em;
+			}
 		}
-	}
-	.modulefront__body__modules__list__first__right,
-	.modulefront__body__modules__list__second__left {
-		img {
-			margin-bottom: 1em;
+		&__first__right,
+		&__second__left {
+			&__shape,
+			img {
+				margin: 0 -2em 2em 0;
+			}
 		}
 	}
 }
-// &__first {
-// 	display: flex;
-// 	flex-direction: rows !important;
-// 	margin-bottom: 6em;
-// 	&__left {
-// 		width: 60%;
-// 		h3 {
-// 			border-radius: 15px;
-// 			background-color: var(--orange-bg);
-// 			color: var(--orange);
-// 			width: 10em;
-// 			height: 2em;
-// 			padding-top: 0.3em;
-// 			font-size: 1em;
-// 		}
-// 		h2 {
-// 			text-align: left;
-// 			color: var(--light-green);
-// 			font-size: 2em;
-// 		}
-// 		p {
-// 			text-align: left;
-// 			font-size: 1.4em;
-// 		}
-// 	}
-// 	&__right {
-// 		width: 40%;
-// 		display: flex;
-// 		justify-content: center;
-// 		flex-direction: row;
-// 		img {
-// 			height: 19em;
-// 			width: 20em;
-// 			border-radius: 50px;
-// 		}
-// 		&__shape {
-// 			border-radius: 50px;
-// 			z-index: -1;
-// 			width: 10em;
-// 			background: var(--light-green);
-// 			color: #fff;
-// 			margin: -1em 0 1em -9em;
-// 			font-size: 2em;
-// 		}
-// 	}
