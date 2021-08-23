@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import { setAlert, setLightNav } from '../../actions';
-import './Register.css';
+import './Register.scss';
 import './Register.responsive.css';
 
 
