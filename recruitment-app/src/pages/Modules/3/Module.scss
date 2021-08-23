@@ -1,8 +1,5 @@
-@import '../../../breakpoints.scss';
+@import "../../../breakpoints.scss";
 .module3 {
-    @include media("<=800px"){
-        margin-right: 56px !important;
-    }
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -13,9 +10,7 @@
 		box-shadow: none;
 		font-weight: 700 !important;
 		font-size: 20px;
-		height: 2em !important;
-
-		// font-size: 20px;
+		height: 2em;
 	}
 	button:hover {
 		background: var(--btn-green);
@@ -121,6 +116,7 @@
 					margin-bottom: 2em;
 				}
 				&__wrapper {
+					// outline: 1px solid red;
 					display: flex;
 					flex-direction: column !important;
 					width: 30em;
@@ -177,6 +173,7 @@
 						margin-bottom: 5em;
 						button {
 							cursor: pointer;
+							height: 2em;
 							font-size: 2em;
 							align-self: flex-end;
 							text-align: center;
@@ -309,8 +306,8 @@
 						background: var(--light-green);
 						border: none;
 						border-radius: 15px;
-						height: 4em;
-						width: 20em !important;
+						height: 2em;
+						width: 20em;
 						font-weight: 400;
 						// padding: 1em;
 						color: #fff;
@@ -402,6 +399,7 @@
 					color: var(--light-green);
 				}
 				&__wrapper {
+					max-width: 100%;
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -409,8 +407,8 @@
 						background: var(--light-green);
 						border: none;
 						border-radius: 15px;
-						height: 4em;
-						min-width: 20em !important;
+						height: 2em;
+						width: 20em;
 						font-weight: 400;
 						// padding: 1em;
 						color: #fff;
@@ -608,7 +606,7 @@
 				}
 				&__modal {
 					&__show {
-						padding: 3em 4em 3em 4em;
+						padding: 0 4em 3em 4em;
 						width: 40vw;
 						text-align: left !important;
 						display: flex;
@@ -725,6 +723,7 @@
 			width: 100% !important;
 			margin: 0 auto;
 			&__show {
+				font-size: 0.9em;
 				width: 100%;
 			}
 			button {
@@ -733,6 +732,43 @@
 		}
 		&__card {
 			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.module3__body__main {
+		&__buttons__wrapper {
+			width: 100%;
+			button {
+				padding: 0;
+				font-size: 1em;
+				width: 90vw !important;
+				p::before {
+					display: none;
+				}
+			}
+			&__2__1 {
+				outline: 1px solid red !important;
+				height: 3em !important;
+			}
+		}
+		&__star__wrapper,
+		&__mistake__wrapper {
+			width: 100%;
+			button {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+		&__do {
+			&__wrapper {
+				flex-direction: column;
+			}
+			&__modal__show {
+				width: 100%;
+			}
 		}
 	}
 }
