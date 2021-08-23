@@ -45,7 +45,7 @@ function Landing() {
       const isVisible = useOnScreen(ref, -200);
 
       useEffect(() =>{
-        console.log(isVisible);
+        // console.log(isVisible);
         if(!ref.current.classList.contains('active') && isVisible && window.innerWidth > 900){
             ref.current.classList.add('active');
             ref2.current.classList.add('active');

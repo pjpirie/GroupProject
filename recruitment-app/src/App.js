@@ -48,7 +48,7 @@ function App() {
   
   
   const checkAuth = async (msg = "App") => {
-    console.log("Checking Auth from " + msg)
+    // console.log("Checking Auth from " + msg)
     return await fetch('https://group-54-rct.herokuapp.com/user/auth', {
       method: 'POST',
       headers: {
@@ -62,13 +62,15 @@ function App() {
       dispatch(setAccount(true, data.user));
     });
   }
+
+  
   
   useEffect(() => {
     checkAuth();
     setLoading(true);
     setTimeout(()=> {
       setLoading(false);
-    }, 3000);
+    }, 3500);
   }, [])
   
   if(loading){
@@ -80,17 +82,17 @@ function App() {
   }else{
     return (
       <Router basename="/GroupProject">
-        {console.log(isRedirect)}
+        {/* {console.log(isRedirect)} */}
         { isRedirect.redirect ? (
           <Redirect to={isRedirect.location}/>
         ) : (
-          console.log("No Redirect")) 
+          '') 
         }
         {hasRedirected ? dispatch(setRedirect(false)) : ""}
         <ScrollToTop checkAuth={checkAuth} loading={setLoading}/>
         <div className="App">
           
-        {console.log(getUser)}
+        {/* {console.log(getUser)} */}
           <div className="main">
             {!isLogged ?  (
               <Fragment>
