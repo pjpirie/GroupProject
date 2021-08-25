@@ -751,28 +751,41 @@
 
 @media (max-width: 600px) {
 	.module3__body__main {
-		&__buttons__wrapper {
-			width: 100%;
-			button {
-				padding: 0;
-				font-size: 1em;
-				width: 90vw !important;
-				p::before {
-					display: none;
+		&__buttons {
+			&__wrapper {
+				width: 100%;
+				button {
+					padding: 0;
+					font-size: 1em;
+					width: 90vw !important;
+					p::before {
+						display: none;
+					}
+				}
+				&__2__1 {
+					height: 3em !important;
 				}
 			}
-			&__2__1 {
-				outline: 1px solid red !important;
-				height: 3em !important;
+			&__modal__show {
+				h1 {
+					font-size: 1.4em;
+				}
 			}
 		}
 		&__star__wrapper,
-		&__mistake__wrapper {
-			width: 100%;
-			button {
+		&__mistake {
+			&__wrapper {
 				width: 100%;
-				margin-left: 0;
-				margin-right: 0;
+				button {
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+			&__modal__show {
+				h1 {
+					font-size: 1.4em;
+				}
 			}
 		}
 		&__do {

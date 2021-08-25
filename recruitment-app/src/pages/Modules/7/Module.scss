@@ -263,6 +263,9 @@
 		}
 		&__buttons {
 			flex-direction: column;
+			&__modal__show {
+				width: 100% !important;
+			}
 		}
 	}
 }
