@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
+import CloseButtonImage from '../../../assets/1x/closeicon.png';
 import ModuleLogo from '../ModuleLogo.js';
 
 function Module() {
@@ -96,7 +97,7 @@ function Module() {
                             {
                                 btnVal === 1?
                                     <div className="module4__body__main__buttons__modal__show">
-                                    <button onClick={modalClose}>X</button>
+                                    <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Documentation</h1>
                                         <h4>You may be required to bring along your Passport or other documents confirming your right to work and address etc.</h4>
                                     </div>
@@ -106,7 +107,7 @@ function Module() {
                             {
                                 btnVal === 2?
                                     <div className="module4__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Connectivity</h1>
                                         <h4>
                                             • Provide a contact number in case of any connectivity issues. <br />
@@ -123,7 +124,7 @@ function Module() {
                             {
                                 btnVal === 3?
                                     <div className="module4__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Appearance</h1>
                                         <h4>
                                             • Dress appropriately, as if you were attending in person. <br />
@@ -138,7 +139,7 @@ function Module() {
                             {
                                 btnVal === 4?
                                     <div className="module4__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Location</h1>
                                         <h4>
                                             • Position yourself in a comfortable, bright space. <br />

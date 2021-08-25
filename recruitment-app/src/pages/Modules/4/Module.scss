@@ -1,8 +1,4 @@
-@import '../../../breakpoints.scss';
 .module4 {
-    @include media("<=800px"){
-        margin-right: 56px !important;
-    }
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -237,6 +233,13 @@
 	}
 }
 
+.close__btn {
+	width: 30px;
+	height: 30px;
+	margin-left: 100%;
+	cursor: pointer;
+}
+
 @media (max-width: 1200px) {
 	.module4__body__main {
 		&__text {
@@ -263,6 +266,7 @@
 			margin: 0 auto;
 			&__show {
 				width: 100%;
+				// padding: 0em;
 			}
 			button {
 				margin-right: -10px;
@@ -270,6 +274,14 @@
 		}
 		&__card {
 			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.module4__body__main__buttons__modal__show {
+		h1 {
+			font-size: 1.4em !important;
 		}
 	}
 }
