@@ -16,7 +16,7 @@ import DownloadIcon from '../../../assets/SVG/Download.svg';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download4 ', {
+        return fetch('https://rsdp-backend.herokuapp.com/download4 ', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
