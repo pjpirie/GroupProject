@@ -8,7 +8,7 @@ import ModuleLogo from '../ModuleLogo.js';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download2', {
+        return fetch('https://rsdp-backend.herokuapp.com/download2', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'

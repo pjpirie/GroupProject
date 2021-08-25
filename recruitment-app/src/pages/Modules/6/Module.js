@@ -15,7 +15,7 @@ import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download5', {
+        return fetch('https://rsdp-backend.herokuapp.com/download5', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ function Module() {
             <div className="module5__body">
                 <div className="module5__body__video">
                     <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/5" type="video/mp4"></source>
+                        <source src="https://rsdp-backend.herokuapp.com/video/5" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="module5__body__main">
