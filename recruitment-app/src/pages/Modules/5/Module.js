@@ -42,36 +42,36 @@ function Module() {
         DownloadMedia();
     };
     return (
-        <div className="module">
+        <div className="module4">
             <RSDPModuleLogo />
-            <div className="module__header">
-                <div className="module__header__text">
+            <div className="module4__header">
+                <div className="module4__header__text">
                     <h3>MODULE FOUR</h3>
                     <h1>Group Exercise</h1>
                 </div>
                 <Eta time={10} />
             </div>
-            <div className="module__body">
-                <div className="module__body__video">
+            <div className="module4__body">
+                <div className="module4__body__video">
                     <video id="Video" autoplay controls>
                         <source src="https://rsdp-backend.herokuapp.com/video/4" type="video/mp4"></source>
                     </video>
                 </div>
-                <div className="module__body__main">
-                    <div className="module__body__main__text">
+                <div className="module4__body__main">
+                    <div className="module4__body__main__text">
                         <p>
                         This is a <span className="highlightGreen">discussion exercise</span> in which a small group of candidates are given a topic to discuss and reach a team conclusion within a given timescale. 
                         </p>
                     </div>
                     {/* Modal Button Section Start */}
-                    <div className="module__body__buttons">
+                    <div className="module4__body__buttons">
                         <p>These exercises can be structured in one of two ways</p>
                         <ModuleButtonModal />
                     </div>
                     {/* Modal Button Section Start */}
                     {/* Text Section Start */}
-                    <div className="textSection">
-                        <div className="textSection__large">
+                    <div className="module4__textSection textSection">
+                        <div className="module4__textSection__large textSection__large">
                             <p>Important!</p>
                             <h1>
                                 You will be observed by {window.innerWidth >900 ? <br />: " "}
@@ -79,7 +79,7 @@ function Module() {
                                 will not take any part {window.innerWidth >900 ? <br />: " "}
                                 in the team discussion</h1>
                         </div>
-                        <div className="textSection__small">
+                        <div className="module4__textSection__small textSection__small">
                             <p>
                              The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork an leadership.<br />
                             <span>••••••••••••••••••••••</span><br />
@@ -101,14 +101,14 @@ function Module() {
                     {/* Competencies Section End */}
 
                     {/* Do's and Don'ts Section Start */}
-                    <div className="module__body__dodont">
+                    <div className="module4__body__dodont">
                         <h1>The do's and don'ts</h1>
                         <DoDontModal />
                     </div>
                     {/* Do's and Don'ts Section End */}
 
                     {/* Activity Section Start */}
-                    <div className="module__body__activity">
+                    <div className="module4__body__activity">
                         <h1>Now its time to work on your action plan</h1>
                         <p>Download the Module 4 activity sheet and work througb the exercised to be fully prepared for group exercises.</p>
                         <button onClick={() => { handleDownload(); }}><img src={DownloadIcon} alt="Download Button"/>Download</button>
