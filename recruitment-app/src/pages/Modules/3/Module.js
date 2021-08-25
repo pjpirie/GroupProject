@@ -83,7 +83,7 @@ function Module() {
             <div className="module3__body">
                 <div className="module3__body__video">
                     <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/2" type="video/mp4"></source>
+                        <source src="https://rsdp-backend.herokuapp.com/video/2" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="module3__body__main">
