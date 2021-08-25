@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
+import CloseButtonImage from '../../../assets/1x/closeicon.png';
+import CloseButtonImageDo from '../../../assets/1x/cross.png';
+
+
 import ModuleLogo from '../ModuleLogo.js';
 
 
@@ -146,7 +150,7 @@ function Module() {
                             {
                                 btnVal === 1?
                                     <div className="module3__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Tell me/us a bit about yourself</h1>
                                         <h2>This question is often used at the start of the interview, so it gives you a great chance to create a positive first impression. Talk about your skills and achievements, work related or in any other areas, for example voluntary activities or at school / college / university. Try to connect these to the role you’ve applied for. Keep your answer short, two or three minutes.</h2>
                                     </div>
@@ -156,7 +160,7 @@ function Module() {
                             {
                                 btnVal === 2?
                                     <div className="module3__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                    <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Why did you apply for this job?</h1>
                                         <h2>Show that you’ve researched the role by discussing aspects of the job that connect with what you enjoy doing, for example face to face contact with people or dealing with customers on the phone. Highlight particular aspects of the job that attracted you.</h2>
                                     </div>
@@ -166,7 +170,7 @@ function Module() {
                             {
                                 btnVal === 3?
                                     <div className="module3__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>What do you know about our organisation?</h1>
                                         <h2>Focus on brief details, for example, main purpose, key achievements and some interesting facts. The purpose is to show that you have researched the organisation. Again, keep your answer brief giving a few specific details.</h2>
                                     </div>
@@ -215,7 +219,7 @@ function Module() {
                             {
                                 btnVal === 4?
                                     <div className="module3__body__main__star__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Situation</h1>
                                         <h2>Explain the background to the events which you are describing.</h2>
                                         <h4>“I was working as a sales assistant in XYZ clothing store in the centre of Birmingham when a customer approached me in a very aggressive way, shouting and holding up a jacket and complaining that there was a rip in the lining.”</h4>
@@ -226,7 +230,7 @@ function Module() {
                             {
                                 btnVal === 5?
                                     <div className="module3__body__main__star__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Task</h1>
                                         <h2>What were you trying to achieve in this situation?</h2>
                                         <h4>“I tried to resolve this customer’s problem in the most effective way for her and for the business”                                  </h4>
@@ -237,7 +241,7 @@ function Module() {
                             {
                                 btnVal === 6?
                                     <div className="module3__body__main__star__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Action</h1>
                                         <h2>What did you do? What actions did you take?</h2>
                                         <h4>“Firstly I began to calm her down by indicating that I was sorry that she was upset and I assured her that I would help. Then I asked her to tell me what was the problem. I assured her that I could resolve this and offered to exchange the item or give her a refund provided she had the receipt”.</h4>
@@ -248,7 +252,7 @@ function Module() {
                             {
                                 btnVal === 7?
                                     <div className="module3__body__main__star__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Result</h1>
                                         <h2>What was the overall outcome?</h2>
                                         <h4>“The customer calmed down and I showed her a number of other jackets and she chose one, apologised for shouting and left the store”.</h4>
@@ -275,7 +279,7 @@ function Module() {
                             {
                                 btnVal === 8?
                                 <div className="module3__body__main__mistake__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Too General</h1>
                                         <h2>Give a general answer not referring to a specific situation</h2>
                                         <h4>“I used to get lots of angry customers. How I dealt with them was to use my customer service skills and my empathy to show that I always put the customer first.”</h4>
@@ -286,7 +290,7 @@ function Module() {
                             {
                                 btnVal === 9?
                                 <div className="module3__body__main__mistake__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Team Focus</h1>
                                         <h2>Refer to team performance rather than focusing on what YOU did</h2>
                                         <h4>“Our team dealt with complaints so we had to talk to angry customers every day. We used to apply the skills we learned in our customer service training and if anyone had difficulties we all came in to help.”</h4>
@@ -296,7 +300,7 @@ function Module() {
                             {
                                 btnVal === 10?
                                 <div className="module3__body__main__mistake__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Job Focus</h1>
                                         <h2>Describe jobs you held when you had to deal with this kind of situation</h2>
                                         <h4>“I worked in a bar in the city centre where many of the customers drank heavily and would then get awkward, so I had to learn quickly how to deal with them. Later I became a receptionist in a busy hotel where the system kept breaking down and rooms were double booked regularly. This really upset the customers and I had to figure out how to calm them down.”</h4>
@@ -358,7 +362,7 @@ function Module() {
                             {
                                 btnVal === 11?
                                     <div className="module3__body__main__mistake__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Strengths</h1>
                                         <h2>Things you can do well</h2>
                                         <h4>Organise, Communicate, Plan Ahead, Work in a Team, Deal with Pressure</h4>
@@ -369,7 +373,7 @@ function Module() {
                             {
                                 btnVal === 12?
                                     <div className="module3__body__main__mistake__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Enthusiasm</h1>
                                         <h2>Intense and eager enjoyment</h2>
                                         <h4>Demonstrate this as you are describing your strengths</h4>
@@ -380,7 +384,7 @@ function Module() {
                             {
                                 btnVal === 13?
                                     <div className="module3__body__main__mistake__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Examples</h1>
                                         <h2>Times when you have demonstrated your strengths</h2>
                                         <h4>Illustrations of when you have shown your strengths</h4>
@@ -405,7 +409,7 @@ function Module() {
                             {
                                 btnVal === 14?
                                     <div className="module3__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>What are you particularly good at?</h1>
                                         <h2><span>STRENGTH - Organising </span><br /> “I am particularly good at organising. I really enjoy bringing order into chaotic situations. It gives me a real buzz. Last month our team moved to a different location in the warehouse and we had to set up our work stations and sort out who was doing what. I made a point of clearing a space and setting up my area neatly in order to make it easy for me to access everything. A few colleagues watched me and asked if I could help them. I jumped at the chance as it meant we were all ready more quickly and I really enjoy supporting other members of my team. When our manager came round an hour later she was amazed that we were fully operational in such a short time. I get a real kick out of organising things whether at work or in my private life. I am a “lists person” and it gives me great satisfaction to tick things off at the end of the day and see what I have achieved and begin to plan for what will be completed tomorrow.”</h2>
                                     </div>
@@ -415,7 +419,7 @@ function Module() {
                             { 
                                 btnVal === 15?
                                     <div className="module3__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>How good are you at working to a tight deadline?</h1>
                                         <h2><span>STRENGTH – Dealing with Pressure</span><br />“When the pressure is on I seem to get an extra boost. It gives me a clear focus and I really enjoy the challenge. At the end of every month my team puts together a performance report for our division and it has to be with the senior management team by close of business on the first of the new month. Three months ago we had a major system problem just as we were about to complete our report. It meant we couldn’t input any data and the I.T. department couldn’t say how long it would take to remedy the situation. I have five people in my team so I got everybody together and asked for ideas in a quick brainstorming session. I love these meetings where everybody is throwing in suggestions, some very practical, others off the wall and sometimes outrageous. We had a real buzz going and I could feel the energy in the room as we all pushed to get results. Within a short time we had a number of action items which we all began to pursue and within two hours we had a clear plan which we then implemented. I contacted my boss with the good news and at lunchtime he came round with a load of cakes and other treats which we all shared as part of our celebration. I find that the more often that kind of thing happens the better we are at dealing with the crisis. I love it, the adrenalin rush, the drive within the team and the terrific sense of achievement when you finally succeed. There’s nothing like it!”  </h2>
                                     </div>
@@ -440,7 +444,7 @@ function Module() {
                             {
                                 btnVal === 16?
                                     <div className="module3__body__main__do__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImageDo} alt="Close" className="close__btn__2" onClick={modalClose}/>
                                         <p>-	Show your feelings when you are answering strength based questions (Tone of voice, body language, eye contact)</p>
                                         <p>-	Quote example(s) of times when you displayed the relevant strength</p>
                                     </div>
@@ -450,7 +454,7 @@ function Module() {
                             {
                                 btnVal === 17?
                                     <div className="module3__body__main__do__modal__show">   
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImageDo} alt="Close" className="close__btn__2" onClick={modalClose}/>
                                         <p>-	Lie about your strengths. A skilled interviewer will detect this</p>                                        
                                         <p>-	Fake it by “acting out” enthusiasm. Again, this is easy to spot.</p>
                                     </div>

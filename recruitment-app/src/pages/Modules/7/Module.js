@@ -3,6 +3,8 @@ import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
 import ModuleLogo from '../ModuleLogo.js';
+import CloseButtonImage from '../../../assets/1x/closeicon.png';
+
 
 function Module() {
 
@@ -95,7 +97,7 @@ function Module() {
                             {
                                 btnVal === 1?
                                     <div className="module6__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Read</h1>
                                         <h4>Read through all of the information provided and identify the key points which you are asked to address. Highlight these and keep them visible as you prepare your answer, regularly checking that you are still on track and providing only relevant information.</h4>
                                     </div>
@@ -105,7 +107,7 @@ function Module() {
                             {
                                 btnVal === 2?
                                     <div className="module6__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Manage Time</h1>
                                         <h4>Construct an outline plan. Allocate time limits for each part of your answer and regularly monitor your progress against these. Allow sufficient time at the end to check that you have done everything requested as you review your work checking spelling and grammar.</h4>
                                     </div>
@@ -114,7 +116,7 @@ function Module() {
                             {
                                 btnVal === 3?
                                     <div className="module6__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Language</h1>
                                         <h4>Use language which is straightforward, jargon free and provides the specific information which is being asked for.</h4>
                                     </div>
@@ -123,7 +125,7 @@ function Module() {
                             {
                                 btnVal === 4?
                                     <div className="module6__body__main__buttons__modal__show">
-                                        <button onClick={modalClose}>X</button>
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Be Clear</h1>
                                         <h4>Ensure that your conclusions and recommendations are specific and unambiguous.</h4>
                                     </div>

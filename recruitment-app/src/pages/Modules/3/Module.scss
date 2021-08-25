@@ -1,4 +1,3 @@
-@import "../../../breakpoints.scss";
 .module3 {
 	button {
 		cursor: pointer;
@@ -692,6 +691,20 @@
 			}
 		}
 	}
+}
+
+.close__btn,
+.close__btn__2 {
+	width: 30px;
+	height: 30px;
+	margin-left: 100%;
+	cursor: pointer;
+}
+
+.close__btn__2 {
+	margin-top: 1em !important;
+	// color: #fff;
+	// background: #fff;
 }
 
 @media (max-width: 1200px) {

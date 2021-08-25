@@ -1,8 +1,4 @@
-@import '../../../breakpoints.scss';
 .module6 {
-    @include media("<=800px"){
-        margin-right: 56px !important;
-    }
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -241,6 +237,13 @@
 			}
 		}
 	}
+}
+
+.close__btn {
+	width: 30px;
+	height: 30px;
+	margin-left: 96%;
+	cursor: pointer;
 }
 
 @media (max-width: 1200px) {
