@@ -65,6 +65,10 @@
                 background: #fff;
                 outline:#175a52 2px solid;
                 color: #175a52;
+                &:hover{
+                    background: #175a52;
+                    color: #fff;
+                }
             }
             &:hover{
                 background: #175a52;
