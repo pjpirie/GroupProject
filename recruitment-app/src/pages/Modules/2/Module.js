@@ -36,22 +36,22 @@ function Module() {
         DownloadMedia();
     };
     return (
-        <div className="module">
+        <div className="module1">
             <RSDPModuleLogo />
-            <div className="module__header">
-                <div className="module__header__text">
+            <div className="module1__header">
+                <div className="module1__header__text">
                     <h3>MODULE ONE</h3>
                     <h1>Preperation</h1>
                 </div>
                 <Eta time={10} />
             </div>
-            <div className="module__body">
-                <div className="module__body__video">
+            <div className="module1__body">
+                <div className="module1__body__video">
                     <video id="Video" autoplay controls>
                         <source src="https://rsdp-backend.herokuapp.com/video/1" type="video/mp4"></source>
                     </video>
                 </div>
-                <div className="module__body__main">
+                <div className="module1__body__main">
                     {/* <p>
                     Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.
                     </p> */}
@@ -74,7 +74,7 @@ function Module() {
                     </div>
                     {/* Text Section End */}
                     {/* Quote Section Start */}
-                    <div className="module__quote">
+                    <div className="module1__quote">
                         <img src={DidYouKnow} alt="Did you know"/>
                         <div className="module__quote__text">
                             <h2>“98% of job seekers are eliminated at the initial screening and only the ‘Top 2%’ of candidates make it to the interview”</h2>
@@ -84,7 +84,7 @@ function Module() {
                     </div>
                     {/* Quote Section Start */}
                     {/* Modal Button Section Start */}
-                    <div className="module__body__buttons__mod1">
+                    <div className="module1__body__buttons__mod1">
                         <p>
                             Explore below to find out what you can do to prepare 
                             for your next recruitment event.
@@ -95,7 +95,7 @@ function Module() {
                     {/* Modal Button Section Start */}
                     
                     {/* Activity Section Start */}
-                    <div className="module__body__activity">
+                    <div className="module1__body__activity">
                         <h1>Now its time to work on your action plan</h1>
                         <p>
                             Download the Module 1 action items and work through the 
