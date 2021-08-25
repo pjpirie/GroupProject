@@ -8,7 +8,7 @@ import ModuleLogo from '../ModuleLogo.js';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download3', {
+        return fetch('https://rsdp-backend.herokuapp.com/download3', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ function Module() {
             <div className="module4__body">
                 <div className="module4__body__video">
                     <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/3" type="video/mp4"></source>
+                        <source src="https://rsdp-backend.herokuapp.com/video/3" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="module4__body__main">

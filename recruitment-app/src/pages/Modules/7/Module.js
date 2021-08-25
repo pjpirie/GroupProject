@@ -9,7 +9,7 @@ import CloseButtonImage from '../../../assets/1x/closeicon.png';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download3', {
+        return fetch('https://rsdp-backend.herokuapp.com/download3', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ function Module() {
             <div className="module6__body">
                 <div className="module6__body__video">
                     <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/6" type="video/mp4"></source>
+                        <source src="https://rsdp-backend.herokuapp.com/video/6" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="module6__body__main">
