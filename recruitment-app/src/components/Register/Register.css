@@ -1,0 +1,167 @@
+/**
+*
+* Testing
+*
+**/
+.registerPage__Wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* background: url('../../assets/register_bg.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.registerWrapper {
+  width: 100%;
+  max-width: 500px;
+  max-height: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.registerForm {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registerForm .names {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  .registerForm .names {
+    padding: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .registerForm .names label:first-of-type {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .registerForm .names label:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.registerForm label {
+  width: 100%;
+  padding: 0 20px;
+  margin: 5px auto 0px auto;
+}
+
+.registerForm label p {
+  width: 100%;
+  padding: 0;
+  margin: 10px auto 5px auto;
+}
+
+.registerForm input {
+  width: 100%;
+  padding: 10px 7px;
+  margin: 0px auto 5px auto;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.3);
+  border: 3px solid #213142;
+  border-color: #213142;
+  font-family: "Rubik", sans-serif !important;
+}
+
+.registerForm div {
+  margin: 20px auto;
+  padding: 0 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 500px) {
+  .registerForm div p {
+    text-align: left !important;
+  }
+}
+
+.registerForm div p {
+  margin-bottom: 0;
+}
+
+.btn-clearing {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.main-btn {
+  padding: 10px 40px;
+  border-radius: 100px;
+  background: #2a9d8f;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.alt-btn {
+  padding: 0px 10px;
+  font-weight: 500;
+  color: #213142;
+}
+/*# sourceMappingURL=Register.css.map */

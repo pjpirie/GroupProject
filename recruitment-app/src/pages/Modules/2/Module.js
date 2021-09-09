@@ -41,7 +41,7 @@ function Module() {
             <div className="module1__header">
                 <div className="module1__header__text">
                     <h3>MODULE ONE</h3>
-                    <h1>Preperation</h1>
+                    <h1>Preparation</h1>
                 </div>
                 <Eta time={10} />
             </div>
