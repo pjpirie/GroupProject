@@ -4,10 +4,7 @@ import '../ModuleGlobal.css';
 import './Module.scss';
 import CloseButtonImage from '../../../assets/1x/closeicon.png';
 import CloseButtonImageDo from '../../../assets/1x/cross.png';
-
-
-import ModuleLogo from '../ModuleLogo.js';
-
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 function Module() {
 
@@ -41,8 +38,8 @@ function Module() {
     const [btnVal, btnClick] = useState(false)
 
     const modalOpen =(num)=>{
-        if(document.querySelector(`.module3__body__main__do__wrapper__do__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__do__p__active`).classList.remove(`module3__body__main__do__wrapper__do__p__active`)}
-        if(document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`).classList.remove(`module3__body__main__do__wrapper__dont__p__active`)}
+        if(document.querySelector(`.module3__body__main__do__wrapper__do__active`)){document.querySelector(`.module3__body__main__do__wrapper__do__active`).classList.remove(`module3__body__main__do__wrapper__do__active`)}
+        if(document.querySelector(`.module3__body__main__do__wrapper__dont__active`)){document.querySelector(`.module3__body__main__do__wrapper__dont__active`).classList.remove(`module3__body__main__do__wrapper__dont__active`)}
         btnClick(num)
         let type = 'buttons'
         console.log(num)
@@ -50,10 +47,10 @@ function Module() {
         
         if(num===16||num===17){
             type='do'
-            if(num===16){return document.querySelector(`.module3__body__main__do__wrapper__do__p`).classList.add(`module3__body__main__do__wrapper__do__p__active`)}
-            if(num===17){return document.querySelector(`.module3__body__main__do__wrapper__dont__p`).classList.add(`module3__body__main__do__wrapper__dont__p__active`)}
-            document.querySelector(`.module3__body__main__do__wrapper__do__p`).classList.add(`module3__body__main__do__wrapper__do__p__active`)
-            document.querySelector(`.module3__body__main__do__wrapper__dont__p`).classList.add(`module3__body__main__do__wrapper__dont__p__active`)
+            if(num===16){return document.querySelector(`.module3__body__main__do__wrapper__do`).classList.add(`module3__body__main__do__wrapper__do__active`)}
+            if(num===17){return document.querySelector(`.module3__body__main__do__wrapper__dont`).classList.add(`module3__body__main__do__wrapper__dont__active`)}
+            document.querySelector(`.module3__body__main__do__wrapper__do`).classList.add(`module3__body__main__do__wrapper__do__active`)
+            document.querySelector(`.module3__body__main__do__wrapper__dont`).classList.add(`module3__body__main__do__wrapper__dont__active`)
         }
         let active = document.querySelector(`.module3__body__main__${type}__wrapper__active`)
         if(active){
@@ -64,18 +61,18 @@ function Module() {
 
     const modalClose=()=>{
         btnClick(0)
-        if(document.querySelector(`.module3__body__main__do__wrapper__do__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__do__p__active`).classList.remove(`module3__body__main__do__wrapper__do__p__active`)}
-        if(document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`)){document.querySelector(`.module3__body__main__do__wrapper__dont__p__active`).classList.remove(`module3__body__main__do__wrapper__dont__p__active`)}
+        if(document.querySelector(`.module3__body__main__do__wrapper__do__active`)){document.querySelector(`.module3__body__main__do__wrapper__do__active`).classList.remove(`module3__body__main__do__wrapper__do__active`)}
+        if(document.querySelector(`.module3__body__main__do__wrapper__dont__active`)){document.querySelector(`.module3__body__main__do__wrapper__dont__active`).classList.remove(`module3__body__main__do__wrapper__dont__active`)}
         if(document.querySelector('.module3__body__main__buttons__wrapper__active')){document.querySelector('.module3__body__main__buttons__wrapper__active').classList.remove('module3__body__main__buttons__wrapper__active')}
         if(document.querySelector('.module3__body__main__do__wrapper__active')){document.querySelector('.module3__body__main__do__wrapper__active').classList.remove('module3__body__main__do__wrapper__active')}
     }
 
     return (
         <div className="module3">
-            <ModuleLogo />
+            <RSDPModuleLogo />
             <div className="module3__header">
-                <div>
-                    <h4>MODULE TWO</h4>
+                <div className="module3__header__text">
+                    <h3>MODULE TWO</h3>
                     <h1>Face to Face Interview</h1>
                 </div>
                 <Eta time={10} />
@@ -181,7 +178,7 @@ function Module() {
                     </div>
                     <div className="module3__body__main__questions">
                         <h1>Competency Based Questions</h1>
-                        <p>These are sometimes called behavioural or situational questions and they are designed to check your skills or competencies. The interviewer wants to know that in the past you have demonstrated that you have the necessary behaviours required for the role on offer. If you can show that you have applied relevant skills, then you should be able to repeat this if you get this job. They are very different from general questions which tend to be more informal. Competency-based questions are much  more systematic and specific, therefore your answers need to follow a clear structure.</p>
+                        <p>These are sometimes called behavioural or situational questions and they are designed to check your skills or competencies. The interviewer wants to know that in the past you have demonstrated that you have the necessary behaviours required for the role on offer. If you can show that you have applied relevant skills, then you should be able to repeat this if you get this job. They are very different from general questions which tend to be more informal. Competency based questions are much more systematic and specific, therefore your answers need to follow a clear structure.</p>
                         <div className="module3__body__main__questions__box">
                             <h1>Competency based questions often have an identifiable opening phrase or sentence. Check out these examples to help you identify them.</h1>
                             <p>“Describe a situation in which you had to…”</p>
@@ -320,7 +317,7 @@ function Module() {
                         <p>As the name suggests these questions are intended to identify what the candidate  enjoys doing, as opposed to what she/he has done which is the focus with competency based questions. From your answers and how you deliver them the interviewer(s) assess what you’re good and maybe not so good at. The intention is to match strengths to the role, resulting in a happier worker who will perform well, learn quickly and stay longer.</p>
                         <p>These questions are more personal and are intended to identify people who will be a good fit for the role and the organisation.</p>
                         <div className="module3__body__main__strength__box">
-                            <h1>Check out these examples of strength based questions.</h1>
+                            <h1>Check out these examples of strengths based questions.</h1>
                             <p>Firstly, the interviewer is attempting to understand you as a person, therefore, you will probably be asked a lot of questions in a short time period. The focus will depend on the job as obviously different strengths are required depending on the role.</p>
                             <p>“What do you like to do when you are not working?”</p>
                             <p>“How would your work colleagues and friends describe you?”</p>
@@ -333,7 +330,7 @@ function Module() {
                     </div>
                     <div className="module3__body__main__text">
                         <div className="module3__body__main__text__left">
-                            <h3>How to answer strength based questions</h3>
+                            <h3>How to answer strengths based questions</h3>
                         </div>
                         <div className= "module3__body__main__text__right">
                             <h3>Some experts suggest that it is best not to over prepare. “Be yourself and answer authentically”. This is valid advice, however, more specific preparation and applying simple techniques can increase your chances of success.</h3>

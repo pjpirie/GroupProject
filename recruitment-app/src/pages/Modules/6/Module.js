@@ -136,10 +136,10 @@ function Module() {
                     {/* Do's and Don'ts Section End */}
 
                     {/* Activity Section Start */}
-                    <div className="module5__body__activity">
-                        <h1>Now its time to work on your action plan</h1>
-                        <p>Download the Module 4 activity sheet and work through the exercised to be fully prepared for role play exercises</p>
-                        <button onClick={() => { handleDownload(); }}>Download</button>
+                    <div className="module5__body__main__download">
+                        <h2>Now it's time to work on you action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
+                        <button onClick={handleDownload}>Download</button>
                     </div>
                     {/* Activity Section End */}
                 </div>

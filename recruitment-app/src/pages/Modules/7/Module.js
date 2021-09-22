@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
-import ModuleLogo from '../ModuleLogo.js';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 import CloseButtonImage from '../../../assets/1x/closeicon.png';
 
 
@@ -52,10 +52,10 @@ function Module() {
 
     return (
         <div className="module6">
-            <ModuleLogo />
+            <RSDPModuleLogo />
             <div className="module6__header">
-                <div>
-                    <h4>MODULE SIX</h4>
+                <div className="module6__header__text">
+                    <h3>MODULE SIX</h3>
                     <h1>Written Exercise</h1>
                 </div>
                 <Eta time={10} />
@@ -80,7 +80,7 @@ function Module() {
                         </div>
                     </div>
                     <div className="module6__body__main__buttons">
-                        <p>How to deliver an excellent written exercise:</p>
+                        <h1>How to deliver an excellent written exercise:</h1>
                         <div className="module6__body__main__buttons__wrapper">
                             <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module6__body__main__buttons__wrapper__1">Read</button>
                             <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module6__body__main__buttons__wrapper__2">Manage Time</button> <br />
@@ -146,8 +146,8 @@ function Module() {
                         <h4>As prioritisation within the exercise is crucial ensure that you cover all items as those at the end may have a high priority. Running out of time and not dealing with later items can seriously impact your performance. Also, prioritise your time during the exercise. Items which are clearly of lower importance should receive as little time as possible, enabling you to concentrate on making the more important decisions and judgements. </h4>
                     </div>
                     <div className="module6__body__main__download">
-                        <h2>Now it's time to work on you action plan</h2>
-                        <h3>Download the Module 6 activity sheet and work through the exercises to be fully prepared for group exercises.</h3>
+                        <h2>Now it's time to work on your action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
                         <button onClick={handleDownload}>Download</button>
                     </div>
                 </div>

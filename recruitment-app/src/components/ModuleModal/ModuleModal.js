@@ -93,8 +93,8 @@ const [ModuleInfo, setModuleInfo] = useState({
                 <img src={getImg(props.number)} alt="placeholder" />
                 <div className="ModuleTree__Modal__Header__Text">
                     <div className="ModuleTree__Modal__Header__Text__Main">
-                    <h3>{ModuleInfo.title ?? "Loading..."}</h3>   
-                    <CloseIcon className="MouleModal__Close__btn" onClick={() => {props.modalOpen(false)}}/>
+                        <h3>{ModuleInfo.title ?? "Loading..."}</h3>   
+                        <CloseIcon className="MouleModal__Close__btn" onClick={() => {props.modalOpen(false)}}/>
                     </div>
                     <p>{ModuleInfo.description ?? "Loading..."}</p>
                 </div>

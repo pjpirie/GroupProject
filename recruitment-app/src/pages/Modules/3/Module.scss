@@ -22,17 +22,22 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin: 7px 0 3px 0;
-		h4 {
-			margin-top: 1em;
-			border-radius: 15px;
-			background-color: var(--orange-bg);
-			color: var(--orange);
-			text-align: center;
-			width: 10em;
-			height: 2em;
-			padding-top: 0.3em;
-			font-size: 1em;
+		margin: 7px 0 20px 0;
+		&__text {
+			display: flex;
+			flex-direction: column;
+			h3 {
+				background: #ffd9ba;
+				border-radius: 20px;
+				padding: 3px 17px;
+				justify-self: flex-start;
+				align-self: flex-start;
+				// margin: 0 auto;
+				font-weight: 700;
+				font-size: var(--module-font) !important;
+				font-family: "roboto";
+				color: #e76f51 !important;
+			}
 		}
 	}
 	&__body {
@@ -53,7 +58,7 @@
 			align-items: center;
 			&__p {
 				line-height: 1.5em;
-				font-size: 1.5em;
+				font-size: 1.4em;
 				margin-bottom: 4em;
 			}
 			&__text {
@@ -84,6 +89,8 @@
 					align-content: flex-end;
 					margin-left: 10vw;
 					border-bottom: 6px dotted var(--orange-bg);
+					padding-bottom: 30px;
+					font-size: var(--module-font);
 					h3 {
 						text-align: left;
 						font-weight: 300 !important;
@@ -107,9 +114,10 @@
 				p {
 					max-width: 70%;
 					margin-bottom: 1em;
+					font-size: var(--module-font);
 				}
 				h6 {
-					font-size: 1.2em;
+					font-size: var(--module-font);
 					font-weight: 500;
 					margin-top: 5em;
 					margin-bottom: 2em;
@@ -148,9 +156,9 @@
 							content: "Q";
 							font-size: 1.2em;
 							border-radius: 50%;
-							margin: -1px 0 0 10px;
-							width: 1.2em;
-							height: 1.2em;
+							margin: -1px 0 -1px 10px;
+							width: 1.3em;
+							height: 1.3em;
 							line-height: 125%;
 						}
 					}
@@ -201,7 +209,7 @@
 							color: var(--light-green);
 						}
 						h2 {
-							font-size: 1.4em;
+							font-size: var(--module-font);
 							font-weight: 400 !important;
 							span {
 								color: var(--light-green);
@@ -246,8 +254,8 @@
 				}
 				h4 {
 					text-align: left;
-					margin-bottom: 5vh;
-					font-size: 1.2em;
+					margin: 10px 0 5vh 0;
+					font-size: var(--module-font);
 					font-weight: 300;
 				}
 			}
@@ -260,9 +268,9 @@
 					color: var(--heading-blue);
 				}
 				p {
-					margin: 4em auto;
-					font-size: 1.1em !important;
-					max-width: 50%;
+					margin: 2em auto;
+					font-size: var(--module-font) !important;
+					max-width: 75%;
 					text-align: center;
 				}
 				&__box {
@@ -298,6 +306,7 @@
 				p {
 					max-width: 70%;
 					margin-top: 1em;
+					font-size: var(--module-font);
 				}
 				&__wrapper {
 					margin: 1em 0 5em 0;
@@ -341,7 +350,7 @@
 							z-index: 1;
 						}
 						h1 {
-							margin: -6vh 0 0 0;
+							margin: -4vh 0 0 0;
 						}
 						h2 {
 							color: var(--light-green);
@@ -350,6 +359,7 @@
 						}
 						h4 {
 							font-weight: 400;
+							font-size: var(--module-font);
 							span {
 								padding-left: 20px;
 							}
@@ -357,11 +367,11 @@
 						h4::before {
 							content: "A";
 							color: var(--light-green);
-							margin: 0 20px 0 -30px;
+							margin: 0 20px 0 -40px;
 						}
 						p {
 							color: var(--light-green);
-							font-size: 1em;
+							font-size: var(--module-font);
 							margin-top: 1em;
 							transform: translate(-8%, 120%);
 						}
@@ -388,6 +398,7 @@
 				p {
 					width: 50%;
 					margin: 1em auto;
+					font-size: var(--module-font);
 				}
 				h2 {
 					font-size: 2em;
@@ -447,16 +458,17 @@
 							margin: 0;
 						}
 						h1 {
-							margin: -6vh 0 0 0;
+							margin: -4vh 0 0 0;
 						}
 						h2 {
 							color: var(--light-green);
 							font-size: 1.3em;
-							margin-bottom: 1em;
+							margin: 0 0 1em 0;
 							max-width: 95%;
 						}
 						h4 {
 							font-weight: 400;
+							font-size: var(--module-font);
 							span {
 								padding-left: 20px;
 							}
@@ -464,7 +476,7 @@
 						h4::before {
 							content: "A";
 							color: var(--light-green);
-							margin: 0 20px 0 -30px;
+							margin: 0 20px 0 -35px;
 						}
 						p {
 							color: var(--light-green);
@@ -482,26 +494,34 @@
 			}
 			&__card {
 				width: 40vw;
-				padding: 1em;
+				padding: 1em 2em 1em 2em;
 				margin: 6em auto;
 				box-shadow: 0 0 5px 0 var(--orange);
 				border-radius: 25px;
 				h1,
 				h2,
 				p {
-					margin: 1em 0 1em 0;
+					margin: 1.5em 0 1.5em 0;
+				}
+				h1 {
+					margin: 1em;
 				}
 				p {
 					color: var(--light-green);
 				}
+				p,
+				h2 {
+					font-size: var(--module-font);
+				}
 			}
 			&__strength {
 				h1 {
-					margin-bottom: 3em;
+					margin-bottom: 2vh;
 					color: var(--heading-blue);
 				}
 				p {
 					margin-bottom: 1em !important;
+					font-size: var(--module-font);
 				}
 				&__box {
 					box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
@@ -513,11 +533,8 @@
 					justify-content: center;
 					flex-direction: column;
 					padding: 5vh 10% 2em 10%;
-					h1 {
-						font-size: 1.5em !important;
-					}
 					p {
-						font-size: 1.3em;
+						font-size: var(--module-font);
 					}
 				}
 			}
@@ -527,9 +544,12 @@
 				margin: 0 auto;
 				p,
 				li {
-					font-size: 1.6em;
+					font-size: var(--module-font);
 				}
 				li {
+					margin-bottom: 1em;
+				}
+				p {
 					margin-bottom: 1em;
 				}
 			}
@@ -560,6 +580,13 @@
 						background: var(--dark-green) !important;
 						color: #fff;
 					}
+					&__do__active,
+					&__dont__active {
+						background: var(--dark-green) !important;
+						border: 1px solid var(--light-green) !important;
+						color: #fff !important;
+					}
+
 					&__do,
 					&__dont {
 						p {
@@ -577,9 +604,9 @@
 							margin: 3px 20px 0 -30px;
 							outline: none;
 						}
-						&__p__active:before {
-							content: url("../../../assets/1x/WhiteTick.png") !important;
-						}
+					}
+					&__do__active p:before {
+						content: url("../../../assets/1x/WhiteTick.png") !important;
 					}
 					&__dont {
 						p:before {
@@ -587,9 +614,9 @@
 							transform: scale(0.6);
 							margin: 3px 20px 0 -30px;
 						}
-						&__p__active:before {
-							content: url("../../../assets/1x/WhiteCross.png") !important;
-						}
+					}
+					&__dont__active p:before {
+						content: url("../../../assets/1x/WhiteCross.png") !important;
 					}
 					&__active {
 						background: var(--dark-green) !important;
@@ -653,7 +680,7 @@
 						}
 						p {
 							color: #fff;
-							font-size: 1em;
+							font-size: var(--module-font);
 							margin-top: 1em;
 						}
 					}
@@ -667,7 +694,7 @@
 					font-weight: 200;
 				}
 				h3 {
-					font-size: 1.5em;
+					font-size: var(--module-font);
 					font-weight: 500 !important;
 					max-width: 50%;
 					margin: 0 auto;
@@ -681,12 +708,14 @@
 					border-radius: 15px;
 					font-size: 1.3em;
 					padding: 10px;
-					width: 10em;
+					width: 11em;
 					align-items: center;
 				}
 				button::before {
 					content: url("../../../assets/v2/download-icon.svg");
-					margin: 0 1em 0 0;
+					transform: scale(0.8);
+					padding: 5px 1em 0 10px;
+					// margin: 5px 3em 0 0;
 				}
 			}
 		}

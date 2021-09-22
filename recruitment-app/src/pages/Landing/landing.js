@@ -60,7 +60,7 @@ function Landing() {
             <div className="landing__hero">
                 <div className="landing__hero__text">
                     <h1>Everything you need{window.innerWidth >900 ? <br />: " "}to ace the interview{window.innerWidth >900 ? <br />: " "}and get that job</h1>
-                    <p>Recruitment Skills Development Programme™ is a modern skill development programme that gives you the skills you need for interview success.</p>
+                    <p>Recruitment Skills Development Programme™ is a modern development programme that gives you the skills you need for interview success.</p>
                     <div className="landing__hero__text__cta">
                     <Link to='/register'>
                         <li className="landing__hero__text__cta__button">Sign up</li>
@@ -81,7 +81,7 @@ function Landing() {
                 <div className="textSection__small">
                     <p>The programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific requirements.<br />
                     <span>••••••••••••••••••••••</span><br />
-                    The content draws on many years’<br />experience in all aspects of recruitment<br />assessment and people development.
+                    The content draws on many years’<br />experience in all aspects of recruitment, <br />assessment and people development.
                     </p>
                 </div>
             </div>

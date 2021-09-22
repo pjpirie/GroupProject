@@ -169,7 +169,7 @@ const ModuleButtonModal = (props) => {
                                 setModal2Open(false);
                                 setModal3Open(false);
                                 setModal4Open(false);
-                                } }>The Brief test</button>
+                                } }>The Brief</button>
 
                             <button className={Modal2Open ? "active" : ""} btnID="2" onClick={ () => { 
                                 setModal1Open(false); 
@@ -183,7 +183,7 @@ const ModuleButtonModal = (props) => {
                                 setModal2Open(false);
                                 setModal3Open(!Modal3Open);
                                 setModal4Open(false);
-                                } }>Preperation</button>
+                                } }>Preparation</button>
 
                             <button className={Modal4Open ? "active" : ""} btnID="4" onClick={ () => { 
                                 setModal1Open(false); 
@@ -229,7 +229,7 @@ const ModuleButtonModal = (props) => {
                                     <Fragment>
                                     <div>
                                         {/* <CloseIcon /> */}
-                                        <h3>Preperation</h3>
+                                        <h3>Preparation</h3>
                                         <img src={CloseButtonImage} alt="Close Button" onClick={() => {setModal3Open(false)}}/>
                                     </div>
                                         <p textID="2">During the preparation time it is important to consider the required outcome and how to deal with possible arguments the role player might use and their potential reactions to any proposals put forward.  Study the brief in detail and think about ways to achieve the outcome your character wants. 

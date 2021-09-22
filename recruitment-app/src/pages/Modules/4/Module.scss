@@ -22,17 +22,22 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin: 7px 0 3px 0;
-		h4 {
-			margin-top: 1em;
-			border-radius: 15px;
-			background-color: var(--orange-bg);
-			color: var(--orange);
-			text-align: center;
-			width: 10em;
-			height: 2em;
-			padding-top: 0.3em;
-			font-size: 1em;
+		margin: 7px 0 20px 0;
+		&__text {
+			display: flex;
+			flex-direction: column;
+			h3 {
+				background: #ffd9ba;
+				border-radius: 20px;
+				padding: 3px 17px;
+				justify-self: flex-start;
+				align-self: flex-start;
+				// margin: 0 auto;
+				font-weight: 700;
+				font-size: var(--module-font) !important;
+				font-family: "roboto";
+				color: #e76f51 !important;
+			}
 		}
 	}
 	&__body {
@@ -53,7 +58,7 @@
 			align-items: center;
 			p {
 				line-height: 1.5em;
-				font-size: 1.5em;
+				font-size: var(--module-font);
 				margin-bottom: 3em;
 			}
 			&__text {
@@ -85,9 +90,11 @@
 					align-content: flex-end;
 					margin-left: 10vw;
 					border-bottom: 6px dotted var(--orange-bg);
+
 					h3 {
 						text-align: left;
 						font-weight: 300 !important;
+						margin-bottom: 30px;
 					}
 				}
 			}
@@ -96,15 +103,16 @@
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
-				margin-bottom: 5em;
+				margin: 5em 0 5em 0;
 				p {
+					font-size: var(--module-font);
+					font-weight: 800;
 					width: 100%;
 				}
 				&__wrapper {
 					display: flex;
 					flex-direction: row !important;
 					flex-wrap: wrap;
-					width: 80%;
 					justify-content: center;
 					align-items: center;
 					button {
@@ -126,7 +134,7 @@
 				}
 				&__modal {
 					&__show {
-						padding: 3em 2em 3em 2em;
+						padding: 3em 4em 3em 4em;
 						width: 40vw;
 						text-align: left !important;
 						display: flex;
@@ -148,16 +156,19 @@
 						}
 						h1 {
 							margin: -3vh 0 2vh 0;
+							color: var(--heading-blue);
 						}
 						h4 {
 							font-weight: 400;
+							font-size: var(--module-font);
+
 							span {
 								padding-left: 20px;
 							}
 						}
 						p {
 							color: var(--light-green);
-							font-size: 1em;
+							font-size: var(--module-font);
 							margin-top: 1em;
 						}
 						h5 {
@@ -170,7 +181,8 @@
 			}
 			&__p {
 				color: var(--heading-blue);
-				font-size: 2em !important;
+				// font-size: var(--module-font);
+				font-weight: 800;
 				margin-top: 2em;
 			}
 			&__consider {
@@ -190,7 +202,7 @@
 				h3 {
 					text-align: left;
 					color: var(--light-green) !important;
-					font-size: 1.4em;
+					font-size: var(--module-font);
 				}
 				h4 {
 					text-align: left;
@@ -207,7 +219,7 @@
 					font-weight: 200;
 				}
 				h3 {
-					font-size: 1.5em;
+					font-size: var(--module-font);
 					font-weight: 500 !important;
 					max-width: 50%;
 					margin: 0 auto;
@@ -221,12 +233,14 @@
 					border-radius: 15px;
 					font-size: 1.3em;
 					padding: 10px;
-					width: 10em;
+					width: 11em;
 					align-items: center;
 				}
 				button::before {
 					content: url("../../../assets/v2/download-icon.svg");
-					margin: 0 1em 0 0;
+					transform: scale(0.8);
+					padding: 5px 1em 0 10px;
+					// margin: 5px 3em 0 0;
 				}
 			}
 		}

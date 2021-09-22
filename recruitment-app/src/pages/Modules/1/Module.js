@@ -25,7 +25,7 @@ function Module() {
                         <h3>Follow these steps in order to maximise the benefits of RSDP</h3>
                     </div>
                     <div className="module1__body__text__right">
-                        <h3>1. Be sure to complete Module 1 Preparation. It will give you all the tips and tricks you need to be ready for your recruitment event.</h3>
+                        <h3>1. Be sure to complete Module 1 Preparation. It will give you all the tips and techniques you need to be ready for your recruitment event.</h3>
                         <h3>2. Select the modules relevant to whatever recruitment process you are about to experience. Are you going to be doing a face to face interview? Or how about a Role Play exercise?</h3>
                     </div>
                 </div>

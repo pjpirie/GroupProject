@@ -24,17 +24,22 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin: 7px 0 3px 0;
-		h4 {
-			margin-top: 1em;
-			border-radius: 15px;
-			background-color: var(--orange-bg);
-			color: var(--orange);
-			text-align: center;
-			width: 10em;
-			height: 2em;
-			padding-top: 0.3em;
-			font-size: 1em;
+		margin: 7px 0 20px 0;
+		&__text {
+			display: flex;
+			flex-direction: column;
+			h3 {
+				background: #ffd9ba;
+				border-radius: 20px;
+				padding: 3px 17px;
+				justify-self: flex-start;
+				align-self: flex-start;
+				// margin: 0 auto;
+				font-weight: 700;
+				font-size: var(--module-font) !important;
+				font-family: "roboto";
+				color: #e76f51 !important;
+			}
 		}
 	}
 	&__body {
@@ -55,8 +60,8 @@
 			align-items: center;
 			p {
 				line-height: 1.5em;
-				font-size: 1.5em;
-				margin-bottom: 4em;
+				font-size: var(--module-font);
+				margin-bottom: 3em;
 			}
 			&__text {
 				display: flex;
@@ -89,6 +94,9 @@
 					border-bottom: 6px dotted var(--orange-bg);
 					h3 {
 						text-align: left;
+						font-size: var(--module-font);
+
+						margin-bottom: 30px;
 						font-weight: 300 !important;
 					}
 				}
@@ -98,10 +106,9 @@
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
-				p {
+				h1 {
 					width: 100%;
 					color: var(--heading-blue);
-					font-size: 1.8em;
 					margin-bottom: 2em;
 				}
 				&__wrapper {
@@ -131,7 +138,7 @@
 				}
 				&__modal {
 					&__show {
-						padding: 3em 2em 3em 2em;
+						padding: 3em 4em 3em 4em;
 						width: 40vw;
 						text-align: left !important;
 						display: flex;
@@ -156,13 +163,16 @@
 						}
 						h4 {
 							font-weight: 400;
+							font-size: var(--module-font);
+
 							span {
 								padding-left: 20px;
 							}
 						}
 						p {
 							color: var(--light-green);
-							font-size: 1em;
+							font-size: var(--module-font);
+
 							margin-top: 1em;
 						}
 						h5 {
@@ -174,10 +184,15 @@
 				}
 			}
 			&__example {
+				width: 80%;
+				margin: 5em auto;
 				h1 {
 					color: var(--heading-blue);
-					margin-bottom: 1em;
-					font-weight: 400;
+					margin: 1em 0 1em 0;
+					// font-weight: 400;
+				}
+				p {
+					font-size: var(--module-font);
 				}
 			}
 			&__consider {
@@ -192,6 +207,7 @@
 				padding: 5vh 10% 0 10%;
 				h1 {
 					margin-bottom: 3vh;
+					color: var(--heading-blue);
 				}
 				h3 {
 					text-align: left;
@@ -201,19 +217,19 @@
 				h4 {
 					text-align: left;
 					margin-bottom: 5vh;
-					font-size: 1.2em;
+					font-size: var(--module-font);
 					font-weight: 300;
 				}
 			}
 			&__download {
 				h2 {
+					color: var(--heading-blue);
 					font-size: 2em;
 					margin-bottom: 1vh;
-					font-weight: 400;
-					color: var(--heading-blue);
+					font-weight: 200;
 				}
 				h3 {
-					font-size: 1.5em;
+					font-size: var(--module-font);
 					font-weight: 500 !important;
 					max-width: 50%;
 					margin: 0 auto;
@@ -227,12 +243,14 @@
 					border-radius: 15px;
 					font-size: 1.3em;
 					padding: 10px;
-					width: 10em;
+					width: 11em;
 					align-items: center;
 				}
 				button::before {
 					content: url("../../../assets/v2/download-icon.svg");
-					margin: 0 1em 0 0;
+					transform: scale(0.8);
+					padding: 5px 1em 0 10px;
+					// margin: 5px 3em 0 0;
 				}
 			}
 		}

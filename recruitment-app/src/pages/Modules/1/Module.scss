@@ -1,8 +1,5 @@
-@import '../../../breakpoints.scss';
+@import "../../../breakpoints.scss";
 .module1 {
-    @include media("<=800px"){
-        margin-right: 56px !important;
-    }
 	max-width: 70vw !important;
 	margin: 0 auto;
 	&__body {
@@ -12,8 +9,8 @@
 		text-align: center;
 		&__top {
 			margin: 5em 0 4em 0;
+			text-align: left;
 			h1 {
-				text-align: left;
 				margin-bottom: 1em;
 			}
 			p {
@@ -52,11 +49,12 @@
 				flex-wrap: wrap;
 				align-content: flex-end;
 				margin-left: 10vw;
-				border-bottom: 6px dotted var(--orange-bg);
+				// border-bottom: 6px dotted var(--orange-bg);
 				h3 {
 					text-align: left;
 					font-weight: 300 !important;
 					margin-top: 1em;
+					font-size: 1.4em;
 				}
 			}
 		}
@@ -109,6 +107,7 @@
 				font-weight: 400;
 				border-bottom: 6px dotted var(--orange-bg);
 				width: 7ch;
+				margin-bottom: 1em;
 			}
 			p {
 				font-size: 1.4em;

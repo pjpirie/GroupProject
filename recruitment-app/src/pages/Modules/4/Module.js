@@ -3,7 +3,7 @@ import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
 import CloseButtonImage from '../../../assets/1x/closeicon.png';
-import ModuleLogo from '../ModuleLogo.js';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 function Module() {
 
@@ -51,10 +51,10 @@ function Module() {
 
     return (
         <div className="module4">
-            <ModuleLogo />
+            <RSDPModuleLogo />
             <div className="module4__header">
-                <div>
-                    <h4>MODULE THREE</h4>
+                <div className="module4__header__text">
+                    <h3>MODULE THREE</h3>
                     <h1>Virtual Interview</h1>
                 </div>
                 <Eta time={10} />
@@ -150,7 +150,7 @@ function Module() {
                             }
                         </div>
                     </div>                        
-                    <p className="module4__body__main__p">Pre-recorded Interviews</p>
+                    <h1 className="module4__body__main__p">Pre-recorded Interviews</h1>
                     <div className="module4__body__main__text">
                         <div className="module4__body__main__text__left">
                             <h4>Be prepared</h4>
@@ -171,7 +171,7 @@ function Module() {
                     </div>
                     <div className="module4__body__main__download">
                         <h2>Now it's time to work on you action plan</h2>
-                        <h3>Download the Module 3 activity sheet and work through the exercises to be fully prepared for group exercises.</h3>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
                         <button onClick={handleDownload}>Download</button>
                     </div>
                 </div>

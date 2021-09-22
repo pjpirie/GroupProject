@@ -81,7 +81,7 @@ function Module() {
                         </div>
                         <div className="module4__textSection__small textSection__small">
                             <p>
-                             The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork an leadership.<br />
+                             The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork and leadership.<br />
                             <span>••••••••••••••••••••••</span><br />
                             </p>
                         </div>
@@ -108,10 +108,10 @@ function Module() {
                     {/* Do's and Don'ts Section End */}
 
                     {/* Activity Section Start */}
-                    <div className="module4__body__activity">
-                        <h1>Now its time to work on your action plan</h1>
-                        <p>Download the Module 4 activity sheet and work througb the exercised to be fully prepared for group exercises.</p>
-                        <button onClick={() => { handleDownload(); }}><img src={DownloadIcon} alt="Download Button"/>Download</button>
+                    <div className="module4__body__main__download">
+                        <h2>Now it's time to work on you action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
+                        <button onClick={handleDownload}>Download</button>
                     </div>
                     {/* Activity Section End */}
                 </div>

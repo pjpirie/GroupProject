@@ -1,4 +1,4 @@
-@import './breakpoints.scss';
+@import "./breakpoints.scss";
 
 :root {
 	--light-green: #2a9d8f;
@@ -6,7 +6,9 @@
 	--btn-green: #175a52;
 	--heading-blue: #264653;
 	--orange: #f4a261;
+	--orange-header: #e76f51;
 	--orange-bg: rgba(244, 162, 97, 0.36);
+	--module-font: 1.4em;
 }
 
 * {
@@ -14,7 +16,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-button{
+button {
 	cursor: pointer;
 }
 
@@ -85,9 +87,9 @@ body {
 
 .LoggedIn__Module__Container {
 	display: flex;
-	@include media("<=500px"){
-        flex-direction: column;
-    }
+	@include media("<=500px") {
+		flex-direction: column;
+	}
 }
 
 .App__MenuOpen__button {

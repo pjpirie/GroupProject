@@ -95,13 +95,10 @@ function Module() {
                     {/* Modal Button Section Start */}
                     
                     {/* Activity Section Start */}
-                    <div className="module1__body__activity">
-                        <h1>Now its time to work on your action plan</h1>
-                        <p>
-                            Download the Module 1 action items and work through the 
-                            exercises to be fully prepared for your recruitment event.
-                        </p>
-                        <button onClick={() => { handleDownload(); }}>Download</button>
+                    <div className="module1__body__download">
+                        <h2>Now it's time to work on your action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
+                        <button onClick={handleDownload}>Download</button>
                     </div>
                     {/* Activity Section End */}
                 </div>
