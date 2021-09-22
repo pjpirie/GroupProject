@@ -59,8 +59,10 @@ function Landing() {
             {/* Hero Start */}
             <div className="landing__hero">
                 <div className="landing__hero__text">
-                    <h1>Everything you need{window.innerWidth >900 ? <br />: " "}to ace the interview{window.innerWidth >900 ? <br />: " "}and get that job</h1>
-                    <p>Recruitment Skills Development Programme™ is a modern development programme that gives you the skills you need for interview success.</p>
+                    <h1>
+                        Everything you need to know to{window.innerWidth >900 ? <br />: " "}improve your performance at{window.innerWidth >900 ? <br />: " "}recruitment events
+                    </h1>
+                    <p>Recruitment Skills Development Programme™ is a modern skill development programme that gives you the skills you need for interview success.</p>
                     <div className="landing__hero__text__cta">
                     <Link to='/register'>
                         <li className="landing__hero__text__cta__button">Sign up</li>
@@ -76,7 +78,7 @@ function Landing() {
             <div className="textSection">
                 <div className="textSection__large">
                     {/* <p>Don't Worry</p> */}
-                    <h1>Landing a job{window.innerWidth > 900 ? <br />: " "}can be hard{window.innerWidth >900 ? <br />: " "}but it’s not{window.innerWidth >900 ? <br />: " "}impossible.</h1>
+                    <h1>Landing a job{window.innerWidth > 9000 ? <br />: " "}can be hard{window.innerWidth >9000 ? <br />: " "}but it’s not{window.innerWidth >900 ? <br />: " "}impossible.</h1>
                 </div>
                 <div className="textSection__small">
                     <p>The programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific requirements.<br />
