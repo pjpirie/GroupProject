@@ -23,7 +23,7 @@ function Module() {
             a.style.display = 'none';
             a.href = url;
             // the filename you want
-            a.download = 'Module 6 Written Exercise Activity Sheet';
+            a.download = 'Module 1 Preparation Activity Sheet';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
