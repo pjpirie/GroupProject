@@ -46,6 +46,12 @@
 				color: #fff;
 				outline: none !important;
 			}
+			&:first-of-type{
+				margin-left: 25%;
+			}
+			&:last-of-type{
+				margin-right: 25%;
+			}
 			@include media("<=900px") {
 				font-size: 20px;
 				border-radius: 10px;

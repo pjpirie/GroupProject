@@ -74,15 +74,15 @@ function Module() {
                         <div className="module4__textSection__large textSection__large">
                             <p>Important!</p>
                             <h1>
-                                You will be observed by {window.innerWidth >900 ? <br />: " "}
-                                assessors but they {window.innerWidth >900 ? <br />: " "}
-                                will not take any part {window.innerWidth >900 ? <br />: " "}
+                                You will be observed by 
+                                assessors but they 
+                                will not take any part 
                                 in the team discussion</h1>
                         </div>
                         <div className="module4__textSection__small textSection__small">
                             <p>
                              The team discussion will be observed by assessors positioned around the room, scoring one or two candidates each against a number of performance criteria such as communications, persuasiveness, teamwork and leadership.<br />
-                            <span>••••••••••••••••••••••</span><br />
+                            {/* <span>••••••••••••••••••••••</span><br /> */}
                             </p>
                         </div>
                     </div>

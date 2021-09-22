@@ -1,4 +1,4 @@
-.module4 {
+.module3 {
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -217,8 +217,10 @@
 					font-size: 2em;
 					margin-bottom: 1vh;
 					font-weight: 200;
+					text-align: center;
 				}
 				h3 {
+					text-align: center;
 					font-size: var(--module-font);
 					font-weight: 500 !important;
 					max-width: 50%;
@@ -255,7 +257,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module4__body__main {
+	.module3__body__main {
 		&__text {
 			flex-direction: column;
 			&__right,
@@ -293,7 +295,7 @@
 }
 
 @media (max-width: 500px) {
-	.module4__body__main__buttons__modal__show {
+	.module3__body__main__buttons__modal__show {
 		h1 {
 			font-size: 1.4em !important;
 		}

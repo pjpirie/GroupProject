@@ -76,7 +76,7 @@ function Module() {
                     {/* Quote Section Start */}
                     <div className="module1__quote">
                         <img src={DidYouKnow} alt="Did you know"/>
-                        <div className="module__quote__text">
+                        <div className="module1__quote__text">
                             <h2>“98% of job seekers are eliminated at the initial screening and only the ‘Top 2%’ of candidates make it to the interview”</h2>
                             <h5>Robert Meier</h5>
                             <h4>President of Job Market Experts.</h4>
@@ -88,7 +88,7 @@ function Module() {
                         <p>
                             Explore below to find out what you can do to prepare 
                             for your next recruitment event.
-                            <span>••••••••••••••••••••••</span><br />
+                            {/* <span>••••••••••••••••••••••</span><br /> */}
                         </p>
                         <ModuleButtonModal type="1x3"/>
                     </div>

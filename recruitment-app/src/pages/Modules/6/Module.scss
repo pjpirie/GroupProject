@@ -42,9 +42,10 @@
 
 	&__body {
 		&__key {
-			width: 70%;
+			width: 100%;
+			max-width:700px;
 			box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.15);
-			padding: 15px;
+			padding: 48px 64px;
 			border-radius: 10px;
 			margin: 20vh auto;
 			@include media("<=900px") {
@@ -53,6 +54,7 @@
 			}
 			h1 {
 				margin: 40px 0;
+				color: #264653;
 			}
 			div {
 				margin: 10px 0 30px 0;
@@ -94,6 +96,8 @@
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
+			font-size: 28px;
+			color: #264653;
 			margin: 40px 0;
 			p {
 				margin: 20px 0;
@@ -101,18 +105,30 @@
 		}
 	}
 }
-.textSection__module6 {
+.module6__textSection {
+	padding: 0;
 	margin: 150px 0;
+	text-align: center;
 	&__large {
+		margin-top: 5vh;
 		h1 {
-			font-weight: 500;
-			font-size: 30px !important;
+			font-weight: 100;
+			font-size: 38px !important;
+			text-align: left;
 		}
 		p {
 			font-weight: 700;
+			font-size: 24px !important;
+			margin: 0;
+			text-align: left;
 		}
 	}
 	&__small {
+		margin-bottom: 5vh;
+		p {
+			font-weight: 100;
+			font-size: 22px !important;
+		}
 	}
 }
 .compSection {

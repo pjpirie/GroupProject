@@ -107,11 +107,11 @@ const ModuleButtonModal = (props) => {
                                         </div>
                                             <p textID="1">
                                                 Use the internet, communications from the hiring organisation and any other sources to gather relevant information. Make sure you have a good understanding of the following:<br /><br />
-                                                <strong>The organisation:</strong> The history and nature of the business<br />
-                                                <strong>The job:</strong> What are my responsibities (What is expected of me)<br />
-                                                <strong>The process:</strong>  What is the format? (Interview/Other exercises)<br />
-                                                <strong>The attendees:</strong> Who will be present? (number of interviewers)<br />
-                                                <strong>The necessities:</strong>  Am I expected to bring anything with me?<br />
+                                                <span className="modal">The organisation:</span> The history and nature of the business<br />
+                                                <span className="modal"> The job:</span> What are my responsibities (What is expected of me)<br />
+                                                <span className="modal"> The process:</span>  What is the format? (Interview/Other exercises)<br />
+                                                <span className="modal"> The attendees:</span> Who will be present? (number of interviewers)<br />
+                                                <span className="modal"> The necessities:</span>  Am I expected to bring anything with me?<br />
                                             </p>
                                         </Fragment>
     

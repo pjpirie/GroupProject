@@ -62,12 +62,12 @@ function Module() {
                     Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.
                     </p> */}
                     {/* Text Section Start */}
-                    <div className="module4__textSection textSection">
-                        <div className="module4__textSection__large textSection__large">
+                    <div className="module6__textSection textSection">
+                        <div className="module6__textSection__large textSection__large">
                             <p>Important!</p>
                             <h1>Role plays simulate a range of scenarios depending on the job being filled.</h1>
                         </div>
-                        <div className="module4__textSection__small textSection__small">
+                        <div className="module6__textSection__small textSection__small">
                             <p>
                             For example, these may cover: <br /><br />
                             • Meeting a problematic supplier<br />
@@ -75,7 +75,7 @@ function Module() {
                             • Engaging with a poor performing team member<br />
 
                             <br />
-                            <span>••••••••••••••••••••••</span><br />
+                            {/* <span>••••••••••••••••••••••</span><br /> */}
                             </p>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-.module3 {
+.module3-2 {
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -122,14 +122,15 @@
 					margin-top: 5em;
 					margin-bottom: 2em;
 				}
-				&__wrapper {
+				&__wrapper{
 					// outline: 1px solid red;
-					display: flex;
+					display: flex!important;
+					flex-wrap: nowrap !important;
 					flex-direction: column !important;
-					width: 30em;
-					justify-content: center;
-					align-items: center;
-					margin-bottom: 3em;
+					width: 30em!important;
+					justify-content: center!important;
+					align-items: center!important;
+					margin-bottom: 3em !important;
 					button {
 						background: var(--light-green);
 						border: none;
@@ -738,7 +739,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module3__body__main {
+	.module3-2__body__main {
 		&__text,
 		&__interview,
 		&__mistake__wrapper {
@@ -780,7 +781,7 @@
 }
 
 @media (max-width: 600px) {
-	.module3__body__main {
+	.module3-2__body__main {
 		&__buttons {
 			&__wrapper {
 				width: 100%;

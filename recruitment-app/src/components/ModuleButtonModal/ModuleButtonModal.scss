@@ -63,7 +63,7 @@
             
             &.active{
                 background: #fff;
-                outline:#175a52 2px solid;
+                border:#175a52 2px solid;
                 color: #175a52;
                 &:hover{
                     background: #175a52;
@@ -163,7 +163,7 @@
             }
             &.active{
                 background: #fff;
-                outline:#175a52 2px solid;
+                border:#175a52 2px solid;
                 color: #175a52;
             }
         }
@@ -174,11 +174,12 @@
     }
 
     &__modal{
-        min-width: 100%;
-        padding: 20px 20px;
+        width: 100%;
+        margin: 5vh auto;
+        max-width: 700px;
+        padding: 48px 64px;
         background: #ffffff;
         position: relative;
-        margin-top: 5vh;
         border-radius: 15px;
         top: 100%;
         border: #ffffff solid 1px;
@@ -186,6 +187,7 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
+        text-align: left;
         @include media("<=1300px"){
                 
             border-radius: 10px;
@@ -200,6 +202,11 @@
             justify-content: space-between;
             align-items: center;
 
+            h3{
+				color: var(--heading-blue);
+                font-size: 30px;
+            }
+
             img{
                 cursor: pointer;
             }
@@ -211,7 +218,18 @@
                 height: 100%;
             }
         }
+        p{
+            font-size: 20px;
+            text-align: left;
+            font-weight: 100;
+            margin-top: 20px;
 
+            span.modal{
+                font-weight: 700;
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
 
     }
 }
