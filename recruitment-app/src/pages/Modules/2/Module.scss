@@ -87,12 +87,17 @@
 }
 .textSection{
     margin: 150px 0;
+    font-size: 20px;
     &__large{
         h1{
             font-weight: 500;
+            font-size: 2.4em;
+            text-align: left;
         }
         p{
             font-weight: 700;
+            font-size: 1.5em;
+            text-align: left;
         }
     }
     &__small{
