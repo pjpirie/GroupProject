@@ -17,10 +17,6 @@ import Card06 from '../../assets/v2/Group 264.svg';
 import ModuleBG from '../../assets/v2/ModuleBG.svg';
 import { useState, useEffect, useRef } from 'react'
 
-
-
-
-
 function Landing() {
 
     function useOnScreen(ref, rootMargin) {
@@ -60,7 +56,11 @@ function Landing() {
             <div className="landing__hero">
                 <div className="landing__hero__text">
                     <h1>
+<<<<<<< HEAD
                         Everything you need to know toimprove your performance atrecruitment events
+=======
+                        Everything you need to know to{window.innerWidth >900 ? <br />: " "} improve your performance at{window.innerWidth >900 ? <br />: " "} recruitment events
+>>>>>>> v2c
                     </h1>
                     <p>Recruitment Skills Development Programme™ is a modern skill development programme that gives you the skills you need for interview success.</p>
                     <div className="landing__hero__text__cta">
@@ -78,7 +78,11 @@ function Landing() {
             <div className="textSection">
                 <div className="textSection__large">
                     {/* <p>Don't Worry</p> */}
+<<<<<<< HEAD
                     <h1>Landing a job can be hard but it’s not impossible.</h1>
+=======
+                    <h1>Landing a job {window.innerWidth > 9000 ? <br />: " "}can be hard{window.innerWidth >9000 ? <br />: " "} but it’s not{window.innerWidth >900 ? <br />: " "} impossible.</h1>
+>>>>>>> v2c
                 </div>
                 <div className="textSection__small">
                     <p>The programme is designed to enhance<br />your chances of success at recruitment<br />events by applying learning relevant to<br />your specific requirements.<br />

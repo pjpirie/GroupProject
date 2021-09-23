@@ -17,15 +17,17 @@
 	max-width: 70vw !important;
 	margin: 0 auto;
 	&__header {
+		max-width: 100vw;
+		width: 100%;
 		display: flex;
-		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-end;
-		margin: 7px 0 20px 0;
+		margin-bottom: 20px;
+
 		&__text {
 			display: flex;
 			flex-direction: column;
+
 			h3 {
 				background: #ffd9ba;
 				border-radius: 20px;
@@ -34,7 +36,7 @@
 				align-self: flex-start;
 				// margin: 0 auto;
 				font-weight: 700;
-				font-size: var(--module-font) !important;
+				font-size: 16px !important;
 				font-family: "roboto";
 				color: #e76f51 !important;
 			}
@@ -312,11 +314,11 @@
 				&__wrapper {
 					margin: 1em 0 5em 0;
 					button {
+						width: 13em;
 						background: var(--light-green);
 						border: none;
 						border-radius: 15px;
 						height: 2em;
-						width: 20em;
 						font-weight: 400;
 						// padding: 1em;
 						color: #fff;

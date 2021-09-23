@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Laptop from '../../assets/laptop-module.png';
 import Room from '../../assets/modules-bottom.png';
 import ModuleImg1 from '../../assets/Image-3.png';
@@ -127,7 +128,7 @@ function Module() {
                     </div>
                     <div className="modulefront__body__modules__bottom">
                         <h1>Ready to begin your journey to success?</h1>
-                        <input type="button" value="Lets Go! 👍" />
+                        <Link to='/register'><input type="button" value="Lets Go! 👍" /></Link>
                     </div>
                 </div>
             </div>

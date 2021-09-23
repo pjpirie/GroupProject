@@ -19,15 +19,17 @@
 	width: 70vw;
 	margin: 0 auto;
 	&__header {
+		max-width: 100vw;
+		width: 100%;
 		display: flex;
-		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-end;
-		margin: 7px 0 20px 0;
+		margin-bottom: 20px;
+
 		&__text {
 			display: flex;
 			flex-direction: column;
+
 			h3 {
 				background: #ffd9ba;
 				border-radius: 20px;
@@ -36,7 +38,7 @@
 				align-self: flex-start;
 				// margin: 0 auto;
 				font-weight: 700;
-				font-size: var(--module-font) !important;
+				font-size: 16px !important;
 				font-family: "roboto";
 				color: #e76f51 !important;
 			}

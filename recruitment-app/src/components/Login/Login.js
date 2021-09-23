@@ -35,7 +35,10 @@ async function accountExists(email) {
 }
 
 export default function Login(props) {
-
+    let a = "A"
+    console.log(a)
+    
+    console.log(a.toLowerCase())
 
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
@@ -84,7 +87,7 @@ export default function Login(props) {
                 <form onSubmit={handleSubmit} className="loginForm">
                     <label>
                         <p>Email</p>
-                        <input type="email" onChange={e => setEmail(e.target.value)} required />
+                        <input type="email" onChange={e => setEmail(e.target.value.toLowerCase())} required />
                     </label>
                     <label>
                         <p>Password</p>
