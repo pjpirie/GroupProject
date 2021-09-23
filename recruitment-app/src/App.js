@@ -13,7 +13,6 @@ import ModuleNav from './components/ModuleHeader/ModuleNav';
 import Register from './components/Register/Register';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import CMSPage from './pages/CMS/CMS';
-import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
 import Edit from './pages/Edit/Edit';
 import FAQPage from './pages/FAQ/FAQ';
@@ -107,7 +106,6 @@ function App() {
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
                     <Route path="/contact" component={Contact} />
-                    <Route path="/company" component={Company} />
                     <Route path="/modules" component={Modules} />
                     <Route path="/privacy" component={Privacy} />
                     <Route component={Landing} />
@@ -123,7 +121,7 @@ function App() {
                       <MenuIcon onClick={() => dispatch(setSideNavOpen(!isSideNavOpen))} />
                   </div>
                   <Switch>
-                    <Route path="/" exact>
+                    <Route path="/" exact component={ModuleTree}>
                       <ModuleTree checkAuth={checkAuth} />
                     </Route>
                     <Route path="/edit" exact>
@@ -136,6 +134,9 @@ function App() {
                     <Route path="/CMS" component={CMSPage} />
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
+                    <Route component={ModuleTree}>
+                      <ModuleTree checkAuth={checkAuth} />
+                    </Route>
                     { 
                       getUser ? (
 

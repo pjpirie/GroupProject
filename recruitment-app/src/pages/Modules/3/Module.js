@@ -468,7 +468,7 @@ function Module() {
                 </div>
                 <div className="module3__body__main__download">
                     <h2>Now it's time to work on you action plan</h2>
-                    <h3>Download the Module 2 action items and work through the exercises to be fully prepared for your interview.</h3>
+                    <h3>Press the Download Button to make detailed personal preparations.</h3>
                     <button onClick={handleDownload}>Download</button>
                 </div>
             </div>
