@@ -8,7 +8,7 @@ import './Login.responsive.css';
 
 
 async function LoginUser(credentials) {
-    return fetch('https://group-54-rct.herokuapp.com/user/login', {
+    return fetch('https://rsdp-backend.herokuapp.com/user/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ async function LoginUser(credentials) {
 async function accountExists(email) {
     const emailJSONObject = { Email: email };
     // console.log("Email: " + email);
-    return fetch('https://group-54-rct.herokuapp.com/user/check', {
+    return fetch('https://rsdp-backend.herokuapp.com/user/check', {
         method: 'POST',
         credentials: 'include',
         headers: {
