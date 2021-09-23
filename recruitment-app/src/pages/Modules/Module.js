@@ -22,7 +22,7 @@ function Module() {
                     <h3 className="modulefront__head__left__h3">The first step is achieving your goals.</h3>
                 </div>
                 <div className="modulefront__head__right">
-                    <img src={Laptop} alt="alt tag" className="modulefront__head__right__img" />
+                    <img src={Laptop} alt="Laptop" className="modulefront__head__right__img" />
                 </div>
             </div>
             <div className="modulefront__body">
@@ -42,13 +42,13 @@ function Module() {
                                 <p>This module provides the starting point as you prepare for a recruitment event. It covers topics such as what areas to research, personal preparations you should make such as logistics, travel arrangements etc. and suggestions on how to enhance your confidence before such an important event.</p>
                             </div>
                             <div className="modulefront__body__modules__list__first__right">
-                                <img src={ModuleImg1} alt="Room" className="" />
+                                <img src={ModuleImg1} alt="Lady at computer" className="" />
                                 <div className="modulefront__body__modules__list__first__right__shape"></div>
                             </div>
                         </div> 
                         <div className="modulefront__body__modules__list__second">
                             <div className="modulefront__body__modules__list__second__left">
-                                <img src={ModuleImg2} alt="Room" className="" />
+                                <img src={ModuleImg2} alt="Handshake" className="" />
                                 <div className="modulefront__body__modules__list__second__left__shape"></div>
                             </div>
                             <div className="modulefront__body__modules__list__second__right">
@@ -64,13 +64,13 @@ function Module() {
                                 <p>In this module you are taken through techniques and processes specific to virtual/remote interviews conducted online which have become increasingly common. Both live and pre-recorded versions are explored.</p>
                             </div>
                             <div className="modulefront__body__modules__list__first__right">
-                                <img src={ModuleImg3} alt="Room" className="" />
+                                <img src={ModuleImg3} alt="Lady at laptop" className="" />
                                 <div className="modulefront__body__modules__list__first__right__shape"></div>
                             </div>
                         </div> 
                         <div className="modulefront__body__modules__list__second">
                             <div className="modulefront__body__modules__list__second__left">
-                                <img src={ModuleImg4} alt="Room" className="" />
+                                <img src={ModuleImg4} alt="Group of people" className="" />
                                 <div className="modulefront__body__modules__list__second__left__shape"></div>
                             </div>
                             <div className="modulefront__body__modules__list__second__right">
@@ -86,13 +86,13 @@ function Module() {
                                 <p>Possible scenarios utilised in role-plays are highlighted. The module also covers effective preparation and relevant techniques to use during the exercise.</p>
                             </div>
                             <div className="modulefront__body__modules__list__first__right">
-                                <img src={ModuleImg5} alt="Room" className="" />
+                                <img src={ModuleImg5} alt="Pen on paper" className="" />
                                 <div className="modulefront__body__modules__list__first__right__shape"></div>
                             </div>
                         </div> 
                         <div className="modulefront__body__modules__list__second"> 
                             <div className="modulefront__body__modules__list__second__left">
-                                <img src={ModuleImg6} alt="Room" className="" />
+                                <img src={ModuleImg6} alt="Desk" className="" />
                                 <div className="modulefront__body__modules__list__second__left__shape"></div>
                             </div>
                             <div className="modulefront__body__modules__list__second__right">
@@ -107,15 +107,15 @@ function Module() {
                         <h1>Featured in Each Module</h1>
                         <div className="modulefront__body__modules__features__icons">
                             <div> 
-                                <img src={Feature1} alt="Video" className="modulefront__body__modules__features__icons__img1" />
+                                <img src={Feature1} alt="Video with Audio Commentary" className="modulefront__body__modules__features__icons__img1" />
                                 <h4 className="modulefront__body__modules__features__icons__heading1">Video with Audio Commentary</h4>
                             </div>
                             <div>
-                                <img src={Feature2} alt="Video" className="modulefront__body__modules__features__icons__img2" />
+                                <img src={Feature2} alt="Key Learning Points" className="modulefront__body__modules__features__icons__img2" />
                                 <h4 className="modulefront__body__modules__features__icons__heading2">Key Learning Points</h4>
                             </div>
                             <div>
-                                <img src={Feature3} alt="Video" className="modulefront__body__modules__features__icons__img3" />
+                                <img src={Feature3} alt="Action Items" className="modulefront__body__modules__features__icons__img3" />
                                 <h4 className="modulefront__body__modules__features__icons__heading3">Action Items</h4>
                             </div>
                         </div>
