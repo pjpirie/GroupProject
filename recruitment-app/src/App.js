@@ -48,7 +48,7 @@ function App() {
   
   const checkAuth = async (msg = "App") => {
     // console.log("Checking Auth from " + msg)
-    return await fetch('https://group-54-rct.herokuapp.com/user/auth', {
+    return await fetch('https://rsdp-backend.herokuapp.com/user/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -134,9 +134,7 @@ function App() {
                     <Route path="/CMS" component={CMSPage} />
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
-                    <Route component={ModuleTree}>
-                      <ModuleTree checkAuth={checkAuth} />
-                    </Route>
+                    
                     { 
                       getUser ? (
 

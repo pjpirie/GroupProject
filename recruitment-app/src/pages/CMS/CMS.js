@@ -11,7 +11,7 @@ function CMSPage(props) {
 
     const [users, setUsers] = useState([])
     useEffect(()=>{
-        axios.get("https://group-54-rct.herokuapp.com/user")
+        axios.get("https://rsdp-backend.herokuapp.com/user")
         .then(res=>{
             console.log(res)
             setUsers(res.data)
@@ -22,14 +22,14 @@ function CMSPage(props) {
     const changeAccess=(currentAccess)=>{
         window.location.reload();
 
-        axios.get("https://group-54-rct.herokuapp.com/user")
+        axios.get("https://rsdp-backend.herokuapp.com/user")
         .then(res=>{
             console.log(res)
             setUsers(res.data)
         })
         .catch(error=>console.log(error))
 
-        return fetch('https://group-54-rct.herokuapp.com/CMS', {
+        return fetch('https://rsdp-backend.herokuapp.com/CMS', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
