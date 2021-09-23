@@ -73,7 +73,6 @@
 				&__left {
 					text-align: left;
 					padding: 0 5vw 0 1vw;
-
 					h4 {
 						color: var(--light-green);
 						font-size: 1.5em;
@@ -293,9 +292,30 @@
 }
 
 @media (max-width: 500px) {
-	.module4__body__main__buttons__modal__show {
-		h1 {
-			font-size: 1.4em !important;
+	.module4__header {
+		flex-direction: column;
+		text-align: center;
+		justify-content: center !important;
+		align-items: center;
+		&__text {
+			margin-bottom: 10px;
+			h3 {
+				margin: 0 auto;
+			}
 		}
+	}
+	.module4__body__main {
+		&__buttons__modal__show {
+			h1 {
+				font-size: 1.4em !important;
+			}
+			&__text__left > h3 {
+				font-size: 1em !important;
+				outline: 1px solid red;
+			}
+		}
+	}
+	#specialH3 {
+		font-size: 2em !important;
 	}
 }

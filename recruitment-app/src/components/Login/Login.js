@@ -35,10 +35,6 @@ async function accountExists(email) {
 }
 
 export default function Login(props) {
-    let a = "A"
-    console.log(a)
-    
-    console.log(a.toLowerCase())
 
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();

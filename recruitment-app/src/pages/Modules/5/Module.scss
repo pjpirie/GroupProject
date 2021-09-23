@@ -4,9 +4,6 @@
 	max-width: 70vw;
 	margin-left: auto;
 	margin-right: auto;
-	@include media("<=800px") {
-		// margin-right: 56px !important;
-	}
 
 	&__header {
 		max-width: 100vw;

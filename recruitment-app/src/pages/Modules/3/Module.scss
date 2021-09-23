@@ -830,3 +830,17 @@
 		}
 	}
 }
+
+@media (max-width: 500px) {
+	.module3__header {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		&__text {
+			margin-bottom: 10px;
+			h3 {
+				margin: 0 auto;
+			}
+		}
+	}
+}
