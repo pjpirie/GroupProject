@@ -89,7 +89,7 @@ export default function Register() {
                     </div>
                     <label>
                         <p>Email</p>
-                        <input type="email" onChange={e => setEmail(e.target.value)} required />
+                        <input type="email" onChange={e => setEmail(e.target.value.toLowerCase())} required />
                     </label>
                     <label>
                         <p>Password</p>
