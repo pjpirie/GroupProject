@@ -1,4 +1,4 @@
-.module6 {
+.module7 {
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -267,7 +267,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module6__body__main {
+	.module7__body__main {
 		&__text {
 			flex-direction: column;
 			&__right,
@@ -291,7 +291,18 @@
 }
 
 @media (max-width: 500px) {
-	.module6 {
+	.module7 {
 		width: 90%;
+		&__header {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			&__text {
+				margin-bottom: 10px;
+				h3 {
+					margin: 0 auto;
+				}
+			}
+		}
 	}
 }

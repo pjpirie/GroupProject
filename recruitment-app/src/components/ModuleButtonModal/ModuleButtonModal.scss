@@ -188,10 +188,20 @@
         display: flex;
         flex-direction: column;
         text-align: left;
+        @include media("<=500px") {
+            padding: 24px 32px;
+        }
+        @include media("<=900px") {
+                    
+        }
+        @include media("<=1200px") {
+                    
+        }
         @include media("<=1300px"){
                 
             border-radius: 10px;
             }
+
         div{
             position: relative;
             display: flex;

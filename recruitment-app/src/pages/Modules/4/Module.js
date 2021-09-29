@@ -154,7 +154,7 @@ function Module() {
                     <div className="module3__body__main__text">
                         <div className="module3__body__main__text__left">
                             <h4>Be prepared</h4>
-                            <h3>Many organisations require candidates to complete pre-recorded interviews.</h3>
+                            <h3 id="specialH3">Many organisations require candidates to complete pre-recorded interviews.</h3>
                         </div>
                         <div className="module3__body__main__text__right">
                             <h3>Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation.</h3>

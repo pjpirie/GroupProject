@@ -134,7 +134,6 @@ function App() {
                     <Route path="/CMS" component={CMSPage} />
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
-                    
                     { 
                       getUser ? (
 
