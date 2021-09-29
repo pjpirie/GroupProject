@@ -1,4 +1,4 @@
-.module3-2 {
+.module2 {
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -741,7 +741,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module3-2__body__main {
+	.module2__body__main {
 		&__text,
 		&__interview,
 		&__mistake__wrapper {
@@ -783,7 +783,7 @@
 }
 
 @media (max-width: 600px) {
-	.module3-2__body__main {
+	.module2__body__main {
 		&__buttons {
 			&__wrapper {
 				width: 100%;
@@ -833,7 +833,7 @@
 }
 
 @media (max-width: 500px) {
-	.module3__header {
+	.module2__header {
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
