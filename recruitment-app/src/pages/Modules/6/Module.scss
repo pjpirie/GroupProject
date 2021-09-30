@@ -18,11 +18,21 @@
 		flex-direction: row;
 		justify-content: space-between;
 		margin-bottom: 20px;
+		@include media("<=500px") {
+			flex-direction: column;
+			align-items: center;
+		}
 
 		&__text {
 			display: flex;
 			flex-direction: column;
 
+			@include media("<=500px") {
+				margin-bottom: 10px;
+				h3 {
+					margin: 0 auto;
+				}
+			}
 			h3 {
 				background: #ffd9ba;
 				border-radius: 20px;
