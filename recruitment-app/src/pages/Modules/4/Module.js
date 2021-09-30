@@ -38,56 +38,56 @@ function Module() {
 
     const modalOpen =(num)=>{
         btnClick(num)
-        let active = document.querySelector('.module4__body__main__buttons__wrapper__active')
+        let active = document.querySelector('.module3__body__main__buttons__wrapper__active')
         if(active){
-            active.classList.remove('module4__body__main__buttons__wrapper__active')
+            active.classList.remove('module3__body__main__buttons__wrapper__active')
         }
-        document.querySelector(`#btn${num}`).classList.add('module4__body__main__buttons__wrapper__active')
+        document.querySelector(`#btn${num}`).classList.add('module3__body__main__buttons__wrapper__active')
     }
     const modalClose=()=>{
         btnClick(0)
-        document.querySelector('.module4__body__main__buttons__wrapper__active').classList.remove('module4__body__main__buttons__wrapper__active')
+        document.querySelector('.module3__body__main__buttons__wrapper__active').classList.remove('module3__body__main__buttons__wrapper__active')
     }
 
     return (
-        <div className="module4">
+        <div className="module3">
             <RSDPModuleLogo />
-            <div className="module4__header">
-                <div className="module4__header__text">
+            <div className="module3__header">
+                <div className="module3__header__text">
                     <h3>MODULE THREE</h3>
                     <h1>Virtual Interview</h1>
                 </div>
                 <Eta time={10} />
             </div>
-            <div className="module4__body">
-                <div className="module4__body__video">
+            <div className="module3__body">
+                <div className="module3__body__video">
                     <video id="Video" autoplay controls>
                         <source src="https://rsdp-backend.herokuapp.com/video/3" type="video/mp4"></source>
                     </video>
                 </div>
-                <div className="module4__body__main">
+                <div className="module3__body__main">
                     <p>
                         Increasingly organisations are conducting recruitment remotely. <br/>
                         Some basic elements are the same as in face to face events, however, some additional <br/> factors have to be considered.
                     </p>
-                    <div className="module4__body__main__text">
-                        <div className="module4__body__main__text__left">
+                    <div className="module3__body__main__text">
+                        <div className="module3__body__main__text__left">
                             <h4>Preparation is Key</h4>
                             <h3>You may be asked to bring along some personal documents.</h3>
                         </div>
-                        <div className="module4__body__main__text__right">
+                        <div className="module3__body__main__text__right">
                             <h3>When you are invited to attend a virtual assessment a briefing email will normally arrive containing instructions on how to join on the day. There may also be some administration and ID tasks to be completed.</h3>
                         </div>
                     </div>
-                    <div className="module4__body__main__buttons">
+                    <div className="module3__body__main__buttons">
                         <p>Keep in mind some things you can do to ensure a smooth virtual interview</p>
-                        <div className="module4__body__main__buttons__wrapper">
-                            <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module4__body__main__buttons__wrapper__1">Documentation</button>
-                            <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module4__body__main__buttons__wrapper__2">Connectivity</button> <br />
-                            <button value="Appearance" onClick={()=>modalOpen(3)} id="btn3" className="module4__body__main__buttons__wrapper__3">Appearance</button>
-                            <button value="Location" onClick={()=>modalOpen(4)} id="btn4" className="module4__body__main__buttons__wrapper__4">Location</button>
+                        <div className="module3__body__main__buttons__wrapper">
+                            <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module3__body__main__buttons__wrapper__1">Documentation</button>
+                            <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module3__body__main__buttons__wrapper__2">Connectivity</button> <br />
+                            <button value="Appearance" onClick={()=>modalOpen(3)} id="btn3" className="module3__body__main__buttons__wrapper__3">Appearance</button>
+                            <button value="Location" onClick={()=>modalOpen(4)} id="btn4" className="module3__body__main__buttons__wrapper__4">Location</button>
                         </div>
-                        <div className="module4__body__main__buttons__modal">
+                        <div className="module3__body__main__buttons__modal">
                             {
                                 btnVal === 0?
                                 <>
@@ -96,7 +96,7 @@ function Module() {
                             }
                             {
                                 btnVal === 1?
-                                    <div className="module4__body__main__buttons__modal__show">
+                                    <div className="module3__body__main__buttons__modal__show">
                                     <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Documentation</h1>
                                         <h4>You may be required to bring along your Passport or other documents confirming your right to work and address etc.</h4>
@@ -106,7 +106,7 @@ function Module() {
                             }
                             {
                                 btnVal === 2?
-                                    <div className="module4__body__main__buttons__modal__show">
+                                    <div className="module3__body__main__buttons__modal__show">
                                         <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Connectivity</h1>
                                         <h4>
@@ -123,7 +123,7 @@ function Module() {
                             }
                             {
                                 btnVal === 3?
-                                    <div className="module4__body__main__buttons__modal__show">
+                                    <div className="module3__body__main__buttons__modal__show">
                                         <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Appearance</h1>
                                         <h4>
@@ -138,7 +138,7 @@ function Module() {
                             }
                             {
                                 btnVal === 4?
-                                    <div className="module4__body__main__buttons__modal__show">
+                                    <div className="module3__body__main__buttons__modal__show">
                                         <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
                                         <h1>Location</h1>
                                         <h4>
@@ -150,17 +150,17 @@ function Module() {
                             }
                         </div>
                     </div>                        
-                    <h1 className="module4__body__main__p">Pre-recorded Interviews</h1>
-                    <div className="module4__body__main__text">
-                        <div className="module4__body__main__text__left">
+                    <h1 className="module3__body__main__p">Pre-recorded Interviews</h1>
+                    <div className="module3__body__main__text">
+                        <div className="module3__body__main__text__left">
                             <h4>Be prepared</h4>
                             <h3 id="specialH3">Many organisations require candidates to complete pre-recorded interviews.</h3>
                         </div>
-                        <div className="module4__body__main__text__right">
+                        <div className="module3__body__main__text__right">
                             <h3>Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation.</h3>
                         </div>
                     </div>
-                    <div className="module4__body__main__consider">
+                    <div className="module3__body__main__consider">
                         <h1>Things to Consider</h1>
                         <h3>Dress to Impress</h3>
                         <h4>Although you will not be face to face you should consider how to dress as you will be visible to the interviewer. </h4>
@@ -169,7 +169,7 @@ function Module() {
                         <h3>Monitor Time</h3>
                         <h4>One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use most, or all of the time available. This will require you to monitor time in an unobtrusive way. </h4>
                     </div>
-                    <div className="module4__body__main__download">
+                    <div className="module3__body__main__download onetwothree">
                         <h2>Now it's time to work on you action plan</h2>
                         <h3>Press the Download Button to make detailed personal preparations.</h3>
                         <button onClick={handleDownload}>Download</button>

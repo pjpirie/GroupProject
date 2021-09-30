@@ -1,4 +1,4 @@
-.module4 {
+.module3 {
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -254,7 +254,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module4__body__main {
+	.module3__body__main {
 		&__text {
 			flex-direction: column;
 			&__right,
@@ -292,7 +292,7 @@
 }
 
 @media (max-width: 500px) {
-	.module4__header {
+	.module3__header {
 		flex-direction: column;
 		text-align: center;
 		justify-content: center !important;
@@ -304,7 +304,7 @@
 			}
 		}
 	}
-	.module4__body__main {
+	.module3__body__main {
 		&__buttons__modal__show {
 			h1 {
 				font-size: 1.4em !important;
@@ -312,6 +312,11 @@
 			&__text__left > h3 {
 				font-size: 1em !important;
 				outline: 1px solid red;
+			}
+		}
+		&__download {
+			h3 {
+				min-width: 100% !important;
 			}
 		}
 	}

@@ -162,6 +162,9 @@
 		font-weight: 500 !important;
 		max-width: 50%;
 		margin: 0 auto;
+		@include media("<=500px") {
+			min-width: 100%;
+		}
 	}
 	button:hover {
 		background: var(--btn-green);
