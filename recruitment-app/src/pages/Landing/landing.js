@@ -56,7 +56,7 @@ function Landing() {
             <div className="landing__hero">
                 <div className="landing__hero__text">
                     <h1>
-                        Everything you need to know toimprove your performance atrecruitment events
+                        Everything you need to know to improve your performance at recruitment events
                     </h1>
                     <p>Recruitment Skills Development Programme™ is a modern skill development programme that gives you the skills you need for interview success.</p>
                     <div className="landing__hero__text__cta">

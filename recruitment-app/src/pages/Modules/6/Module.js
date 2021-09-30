@@ -42,22 +42,22 @@ function Module() {
         DownloadMedia();
     };
     return (
-        <div className="module5">
+        <div className="module6">
             <RSDPModuleLogo />
-            <div className="module5__header">
-                <div className="module5__header__text">
+            <div className="module6__header">
+                <div className="module6__header__text">
                     <h3>MODULE FIVE</h3>
                     <h1>Role Play</h1>
                 </div>
                 <Eta time={10} />
             </div>
-            <div className="module5__body">
-                <div className="module5__body__video">
+            <div className="module6__body">
+                <div className="module6__body__video">
                     <video id="Video" autoplay controls>
                         <source src="https://rsdp-backend.herokuapp.com/video/5" type="video/mp4"></source>
                     </video>
                 </div>
-                <div className="module5__body__main">
+                <div className="module6__body__main">
                     {/* <p>
                     Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.
                     </p> */}
@@ -81,7 +81,7 @@ function Module() {
                     </div>
                     {/* Text Section End */}
                     {/* Modal Button Section Start */}
-                    <div className="module5__body__buttons">
+                    <div className="module6__body__buttons">
                         <p>What is involved?</p>
                         <ModuleButtonModal type="2x2"/>
                     </div>
@@ -101,7 +101,7 @@ function Module() {
                                 </p>
                         </div>
                     </div> */}
-                    <div className="module5__body__key">
+                    <div className="module6__body__key">
                         <h1>Things to Remember</h1>
 
                         <div>
@@ -129,14 +129,14 @@ function Module() {
                     {/* Competencies Section End */}
 
                     {/* Do's and Don'ts Section Start */}
-                    <div className="module5__body__dodont">
+                    <div className="module6__body__dodont">
                         <h1>The do's and don'ts</h1>
                         <DoDontModal module={5}/>
                     </div>
                     {/* Do's and Don'ts Section End */}
 
                     {/* Activity Section Start */}
-                    <div className="module5__body__main__download">
+                    <div className="module6__body__main__download">
                         <h2>Now it's time to work on you action plan</h2>
                         <h3>Press the Download Button to make detailed personal preparations.</h3>
                         <button onClick={handleDownload}>Download</button>
