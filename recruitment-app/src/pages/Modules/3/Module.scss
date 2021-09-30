@@ -844,4 +844,19 @@
 			}
 		}
 	}
+	.module2__body__main {
+		&__questions,
+		&__star,
+		&__mistake,
+		&__list,
+		&__download {
+			p,
+			li,
+			h3 {
+				min-width: 100%;
+			}
+		}
+		&__star {
+		}
+	}
 }

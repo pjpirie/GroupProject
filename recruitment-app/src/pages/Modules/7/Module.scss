@@ -1,4 +1,4 @@
-.module7 {
+.module6 {
 	button {
 		cursor: pointer;
 		transition: background ease-in-out 200ms;
@@ -267,7 +267,7 @@
 }
 
 @media (max-width: 1200px) {
-	.module7__body__main {
+	.module6__body__main {
 		&__text {
 			flex-direction: column;
 			&__right,
@@ -291,7 +291,7 @@
 }
 
 @media (max-width: 500px) {
-	.module7 {
+	.module6 {
 		width: 90%;
 		&__header {
 			flex-direction: column;
@@ -301,6 +301,13 @@
 				margin-bottom: 10px;
 				h3 {
 					margin: 0 auto;
+				}
+			}
+		}
+		&__body__main {
+			&__download {
+				h3 {
+					min-width: 100%;
 				}
 			}
 		}
