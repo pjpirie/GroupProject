@@ -38,8 +38,8 @@ function Module() {
     return (
         <div className="module1">
             <RSDPModuleLogo />
-            <div className="module1__header">
-                <div className="module1__header__text">
+            <div className="module1__header module__header">
+                <div className="module__header__text">
                     <h3>MODULE ONE</h3>
                     <h1>Preparation</h1>
                 </div>

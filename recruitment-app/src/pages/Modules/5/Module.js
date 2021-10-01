@@ -4,11 +4,11 @@ import '../ModuleGlobal.css';
 import './Module.scss';
 import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal.js';
 import DoDontModal from '../../../components/DoDontModal/DoDontModal.js';
-import EffectiveImage from '../../../assets/SVG/Effective.svg';
-import FocusImage from '../../../assets/SVG/Focus.svg';
-import AwarenessImage from '../../../assets/SVG/Awareness.svg';
-import TeamImage from '../../../assets/SVG/Team.svg';
-import ConfidentImage from '../../../assets/SVG/Confident.svg';
+import EffectiveImage from '../../../assets/1x/EffectiveCommunication.png';
+import FocusImage from '../../../assets/1x/FocusGoals.png';
+import AwarenessImage from '../../../assets/1x/AwarenessTime.png';
+import TeamImage from '../../../assets/1x/Constructive.png';
+import ConfidentImage from '../../../assets/1x/ConfidentDelivery.png';
 import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 import DownloadIcon from '../../../assets/SVG/Download.svg';
 
@@ -44,8 +44,8 @@ function Module() {
     return (
         <div className="module5">
             <RSDPModuleLogo />
-            <div className="module5__header">
-                <div className="module5__header__text">
+            <div className="module5__header module__header">
+                <div className="module__header__text">
                     <h3>MODULE FOUR</h3>
                     <h1>Group Exercise</h1>
                 </div>

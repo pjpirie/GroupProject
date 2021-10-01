@@ -44,8 +44,8 @@ function Module() {
     return (
         <div className="module6">
             <RSDPModuleLogo />
-            <div className="module6__header">
-                <div className="module6__header__text">
+            <div className="module__header">
+                <div className="module__header__text">
                     <h3>MODULE FIVE</h3>
                     <h1>Role Play</h1>
                 </div>

@@ -36,6 +36,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			position: relative;
 
 			img {
 				transform: scale(0.7);
@@ -47,10 +48,15 @@
 				outline: none !important;
 			}
 			&:first-of-type{
-				margin-left: 25%;
+				// margin-left: 20%;
+				@include media(">=1200px"){
+					margin-left: 20%;
+				}
 			}
 			&:last-of-type{
-				margin-right: 25%;
+				@include media(">=1200px"){
+					margin-right: 20%;
+				}
 			}
 			@include media("<=900px") {
 				font-size: 20px;

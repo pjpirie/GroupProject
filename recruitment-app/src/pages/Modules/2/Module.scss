@@ -1,4 +1,49 @@
 @import "../../../breakpoints.scss";
+.module__header {
+	max-width: 100vw;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+	@include media("<=650px") {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+
+		@include media("<=650px") {
+
+			margin-bottom: 10px;
+			h3 {
+				margin: 0 auto;
+				align-self: center !important;
+			}
+		}
+		h3 {
+			background: #ffd9ba;
+			border-radius: 20px;
+			padding: 3px 17px;
+			justify-self: flex-start;
+			align-self: flex-start;
+			// margin: 0 auto;
+			font-weight: 700;
+			font-size: 16px !important;
+			font-family: "roboto";
+			color: #e76f51 !important;
+			@include media("<=650px") {
+				align-self: center !important;
+			}
+		}
+		h1 {
+		}
+	}
+}
+
 .module1 {
 	@include media("<=500px") {
 		max-width: 90vw !important;
@@ -9,45 +54,7 @@
 	@include media("<=1200px") {
 		
 	}
-	&__header {
-		max-width: 100vw;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-bottom: 20px;
-
-		@include media("<=500px") {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		&__text {
-			display: flex;
-			flex-direction: column;
-
-			@include media("<=500px") {
-				margin-bottom: 10px;
-				h3 {
-					margin: 0 auto;
-				}
-			}
-			h3 {
-				background: #ffd9ba;
-				border-radius: 20px;
-				padding: 3px 17px;
-				justify-self: flex-start;
-				align-self: flex-start;
-				// margin: 0 auto;
-				font-weight: 700;
-				font-size: 16px !important;
-				font-family: "roboto";
-				color: #e76f51 !important;
-			}
-			h1 {
-			}
-		}
-	}
+	
 
 	&__body {
 		.highlightGreen {
@@ -192,10 +199,6 @@
 			}
 			@include media("<=500px") {
 				width: 60%;
-			}
-
-			&:last-of-type {
-				transform: scale(1.4);
 			}
 		}
 	}
