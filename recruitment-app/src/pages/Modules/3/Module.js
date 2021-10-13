@@ -22,7 +22,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 2 Interview Activity Sheet';
+                a.download = 'Module 2 Interview Action Items';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -83,6 +83,9 @@ function Module() {
                         <source src="https://rsdp-backend.herokuapp.com/video/2" type="video/mp4"></source>
                     </video>
                 </div>
+                <p className="KeyLearningPoints">
+                        Key Learning Points
+                    </p>
                 <div className="module2__body__main">
                     <p className="module2__body__main__p">Interviews can be a daunting and nerve-racking experience but you can prepare to succeed with the tips and techniques within this module. Learn all about the three styles of questions you may experience at your next interview and start preparing your answers today.</p>
                     <div className="module2__body__main__text">
@@ -131,7 +134,7 @@ function Module() {
                     </div>
                     <div className="module2__body__main__buttons">
                         <h1>General Questions</h1>
-                        <p>This type of question is often used to give candidates an opportunity to “loosen up” and ease themselves into the interview. Read the questions and have a think about your what your response might be. Click on the question to see an example answer.</p>
+                        <p>This type of question is often used to give candidates an opportunity to “loosen up” and ease themselves into the interview. Read the questions and have a think about what your response might be. Click on the questions to see example answers.</p>
                         <div className="module2__body__main__buttons__wrapper">
                             <button onClick={()=>modalOpen(1)} id="btn1" className="module2__body__main__buttons__wrapper__1"><p>Tell me/us a bit about yourself</p></button>
                             <button onClick={()=>modalOpen(2)} id="btn2" className="module2__body__main__buttons__wrapper__2"><p>Why did you apply for this job?</p></button>
@@ -467,7 +470,7 @@ function Module() {
                     </div>
                 </div>
                 <div className="module2__body__main__download">
-                    <h2>Now it's time to work on you action plan</h2>
+                    <h2>Now it's time to work on your action plan</h2>
                     <h3>Press the Download Button to make detailed personal preparations.</h3>
                     <button onClick={handleDownload}>Download</button>
                 </div>

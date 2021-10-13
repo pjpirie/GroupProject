@@ -29,7 +29,7 @@ function Module() {
             a.style.display = 'none';
             a.href = url;
             // the filename you want
-            a.download = 'Module 5 Role Play Activity Sheet';
+            a.download = 'Module 5 Role Play Action Items';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
@@ -57,6 +57,9 @@ function Module() {
                         <source src="https://rsdp-backend.herokuapp.com/video/5" type="video/mp4"></source>
                     </video>
                 </div>
+                <p className="KeyLearningPoints">
+                        Key Learning Points
+                    </p>
                 <div className="module6__body__main">
                     {/* <p>
                     Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.
@@ -137,7 +140,7 @@ function Module() {
 
                     {/* Activity Section Start */}
                     <div className="module6__body__main__download">
-                        <h2>Now it's time to work on you action plan</h2>
+                        <h2>Now it's time to work on your action plan</h2>
                         <h3>Press the Download Button to make detailed personal preparations.</h3>
                         <button onClick={handleDownload}>Download</button>
                     </div>

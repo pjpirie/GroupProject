@@ -23,7 +23,7 @@ function Module() {
             a.style.display = 'none';
             a.href = url;
             // the filename you want
-            a.download = 'Module 1 Preparation Activity Sheet';
+            a.download = 'Module 1 Preparation Action Items';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
@@ -52,9 +52,9 @@ function Module() {
                     </video>
                 </div>
                 <div className="module1__body__main">
-                    {/* <p>
-                    Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.
-                    </p> */}
+                    <p className="KeyLearningPoints">
+                        Key Learning Points
+                    </p>
                     {/* Text Section Start */}
                     <div className="textSection">
                         <div className="textSection__large">

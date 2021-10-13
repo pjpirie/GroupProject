@@ -22,7 +22,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 6 RemoteVirtule Interview Activity Sheet';
+                a.download = 'Module 6 RemoteVirtule Interview Action Items';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -66,6 +66,9 @@ function Module() {
                         <source src="https://rsdp-backend.herokuapp.com/video/6" type="video/mp4"></source>
                     </video>
                 </div>
+                <p className="KeyLearningPoints">
+                        Key Learning Points
+                    </p>
                 <div className="module7__body__main">
                     <p>
                     Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.

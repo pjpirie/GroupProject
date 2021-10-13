@@ -21,7 +21,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 3 RemoteVirtule Interview Activity Sheet';
+                a.download = 'Module 3 RemoteVirtule Interview Action Items';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -65,6 +65,9 @@ function Module() {
                         <source src="https://rsdp-backend.herokuapp.com/video/3" type="video/mp4"></source>
                     </video>
                 </div>
+                <p className="KeyLearningPoints">
+                        Key Learning Points
+                    </p>
                 <div className="module3__body__main">
                     <p>
                         Increasingly organisations are conducting recruitment remotely. <br/>
@@ -170,7 +173,7 @@ function Module() {
                         <h4>One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use most, or all of the time available. This will require you to monitor time in an unobtrusive way. </h4>
                     </div>
                     <div className="module3__body__main__download onetwothree">
-                        <h2>Now it's time to work on you action plan</h2>
+                        <h2>Now it's time to work on your action plan</h2>
                         <h3>Press the Download Button to make detailed personal preparations.</h3>
                         <button onClick={handleDownload}>Download</button>
                     </div>
