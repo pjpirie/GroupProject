@@ -11,9 +11,9 @@ function Footer() {
                 <img src={Logo} alt="RSDP Logo"/>
                 <div className="footer__brand__text">
                     
-                    <NavLink activeClassName="is-active" to='/privacy'>
+                    {/* <NavLink activeClassName="is-active" to='/privacy'>
                         <h4>Privacy Policy</h4>
-                    </NavLink>
+                    </NavLink> */}
                     <h3>© XPC International Ltd. </h3>
                 </div>
             </div>

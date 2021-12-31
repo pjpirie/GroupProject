@@ -54,7 +54,7 @@ function Module() {
                             <div className="modulefront__body__modules__list__second__right">
                                 <h3>MODULE TWO</h3>
                                 <h2>Interview (Face to Face)</h2>
-                                <p>In face to face interviews what behaviours and techniques should you display. You are also shown how to deal with the different kinds of questions used by interviewers.</p>
+                                <p>In face to face interviews what behaviours and techniques you should display. You are also shown how to deal with the different kinds of questions used by interviewers.</p>
                             </div>
                         </div> 
                         <div className="modulefront__body__modules__list__first">

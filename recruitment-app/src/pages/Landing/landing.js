@@ -58,7 +58,7 @@ function Landing() {
                     <h1>
                         Everything you need to know to improve your performance at recruitment events
                     </h1>
-                    <p>Recruitment Skills Development Programme™ is a modern skill development programme that gives you the skills you need for interview success.</p>
+                    <p>Our Recruitment Skills Development Programme is a comprehensive personal development programme that gives you the opportunity to acquire skills you need for interview success.</p>
                     <div className="landing__hero__text__cta">
                     <Link to='/register'>
                         <li className="landing__hero__text__cta__button">Sign up</li>
@@ -111,7 +111,7 @@ function Landing() {
                     <div className="cardSection__card__text">
                         <h1>Easy to access</h1>
                         <p>
-                        RSVP is straightforward, easy to follow and combines engaging video with individual learning.
+                        RSDP is straightforward, easy to follow and combines engaging video with individual learning material.
                         </p>
                         <div className="cardSection__card__text__cta">
                             <img src={orange_hash} />

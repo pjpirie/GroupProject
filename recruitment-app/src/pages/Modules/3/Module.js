@@ -193,7 +193,7 @@ function Module() {
                     </div>
                     <div className="module2__body__main__text">
                         <div className="module2__body__main__text__left">
-                            <h3>How to answer competency based question.</h3>
+                            <h3>How to answer competency based Questions.</h3>
                         </div>
                         <div className= "module2__body__main__text__right">
                             <h3>There are clear rules which must be applied in order to perform well. There is a useful structure which is used to summarise how to answer competency based questions.</h3>

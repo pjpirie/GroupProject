@@ -9,7 +9,7 @@ import CloseButtonImage from '../../../assets/1x/closeicon.png';
 function Module() {
 
     async function DownloadMedia() {
-        return fetch('https://rsdp-backend.herokuapp.com/download3', {
+        return fetch('https://rsdp-backend.herokuapp.com/download6', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 6 RemoteVirtule Interview Action Items';
+                a.download = 'Module 6 Written Exercise Action Items';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
