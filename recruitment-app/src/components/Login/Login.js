@@ -66,6 +66,7 @@ export default function Login(props) {
             // console.log(logged_in.token);
             if (logged_in.token != undefined) {
                 window.localStorage.setItem('token', logged_in.token);
+                window.localStorage.setItem('authToken', `Bearer ${logged_in.authToken}`);
                 window.localStorage.setItem('User_Id', logged_in.data.User_Id);
                 window.localStorage.setItem('logged_in', logged_in.data.logged_in);
                 dispatch(setAccount(true, logged_in.user));

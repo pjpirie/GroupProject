@@ -21,7 +21,7 @@ function AccountSection(props) {
             }, 
             credentials: 'same-origin'
         })
-        .then(data => console.log(data));
+        // .then(data => console.log(data));
         // .then(data => data.json())
         // .then(data => setAuth(data.tokenValid));
     }

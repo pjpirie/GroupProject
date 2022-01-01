@@ -65,11 +65,26 @@ function App() {
     });
   }
 
-  
+  async function logout() {
+    return await fetch('/user/logout', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        }, 
+        credentials: 'same-origin'
+    })
+    // .then(data => console.log(data));
+    // .then(data => data.json())
+    // .then(data => setAuth(data.tokenValid));
+}
   
   useEffect(() => {
     checkAuth();
     setLoading(true);
+    if(!window.localStorage.getItem('authToken')){
+      logout();
+      dispatch(setLogged(false));
+    }
     // setTimeout(()=> {
     //   setLoading(false);
     // }, 3500);

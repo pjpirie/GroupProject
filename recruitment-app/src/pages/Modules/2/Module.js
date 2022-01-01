@@ -9,10 +9,60 @@ import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 function Module() {
 
+
+const url = "https://rsdp-backend.herokuapp.com/video/1";
+
+async function init() {
+    const audioSource = document.getElementById("video-1");
+
+    const mediaResponse = await fetch(url, {
+    headers: {
+        Authorization: `${window.localStorage.getItem('authToken')}`
+    }
+    });
+
+    const reader = mediaResponse.body.getReader();
+
+    const stream = new ReadableStream({
+    start(controller) {
+        return pump();
+        function pump() {
+        return reader.read().then(({ done, value }) => {
+          // When no more data needs to be consumed, close the stream
+            if (done) {
+            controller.close();
+            return;
+            }
+
+          // Enqueue the next data chunk into our target stream
+            controller.enqueue(value);
+            return pump();
+        });
+        }
+    }
+    });
+
+    const blob = await new Response(stream).blob();
+
+    if (blob) {
+    audioSource.src = URL.createObjectURL(blob);
+
+    // Load the new resource
+    audioSource.parentElement.load();
+
+    console.info("Ready!", audioSource.src);
+    } else {
+    console.warn("Can not load");
+    }
+}
+
+init();
+
     async function DownloadMedia() {
         return fetch('https://rsdp-backend.herokuapp.com/download1', {
             method: 'get',
             headers: {
+                'Authorization': window.localStorage.getItem('authToken'),
                 'Content-Type': 'application/json'
             },
         })
@@ -48,7 +98,8 @@ function Module() {
             <div className="module1__body">
                 <div className="module1__body__video">
                     <video id="Video" autoplay controls>
-                        <source src="https://rsdp-backend.herokuapp.com/video/1" type="video/mp4"></source>
+                        {/* <source id="video-1" src="https://rsdp-backend.herokuapp.com/video/1" type="video/mp4"></source> */}
+                        <source id="video-1" type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="module1__body__main">
