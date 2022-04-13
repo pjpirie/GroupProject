@@ -1,5 +1,4 @@
 import { Fragment, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import GuideIcon from '../../assets/2x/CourseGuide_Gray@2x.png';
 import GuideIconGreen from '../../assets/2x/CourseGuide__Green@2x.png';
@@ -19,6 +18,8 @@ import ModuleModal from '../../components/ModuleModal/ModuleModal';
 import ModulesCompleted from '../../components/ModulesCompleted/ModulesCompleted';
 import './ModuleTree.css';
 import './ModuleTree.responsive.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLogged, setRedirect } from '../../actions';
 
 
 
@@ -26,11 +27,37 @@ import './ModuleTree.responsive.css';
 
 
 function ModuleTree(props) {
-
-    useEffect(() => {
-        console.log(props)
-        props.checkAuth();
+    const dispatch = useDispatch();
+    const isLogged = useSelector(state => state.isLogged);
+    async function logout() {
+        return await fetch('https://rsdp-backend.herokuapp.com/user/logout', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            }, 
+            credentials: 'same-origin'
+        })
+        .then( () => {
+            window.localStorage.removeItem('authToken');
+            window.localStorage.removeItem('token');
+            window.localStorage.removeItem('User_Id');
+            window.localStorage.removeItem('logged_in');
+        });
+        // .then(data => console.log(data));
+        // .then(data => data.json())
+        // .then(data => setAuth(data.tokenValid));
+    }
+    
+    useEffect(() => {    
+        if(!window.localStorage.getItem('authToken') && isLogged){
+            logout();
+            dispatch(setLogged(false))
+            dispatch(setRedirect(true, `/`));
+            console.log(props)
+            props.checkAuth();
+        }
     }, [])
+
     
     const UserData = useSelector(state => state.getAccount).user;
 

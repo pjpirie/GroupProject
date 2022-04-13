@@ -70,8 +70,8 @@ export default function Login(props) {
                 window.localStorage.setItem('User_Id', logged_in.data.User_Id);
                 window.localStorage.setItem('logged_in', logged_in.data.logged_in);
                 dispatch(setAccount(true, logged_in.user));
-                dispatch(setLogged(true));
                 dispatch(setRedirect(true, `/`));
+                dispatch(setLogged(true));
             }
         } catch (e) {
             console.error(e);

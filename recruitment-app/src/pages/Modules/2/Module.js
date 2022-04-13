@@ -1,62 +1,47 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
 import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal.js';
 import DidYouKnow from '../../../assets/SVG/Didyouknow.svg';
 import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLogged, setRedirect } from '../../../actions';
 
 
 function Module() {
 
+const dispatch = useDispatch();
+const isLogged = useSelector(state => state.isLogged);
 
-const url = "https://rsdp-backend.herokuapp.com/video/1";
-
-async function init() {
-    const audioSource = document.getElementById("video-1");
-
-    const mediaResponse = await fetch(url, {
-    headers: {
-        Authorization: `${window.localStorage.getItem('authToken')}`
-    }
+async function logout() {
+    return await fetch('https://rsdp-backend.herokuapp.com/user/logout', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        }, 
+        credentials: 'same-origin'
+    })
+    .then( () => {
+        window.localStorage.removeItem('token');
+        window.localStorage.removeItem('User_Id');
+        window.localStorage.removeItem('logged_in');
+        window.localStorage.removeItem('authToken');
     });
-
-    const reader = mediaResponse.body.getReader();
-
-    const stream = new ReadableStream({
-    start(controller) {
-        return pump();
-        function pump() {
-        return reader.read().then(({ done, value }) => {
-          // When no more data needs to be consumed, close the stream
-            if (done) {
-            controller.close();
-            return;
-            }
-
-          // Enqueue the next data chunk into our target stream
-            controller.enqueue(value);
-            return pump();
-        });
-        }
-    }
-    });
-
-    const blob = await new Response(stream).blob();
-
-    if (blob) {
-    audioSource.src = URL.createObjectURL(blob);
-
-    // Load the new resource
-    audioSource.parentElement.load();
-
-    console.info("Ready!", audioSource.src);
-    } else {
-    console.warn("Can not load");
-    }
+    // .then(data => console.log(data));
+    // .then(data => data.json())
+    // .then(data => setAuth(data.tokenValid));
 }
 
-init();
+useEffect(() => {    
+    if(!window.localStorage.getItem('authToken') && isLogged){
+        logout();
+        dispatch(setLogged(false))
+        dispatch(setRedirect(true, `/`));
+    }
+}, [])
+
 
     async function DownloadMedia() {
         return fetch('https://rsdp-backend.herokuapp.com/download1', {
@@ -97,10 +82,9 @@ init();
             </div>
             <div className="module1__body">
                 <div className="module1__body__video">
-                    <video id="Video" autoplay controls>
-                        {/* <source id="video-1" src="https://rsdp-backend.herokuapp.com/video/1" type="video/mp4"></source> */}
-                        <source id="video-1" type="video/mp4"></source>
-                    </video>
+                <video id="Video" autoplay controls>
+                    <source src={`https://rsdp-backend.herokuapp.com/video/1${window.localStorage.getItem('authToken')}`} type="video/mp4"></source>
+                </video>
                 </div>
                 <div className="module1__body__main">
                     <p className="KeyLearningPoints">
@@ -156,6 +140,7 @@ init();
             </div>
         </div>
     )
+    
 }
 
 export default Module

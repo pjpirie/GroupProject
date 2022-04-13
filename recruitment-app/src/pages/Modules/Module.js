@@ -18,8 +18,8 @@ function Module() {
         <div className="modulefront">
             <div className="modulefront__head">
                 <div className="modulefront__head__left">
-                    <h4 className="modulefront__head__left__h4">About Our Program</h4>
-                    <h3 className="modulefront__head__left__h3">The first step is achieving your goals.</h3>
+                    <h4 className="modulefront__head__left__h4">About our programme</h4>
+                    <h3 className="modulefront__head__left__h3">The first step in achieving your goals.</h3>
                 </div>
                 <div className="modulefront__head__right">
                     <img src={Laptop} alt="Laptop" className="modulefront__head__right__img" />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
 import './Module.scss';
@@ -6,6 +6,11 @@ import CloseButtonImage from '../../../assets/1x/closeicon.png';
 import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 function Module() {
+
+    useEffect(() => {    
+    }, [])
+    
+    
 
     async function DownloadMedia() {
         return fetch('https://rsdp-backend.herokuapp.com/download3', {
@@ -61,9 +66,9 @@ function Module() {
             </div>
             <div className="module3__body">
                 <div className="module3__body__video">
-                    <video id="Video" autoplay controls>
-                        <source src="https://rsdp-backend.herokuapp.com/video/3" type="video/mp4"></source>
-                    </video>
+                <video id="Video" autoplay controls>
+                    <source src={`https://rsdp-backend.herokuapp.com/video/3${window.localStorage.getItem('authToken')}`} type="video/mp4"></source>
+                </video>
                 </div>
                 <p className="KeyLearningPoints">
                         Key Learning Points

@@ -66,24 +66,32 @@ function App() {
   }
 
   async function logout() {
-    return await fetch('/user/logout', {
+    return await fetch('https://rsdp-backend.herokuapp.com/user/logout', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
         }, 
         credentials: 'same-origin'
     })
+    .then( () => {
+      window.localStorage.removeItem('token');
+      window.localStorage.removeItem('User_Id');
+      window.localStorage.removeItem('logged_in');
+      window.localStorage.removeItem('authToken');
+    });
     // .then(data => console.log(data));
     // .then(data => data.json())
     // .then(data => setAuth(data.tokenValid));
+    
 }
   
   useEffect(() => {
     checkAuth();
     setLoading(true);
-    if(!window.localStorage.getItem('authToken')){
+    if(!window.localStorage.getItem('authToken') && isLogged){
       logout();
-      dispatch(setLogged(false));
+      dispatch(setLogged(false))
+      dispatch(setRedirect(true, `/`));
     }
     // setTimeout(()=> {
     //   setLoading(false);
