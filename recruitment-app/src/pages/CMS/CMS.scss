@@ -1,0 +1,186 @@
+@import '../../breakpoints.scss';
+
+.cmsPage{
+    width: 100%;
+    padding: 50px;
+    &__userPanel{
+        // padding: 20px;
+        width: 100%;
+    }
+    &__header{
+        margin: 0px 0px 50px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media("<=500px"){
+            flex-direction: column;   
+        }
+
+        &__search{
+            height: 20px;
+            padding: 10px 5px;
+            @include media("<=500px"){
+                margin: 20px 0px;   
+            }
+        }
+    }
+
+    @include media("<=1000px"){
+        padding: 50px 20px;    
+    }
+    @include media("<=500px"){
+        padding: 50px 5px;    
+    }
+}
+.userList{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    &__item{
+        // display: flex;
+        // justify-content: space-evenly;
+        // align-items: center;
+        display: grid;
+        grid-template-columns: 10% 20% 5% 20% 5% 15%;
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px 5px 0px;
+        border-bottom: 1px solid #c9c9c9;
+        justify-content: space-between;
+        padding: 10px;
+        @include media("<=1000px"){
+        grid-template-columns: 10% 20% 5% 5% 15%;
+        }
+        @include media("<=500px"){
+            grid-template-columns: 20% 20% 20% 30%;
+            font-size: 0.8em;
+            }
+
+        &>p{
+            // margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        &__name{
+            // width: 10%;
+            height: 100%;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            &.heading{
+            }
+        }
+        &__email{
+            
+            // width: 20%;
+            height: 100%;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            &.heading{
+            }
+        }
+        &__paidAccess{
+
+            // width: 5%;
+            height: 100%;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            justify-content: center !important;
+            text-align: center;
+            &.heading{
+            }
+            
+        }
+        &__dob{
+
+            // width: 20%;
+            height: 100%;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            &.heading{
+            }
+        }
+        &__auth{
+            
+            // width: 5%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            justify-content: center !important;
+            text-align: center;
+            &.heading{
+            }
+        }
+        &__button{
+            display: flex;
+            // width: 15%; 
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border-radius: 5px;
+            background: rgb(63, 98, 112);
+            color: #f1f1f1;
+            font-weight: 700;
+            padding: 5px 10px;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            &.heading{
+            }
+            &:hover{  
+                background: rgb(91, 132, 148);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    margin: 20px 0px;
+    
+
+    &__item{
+        display: flex;
+        list-style: none;
+        text-decoration: none; 
+    
+    }
+
+    &__link{
+        list-style: none;
+        text-decoration: none;
+        padding: 4px 8px;
+        cursor: pointer;
+        border: 2px solid #c9c9c9;
+        border-left: 1px solid #c9c9c9 ;
+        border-right: 1px solid #c9c9c9 ;
+        &:hover{
+            color: #242930;
+            background: #f1f1f1;
+        }
+        &.first{
+            border-radius: 5px 0 0 5px;
+            border-left: 2px solid #c9c9c9;
+        }
+        &.last{
+            border-radius: 0px 5px 5px 0px;
+            border-right: 2px solid #c9c9c9;
+        } 
+        &.single{
+            border: 1px solid #c9c9c9;
+            border-radius: 5px;
+            border-right: 2px solid #c9c9c9;
+            border-left: 2px solid #c9c9c9;
+        }
+    }
+}

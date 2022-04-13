@@ -8,7 +8,7 @@ import './Login.responsive.css';
 
 
 async function LoginUser(credentials) {
-    return fetch('https://group-54-rct.herokuapp.com/user/login', {
+    return fetch('https://rsdp-backend.herokuapp.com/user/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ async function LoginUser(credentials) {
 async function accountExists(email) {
     const emailJSONObject = { Email: email };
     // console.log("Email: " + email);
-    return fetch('https://group-54-rct.herokuapp.com/user/check', {
+    return fetch('https://rsdp-backend.herokuapp.com/user/check', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -35,7 +35,6 @@ async function accountExists(email) {
 }
 
 export default function Login(props) {
-
 
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
@@ -67,11 +66,12 @@ export default function Login(props) {
             // console.log(logged_in.token);
             if (logged_in.token != undefined) {
                 window.localStorage.setItem('token', logged_in.token);
+                window.localStorage.setItem('authToken', `Bearer ${logged_in.authToken}`);
                 window.localStorage.setItem('User_Id', logged_in.data.User_Id);
                 window.localStorage.setItem('logged_in', logged_in.data.logged_in);
                 dispatch(setAccount(true, logged_in.user));
-                dispatch(setLogged(true));
                 dispatch(setRedirect(true, `/`));
+                dispatch(setLogged(true));
             }
         } catch (e) {
             console.error(e);
@@ -84,7 +84,7 @@ export default function Login(props) {
                 <form onSubmit={handleSubmit} className="loginForm">
                     <label>
                         <p>Email</p>
-                        <input type="email" onChange={e => setEmail(e.target.value)} required />
+                        <input type="email" onChange={e => setEmail(e.target.value.toLowerCase())} required />
                     </label>
                     <label>
                         <p>Password</p>

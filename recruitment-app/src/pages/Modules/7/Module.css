@@ -1,0 +1,367 @@
+.module6 {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.module6 button {
+  cursor: pointer;
+  -webkit-transition: background ease-in-out 200ms;
+  transition: background ease-in-out 200ms;
+  font-family: "roboto";
+  font-weight: 700;
+  border-radius: 15px;
+  outline: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: 700 !important;
+  font-size: 20px;
+  height: 2em !important;
+}
+
+.module6 button:hover {
+  background: var(--btn-green);
+}
+
+.module6__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 7px 0 3px 0;
+}
+
+.module6__header h4 {
+  margin-top: 1em;
+  border-radius: 15px;
+  background-color: var(--orange-bg);
+  color: var(--orange);
+  text-align: center;
+  width: 10em;
+  height: 2em;
+  padding-top: 0.3em;
+  font-size: 1em;
+}
+
+.module6__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.module6__body__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3em;
+}
+
+.module6__body__video video {
+  width: 100%;
+}
+
+.module6__body__main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.module6__body__main p {
+  line-height: 1.5em;
+  font-size: 1.5em;
+  margin-bottom: 4em;
+}
+
+.module6__body__main__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 5em;
+}
+
+.module6__body__main__text__left, .module6__body__main__text__right {
+  width: 50%;
+  min-height: 30vh;
+}
+
+.module6__body__main__text__left {
+  text-align: left;
+  padding: 0 5vw 0 1vw;
+}
+
+.module6__body__main__text__left h4 {
+  color: var(--light-green);
+  font-size: 1.5em;
+}
+
+.module6__body__main__text__left h3 {
+  color: var(--heading-blue);
+  font-size: 2.4em;
+  font-weight: 300 !important;
+}
+
+.module6__body__main__text__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  margin-left: 10vw;
+  border-bottom: 6px dotted var(--orange-bg);
+}
+
+.module6__body__main__text__right h3 {
+  text-align: left;
+  font-weight: 300 !important;
+}
+
+.module6__body__main__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.module6__body__main__buttons p {
+  width: 100%;
+  color: var(--heading-blue);
+  font-size: 1.8em;
+  margin-bottom: 2em;
+}
+
+.module6__body__main__buttons__wrapper {
+  margin-bottom: 3em;
+}
+
+.module6__body__main__buttons__wrapper button {
+  background: var(--light-green);
+  border: none;
+  border-radius: 15px;
+  width: 10em;
+  color: #fff;
+  margin: 0 5vw 2vh 5vw;
+}
+
+.module6__body__main__buttons__wrapper button:hover {
+  background: var(--btn-green);
+}
+
+.module6__body__main__buttons__wrapper__active {
+  background: #fff !important;
+  border: 1px solid var(--light-green) !important;
+  color: var(--light-green) !important;
+}
+
+.module6__body__main__buttons__modal__show {
+  padding: 3em 2em 3em 2em;
+  width: 40vw;
+  text-align: left !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
+  margin-bottom: 5em;
+}
+
+.module6__body__main__buttons__modal__show button {
+  cursor: pointer;
+  font-size: 2em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--light-green);
+  color: #fff;
+  width: 1em;
+  z-index: 1;
+}
+
+.module6__body__main__buttons__modal__show h1 {
+  margin: -3vh 0 2vh 0;
+}
+
+.module6__body__main__buttons__modal__show h4 {
+  font-weight: 400;
+}
+
+.module6__body__main__buttons__modal__show h4 span {
+  padding-left: 20px;
+}
+
+.module6__body__main__buttons__modal__show p {
+  color: var(--light-green);
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.module6__body__main__buttons__modal__show h5 {
+  font-size: 1em;
+  font-weight: 300;
+  -webkit-transform: translate(10%, -94%);
+          transform: translate(10%, -94%);
+}
+
+.module6__body__main__example h1 {
+  color: var(--heading-blue);
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+.module6__body__main__consider {
+  -webkit-box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
+  margin: 0 auto 10vh auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5vh 10% 0 10%;
+}
+
+.module6__body__main__consider h1 {
+  margin-bottom: 3vh;
+}
+
+.module6__body__main__consider h3 {
+  text-align: left;
+  color: var(--light-green) !important;
+  font-size: 1.4em;
+}
+
+.module6__body__main__consider h4 {
+  text-align: left;
+  margin-bottom: 5vh;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.module6__body__main__download h2 {
+  font-size: 2em;
+  margin-bottom: 1vh;
+  font-weight: 400;
+  color: var(--heading-blue);
+}
+
+.module6__body__main__download h3 {
+  font-size: 1.5em;
+  font-weight: 500 !important;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.module6__body__main__download button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em auto;
+  color: #fff;
+  background: var(--light-green);
+  border: none;
+  border-radius: 15px;
+  font-size: 1.3em;
+  padding: 10px;
+  width: 10em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.module6__body__main__download button::before {
+  content: url("../../../assets/v2/download-icon.svg");
+  margin: 0 1em 0 0;
+}
+
+.close__btn {
+  width: 30px;
+  height: 30px;
+  margin-left: 96%;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .module6__body__main__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .module6__body__main__text__right, .module6__body__main__text__left {
+    width: 100%;
+    min-height: 1px;
+    margin: 0;
+    text-align: center !important;
+  }
+  .module6__body__main__text__right {
+    margin-top: 4em;
+  }
+  .module6__body__main__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .module6__body__main__buttons__modal__show {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .module6 {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=Module.css.map */

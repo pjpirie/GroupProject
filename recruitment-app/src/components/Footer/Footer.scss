@@ -1,0 +1,52 @@
+@import '../../breakpoints.scss';
+
+.footer{
+
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	background: #264653;
+	padding: 2vh 20vw;
+
+	h1{
+		margin: 0 0 20px 0;
+		color: rgba(255, 255, 255, 0.25)	;
+		@include media("<=600px"){
+			text-align: center;
+		}
+	}
+
+	&__brand{
+		display: flex;
+		align-items: center;
+		@include media("<=600px"){
+			flex-direction: column;
+		}
+
+		img{
+
+		}
+
+		&__text{
+			align-self: flex-end;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			flex-direction: column;
+			@include media("<=600px"){
+				align-items: center;
+				margin: 20px 0;
+			}
+
+			h4{
+				color: #fff;
+			}
+
+			h3{
+				color: #fff;
+			}
+		}
+	}
+}

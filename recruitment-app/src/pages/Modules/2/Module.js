@@ -1,116 +1,146 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
-import './Module.css';
+import './Module.scss';
+import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal.js';
+import DidYouKnow from '../../../assets/SVG/Didyouknow.svg';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLogged, setRedirect } from '../../../actions';
 
 
 function Module() {
 
+const dispatch = useDispatch();
+const isLogged = useSelector(state => state.isLogged);
+
+async function logout() {
+    return await fetch('https://rsdp-backend.herokuapp.com/user/logout', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        }, 
+        credentials: 'same-origin'
+    })
+    .then( () => {
+        window.localStorage.removeItem('token');
+        window.localStorage.removeItem('User_Id');
+        window.localStorage.removeItem('logged_in');
+        window.localStorage.removeItem('authToken');
+    });
+    // .then(data => console.log(data));
+    // .then(data => data.json())
+    // .then(data => setAuth(data.tokenValid));
+}
+
+useEffect(() => {    
+    if(!window.localStorage.getItem('authToken') && isLogged){
+        logout();
+        dispatch(setLogged(false))
+        dispatch(setRedirect(true, `/`));
+    }
+}, [])
+
+
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download1', {
+        return fetch('https://rsdp-backend.herokuapp.com/download1', {
             method: 'get',
             headers: {
+                'Authorization': window.localStorage.getItem('authToken'),
                 'Content-Type': 'application/json'
             },
         })
-            .then(res => res.blob())
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
-                // the filename you want
-                a.download = 'Module 1 Preparation Activity Sheet';
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                // alert('your file has downloaded!'); // or you know, something with better UX...
-            })
-            .catch(() => alert('Issue Downloading File. Please Try Again Later'));
+        .then(res => res.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            // the filename you want
+            a.download = 'Module 1 Preparation Action Items';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            // alert('your file has downloaded!'); // or you know, something with better UX...
+        })
+        .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
-
+    
     const handleDownload = () => {
         DownloadMedia();
     };
     return (
-        <div className="Module__Page__Wrapper">
-            <div className="Module__Page__Header__Modules">
-                <div className="Module__Page__Header__Text">
-                    <h3>Module 1</h3>
+        <div className="module1">
+            <RSDPModuleLogo />
+            <div className="module1__header module__header">
+                <div className="module__header__text">
+                    <h3>MODULE ONE</h3>
                     <h1>Preparation</h1>
                 </div>
                 <Eta time={10} />
             </div>
-            <div className="Module__Page__Body">
-                <div className="Module__Page__Video__Container">
-                    <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/1" type="video/mp4"></source>
-                    </video>
+            <div className="module1__body">
+                <div className="module1__body__video">
+                <video id="Video" autoplay controls>
+                    <source src={`https://rsdp-backend.herokuapp.com/video/1${window.localStorage.getItem('authToken')}`} type="video/mp4"></source>
+                </video>
                 </div>
-                <div className="Module__Page__Text">
-                    <p>You have probably invested a lot of time and effort finding a job that you really want, passed an initial screening and now you face the last hurdle, the interview. <strong>Do you realise how difficult it is to reach this point? </strong>
-
-                    “98% of job seekers are eliminated at the initial screening and only the “Top 2%” of candidates make it to the interview” - Robert Meier, President of Job Market Experts.
-
-                    How can you give yourself the best possible chance of taking the final step and justifying all your investment in order to reach your goal – THE JOB.
-
-                    The modules in this programme will give you practical guidance and tools to use in whatever form your assessment or selection process takes.
-
+                <div className="module1__body__main">
+                    <p className="KeyLearningPoints">
+                        Key Learning Points
                     </p>
-                </div>
-                <div className="Module__Page__LearningPoints">
-                    <h2>Key Learning Points</h2>
-                    <p>Irrespective of the selection process you are facing there are a number of basic things to do before the appointed day:-</p>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>01</h4>
-                            <h3>Research</h3>
+                    {/* Text Section Start */}
+                    <div className="textSection">
+                        <div className="textSection__large">
+                            <p>How to</p>
+                            <h1>
+                                Maximise your
+                                chances of success
+                                at recruitment events
+                            </h1>
                         </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>Use the internet, communications from the hiring organisation and any other sources to gather relevant information. Make sure you have a good understanding of the following:
-
-                            - The organisation – History, nature of the business
-                            - The job – Responsibilities (What will I be expected to do?)
-                            - What is the format of the assessment process? (Interview/Other exercises)
-                            - Who will be present? (number of interviewers?)
-                            - Am I expected to bring anything with me?
+                        <div className="textSection__small">
+                            <p>
+                            You have probably invested a lot of time and effort finding a job that you really want, passed an initial screening and now you face the last hurdle, the interview. Do you realise how difficult it is to reach this point?
+                            <br />
                             </p>
                         </div>
                     </div>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>02</h4>
-                            <h3>Personal Preperation</h3>
-                        </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>Given the importance of the interview ensure that you give yourself plenty of time to arrive at the location, or indeed at the computer if the assessment has to be carried out remotely. Whether remote or face to face think about appropriate dress and overall appearance.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="Module__Page__Points">
-                        <div className="Module__Page__Point__Header">
-                            <h4>03</h4>
-                            <h3>Self Confidence</h3>
-                        </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>Definition: “A feeling of trust in one’s abilities, qualities and judgement.” There are literally thousands of books, online resources and programmes on this subject. It is worth exploring this area.  </p>
+                    {/* Text Section End */}
+                    {/* Quote Section Start */}
+                    <div className="module1__quote">
+                        <img src={DidYouKnow} alt="Did you know"/>
+                        <div className="module1__quote__text">
+                            <h2>“98% of job seekers are eliminated at the initial screening and only the ‘Top 2%’ of candidates make it to the interview”</h2>
+                            <h5>Robert Meier</h5>
+                            <h4>President of Job Market Experts.</h4>
                         </div>
                     </div>
-                </div>
-                <div className="Module__Page__Activity__Container">
-                    <div className="Module__Page__Activity__Header">
-                        <h2>Activity</h2>
+                    {/* Quote Section Start */}
+                    {/* Modal Button Section Start */}
+                    <div className="module1__body__buttons__mod1">
+                        <p>
+                            Explore below to find out what you can do to prepare 
+                            for your next recruitment event.
+                            {/* <span>••••••••••••••••••••••</span><br /> */}
+                        </p>
+                        <ModuleButtonModal type="1x3"/>
                     </div>
-                    <div className="Module__Page__Activity__Body">
-                        <p>Download the Module 1 activity sheet and work through the exercises to be fully prepared for your recruitment event.</p>
+                    {/* Modal Button Section Start */}
+                    
+                    {/* Activity Section Start */}
+                    <div className="module1__body__download">
+                        <h2>Now it's time to work on your action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
+                        <button onClick={handleDownload}>Download</button>
                     </div>
-                </div>
-                <div className="Module__Page__Btn__Container">
-                    <button onClick={() => { DownloadMedia(); }}>Download</button>
+                    {/* Activity Section End */}
                 </div>
             </div>
         </div>
     )
+    
 }
 
 export default Module

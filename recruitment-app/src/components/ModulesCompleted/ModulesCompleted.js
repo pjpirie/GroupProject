@@ -11,8 +11,10 @@ function ModulesCompleted(props) {
     
     const [percentage, setPercentage] = useState(0.0);
     const UserData = useSelector(state => state.getAccount).user;
-    console.log(UserData.modulesCompleted);
+    // console.log(UserData.modulesCompleted);
     
+    
+
     const getPercentage = () =>{
         let completedCount = 0;
         for(let i = 0; i < UserData.modulesCompleted.length; i++){
@@ -24,7 +26,6 @@ function ModulesCompleted(props) {
         return Math.floor((completedCount / 7) * 100);
         }
         
-    
     
     useEffect(() => {
         setPercentage(getPercentage());

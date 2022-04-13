@@ -1,82 +1,89 @@
 .ModuleTree {
-    margin-top: 1rem;
-    width: 100%;
-    z-index: 2;
+	margin-top: 1rem;
+	width: 100%;
+	z-index: 2;
 }
 
 .ModuleTree__header {
-    margin-top: 1rem;
-    padding: 0 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	margin-top: 1rem;
+	padding: 0 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ModuleTree__header > h1 {
+	margin-left: 5em;
+	font-size: 3em;
 }
 
 .ModuleTree__container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .ModuleTree__Tree {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 700px;
-    width: 100%;
-    position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 700px;
+	width: 100%;
+	position: relative;
 }
 
 .ModuleTree__Tree__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
 }
 
 .ModuleTree__Tree__row--duo {
-    justify-content: space-evenly;
+	justify-content: space-evenly;
 }
 
-.ModuleTree__Tree_item {}
+.ModuleTree__Tree_item {
+}
 
 .ModuleTree__Tree_item img {
-    max-height: 10vh;
-    cursor: pointer;
+	max-height: 10vh;
+	cursor: pointer;
 }
 
-.Mod1 img {}
+.Mod1 img {
+}
 
 .ModuleTree__Line {
-    width: 100px;
-    height: 20px;
-    background: #ccc;
-    z-index: -1;
-    position: absolute;
-    transform: rotate(90deg) translateX(50%);
+	width: 100px;
+	height: 20px;
+	background: #ccc;
+	z-index: -1;
+	position: absolute;
+	transform: rotate(90deg) translateX(50%);
 }
 
 .M45 {
-    width: 180px;
-    transform: translate(100px, 35px) rotate(-45deg);
+	width: 180px;
+	transform: translate(100px, 35px) rotate(-45deg);
 }
 
 .P45 {
-    width: 180px;
-    transform: translate(-100px, 35px) rotate(45deg);
+	width: 180px;
+	transform: translate(-100px, 35px) rotate(45deg);
 }
 
 .TopLineM45 {
-    width: 180px;
-    transform: translate(100px, -35px) rotate(45deg);
+	width: 180px;
+	transform: translate(100px, -35px) rotate(45deg);
 }
 
 .TopLineP45 {
-    width: 180px;
-    transform: translate(-100px, -35px) rotate(-45deg);
+	width: 180px;
+	transform: translate(-100px, -35px) rotate(-45deg);
 }
 
 /* .modal__container {

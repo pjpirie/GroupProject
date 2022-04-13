@@ -29,14 +29,14 @@ function Edit(props) {
             // checkMatch(document.getElementById("confirmPass").value);
             setFirstName(document.getElementById("FirstNameID").value)
             setLastName(document.getElementById("LastNameID").value)
-            console.log('Info Form Works')
-            console.table({
-                        firstName: FirstName,
-                        lastName : LastName,
-                        C_email: UserData.email,
-                        N_email: Email,
-                        Password: Password,
-                    })
+            // console.log('Info Form Works')
+            // console.table({
+            //             firstName: FirstName,
+            //             lastName : LastName,
+            //             C_email: UserData.email,
+            //             N_email: Email,
+            //             Password: Password,
+            //         })
             try {
                 // if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
                 console.log("Submitted");
@@ -56,12 +56,12 @@ function Edit(props) {
             }
         }else{
             checkMatch(document.getElementById("confirmNewPass").value);
-            console.log('Password Form Works')
-            console.table({
-                        C_email: UserData.email,
-                        N_email: Email,
-                        Password: Password,
-                    })
+            // console.log('Password Form Works')
+            // console.table({
+            //             C_email: UserData.email,
+            //             N_email: Email,
+            //             Password: Password,
+            //         })
             try {
                 if (!PasswordsMatch) throw ("PasswordError: Passwords Don't Match");
                 console.log("Submitted");
@@ -70,7 +70,7 @@ function Edit(props) {
                     Password: Password,
                     N_Password: newPassword,
                 });
-                console.log(User);
+                // console.log(User);
                 if(User.error !== undefined){
                     dispatch(setAlert(true, {AlertTitle: 'Edit Error', AlertMessage: User.error}));
                 }else{
@@ -85,7 +85,7 @@ function Edit(props) {
     }
 
     async function changeUserInfo(inData) {
-        return await fetch(`https://group-54-rct.herokuapp.com/user/edit`, {
+        return await fetch(`https://rsdp-backend.herokuapp.com/user/edit`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -107,7 +107,7 @@ function Edit(props) {
     }
 
     async function changeUserPassword(inData) {
-        return await fetch(`https://group-54-rct.herokuapp.com/user/edit/password`, {
+        return await fetch(`https://rsdp-backend.herokuapp.com/user/edit/password`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'

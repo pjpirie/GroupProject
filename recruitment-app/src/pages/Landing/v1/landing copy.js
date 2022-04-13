@@ -85,21 +85,21 @@ Everyone will access Module 1, Preparation, as this is relevant irrespective of 
                     <div className="info__section__points__container">
                         <h2>Within each module</h2>
                         <div className="info__section__point">
-                            <AddIcon style={{ color: '#71A068' }} />
+                            <AddIcon style={{ color: '#2a9d8f' }} />
                             <p>
                                 Short video with audio commentary<br />
                                 (Relevant recruitment scenarios)
                             </p>
                         </div>
                         <div className="info__section__point">
-                            <AddIcon style={{ color: '#71A068' }} />
+                            <AddIcon style={{ color: '#2a9d8f' }} />
                             <p>
                                 Key Learning Points<br />
                                 (Detailed content)
                             </p>
                         </div>
                         <div className="info__section__point">
-                            <AddIcon style={{ color: '#71A068' }} />
+                            <AddIcon style={{ color: '#2a9d8f' }} />
                             <p>
                                 Action Items<br />
                                 (Personal Action Plan – Download, Save, Print)

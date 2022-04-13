@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import HashLoader from 'react-spinners/HashLoader';
 import { setAccount, setLogged, setRedirect, setSideNavOpen } from './actions';
-import './App.css';
+import './App.scss';
 import AlertBox from './components/AlertBox/AlertBox';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Header/Navbar';
@@ -13,7 +13,6 @@ import ModuleNav from './components/ModuleHeader/ModuleNav';
 import Register from './components/Register/Register';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import CMSPage from './pages/CMS/CMS';
-import Company from './pages/Company/Company';
 import Contact from './pages/Contact/contact';
 import Edit from './pages/Edit/Edit';
 import FAQPage from './pages/FAQ/FAQ';
@@ -48,8 +47,8 @@ function App() {
   
   
   const checkAuth = async (msg = "App") => {
-    console.log("Checking Auth from " + msg)
-    return await fetch('https://group-54-rct.herokuapp.com/user/auth', {
+    // console.log("Checking Auth from " + msg)
+    return await fetch('https://rsdp-backend.herokuapp.com/user/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -60,16 +59,44 @@ function App() {
     .then(data => {
       (data.tokenValid) === true ? dispatch(setLogged(true)) : dispatch(setLogged(false));
       dispatch(setAccount(true, data.user));
+      setTimeout(()=> {
+        setLoading(false);
+      }, 1000);
     });
   }
+
+  async function logout() {
+    return await fetch('https://rsdp-backend.herokuapp.com/user/logout', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        }, 
+        credentials: 'same-origin'
+    })
+    .then( () => {
+      window.localStorage.removeItem('token');
+      window.localStorage.removeItem('User_Id');
+      window.localStorage.removeItem('logged_in');
+      window.localStorage.removeItem('authToken');
+    });
+    // .then(data => console.log(data));
+    // .then(data => data.json())
+    // .then(data => setAuth(data.tokenValid));
+    
+}
   
-  // useEffect(() => {
-  //   checkAuth();
-  //   setLoading(true);
-  //   setTimeout(()=> {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, [])
+  useEffect(() => {
+    checkAuth();
+    setLoading(true);
+    if(!window.localStorage.getItem('authToken') && isLogged){
+      logout();
+      dispatch(setLogged(false))
+      dispatch(setRedirect(true, `/`));
+    }
+    // setTimeout(()=> {
+    //   setLoading(false);
+    // }, 3500);
+  }, [])
   
   if(loading){
     return (
@@ -79,32 +106,34 @@ function App() {
     );
   }else{
     return (
-      <Router basename="/GroupProject">
-        {console.log(isRedirect)}
+      // <Router basename="/GroupProject">
+      <Router>
+        {/* {console.log(isRedirect)} */}
         { isRedirect.redirect ? (
           <Redirect to={isRedirect.location}/>
         ) : (
-          console.log("No Redirect")) 
+          '') 
         }
         {hasRedirected ? dispatch(setRedirect(false)) : ""}
         <ScrollToTop checkAuth={checkAuth} loading={setLoading}/>
         <div className="App">
           
-        {console.log(getUser)}
+        {/* {console.log(getUser)} */}
           <div className="main">
             {!isLogged ?  (
               <Fragment>
                 <Navbar checkAuth={checkAuth} />
+                  <div className="contentWrapper">
                 <Switch>
-                  <Route path="/" exact component={Landing} />
-                  <Route path="/login" component={Login} />
-                  <Route path="/register" component={Register} />
-                  <Route path="/contact" component={Contact} />
-                  <Route path="/company" component={Company} />
-                  <Route path="/modules" component={Modules} />
-                  <Route path="/privacy" component={Privacy} />
-                  <Route component={Landing} />
+                    <Route path="/" exact component={Landing} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/modules" component={Modules} />
+                    <Route path="/privacy" component={Privacy} />
+                    <Route component={Landing} />
                 </Switch>
+                  </div>
               </Fragment>
             ) : (
               <Fragment>
@@ -115,7 +144,7 @@ function App() {
                       <MenuIcon onClick={() => dispatch(setSideNavOpen(!isSideNavOpen))} />
                   </div>
                   <Switch>
-                    <Route path="/" exact>
+                    <Route path="/" exact component={ModuleTree}>
                       <ModuleTree checkAuth={checkAuth} />
                     </Route>
                     <Route path="/edit" exact>
@@ -129,40 +158,42 @@ function App() {
                     <Route path="/FAQ" component={FAQPage} />
                     <Route path="/contact" component={Contact} />
                     { 
-                    getUser.paidAccess ? (
-                      <Fragment>
-                        <Route path="/module/1" component={Module1} />
-                        <Route path="/module/2" component={Module2} />
-                        <Route path="/module/3" component={Module3} />
-                        <Route path="/module/4" component={Module4} />
-                        <Route path="/module/5" component={Module5} />
-                        <Route path="/module/6" component={Module6} />
-                        <Route path="/module/7" component={Module7} />
-                      </Fragment>
-                    ) : (
-                      <Fragment>
-                        <Route path="/module/1" component={NoAccess} />
-                        <Route path="/module/2" component={NoAccess} />
-                        <Route path="/module/3" component={NoAccess} />
-                        <Route path="/module/4" component={NoAccess} />
-                        <Route path="/module/5" component={NoAccess} />
-                        <Route path="/module/6" component={NoAccess} />
-                        <Route path="/module/7" component={NoAccess} />
-                      </Fragment>
-                    )
+                      getUser ? (
+
+                          getUser.paidAccess ? (
+                            <Fragment>
+                              <Route path="/module/1" component={Module1} />
+                              <Route path="/module/2" component={Module2} />
+                              <Route path="/module/3" component={Module3} />
+                              <Route path="/module/4" component={Module4} />
+                              <Route path="/module/5" component={Module5} />
+                              <Route path="/module/6" component={Module6} />
+                              <Route path="/module/7" component={Module7} />
+                            </Fragment>
+                          ) : (
+                            <Fragment>
+                              <Route path="/module/1" component={NoAccess} />
+                              <Route path="/module/2" component={NoAccess} />
+                              <Route path="/module/3" component={NoAccess} />
+                              <Route path="/module/4" component={NoAccess} />
+                              <Route path="/module/5" component={NoAccess} />
+                              <Route path="/module/6" component={NoAccess} />
+                              <Route path="/module/7" component={NoAccess} />
+                            </Fragment>
+                          ) 
+                      ) : ( console.log("UserData Not Set") )
                     }
                     
                     <Route>
                       <ModuleTree checkAuth={checkAuth} />
                     </Route>
                   </Switch>
-                  <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
+                  {/* <div className={(!isSideNavOpen ? "App__MenuOpen__button" : "App__MenuOpen__button hidden")}>
                       <MenuIcon style={{opacity: 0}} />
-                  </div>
+                  </div> */}
                 </div>
               </Fragment>
             )}
-              <span className="footer__divider"></span>
             <Footer />
             {getAlert.alert ? (<AlertBox AlertData={getAlert.AlertData} />): ('')}
           </div>

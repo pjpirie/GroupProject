@@ -1,17 +1,12 @@
 import { Button } from '@material-ui/core';
 import emailjs from 'emailjs-com';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setLightNav } from '../../actions';
-import contactBg from '../../assets/ContactBG.png'
-import contactBubbles from '../../assets/ContactBubbles.png'
-import './contact.css';
+import { useState } from 'react';
+import Letter from '../../assets/letter.svg'
+import './contact.scss';
 
 function Contact() {
 
     const [display, setDisplay] = useState(false);
-    const dispatch = useDispatch();
-
     const handelSubmit = (e) =>{
 
         e.preventDefault()
@@ -24,76 +19,51 @@ function Contact() {
             }, (error) => {
                 console.log(error.text);
             });
-        // e.target.reset()
+        e.target.reset()
     }
 
-    useEffect(() => {
-        dispatch(setLightNav(false))
-    }, [])
+    return (        
+        <div className="contact">                
 
-    return (
-        <div className="contact-page">
-            <div className="contact-header">
-                <div className="contact-left">
-                    <img src={contactBg} alt="" className="bigcircle"/>
-                    <img src={contactBubbles} alt="" className="bubble"/>
+            <div className="contact__header">
+                <div className="contact__header__left">
+                    <h4 className="contact__header__h4">Need More Info?</h4>
+                    <h3 className="contact__header__h3">Use the Form Below to Get in Touch</h3>
                 </div>
-                <div className="contact-right">
-                    <h1>Contact Us</h1>
+                <div className="contact__header__right">
+                    <img src={Letter} alt="Letter" className="contact__header__letter" />
                 </div>
             </div>
-            <div className="contact">        
-                {
-                    !display? 
-                <div className="container-form">
-                    <h2 className="form-h4">Get in touch below</h2>
-                    <form onSubmit={handelSubmit} className="contact-form">
-                        <label className="label">
-                            <p>Name</p>
-                            <input type="text" className="input" required name="name" />
-                        </label>
 
-                        <label className="label">
-                            <p>Email</p>
-                            <input type="email" className="input" required name="email"/>
-                        </label>
-                        
-                        <label className="label">
-                            <p>Number</p>
-                            <input type="text" className="input" required name="number" pattern="^\d{11}$" />
-                        </label>
-
-                        <label className="label">
-                            <p>Category</p>
-                            <select required className="input-select" name="category">
-                                <option></option>
-                                <option>Select 1</option>
-                                <option>Select 2</option>
-                                <option>Select 3</option>
-                            </select> 
-                        </label>
-
-                        <label className="label">
-                            <p>Enquiry</p>
-                            <textarea className="textarea" required name="enquiry"/>
-                        </label>
-                        <div className="submitBtn-container">
-                            <Button type="submit" className="submitBtn">Submit</Button>
-                        </div>
-                    </form>
-                </div>
-                : null
-                }
-                {
-                    display?
-                    <div className="contact-message-container">
-                        <div className="contact-message">
-                            <h1 className="formSubmit">Thank you for contacting us with your enquiry</h1>
-                            <h2 className="formSubmit">We will be in touch</h2>
-                        </div>
-                    </div>
+            <div className="contact__form">
+                <form className="contact__form__left" onSubmit={handelSubmit}>
+                    {
+                    !display?
+                        <>
+                        <label className="contact__form__left__label">Whats your name?</label>
+                        <input className="contact__form__left__input" type="text" placeholder="Jon Doe" required/>
+                        <label className="contact__form__left__label">And your email address?</label>
+                        <input className="contact__form__left__input" type="email" placeholder="jondoe@mail.com" required/>
+                        <label className="contact__form__left__label">What number can we reach you on?</label>
+                        <input className="contact__form__left__input" type="text" placeholder="0987654210"  pattern="^\d{11}$" required/>
+                        <label className="contact__form__left__label">And what is your enquiry about?</label>
+                        <textarea className="contact__form__left__input contact__form__left__area" required/>
+                        <Button type="submit" className="contact__form__left__input contact__form__left__submit">SUBMIT</Button>
+                        </>
                     : null
-                }
+                    }{
+                    display?
+                        <>
+                        <h3 className="contact__form__left__post">Thanks for contacting us with your enquiry</h3> <br />
+                        <h3 className="contact__form__left__post">We will be in touch ASAP</h3>
+                        </>
+                : null
+            }
+                </form>
+                <div className="contact__form__right">
+                    <p className="contact__form__right__info">If you don’t fancy using the form you can contact us by email:</p>
+                    <p className="contact__form__right__email">info@info.co.uk</p>
+                </div>
             </div>
         </div>
     );

@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
-import './Module.css';
-
+import './Module.scss';
+import CloseButtonImage from '../../../assets/1x/closeicon.png';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
 
 function Module() {
 
+    useEffect(() => {    
+    }, [])
+    
+    
+
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download3', {
+        return fetch('https://rsdp-backend.herokuapp.com/download3', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +26,7 @@ function Module() {
                 a.style.display = 'none';
                 a.href = url;
                 // the filename you want
-                a.download = 'Module 3 RemoteVirtule Interview Activity Sheet';
+                a.download = 'Module 3 RemoteVirtule Interview Action Items';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -32,87 +38,150 @@ function Module() {
     const handleDownload = () => {
         DownloadMedia();
     };
+
+    const [btnVal, btnClick] = useState(false)
+
+    const modalOpen =(num)=>{
+        btnClick(num)
+        let active = document.querySelector('.module3__body__main__buttons__wrapper__active')
+        if(active){
+            active.classList.remove('module3__body__main__buttons__wrapper__active')
+        }
+        document.querySelector(`#btn${num}`).classList.add('module3__body__main__buttons__wrapper__active')
+    }
+    const modalClose=()=>{
+        btnClick(0)
+        document.querySelector('.module3__body__main__buttons__wrapper__active').classList.remove('module3__body__main__buttons__wrapper__active')
+    }
+
     return (
-        <div className="Module__Page__Wrapper">
-            <div className="Module__Page__Header__Modules">
-                <div className="Module__Page__Header__Text">
-                    <h3>Module 3</h3>
+        <div className="module3">
+            <RSDPModuleLogo />
+            <div className="module3__header">
+                <div className="module3__header__text">
+                    <h3>MODULE THREE</h3>
                     <h1>Virtual Interview</h1>
                 </div>
-                <Eta time={15} />
+                <Eta time={10} />
             </div>
-            <div className="Module__Page__Body">
-                <div className="Module__Page__Video__Container">
-                    <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/3" type="video/mp4"></source>
-                    </video>
+            <div className="module3__body">
+                <div className="module3__body__video">
+                <video id="Video" autoplay controls>
+                    <source src={`https://rsdp-backend.herokuapp.com/video/3${window.localStorage.getItem('authToken')}`} type="video/mp4"></source>
+                </video>
                 </div>
-                <div className="Module__Page__Text">
-                    <p>Increasingly organisations are conducting recruitment remotely. Some basic elements are the same as in face to face events, however, some additional factors have to be considered.</p>
-                </div>
-                <div className="Module__Page__LearningPoints">
-                    <h2>Key Learning Points</h2>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>01</h4>
-                            <h3>Preparation</h3>
+                <p className="KeyLearningPoints">
+                        Key Learning Points
+                    </p>
+                <div className="module3__body__main">
+                    <p>
+                        Increasingly organisations are conducting recruitment remotely. <br/>
+                        Some basic elements are the same as in face to face events, however, some additional <br/> factors have to be considered.
+                    </p>
+                    <div className="module3__body__main__text">
+                        <div className="module3__body__main__text__left">
+                            <h4>Preparation is Key</h4>
+                            <h3>You may be asked to bring along some personal documents.</h3>
                         </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>When you are invited to attend a virtual assessment a briefing email will normally arrive containing instructions on how to join on the day. There may also be some administration and ID tasks  to be completed.</p>
-                        </div>
-                    </div>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>02</h4>
-                            <h3>To Do List</h3>
-                        </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>
-                                •	Passport or other documents confirming your right to work.<br />
-                            •	Provide a contact number in case of any connectivity issues.<br />
-                            •	Download the required software for the assessment such as Zoom, Google Hangouts and Microsoft Teams.<br />
-                            •	Ensure you have a strong WiFi connection.<br />
-                            •	Test microphone and webcam.<br />
-                            •	If required plug your device into a charging socket. <br />
-                            •	Activate the invitation link 15 minutes early, so that you can resolve any technical  issues.<br />
-                            •	Dress appropriately, as if you were attending in person.<br />
-                            •	Use a headset if it helps with your audio.<br />
-                            •	Position yourself in a comfortable, bright space.<br />
-                            •	Ensure that you will not be interrupted.<br />
-                            •	Consider your body language<br />
-                                        - Sit straight<br />
-                                        - Minimise your movement without appearing stiff<br />
-                                        - Make eye contact. This will require you to look directly at your webcam or camera, so avoid looking at the interviewer(s) on your screen.<br />
-                            </p>
+                        <div className="module3__body__main__text__right">
+                            <h3>When you are invited to attend a virtual assessment a briefing email will normally arrive containing instructions on how to join on the day. There may also be some administration and ID tasks to be completed.</h3>
                         </div>
                     </div>
-                    <div className="Module__Page__Points">
-                        <div className="Module__Page__Point__Header">
-                            <h4>03</h4>
-                            <h3>Pre-recorded Interviews</h3>
+                    <div className="module3__body__main__buttons">
+                        <p>Keep in mind some things you can do to ensure a smooth virtual interview</p>
+                        <div className="module3__body__main__buttons__wrapper">
+                            <button value="Documentation" onClick={()=>modalOpen(1)} id="btn1" className="module3__body__main__buttons__wrapper__1">Documentation</button>
+                            <button value="Connectivity" onClick={()=>modalOpen(2)} id="btn2" className="module3__body__main__buttons__wrapper__2">Connectivity</button> <br />
+                            <button value="Appearance" onClick={()=>modalOpen(3)} id="btn3" className="module3__body__main__buttons__wrapper__3">Appearance</button>
+                            <button value="Location" onClick={()=>modalOpen(4)} id="btn4" className="module3__body__main__buttons__wrapper__4">Location</button>
                         </div>
-                        <div className="Module__Page__Point__Body">
-                            <p>
-                                Preparation - Many organisations require candidates to complete pre-recorded interviews as part of their recruitment process. Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation. Although you will not be face to face you should consider how to dress as you will be visible to the interviewer.   <br />
-                                <br />
-                            Conducting the interview – You will be given the question a very short time in advance. Focus intensely on understanding what is being asked and formulate a quick outline plan.    <br />
-                                <br />
-                            One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use most, or all, the time available. This will require you to monitor time taken in an unobtrusive way.  <br />
-                                <br />
-                            </p>
+                        <div className="module3__body__main__buttons__modal">
+                            {
+                                btnVal === 0?
+                                <>
+                                </>
+                                :null
+                            }
+                            {
+                                btnVal === 1?
+                                    <div className="module3__body__main__buttons__modal__show">
+                                    <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
+                                        <h1>Documentation</h1>
+                                        <h4>You may be required to bring along your Passport or other documents confirming your right to work and address etc.</h4>
+                                    </div>
+                                
+                                :null
+                            }
+                            {
+                                btnVal === 2?
+                                    <div className="module3__body__main__buttons__modal__show">
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
+                                        <h1>Connectivity</h1>
+                                        <h4>
+                                            • Provide a contact number in case of any connectivity issues. <br />
+                                            • Download the required software for the assessment such as Zoom, Google Hangouts and Microsoft Teams.<br />
+                                            • Ensure you have a strong WiFi connection.<br />
+                                            • Test microphone and webcam.<br />
+                                            • If required plug your device into a charging socket. <br />
+                                            • Activate the invitation link 15 minutes early, so that you can resolve any technical  issues.<br />
+                                            • Use a headset if it helps with your audio.
+                                        </h4>
+                                    </div>
+                                :null
+                            }
+                            {
+                                btnVal === 3?
+                                    <div className="module3__body__main__buttons__modal__show">
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
+                                        <h1>Appearance</h1>
+                                        <h4>
+                                            • Dress appropriately, as if you were attending in person. <br />
+                                            • Consider your body language <br />
+                                            <span />- Sit straight  <br />
+                                            <span />- Minimise your movement without appearing stiff  <br />
+                                            <span />- Make eye contact.   <br />
+                                        </h4>
+                                    </div>
+                                :null
+                            }
+                            {
+                                btnVal === 4?
+                                    <div className="module3__body__main__buttons__modal__show">
+                                        <img src={CloseButtonImage} alt="Close" className="close__btn" onClick={modalClose}/>
+                                        <h1>Location</h1>
+                                        <h4>
+                                            • Position yourself in a comfortable, bright space. <br />
+                                            • Ensure that you will not be interrupted.
+                                        </h4>
+                                    </div>
+                                :null
+                            }
+                        </div>
+                    </div>                        
+                    <h1 className="module3__body__main__p">Pre-recorded Interviews</h1>
+                    <div className="module3__body__main__text">
+                        <div className="module3__body__main__text__left">
+                            <h4>Be prepared</h4>
+                            <h3 id="specialH3">Many organisations require candidates to complete pre-recorded interviews.</h3>
+                        </div>
+                        <div className="module3__body__main__text__right">
+                            <h3>Normally you receive lots of information including technical details on how to participate. Ensure that you study all of this in detail and if you are unclear contact the organisation.</h3>
                         </div>
                     </div>
-                </div>
-                <div className="Module__Page__Activity__Container">
-                    <div className="Module__Page__Activity__Header">
-                        <h2>Activity</h2>
+                    <div className="module3__body__main__consider">
+                        <h1>Things to Consider</h1>
+                        <h3>Dress to Impress</h3>
+                        <h4>Although you will not be face to face you should consider how to dress as you will be visible to the interviewer. </h4>
+                        <h3>Prepare your Answers</h3>
+                        <h4>You will be given the question a very short time in advance. Focus intensely on understanding what is being asked and formulate a quick outline plan.</h4>
+                        <h3>Monitor Time</h3>
+                        <h4>One of the main differences from a face to face interview is that you are given a clear time limit for each answer. Ensure that you do not exceed this as you will be cut off. Equally importantly you should use most, or all of the time available. This will require you to monitor time in an unobtrusive way. </h4>
                     </div>
-                    <div className="Module__Page__Activity__Body">
-                        <p>Download the Module 3 activity sheet and work through the exercises to be fully prepared for your virtual interview.</p>
+                    <div className="module3__body__main__download onetwothree">
+                        <h2>Now it's time to work on your action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
+                        <button onClick={handleDownload}>Download</button>
                     </div>
-                </div>
-                <div className="Module__Page__Btn__Container">
-                    <button onClick={() => { handleDownload(); }}>Download</button>
                 </div>
             </div>
         </div>

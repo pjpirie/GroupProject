@@ -1,0 +1,170 @@
+.contact {
+	min-height: 100vh;
+	width: 70vw;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+
+	background-image: url("../../assets/contact-style.svg");
+	background-position: center;
+	background-position-y: 10em;
+	background-repeat: no-repeat;
+
+	&__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&__left,
+		&__right {
+			width: 40%;
+		}
+		&__h4 {
+			color: var(--light-green) !important;
+			font-size: 2em;
+			font-weight: 100 !important;
+		}
+		&__h3 {
+			font-size: 5.5em;
+		}
+		&__letter {
+			width: 22em;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&__right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			margin-top: 6em;
+			width: 30%;
+			border-top: 6px solid var(--orange);
+
+			&__info {
+				width: 19ch;
+				text-align: right;
+				padding-top: 1em;
+				margin-bottom: 2em;
+			}
+			&__email {
+				color: var(--light-green);
+				font-weight: 600;
+			}
+		}
+
+		&__left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 55%;
+			box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+			border-radius: 15px;
+			padding: 1em;
+			margin-bottom: 5em;
+
+			&__label {
+				font-weight: 800 !important;
+				margin-bottom: 0.5em;
+			}
+			&__input {
+				width: 100%;
+				height: 4em;
+				padding-left: 1em;
+				margin-bottom: 2em;
+				border-radius: 15px;
+				border: 2px solid #000;
+				box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+			}
+			&__area {
+				height: 15em;
+				padding-top: 1em;
+				font-family: "Plantin", sans-serif !important;
+			}
+			&__submit {
+				width: 6em;
+				height: 2em;
+				font-size: 1.2em !important;
+				background: var(--light-green) !important;
+				color: #fff !important;
+				align-self: flex-end !important;
+			}
+			&__post {
+				text-align: center;
+				width: 60%;
+				margin: 0 auto;
+				font-size: 2em;
+				padding: 0.9em 0 0.9em 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.contact {
+		&__header {
+			margin-bottom: 2em;
+			&__h3 {
+				font-size: 3em;
+			}
+			&__letter {
+				width: 19em;
+			}
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.contact {
+		&__header {
+			margin-bottom: 2em;
+			&__h3 {
+				font-size: 3em;
+			}
+			&__letter {
+				width: 19em;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.contact {
+		background-position-y: 5em;
+		background-position-x: 90%;
+		margin-bottom: 5em;
+		&__header {
+			margin-bottom: 2em;
+			&__h3 {
+				font-size: 3em;
+			}
+			&__letter {
+				display: none;
+			}
+			&__left {
+				width: 70%;
+			}
+		}
+		&__form {
+			display: flex;
+			flex-direction: column;
+			&__left {
+				width: 100%;
+			}
+			&__right {
+				width: 100%;
+				border-top: 10px solid var(--orange);
+			}
+		}
+	}
+}
+
+// 1250
+// 1100
+// 700
+// 400

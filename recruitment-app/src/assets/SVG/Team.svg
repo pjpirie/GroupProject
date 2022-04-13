@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="214.569" height="175.795" viewBox="0 0 214.569 175.795">
+  <g id="Team" transform="translate(-16421.923 11235.488)">
+    <g id="Group_420" data-name="Group 420" transform="translate(16017.014 -13617.447)">
+      <g id="Group_313" data-name="Group 313" transform="translate(276.518 1965.814)">
+        <path id="Path_1076" data-name="Path 1076" d="M165.8,571.383c15.935,6.588,23.811-1.42,50.689,3.483,26.349,4.806,29.238,14.41,44.885,15.477,30.163,2.057,67.469-30.356,73.131-64.232,8.713-52.131-56.005-116.745-118.789-107.568-51.13,7.473-93.1,62.733-84.739,106.02C134.163,541.05,146.084,563.23,165.8,571.383Z" transform="translate(0 0)" fill="none" stroke="#2a9d8f" stroke-miterlimit="10" stroke-width="3" style="isolation: isolate"/>
+        <path id="Path_1077" data-name="Path 1077" d="M299.409,436.718c-15.935-6.588-23.811,1.421-50.689-3.482-26.349-4.807-29.238-14.41-44.884-15.478-30.163-2.057-67.469,30.356-73.131,64.232-8.713,52.13,56.005,116.745,118.789,107.568,51.13-7.474,93.1-62.734,84.739-106.021C331.049,467.051,319.129,444.871,299.409,436.718Z" transform="translate(0 0)" fill="#264653" style="isolation: isolate"/>
+      </g>
+      <text id="Constructive_team_behaviours" data-name="Constructive
+team behaviours" transform="translate(514.986 2467.365)" fill="#fff" font-size="20" font-family="Roboto-Black, Roboto" font-weight="800"><tspan x="-57.788" y="0">Constructive</tspan><tspan x="-75.322" y="26">team behaviours</tspan></text>
+      <g id="Ellipse_344" data-name="Ellipse 344" transform="translate(559.479 2386.365)" fill="#2a9d8f" stroke="#fff" stroke-width="4">
+        <circle cx="30" cy="30" r="30" stroke="none"/>
+        <circle cx="30" cy="30" r="28" fill="none"/>
+      </g>
+      <path id="Icon_material-thumb-up" data-name="Icon material-thumb-up" d="M1.5,26.927H6.585V11.671H1.5ZM29.469,12.942A2.55,2.55,0,0,0,26.927,10.4H18.9l1.208-5.81.038-.407a1.914,1.914,0,0,0-.559-1.348L18.244,1.5,9.878,9.878a2.486,2.486,0,0,0-.75,1.793V24.384a2.55,2.55,0,0,0,2.543,2.543H23.113a2.526,2.526,0,0,0,2.339-1.551l3.839-8.963a2.512,2.512,0,0,0,.178-.928V13.056l-.013-.013Z" transform="translate(573.994 2400.6)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+@media (max-width:1050px) {
+    .about__section img {
+        max-width: 40vw;
+    }
+
+    .module__grid__item {
+        margin: 1rem;
+    }
+
+    .module__grid__item img {
+        height: 75px !important;
+        width: 75px !important;
+    }
+
+    .module__section__content {}
+}
+
+@media (max-width:700px) {
+    .hero__text{
+        text-align: center;
+    }
+    .about__section {
+        flex-direction: column;
+    }
+
+    .about__section {
+        margin: 0;
+    }
+
+    .about__section div {
+        margin: 2rem 0.5rem;
+    }
+
+    .about__section img {
+        max-width: 80vw;
+    }
+
+    .about__section div button {
+        margin: 0;
+    }
+
+    .module__section h2 {
+        margin-top: 5rem;
+    }
+
+    .module__grid__item {
+        width: 70%;
+        margin: 1rem;
+    }
+
+    .module__grid__item img {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    .howto__section {
+        flex-direction: column-reverse;
+    }
+
+    .howto__section .computerImage {
+        max-width: 70vw;
+    }
+
+    .tab1 {
+        width: 60vw !important;
+    }
+
+    .tab2 {
+        width: 70vw !important;
+    }
+
+    .tab3 {
+        width: 80vw !important;
+    }
+
+    .module__start__section,
+    .progress__bar {
+        width: 80vw !important;
+    }
+
+    .info__section__container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:500px) {
+    .module__grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .module__grid__item {
+        width: 50%;
+        margin: 1rem 0;
+    }
+
+
+
+    .module__grid__item img {
+        height: 75px !important;
+        width: 75px !important;
+    }
+}

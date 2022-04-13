@@ -1,0 +1,315 @@
+.module7 {
+	button {
+		cursor: pointer;
+		transition: background ease-in-out 200ms;
+		font-family: "roboto";
+		font-weight: 700;
+		border-radius: 15px;
+		outline: 0px;
+		box-shadow: none;
+		font-weight: 700 !important;
+		font-size: 20px;
+		height: 2em !important;
+
+		// font-size: 20px;
+	}
+	button:hover {
+		background: var(--btn-green);
+	}
+	width: 70vw;
+	margin: 0 auto;
+	&__header {
+		max-width: 100vw;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+
+			h3 {
+				background: #ffd9ba;
+				border-radius: 20px;
+				padding: 3px 17px;
+				justify-self: flex-start;
+				align-self: flex-start;
+				// margin: 0 auto;
+				font-weight: 700;
+				font-size: 16px !important;
+				font-family: "roboto";
+				color: #e76f51 !important;
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		&__video {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 3em;
+			video {
+				width: 100%;
+			}
+		}
+		&__main {
+			align-items: center;
+			p {
+				line-height: 1.5em;
+				font-size: var(--module-font);
+				margin-bottom: 3em;
+			}
+			&__text {
+				display: flex;
+				flex-direction: row;
+				margin-bottom: 5em;
+				&__left,
+				&__right {
+					width: 50%;
+					min-height: 30vh;
+				}
+				&__left {
+					text-align: left;
+					padding: 0 5vw 0 1vw;
+
+					h4 {
+						color: var(--light-green);
+						font-size: 1.5em;
+					}
+					h3 {
+						color: var(--heading-blue);
+						font-size: 2.4em;
+						font-weight: 300 !important;
+					}
+				}
+				&__right {
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-end;
+					margin-left: 10vw;
+					border-bottom: 6px dotted var(--orange-bg);
+					h3 {
+						text-align: left;
+						font-size: var(--module-font);
+
+						margin-bottom: 30px;
+						font-weight: 300 !important;
+					}
+				}
+			}
+			&__buttons {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				h1 {
+					width: 100%;
+					color: var(--heading-blue);
+					margin-bottom: 2em;
+				}
+				&__wrapper {
+					margin-bottom: 3em;
+					button {
+						background: var(--light-green);
+						border: none;
+						border-radius: 15px;
+						width: 10em;
+						// font-weight: 700;
+						// font-size: 20px;
+
+						color: #fff;
+						margin: 0 5vw 2vh 5vw;
+						// padding: 10px 30px;
+						// transition: background ease-in-out 200ms;
+						// cursor: pointer;
+					}
+					button:hover {
+						background: var(--btn-green);
+					}
+					&__active {
+						background: #fff !important;
+						border: 1px solid var(--light-green) !important;
+						color: var(--light-green) !important;
+					}
+				}
+				&__modal {
+					&__show {
+						padding: 3em 4em 3em 4em;
+						width: 40vw;
+						text-align: left !important;
+						display: flex;
+						flex-direction: column;
+						box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+						border-radius: 15px;
+						margin-bottom: 5em;
+						button {
+							cursor: pointer;
+							font-size: 2em;
+							align-self: flex-end;
+							text-align: center;
+							border: none;
+							border-radius: 100%;
+							background-color: var(--light-green);
+							color: #fff;
+							width: 1em;
+							z-index: 1;
+						}
+						h1 {
+							margin: -3vh 0 2vh 0;
+						}
+						h4 {
+							font-weight: 400;
+							font-size: var(--module-font);
+
+							span {
+								padding-left: 20px;
+							}
+						}
+						p {
+							color: var(--light-green);
+							font-size: var(--module-font);
+
+							margin-top: 1em;
+						}
+						h5 {
+							font-size: 1em;
+							font-weight: 300;
+							transform: translate(10%, -94%);
+						}
+					}
+				}
+			}
+			&__example {
+				width: 80%;
+				margin: 5em auto;
+				h1 {
+					color: var(--heading-blue);
+					margin: 1em 0 1em 0;
+					// font-weight: 400;
+				}
+				p {
+					font-size: var(--module-font);
+				}
+			}
+			&__consider {
+				box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.16);
+				// border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 15px;
+				margin: 0 auto 10vh auto;
+				width: 80%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				padding: 5vh 10% 0 10%;
+				h1 {
+					margin-bottom: 3vh;
+					color: var(--heading-blue);
+				}
+				h3 {
+					text-align: left;
+					color: var(--light-green) !important;
+					font-size: 1.4em;
+				}
+				h4 {
+					text-align: left;
+					margin-bottom: 5vh;
+					font-size: var(--module-font);
+					font-weight: 300;
+				}
+			}
+			&__download {
+				h2 {
+					color: var(--heading-blue);
+					font-size: 2em;
+					margin-bottom: 1vh;
+					font-weight: 200;
+				}
+				h3 {
+					font-size: var(--module-font);
+					font-weight: 500 !important;
+					max-width: 50%;
+					margin: 0 auto;
+				}
+				button {
+					display: flex;
+					margin: 2em auto;
+					color: #fff;
+					background: var(--light-green);
+					border: none;
+					border-radius: 15px;
+					font-size: 1.3em;
+					padding: 10px;
+					width: 11em;
+					align-items: center;
+				}
+				button::before {
+					content: url("../../../assets/v2/download-icon.svg");
+					transform: scale(0.8);
+					padding: 5px 1em 0 10px;
+					// margin: 5px 3em 0 0;
+				}
+			}
+		}
+	}
+}
+
+.close__btn {
+	width: 30px;
+	height: 30px;
+	margin-left: 96%;
+	cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+	.module7__body__main {
+		&__text {
+			flex-direction: column;
+			&__right,
+			&__left {
+				width: 100%;
+				min-height: 1px;
+				margin: 0;
+				text-align: center !important;
+			}
+			&__right {
+				margin-top: 4em;
+			}
+		}
+		&__buttons {
+			flex-direction: column;
+			&__modal__show {
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.module7 {
+		width: 90%;
+		&__header {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			&__text {
+				margin-bottom: 10px;
+				h3 {
+					margin: 0 auto;
+				}
+			}
+		}
+		&__body__main {
+			&__download {
+				h3 {
+					min-width: 100%;
+				}
+			}
+		}
+	}
+}

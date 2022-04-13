@@ -1,0 +1,303 @@
+/**
+*
+* Testing
+*
+**/
+.ModuleButton {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  z-index: 1;
+}
+
+.ModuleButton__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 50px;
+  max-width: 70vw;
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    max-width: unset;
+  }
+}
+
+.ModuleButton__buttons button {
+  margin: 10px 0;
+  padding: 10px 30px;
+  background: #2A9D8F;
+  color: #fff;
+  font-family: 'roboto';
+  font-weight: 700;
+  border-radius: 15px;
+  outline: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  font-size: 20px;
+  width: 20vw;
+  -ms-flex-preferred-size: calc(50% - 10px);
+      flex-basis: calc(50% - 10px);
+  -webkit-transition: background ease-in-out 200ms;
+  transition: background ease-in-out 200ms;
+}
+
+@media (max-width: 900px) {
+  .ModuleButton__buttons button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons button {
+    width: 40vw;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ModuleButton__buttons button {
+    font-size: 18px;
+    width: 60vw;
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+}
+
+.ModuleButton__buttons button.active {
+  background: #fff;
+  outline: #175a52 2px solid;
+  color: #175a52;
+}
+
+.ModuleButton__buttons button.active:hover {
+  background: #175a52;
+  color: #fff;
+}
+
+.ModuleButton__buttons button:hover {
+  background: #175a52;
+}
+
+.ModuleButton__buttons button:first-of-type {
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons button:first-of-type {
+    margin-right: 0px;
+  }
+}
+
+.ModuleButton__buttons button:last-of-type {
+  margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons button:last-of-type {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ModuleButton__buttons {
+    margin: 0;
+  }
+}
+
+.ModuleButton__buttons__1x3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 70vw;
+}
+
+@media (max-width: 900px) {
+  .ModuleButton__buttons__1x3 {
+    max-width: 90%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons__1x3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    max-width: unset;
+  }
+}
+
+.ModuleButton__buttons__1x3 button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background: #2A9D8F;
+  color: #fff;
+  font-family: 'roboto';
+  font-weight: 700;
+  border-radius: 15px;
+  outline: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  font-size: 20px;
+  width: 20vw;
+  -ms-flex-preferred-size: calc(33% - 10px);
+      flex-basis: calc(33% - 10px);
+  word-wrap: none;
+  -webkit-transition: background ease-in-out 200ms;
+  transition: background ease-in-out 200ms;
+}
+
+@media (max-width: 1000px) {
+  .ModuleButton__buttons__1x3 button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons__1x3 button {
+    width: 40vw;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ModuleButton__buttons__1x3 button {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+}
+
+.ModuleButton__buttons__1x3 button:hover {
+  background: #175a52;
+}
+
+.ModuleButton__buttons__1x3 button:first-of-type {
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons__1x3 button:first-of-type {
+    margin-right: 0px;
+  }
+}
+
+.ModuleButton__buttons__1x3 button:last-of-type {
+  margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .ModuleButton__buttons__1x3 button:last-of-type {
+    margin-left: 0px;
+  }
+}
+
+.ModuleButton__buttons__1x3 button.active {
+  background: #fff;
+  outline: #175a52 2px solid;
+  color: #175a52;
+}
+
+@media (max-width: 500px) {
+  .ModuleButton__buttons__1x3 {
+    margin: 0;
+  }
+}
+
+.ModuleButton__modal {
+  min-width: 100%;
+  padding: 20px 20px;
+  background: #ffffff;
+  position: relative;
+  margin-top: 5vh;
+  border-radius: 15px;
+  top: 100%;
+  border: #ffffff solid 1px;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+  .ModuleButton__modal {
+    border-radius: 10px;
+  }
+}
+
+.ModuleButton__modal div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffffff;
+  width: 100%;
+  height: 35px;
+  border-radius: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ModuleButton__modal div img {
+  cursor: pointer;
+}
+
+.ModuleButton__modal div svg {
+  color: #ffffff;
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=ModuleButtonModal.css.map */

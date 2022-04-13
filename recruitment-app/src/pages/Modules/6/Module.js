@@ -1,123 +1,157 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Eta from '../../../components/ETA/Eta';
 import '../ModuleGlobal.css';
-import './Module.css';
+import './Module.scss';
+import ModuleButtonModal from '../../../components/ModuleButtonModal/ModuleButtonModal.js';
+import DoDontModal from '../../../components/DoDontModal/DoDontModal.js';
+import EffectiveImage from '../../../assets/1x/effective.png';
+import FocusImage from '../../../assets/1x/focus.png';
+import AwarenessImage from '../../../assets/1x/awareness.png';
+import TeamImage from '../../../assets/1x/team.png';
+import ConfidentImage from '../../../assets/1x/confident.png';
+import RSDPModuleLogo from '../../../components/RSDPModuleLogo/RSDPModuleLogo';
+
 
 
 function Module() {
 
+    useEffect(() => {    
+        
+    }, [])
+    
+    
+    
+
     async function DownloadMedia() {
-        return fetch('https://group-54-rct.herokuapp.com/download5', {
+        return fetch('https://rsdp-backend.herokuapp.com/download5', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
             },
         })
-            .then(res => res.blob())
-            // .then(blob => {
-            //     const file = window.URL.createObjectURL(blob);
-            //     // window.location.assign(file);
-            //     window.open(file, "_blank");
-            // });
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
-                // the filename you want
-                a.download = 'Module 5 Role Play Activity Sheet';
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                // alert('your file has downloaded!'); // or you know, something with better UX...
-            })
-            .catch(() => alert('oh no!'));
+        .then(res => res.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            // the filename you want
+            a.download = 'Module 5 Role Play Action Items';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            // alert('your file has downloaded!'); // or you know, something with better UX...
+        })
+        .catch(() => alert('Issue Downloading File. Please Try Again Later'));
     }
-
+    
     const handleDownload = () => {
         DownloadMedia();
     };
     return (
-        <div className="Module__Page__Wrapper">
-            <div className="Module__Page__Header__Modules">
-                <div className="Module__Page__Header__Text">
-                    <h3>Module 5</h3>
+        <div className="module6">
+            <RSDPModuleLogo />
+            <div className="module__header">
+                <div className="module__header__text">
+                    <h3>MODULE FIVE</h3>
                     <h1>Role Play</h1>
                 </div>
-                <Eta time={15} />
+                <Eta time={10} />
             </div>
-            <div className="Module__Page__Body">
-                <div className="Module__Page__Video__Container">
-                    <video id="Video" autoplay controls>
-                        <source src="https://group-54-rct.herokuapp.com/video/5" type="video/mp4"></source>
-                    </video>
+            <div className="module6__body">
+                <div className="module6__body__video">
+                <video id="Video" autoplay controls>
+                    <source src={`https://rsdp-backend.herokuapp.com/video/5${window.localStorage.getItem('authToken')}`} type="video/mp4"></source>
+                </video>
                 </div>
-                <div className="Module__Page__Text">
-                    <p>
-                        Role plays simulate a range of scenarios depending on the job being filled. <br />
-                        <br />
-                    Examples:  <br />
-                    •	Meeting a problematic supplier <br />
-                    •	An angry customer <br />
-                    •	A poor performing team member <br />
-                        <br />
-                    The candidate is given a brief with instructions to try to achieve a particular outcome. The role player has an outline to follow which is different from the one given to the candidate. The candidate has to negotiate an amicable resolution which achieves the goal(s) whilst placating the role player. <br />
-                        <br />
-                    The role player brief will test the candidate by raising challenging issues and they will respond according to how the candidate addresses these. Consequently, it is very important to respond to what the role player says and does whilst staying focused on the initial brief. A balanced approach together with demonstrating effective interpersonal skills is essential. <br />
-                        <br />
-                    During the preparation time it is important to consider the required outcome and how to deal with possible arguments the role player might use and their potential reactions to any proposals put forward.  Study the brief in detail and think about ways to achieve the outcome your character wants.  <br />
-                        <br />
-                    During the exercise the candidate will be assessed by the role player, an observer or the interaction will be recorded on camera. <br />
-                        <br />
-                    Adopt a positive and cheerful attitude at the outset and focus on establishing rapport with the role player. An amicable approach will come across well particularly if you still deal with difficult issues without coming over as angry or negative whilst attempting to resolve problems. Keep monitoring time in an unobtrusive way and make sure that you summarise the meeting whilst agreeing relevant next steps by the end of your allotted time.  <br />
-                        <br />
-                    Throughout the role play exercise don’t attempt to take on a different personality. The assessor wants to see how you will deal with the scenario utilising your skills and attitudes not by pretending to be someone else. <br />
+                <p className="KeyLearningPoints">
+                        Key Learning Points
                     </p>
-                </div>
-                <div className="Module__Page__LearningPoints">
-                    <h2>Key Learning Points</h2>
-                    <p>During role play exercises there are a number of ‘do’s’ and ‘don’ts’ that you should keep in mind.</p>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>01</h4>
-                            <h3>Do: </h3>
+                <div className="module6__body__main">
+                    {/* <p>
+                    Written exercises are designed to check that a candidate can communicate logically and clearly in a written format as information is analysed, conclusions reached and recommendations made.
+                    </p> */}
+                    {/* Text Section Start */}
+                    <div className="module6__textSection textSection">
+                        <div className="module6__textSection__large textSection__large">
+                            <p>Important!</p>
+                            <h1>Role plays simulate a range of scenarios depending on the job being filled.</h1>
                         </div>
-                        <div className="Module__Page__Point__Body">
+                        <div className="module6__textSection__small textSection__small">
                             <p>
-                                -	Use the preparation time effectively by identifying key issues, anticipating possible   positions which the role player may take and preparing general reactions to these. <br />
-                            -	Take time at the outset to build rapport with the role player by introducing yourself, asking about him/her before raising the issues in your brief <br />
-                            -	Monitor time carefully but unobtrusively <br />
-                            -	Listen “actively”. Show that you are listening. <br />
-                            -	Summarise and outline next steps at the end of the meeting <br />
+                            For example, these may cover: <br /><br />
+                            • Meeting a problematic supplier<br />
+                            • Dealing with an angry customer<br />
+                            • Engaging with a poor performing team member<br />
+
+                            <br />
+                            {/* <span>••••••••••••••••••••••</span><br /> */}
                             </p>
                         </div>
                     </div>
-                    <div className="Module__Page__Point">
-                        <div className="Module__Page__Point__Header">
-                            <h4>02</h4>
-                            <h3>Don’t:</h3>
-                        </div>
-                        <div className="Module__Page__Point__Body">
+                    {/* Text Section End */}
+                    {/* Modal Button Section Start */}
+                    <div className="module6__body__buttons">
+                        <p>What is involved?</p>
+                        <ModuleButtonModal type="2x2"/>
+                    </div>
+                    {/* Modal Button Section Start */}
+                    {/* Competencies Section Start */}
+                    {/* <div className="intray">
+                        <p>Written Exercise Example - In Tray Exercise</p>
+                        <div className="intray__container">
                             <p>
-                                -	Prepare a script <br />
-                            -	Fake it by “acting out” characteristics which are not natural to you. <br />
-                            -	Be drawn into negative arguments <br />
-                            -	Avoid dealing with difficult issues <br />
-                            -	End the meeting without agreeing a detailed action plan to be followed up by both individuals <br />
+                                Candidates are given a pile of documents outlining issues to be dealt with and actions to be taken requiring them to prioritise items and suggest what should be done.<br /><br />
+
+                                The items are usually varied in number (10 to 30?), requiring a range of actions to be highlighted within a strict timescale. <br /><br />
+
+                                Candidates may be required to make numerical calculations, draft written responses to documents, prioritise tasks and decide upon courses of action. <br /><br />
+
+
+                                </p>
+                        </div>
+                    </div> */}
+                    <div className="module6__body__key">
+                        <h1>Things to Remember</h1>
+
+                        <div>
+                            <h2>Be Positive and Cheerful</h2>
+                            <p>Adopt a positive and cheerful attitude at the outset and focus on establishing rapport with the role player. An amicable approach will come across well particularly if you still deal with difficult issues without coming over as angry or negative whilst attempting to resolve problems. 
                             </p>
                         </div>
+                        <div>
+                            <h2>Monitor Time</h2>
+                            <p>Keep monitoring time in an unobtrusive way
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Summarise the Meeting</h2>
+                            <p>Make sure that you summarise the meeting whilst agreeing relevant next steps by the end of your allotted time.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Be True to You</h2>
+                            <p>Throughout the role play exercise don’t attempt to take on a different personality. The assessor wants to see how you will deal with the scenario utilising your skills and attitudes not by pretending to be someone else.
+                            </p>
+                        </div>
+                        
                     </div>
-                </div>
-                <div className="Module__Page__Activity__Container">
-                    <div className="Module__Page__Activity__Header">
-                        <h2>Activity</h2>
+                    {/* Competencies Section End */}
+
+                    {/* Do's and Don'ts Section Start */}
+                    <div className="module6__body__dodont">
+                        <h1>The do's and don'ts</h1>
+                        <DoDontModal module={5}/>
                     </div>
-                    <div className="Module__Page__Activity__Body">
-                        <p>Download the Module 5 activity sheet and work through the exercises to be fully prepared for role play exercises.</p>
+                    {/* Do's and Don'ts Section End */}
+
+                    {/* Activity Section Start */}
+                    <div className="module6__body__main__download">
+                        <h2>Now it's time to work on your action plan</h2>
+                        <h3>Press the Download Button to make detailed personal preparations.</h3>
+                        <button onClick={handleDownload}>Download</button>
                     </div>
-                </div>
-                <div className="Module__Page__Btn__Container">
-                    <button onClick={() => { handleDownload(); }}>Download</button>
+                    {/* Activity Section End */}
                 </div>
             </div>
         </div>

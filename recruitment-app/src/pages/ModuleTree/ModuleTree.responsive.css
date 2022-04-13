@@ -1,28 +1,33 @@
-@media (max-width:1050px) {
-    .M45 {
-        width: 180px;
-        transform: translate(50px, 0px) rotate(0deg);
-        width: 22.5vw;
-    }
+@media (max-width: 1050px) {
+	.ModuleTree__header > h1 {
+		margin: 0;
+	}
 
-    .P45 {
-        width: 180px;
-        transform: translate(0px, 35px) rotate(90deg);
-        /* background: pink; */
-    }
+	.M45 {
+		width: 180px;
+		transform: translate(50px, 0px) rotate(0deg);
+		width: 22.5vw;
+	}
 
-    .TopLineM45 {
-        width: 180px;
-        transform: translate(0px, -35px) rotate(-90deg);
-        /* background: green; */
-    }
+	.P45 {
+		width: 180px;
+		transform: translate(0px, 35px) rotate(90deg);
+		/* background: pink; */
+	}
 
-    .TopLineP45 {
-        width: 180px;
-        transform: translate(-50px, 0px) rotate(0deg);
-        /* background: red; */
-        width: 22.5vw;
-    }
+	.TopLineM45 {
+		width: 180px;
+		transform: translate(0px, -35px) rotate(-90deg);
+		/* background: green; */
+	}
+
+	.TopLineP45 {
+		width: 180px;
+		transform: translate(-50px, 0px) rotate(0deg);
+		/* background: red; */
+		width: 22.5vw;
+	}
 }
 
-@media (max-width:500px) {}
+@media (max-width: 500px) {
+}

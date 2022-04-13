@@ -1,4 +1,4 @@
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
 	.Module__Page {
 		padding-top: 3.5rem;
 	}
@@ -43,7 +43,7 @@
 		width: 100vw;
 	}
 
-	.Module__Page__Item>div {
+	.Module__Page__Item > div {
 		width: 100%;
 		max-width: 100vw;
 	}
@@ -78,7 +78,7 @@
 	}
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
 	.Module__Page__Header__Wheels img {
 		/* position: absolute;
 		top: 30%;
@@ -98,7 +98,6 @@
 	.Module__Page__About img {
 		max-width: 100vw;
 	}
-
 }
 
 /* @media (max-width:600px) {
@@ -127,7 +126,7 @@
 	}
 } */
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
 	.Module__Page {
 		padding: 0;
 	}

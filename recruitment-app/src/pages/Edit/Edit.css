@@ -96,16 +96,29 @@
 }
 
 .main-btn {
-    padding: 10px 40px;
+    padding: 10px 25px;
+    margin: 0 20px;
     border-radius: 100px;
-    background: #71A068;
+    background: #2a9d8f;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
+    background: #2A9D8F;
+    color: #fff;
+    font-family: 'roboto';
+    font-weight: 700;
+    border-radius: 15px;
+    outline: 0px;
+    box-shadow: none;
+    border: none;   
+    font-size: 20px;
+    /* width: 20vw; */
+    transition: background ease-in-out 200ms;
 }
 
 .alt-btn {
     padding: 0px 10px;
     font-weight: 500;
     color: #213142;
+    margin: 10px 0;
 }

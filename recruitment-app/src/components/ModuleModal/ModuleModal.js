@@ -29,7 +29,7 @@ const [ModuleInfo, setModuleInfo] = useState({
 });
 
     const getModuleInfo = async (number) => {
-        return await fetch(`https://group-54-rct.herokuapp.com/module/${number}`, {
+        return await fetch(`https://rsdp-backend.herokuapp.com/module/${number}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ const [ModuleInfo, setModuleInfo] = useState({
     
 
     async function completeModule(inData, moduleNumber) {
-        return await fetch(`https://group-54-rct.herokuapp.com/user/moduleComplete/${moduleNumber}`, {
+        return await fetch(`https://rsdp-backend.herokuapp.com/user/moduleComplete/${moduleNumber}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -93,8 +93,8 @@ const [ModuleInfo, setModuleInfo] = useState({
                 <img src={getImg(props.number)} alt="placeholder" />
                 <div className="ModuleTree__Modal__Header__Text">
                     <div className="ModuleTree__Modal__Header__Text__Main">
-                    <h3>{ModuleInfo.title ?? "Loading..."}</h3>   
-                    <CloseIcon className="MouleModal__Close__btn" onClick={() => {props.modalOpen(false)}}/>
+                        <h3>{ModuleInfo.title ?? "Loading..."}</h3>   
+                        <CloseIcon className="MouleModal__Close__btn" onClick={() => {props.modalOpen(false)}}/>
                     </div>
                     <p>{ModuleInfo.description ?? "Loading..."}</p>
                 </div>

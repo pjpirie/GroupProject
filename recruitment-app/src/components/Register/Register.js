@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import { setAlert, setLightNav } from '../../actions';
-import './Register.css';
+import './Register.scss';
 import './Register.responsive.css';
 
 
@@ -25,7 +25,7 @@ export default function Register() {
     const [redirect, setRedirect] = useState(false);
 
     async function RegisterUser(credentials) {
-        return fetch('https://group-54-rct.herokuapp.com/user/register', {
+        return fetch('https://rsdp-backend.herokuapp.com/user/register', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -89,7 +89,7 @@ export default function Register() {
                     </div>
                     <label>
                         <p>Email</p>
-                        <input type="email" onChange={e => setEmail(e.target.value)} required />
+                        <input type="email" onChange={e => setEmail(e.target.value.toLowerCase())} required />
                     </label>
                     <label>
                         <p>Password</p>

@@ -1,3 +1,5 @@
+@import '../../breakpoints.scss';
+
 .navbar{
     max-width: 100vw;
     width: 100%;
@@ -7,6 +9,11 @@
     padding: 50px 50px 50px 50px;
     background: none;
 
+    @include media("<=900px"){
+        height: auto !important;
+        align-items: flex-start;
+    }
+
     >div{
         width: 33%;
     }
@@ -14,23 +21,114 @@
     ul{
         list-style: none;
         height: 100%;
+        a{
+            color: #213142;
+            li{
+                padding-bottom: 2px;
+                border-bottom: 3px solid rgba(0,0,0, 0);
+            }
+            &:hover{
+                color: #324c68;
+            }
+            &.is-active li{
+                border-bottom: 3px solid #F4A261;
+            }
+        }
         li{
             margin: 0 20px;
+            @include media("<=900px"){
+                margin: 20px 0;
+            }
         }
     }
     &__logo{
         padding: 0 0 0 90px;
         justify-content: start;
+        @include media("<=1100px"){
+            padding: 0;
+        }
     }
+
+    &__main{
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            width: 100% !important;
+            align-items: center;
+            height: auto;
+        }
+    }
+
     &__menu{
+
+        >div{
+            margin-bottom: 50px;
+        }
+        &__container{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto !important;
+            position: fixed;
+            right: 0px;
+            bottom: -100vh;
+            width: 35vw !important;
+            background: #fff;
+            margin: auto 0 0 auto;
+            @include media("<=900px"){
+                display: flex;
+                transition: all 500ms ease-in-out;
+                padding: 50px;
+                box-shadow: -25px -20px 30px -30px rgba(0, 0, 0, 0.6);
+            }
+            @include media("<=800px"){
+                width: 40vw !important;
+            }
+            @include media("<=700px"){
+                width: 50vw !important;
+            }
+            @include media("<=550px"){
+                width: 100vw !important;
+            }
+
+        }
+
+        &__container.mobile{
+            bottom: 0;
+            z-index: 999;
+        }
         display: flex;
         justify-content: center;
         align-items: center;
+        @include media("<=900px"){
+            height: 100%;
+            flex-direction: column;
+            align-items: flex-end;
+        }
     }
     &__account{
         display: flex;
         padding: 0 90px 0 0;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
+        @include media("<=1100px"){
+            padding: 0;
+        }
+        
+        &__button{
+            padding: 10px 20px !important;
+            background: #2A9D8F;
+            border-radius: 10px;
+            width: auto;
+            color: #fff !important;
+            font-size: 16px;
+            font-family: 'Roboto';
+            font-weight: 700;
+            border: none !important;
+            @include media("<=900px"){
+                margin: 0 0 0 20px !important;
+            }
+        }
     }
 }
+

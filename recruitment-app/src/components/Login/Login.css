@@ -1,5 +1,5 @@
 .loginPage__Wrapper {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -77,11 +77,23 @@
 .main-btn {
     padding: 10px 40px;
     border-radius: 100px;
-    background: #71A068;
+    background: #2a9d8f;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
+    margin: 10px 0;
+    background: #2A9D8F;
+    color: #fff;
+    font-family: 'roboto';
+    font-weight: 700;
+    border-radius: 15px;
+    outline: 0px;
+    box-shadow: none;
+    border: none;   
+    font-size: 20px;
+    /* width: 20vw; */
+    transition: background ease-in-out 200ms;
 }
 
 .alt-btn {
@@ -89,6 +101,7 @@
     font-weight: 500;
     color: #213142;
     background: #fff;
+    margin: 10px 0;
     cursor: pointer;
 
 }
